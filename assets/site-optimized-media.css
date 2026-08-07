@@ -18,3 +18,20 @@ video.size-full {
     padding-right: 20px !important;
   }
 }
+
+/* Fix for columns where GIFs were converted to MP4 videos, restoring borders and heights */
+.elementor-element-57ce8dc video,
+.elementor-element-632f2af video,
+.elementor-element-939e797 video,
+.elementor-element-576658d video,
+.elementor-element-60ecd0b video,
+.elementor-element-3734206 video,
+.elementor-element-504d701 video,
+.elementor-element-f818e82 video {
+  width: 100% !important;
+  height: 300px !important;
+  border-style: solid !important;
+  border-color: #CEAE80 !important;
+  border-width: 1px !important;
+  object-fit: cover !important;
+}
