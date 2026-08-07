@@ -22,6 +22,30 @@ video.size-full {
   .make-column-clickable-elementor {
     padding-bottom: 30px !important;
   }
+
+  /* Fix spacing and padding for dashed treatment cards on tablet */
+  .treatment-dashed-card {
+    margin-bottom: 30px !important;
+    padding: 30px !important;
+    --margin-bottom: 30px !important;
+    --padding-top: 30px !important;
+    --padding-bottom: 30px !important;
+    --padding-left: 30px !important;
+    --padding-right: 30px !important;
+  }
+}
+
+/* Fix spacing and padding for dashed treatment cards on mobile */
+@media (max-width: 767px) {
+  .treatment-dashed-card {
+    margin-bottom: 25px !important;
+    padding: 20px !important;
+    --margin-bottom: 25px !important;
+    --padding-top: 20px !important;
+    --padding-bottom: 20px !important;
+    --padding-left: 20px !important;
+    --padding-right: 20px !important;
+  }
 }
 
 /* Fix for columns where GIFs were converted to MP4 videos, restoring borders and heights */
