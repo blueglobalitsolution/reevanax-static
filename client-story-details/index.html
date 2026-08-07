@@ -692,11 +692,7 @@ li.ova-megamenu ul.ova-mega-menu{
 </li>
 <li id="menu-item-26609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26609"><a href="../book-an-appointment/index.html">Book An Appointment</a></li>
 <li id="menu-item-25953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25953"><a href="../blogs/index.html">Blogs</a></li>
-<li id="menu-item-24346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24346"><a href="../contact-us/index.html">Contact</a>
-<ul class="sub-menu">
-	<li id="menu-item-24347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24347"><a href="../contact-us/index.html">Contact Us</a></li>
-</ul>
-</li>
+<li id="menu-item-24346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24346"><a href="../contact-us/index.html">Contact Us</a></li>
 </ul></div>        </nav>
 		
 
@@ -1153,6 +1149,46 @@ li.ova-megamenu ul.ova-mega-menu{
 					<h2 class="elementor-heading-title elementor-size-default"><strong>Business Hours :</strong><br>
 Mon - Fri : 08.00 AM To 09.00 PM Sat : 09.00 AM To 06.00 PM</h2>				</div>
 				</div>
+				<div class="footer-contact-form-wrapper" style="width: 100%; margin-top: 20px; margin-bottom: 10px;">
+					<form id="footer-contact-us-form" class="custom-contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+						<div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
+							<label style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: #ffffff; display: block; margin-bottom: 5px;">Name <span style="color: #ceae80; font-size: 12px; font-weight: 400;">(Required)</span></label>
+							<div style="display: flex; gap: 10px;">
+								<div style="flex: 1;">
+									<input type="text" name="first_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 14px; background: #fff;" />
+									<span style="font-size: 11px; color: #f0e8e8; font-family: 'Roboto', sans-serif; display: block; margin-top: 3px;">First</span>
+								</div>
+								<div style="flex: 1;">
+									<input type="text" name="last_name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 14px; background: #fff;" />
+									<span style="font-size: 11px; color: #f0e8e8; font-family: 'Roboto', sans-serif; display: block; margin-top: 3px;">Last</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
+							<label style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: #ffffff; display: block; margin-bottom: 5px;">Phone <span style="color: #ceae80; font-size: 12px; font-weight: 400;">(Required)</span></label>
+							<input type="tel" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 14px; background: #fff;" />
+						</div>
+						<div style="margin-top: 5px; text-align: left;">
+							<button type="submit" style="background-color: #ffffff; color: #834c24; border: none; padding: 10px 25px; font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background-color 0.3s; font-family: 'Poppins', sans-serif;">Submit</button>
+						</div>
+						<div id="footer-form-message" style="display: none; font-family: 'Roboto', sans-serif; font-size: 14px; margin-top: 10px; font-weight: 500;"></div>
+					</form>
+				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function() {
+						const form = document.getElementById('footer-contact-us-form');
+						if (form) {
+							form.addEventListener('submit', function(e) {
+								e.preventDefault();
+								const messageDiv = document.getElementById('footer-form-message');
+								messageDiv.style.display = 'block';
+								messageDiv.style.color = '#ffffff';
+								messageDiv.innerText = 'Thank you! Your request has been submitted successfully.';
+								this.reset();
+							});
+						}
+					});
+				</script>
 				</div>
 					</div>
 				</div>
