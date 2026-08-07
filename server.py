@@ -25,11 +25,80 @@ from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse
+import re
+import time
+from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = Path(os.environ.get("REVANAX_SMTP_CONFIG", ROOT / "smtp_config.json"))
 HOST = os.environ.get("REVANAX_HOST", "0.0.0.0")
 PORT = int(os.environ.get("REVANAX_PORT", "8080"))
+
+# Simple in-memory rate limiter for contact form submissions (max 3 requests per 60 seconds per IP)
+CONTACT_RATE_LIMITS = defaultdict(list)
+RATE_LIMIT_MAX_REQUESTS = 3
+RATE_LIMIT_WINDOW = 60
+
+
+def send_contact_email(contact: dict) -> None:
+    cfg = load_smtp_config()
+    
+    first_name = contact.get("first_name", "").strip()
+    last_name = contact.get("last_name", "").strip()
+    phone = contact.get("phone", "").strip()
+    
+    # Input validation / sanitization
+    if not first_name or not last_name or not phone:
+        raise ValueError("Missing name or phone fields.")
+        
+    if len(first_name) > 100 or len(last_name) > 100 or len(phone) > 30:
+        raise ValueError("Input field length exceeded.")
+        
+    # Basic regex validation for phone to prevent header injection or spam
+    if not re.match(r"^\+?[0-9\s\-()]{5,20}$", phone):
+        raise ValueError("Invalid phone format.")
+        
+    # Phone must contain between 10 and 11 digits
+    digits_only = re.sub(r"\D", "", phone)
+    if not (10 <= len(digits_only) <= 11):
+        raise ValueError("Phone number must be between 10 and 11 digits.")
+        
+    # Construct email message
+    msg = EmailMessage()
+    msg["Subject"] = f"New Contact Request from {first_name} {last_name}"
+    from_name = cfg.get("from_name") or "ReevanaX Contact Form"
+    msg["From"] = f"{from_name} <{cfg['from_email']}>"
+    msg["To"] = cfg["to_email"]
+    
+    lines = [
+        "You have received a new contact request from your website.",
+        "",
+        f"Name: {first_name} {last_name}",
+        f"Phone: {phone}",
+    ]
+    msg.set_content("\n".join(lines))
+    
+    host = cfg["smtp_host"]
+    port = int(cfg["smtp_port"])
+    user = cfg["smtp_user"]
+    password = cfg["smtp_password"]
+    use_tls = bool(cfg.get("smtp_use_tls", True))
+
+    if port == 465:
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL(host, port, context=context, timeout=30) as smtp:
+            smtp.login(user, password)
+            smtp.send_message(msg)
+    else:
+        with smtplib.SMTP(host, port, timeout=30) as smtp:
+            smtp.ehlo()
+            if use_tls:
+                context = ssl.create_default_context()
+                smtp.starttls(context=context)
+                smtp.ehlo()
+            smtp.login(user, password)
+            smtp.send_message(msg)
+
 
 
 def load_smtp_config() -> dict:
@@ -151,7 +220,7 @@ class RevanaxHandler(SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_OPTIONS(self):
-        if urlparse(self.path).path == "/api/book":
+        if urlparse(self.path).path in ("/api/book", "/api/contact"):
             self.send_response(HTTPStatus.NO_CONTENT)
             self.send_header("Access-Control-Allow-Origin", "*")
             self.send_header("Access-Control-Allow-Headers", "Content-Type")
@@ -162,19 +231,64 @@ class RevanaxHandler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path != "/api/book":
+        if parsed.path not in ("/api/book", "/api/contact"):
             self.send_error(HTTPStatus.NOT_FOUND)
             return
+
+        client_ip = self.client_address[0]
+
+        # Rate Limit check for /api/contact (max 3 requests per 60 seconds per IP)
+        if parsed.path == "/api/contact":
+            now = time.time()
+            # Clean up old timestamps outside the rate limit window
+            CONTACT_RATE_LIMITS[client_ip] = [t for t in CONTACT_RATE_LIMITS[client_ip] if now - t < RATE_LIMIT_WINDOW]
+            if len(CONTACT_RATE_LIMITS[client_ip]) >= RATE_LIMIT_MAX_REQUESTS:
+                self._send_json(HTTPStatus.TOO_MANY_REQUESTS, {"ok": False, "error": "Too many requests. Please try again later."})
+                return
+            CONTACT_RATE_LIMITS[client_ip].append(now)
 
         length = int(self.headers.get("Content-Length") or 0)
         raw = self.rfile.read(length) if length else b"{}"
         try:
-            booking = json.loads(raw.decode("utf-8"))
+            payload = json.loads(raw.decode("utf-8"))
         except Exception:
             self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "Invalid JSON body."})
             return
 
-        customer = booking.get("customer") or {}
+        if parsed.path == "/api/contact":
+            # Honeypot check: if the hidden "website" field has content, it's a bot.
+            # Silently succeed to trick the bot without sending mail.
+            if payload.get("website"):
+                self._send_json(HTTPStatus.OK, {"ok": True, "message": "Contact request submitted successfully."})
+                return
+
+            try:
+                send_contact_email(payload)
+            except ValueError as e:
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": str(e)})
+                return
+            except smtplib.SMTPAuthenticationError:
+                self._send_json(
+                    HTTPStatus.BAD_GATEWAY,
+                    {"ok": False, "error": "SMTP authentication failed. Check smtp_config.json credentials."},
+                )
+                return
+            except Exception as e:
+                traceback.print_exc()
+                self._send_json(
+                    HTTPStatus.BAD_GATEWAY,
+                    {"ok": False, "error": f"Failed to send email: {e}"},
+                )
+                return
+
+            self._send_json(
+                HTTPStatus.OK,
+                {"ok": True, "message": "Contact request submitted successfully."},
+            )
+            return
+
+        # Original /api/book flow
+        customer = payload.get("customer") or {}
         if not (customer.get("email") or customer.get("phone")):
             self._send_json(
                 HTTPStatus.BAD_REQUEST,
@@ -183,7 +297,7 @@ class RevanaxHandler(SimpleHTTPRequestHandler):
             return
 
         try:
-            send_booking_email(booking)
+            send_booking_email(payload)
         except FileNotFoundError as e:
             self._send_json(HTTPStatus.SERVICE_UNAVAILABLE, {"ok": False, "error": str(e)})
             return
@@ -206,7 +320,7 @@ class RevanaxHandler(SimpleHTTPRequestHandler):
 
         self._send_json(
             HTTPStatus.OK,
-            {"ok": True, "message": "Booking email sent.", "id": booking.get("id")},
+            {"ok": True, "message": "Booking email sent.", "id": payload.get("id")},
         )
 
     def log_message(self, fmt, *args):

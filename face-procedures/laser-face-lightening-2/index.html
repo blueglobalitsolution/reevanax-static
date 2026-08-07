@@ -1750,6 +1750,9 @@ Mon - Fri : 08.00 AM To 09.00 PM Sat : 09.00 AM To 06.00 PM</h2>				</div>
 				</div>
 				<div class="footer-contact-form-wrapper" style="width: 100%; margin-top: 20px; margin-bottom: 10px;">
 					<form id="footer-contact-us-form" class="custom-contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+						<!-- Honeypot field for bot protection -->
+						<input type="text" name="website" style="display:none !important" tabindex="-1" autocomplete="off" />
+						
 						<div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
 							<label style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: #ffffff; display: block; margin-bottom: 5px;">Name <span style="color: #ceae80; font-size: 12px; font-weight: 400;">(Required)</span></label>
 							<div style="display: flex; gap: 10px;">
@@ -1765,7 +1768,7 @@ Mon - Fri : 08.00 AM To 09.00 PM Sat : 09.00 AM To 06.00 PM</h2>				</div>
 						</div>
 						<div class="form-group" style="display: flex; flex-direction: column; text-align: left;">
 							<label style="font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: #ffffff; display: block; margin-bottom: 5px;">Phone <span style="color: #ceae80; font-size: 12px; font-weight: 400;">(Required)</span></label>
-							<input type="tel" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 14px; background: #fff;" />
+							<input type="tel" name="phone" required minlength="10" maxlength="11" pattern="[0-9]{10,11}" title="Please enter a valid 10 or 11 digit phone number." oninput="this.value = this.value.replace(/[^0-9]/g, '')" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 14px; background: #fff;" />
 						</div>
 						<div style="margin-top: 5px; text-align: left;">
 							<button type="submit" style="background-color: #ffffff; color: #834c24; border: none; padding: 10px 25px; font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background-color 0.3s; font-family: 'Poppins', sans-serif;">Submit</button>
@@ -1782,8 +1785,42 @@ Mon - Fri : 08.00 AM To 09.00 PM Sat : 09.00 AM To 06.00 PM</h2>				</div>
 								const messageDiv = document.getElementById('footer-form-message');
 								messageDiv.style.display = 'block';
 								messageDiv.style.color = '#ffffff';
-								messageDiv.innerText = 'Thank you! Your request has been submitted successfully.';
-								this.reset();
+								messageDiv.innerText = 'Submitting request...';
+								
+								const data = {
+									first_name: this.first_name.value,
+									last_name: this.last_name.value,
+									phone: this.phone.value,
+									website: this.website.value
+								};
+								
+								fetch('/api/contact', {
+									method: 'POST',
+									headers: {
+										'Content-Type': 'application/json'
+									},
+									body: JSON.stringify(data)
+								})
+								.then(response => {
+									if (response.status === 429) {
+										throw new Error("Too many requests. Please try again in a minute.");
+									}
+									return response.json();
+								})
+								.then(res => {
+									if (res.ok) {
+										messageDiv.style.color = '#7CFC00'; // light green for visibility on brown
+										messageDiv.innerText = 'Thank you! Your request has been submitted successfully.';
+										this.reset();
+									} else {
+										messageDiv.style.color = '#FF7F7F'; // light red
+										messageDiv.innerText = 'Error: ' + res.error;
+									}
+								})
+								.catch(err => {
+									messageDiv.style.color = '#FF7F7F';
+									messageDiv.innerText = err.message || 'Something went wrong. Please try again.';
+								});
 							});
 						}
 					});
