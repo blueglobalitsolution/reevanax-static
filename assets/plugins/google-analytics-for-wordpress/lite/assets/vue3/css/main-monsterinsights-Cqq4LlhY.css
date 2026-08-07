@@ -1,0 +1,5 @@
+
+/* Separate the contextual Universally tip from the affiliate-links repeater above it (GH-3374). */
+.monsterinsights-publisher-settings__universally-promo[data-v-22b275e4] {
+	margin-top: 16px;
+}

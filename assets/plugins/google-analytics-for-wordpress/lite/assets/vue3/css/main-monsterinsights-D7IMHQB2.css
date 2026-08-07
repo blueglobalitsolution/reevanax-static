@@ -1,0 +1,53 @@
+.monsterinsights-exceptions-report[data-v-c95f02c5] .monsterinsights-overview-report-table__table th,
+.monsterinsights-exceptions-report[data-v-c95f02c5] .monsterinsights-overview-report-table__table td {
+  text-align: left;
+}
+.monsterinsights-exceptions-report__status-cell[data-v-c95f02c5] {
+  text-align: left;
+}
+.monsterinsights-exceptions-report__action-cell[data-v-c95f02c5] {
+  white-space: nowrap;
+}
+.monsterinsights-exceptions-report__delete-btn[data-v-c95f02c5] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #EB5757;
+  font-size: 13px;
+  font-weight: 500;
+}
+.monsterinsights-exceptions-report__delete-btn[data-v-c95f02c5]:hover {
+  opacity: 0.8;
+}
+.monsterinsights-exceptions-report__pagination[data-v-c95f02c5] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+.monsterinsights-exceptions-report__pagination button[data-v-c95f02c5] {
+  padding: 6px 14px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #393f4c;
+  cursor: pointer;
+}
+.monsterinsights-exceptions-report__pagination button[data-v-c95f02c5]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.monsterinsights-exceptions-report__pagination button[data-v-c95f02c5]:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+.monsterinsights-exceptions-report__pagination span[data-v-c95f02c5] {
+  font-size: 13px;
+  color: #6a7282;
+}

@@ -1,0 +1,57 @@
+i.eci { 
+display: block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+     }
+     .select2-container i.eci,
+     .elementor-icon-list-icon i.eci {
+       display: inline-block;
+     }
+     .elementor-icons-manager__tab__item__icon.eci {
+    font-size: 28px;
+}
+.elementor-icons-manager__tab-link i.eci {
+    display: inline-block;
+    font-size: 18px;
+}
+@font-face {
+ font-family: 'iva-cosmetic-icons';
+  src: url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.eot?1603216678');
+  src: url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.eot?1603216678#iefix') format('embedded-opentype'),
+       url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.woff2?1603216678') format('woff2'),
+       url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.woff?1603216678') format('woff'),
+       url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.ttf?1603216678') format('truetype'),
+       url('iva-cosmetic-icons.zip/fontello-1ae724de/font/fontello.svg?1603216678#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.eci.iva-cosmetic-icons-flower-cup-candle::before { content: '\e800'; font-family: 'iva-cosmetic-icons'; }
+.eci.iva-cosmetic-icons-flask-pot-mug::before { content: '\e801'; font-family: 'iva-cosmetic-icons'; }
+.eci.iva-cosmetic-icons-jar-tube-beautycare::before { content: '\e802'; font-family: 'iva-cosmetic-icons'; }
+.eci.iva-cosmetic-icons-lotion-vase::before { content: '\e803'; font-family: 'iva-cosmetic-icons'; }
+.eci.iva-cosmetic-icons-stickbottle-flower::before { content: '\e804'; font-family: 'iva-cosmetic-icons'; }
+.eci.iva-cosmetic-icons-bamboo-tree-sticks::before { content: '\e805'; font-family: 'iva-cosmetic-icons'; }
+
+
+@font-face {
+ font-family: 'iva-cosmetic-icons-set-ii';
+  src: url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.eot?2122880410');
+  src: url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.eot?2122880410#iefix') format('embedded-opentype'),
+       url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.woff2?2122880410') format('woff2'),
+       url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.woff?2122880410') format('woff'),
+       url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.ttf?2122880410') format('truetype'),
+       url('iva-cosmetic-icons-set-ii.zip/fontello-d3b0bd4f/font/fontello.svg?2122880410#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-mascara::before { content: '\e806'; font-family: 'iva-cosmetic-icons-set-ii'; }
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-lipstick::before { content: '\e807'; font-family: 'iva-cosmetic-icons-set-ii'; }
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-concealer::before { content: '\e808'; font-family: 'iva-cosmetic-icons-set-ii'; }
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-primer-vase::before { content: '\e809'; font-family: 'iva-cosmetic-icons-set-ii'; }
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-lotion-tube::before { content: '\e80a'; font-family: 'iva-cosmetic-icons-set-ii'; }
+.eci.iva-cosmetic-icons-set-ii-iva-cosmetic-serum::before { content: '\e80b'; font-family: 'iva-cosmetic-icons-set-ii'; }
+
+

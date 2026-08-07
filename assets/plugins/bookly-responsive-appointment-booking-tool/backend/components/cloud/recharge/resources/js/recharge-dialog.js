@@ -1,0 +1,380 @@
+jQuery(function ($) {
+    'use strict';
+
+    let $modal = $('#bookly-js-recharge-modal'),
+        $auto_recharges_btn = $('.bookly-js-auto-recharges-btn', $modal),
+        $manual_recharges_btn = $('.bookly-js-manual-recharges-btn', $modal),
+        $auto_recharge_text = $('.bookly-js-auto-recharge-text', $modal),
+        $manual_recharge_text = $('.bookly-js-manual-recharge-text', $modal),
+        $auto_recharges = $('.bookly-js-auto-recharges', $modal),
+        $manual_recharges = $('.bookly-js-manual-recharges', $modal),
+        $back = $('.bookly-js-back', $modal),
+        slides = {
+            amounts: $('#bookly-recharge-amounts', $modal),
+            payment: $('#bookly-recharge-payment', $modal).hide(),
+            accepted: $('#bookly-recharge-accepted', $modal).hide(),
+            cancelled: $('#bookly-recharge-cancelled', $modal).hide(),
+        },
+        $promo_section = $('.bookly-js-promo-section', slides.payment),
+        promo = {
+            $add: $('.bookly-js-add-promo', $modal),
+            $remove: $('.bookly-js-remove-promo', $modal),
+            $code: $('.bookly-js-promo-code', $promo_section),
+            $apply: $('.bookly-js-apply-promo', $promo_section),
+            $error: $('.bookly-js-promo-error', $promo_section),
+            $success: $('.bookly-js-promo-success', slides.payment),
+            $success_info: $('.bookly-js-promo-success-info', slides.payment),
+        },
+        $rechargeModalActivator = $('.bookly-js-recharge-dialog-activator'),
+        payment = {type: '', data: {}},
+        $recharge = $('[data-recharge]'),
+        $disableAutoRechargeModal = $('#bookly-js-disable-auto-recharge-modal'),
+        hash = window.location.href.split('#')
+    ;
+
+    let $amounts = $('.bookly-js-amount', slides.payment),
+        $pay = $('.bookly-js-pay', slides.payment),
+        consent = {
+            $input: $('#bookly-js-auto-recharge-consent', slides.amounts),
+            $error: $('.bookly-js-consent-error', slides.amounts),
+        };
+
+    consent.$input.on('change', function () {
+        if (this.checked) {
+            consent.$error.hide();
+        }
+    });
+
+    $(document.body).on('bookly.recharge.choice', {},
+        function (event, type, recharge, btn) {
+            payment.type = type;
+            payment.recharge = recharge;
+            checkout(btn);
+        }
+    );
+
+    $manual_recharges_btn.on('click', function () {
+        $auto_recharges_btn.removeClass('btn-bookly').addClass('btn-default');
+        $manual_recharges_btn.removeClass('btn-default').addClass('btn-bookly');
+        $auto_recharge_text.hide();
+        $manual_recharge_text.show();
+        $auto_recharges.hide();
+        $manual_recharges.show();
+    });
+
+    $auto_recharges_btn.on('click', function () {
+        $manual_recharges_btn.removeClass('btn-bookly').addClass('btn-default');
+        $auto_recharges_btn.removeClass('btn-default').addClass('btn-bookly');
+        $manual_recharge_text.hide();
+        $auto_recharge_text.show();
+        $manual_recharges.hide();
+        $auto_recharges.show();
+    });
+
+    $('#bookly-cloud-panel').on('click', '.bookly-js-recharge-dialog-activator', function () {
+        $modal.booklyModal();
+        $back.trigger('click');
+    });
+
+    $('button.bookly-disable-auto-recharge').on('click', function (e) {
+        e.preventDefault();
+        $disableAutoRechargeModal.booklyModal('show');
+    })
+    $disableAutoRechargeModal
+        .on('show.bs.modal', function () {
+            $('.bookly-js-amount', $disableAutoRechargeModal).html(parseFloat(BooklyRechargeDialogL10n.auto_recharge.amount));
+            if (BooklyRechargeDialogL10n.auto_recharge.bonus) {
+                $('.bookly-js-amount', $disableAutoRechargeModal).append(' + ' + BooklyRechargeDialogL10n.auto_recharge.bonus);
+            }
+        })
+        .on('click', '#bookly-js-auto-recharge-disable', function () {
+            let ladda = Ladda.create(this);
+            ladda.start();
+            $.ajax({
+                method: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'bookly_disable_auto_recharge',
+                    csrf_token: BooklyL10nGlobal.csrf_token,
+                },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        booklyAlert({success: [response.data.message]});
+                        window.location.reload();
+                    } else {
+                        booklyAlert({error: [response.data.message]});
+                    }
+                    ladda.stop();
+                }
+            });
+        });
+
+    if (hash.length > 1) {
+        let hashObj = {};
+        hash[1].split('&').forEach(function (part) {
+            var params = part.split('=');
+            hashObj[params[0]] = params[1];
+        });
+
+        let showModal = false;
+        if (hashObj.hasOwnProperty('payment')) {
+            if (hashObj.payment === 'cancelled') {
+                $('.bookly-js-message', showSlide('cancelled')).html(BooklyRechargeDialogL10n.payment.manual.cancelled);
+                showModal = true;
+            } else if (hashObj.payment === 'accepted') {
+                $('.bookly-js-message', showSlide('accepted')).html(BooklyRechargeDialogL10n.payment.manual.accepted);
+                showModal = true;
+            }
+        } else if (hashObj.hasOwnProperty('auto-recharge')) {
+            if (hashObj['auto-recharge'] === 'cancelled') {
+                $('.bookly-js-message', showSlide('cancelled')).html(BooklyRechargeDialogL10n.payment.auto.cancelled);
+                showModal = true;
+            } else if (hashObj['auto-recharge'] === 'enabled') {
+                $('.bookly-js-message', showSlide('accepted')).html(BooklyRechargeDialogL10n.payment.auto.enabled);
+                showModal = true;
+            } else if (hashObj['auto-recharge'] === 'renewed') {
+                $('#bookly-js-renew').remove();
+                $('.bookly-js-message', showSlide('accepted')).html(BooklyRechargeDialogL10n.payment.auto.renewed);
+                showModal = true;
+            }
+        } else if (hashObj.hasOwnProperty('recharge')) {
+            window.location.href = '#';
+            $rechargeModalActivator.trigger('click');
+        } else if (hashObj.hasOwnProperty('notifications-settings')) {
+            window.location.href = '#';
+            $('#bookly-open-account-settings').trigger('click');
+            $('[href="#bookly-account-notifications-tab"]').click();
+        }
+        if (showModal) {
+            window.location.href = '#';
+            $modal.booklyModal('show');
+            setTimeout(function () {
+                if (slides.accepted.css('display') === 'block' || slides.cancelled.css('display') === 'block') {
+                    $modal.booklyModal('hide');
+                }
+            }, 5000);
+        }
+
+    }
+
+    $recharge.on('click', function (e) {
+        e.preventDefault();
+        // Auto-Recharge sets up a recurring charge, it needs an explicit authorization.
+        // The checkbox is absent while Auto-Recharge is already on, there is nothing to set up then.
+        if ($(this).data('recharge-type') === 'auto' && consent.$input.length && !consent.$input.prop('checked')) {
+            consent.$error.show();
+            return;
+        }
+        $(document.body).trigger('bookly.recharge.choice', [$(this).data('recharge-type'), $(this).data('recharge'), this]);
+    });
+
+    $back.on('click', function () {
+        showSlide('amounts');
+    });
+
+    $('#bookly-recharge-amounts .bookly-js-auto-recharges-btn').trigger('click');
+
+    $pay.on('click', function () {
+        switch ($(this).data('gateway')) {
+            case 'paypal':
+                if (payment.type === 'manual') {
+                    payManualPayPal(this);
+                } else if (payment.type === 'auto') {
+                    payAutoPayPal(this);
+                }
+                break;
+            case 'card':
+                checkout(this);
+                break;
+        }
+    });
+
+    promo.$add.on('click', function () {
+        promo.$add.hide();
+        promo.$remove.hide();
+        $promo_section.show();
+    });
+
+    promo.$remove.on('click', function () {
+        promo.$remove.hide();
+        promo.$success.hide();
+        promo.$code.val('');
+        $promo_section.show();
+    });
+
+    promo.$apply.on('click', function () {
+        const ladda = Ladda.create(this);
+        ladda.start();
+        promo.$error.hide();
+        promo.$success.hide();
+        
+        $.ajax({
+            method: 'POST',
+            url: ajaxurl,
+            data: {
+                action: 'bookly_verify_cloud_promo_code',
+                csrf_token: BooklyL10nGlobal.csrf_token,
+                promo_code: promo.$code.val(),
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.success) {
+                    $promo_section.hide();
+                    promo.$success_info.html('');
+                    if (response.data['type'] === 'percentage') {
+                        let bonusValue = parseFloat(response.data.bonus).toString() + '%';
+                        let message = BooklyRechargeDialogL10n.promo_percentage_info.replace('%s', bonusValue);
+                        promo.$success_info.html(message);
+                    }
+                    promo.$success.show();
+                    promo.$remove.show();
+                } else {
+                    promo.$error.show();
+                }
+                ladda.stop();
+            },
+            error: function () {
+                promo.$error.show();
+                ladda.stop();
+            }
+        });
+    });
+
+    promo.$code.on('input', function () {
+        const hasValue = $(this).val().trim().length > 0;
+        promo.$apply.prop('disabled', !hasValue);
+    });
+
+    promo.$code.on('keydown', function (e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            e.preventDefault();
+            promo.$apply.trigger('click');
+        }
+    });
+
+    function getValidatedPromoCode() {
+        if (promo.$success.is(':visible')) {
+            return promo.$code.val();
+        }
+        return '';
+    }
+
+    function showSlide(slide) {
+        $.each(slides, function () {
+            this.hide();
+        });
+
+        if (slide === 'payment') {
+            // Hide card payment for disabled countries
+            slides.payment.find('#bookly-pay-card').toggle(
+                !!BooklyRechargeDialogL10n.country &&
+                !BooklyRechargeDialogL10n.no_card.includes(BooklyRechargeDialogL10n.country)
+            );
+            slides.payment.find('.bookly-js-action').text(BooklyRechargeDialogL10n.payment[payment.type].action);
+
+            promo.$remove.hide();
+            promo.$add.show();
+            $promo_section.hide();
+            promo.$error.hide();
+            promo.$success.hide();
+            promo.$code.val('');
+            promo.$apply.prop('disabled', true);
+        }
+
+        return slides[slide].show();
+    }
+
+    function payManualPayPal(btn) {
+        const ladda = Ladda.create(btn);
+        ladda.start();
+
+        $.ajax({
+            method: 'POST',
+            url: ajaxurl,
+            data: {
+                action: 'bookly_create_paypal_order',
+                url: document.URL.split('#')[0],
+                csrf_token: BooklyL10nGlobal.csrf_token,
+                recharge: payment.recharge.id,
+                promo_code: getValidatedPromoCode()
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.success) {
+                    window.location.replace(response.data.order_url);
+                } else {
+                    $modal.booklyModal('hide');
+                    ladda.stop();
+                    booklyAlert({error: [response.data.message]});
+                }
+            }
+        });
+    }
+
+    function payAutoPayPal(btn) {
+        const ladda = Ladda.create(btn);
+        ladda.start();
+
+        $.ajax({
+            method: 'POST',
+            url: ajaxurl,
+            data: {
+                action: 'bookly_init_auto_recharge_paypal',
+                url: document.URL.split('#')[0],
+                csrf_token: BooklyL10nGlobal.csrf_token,
+                recharge: payment.recharge.id,
+                promo_code: getValidatedPromoCode()
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.success) {
+                    window.location.replace(response.data.paypal_preapproval);
+                } else {
+                    $modal.booklyModal('hide');
+                    ladda.stop();
+                    booklyAlert({error: [response.data.message]});
+                }
+            }
+        });
+    }
+
+    /**
+     * Pay with card
+     *
+     * @param btn
+     */
+    function checkout(btn) {
+        const ladda = Ladda.create(btn);
+        ladda.start();
+
+        $.ajax({
+            method: 'POST',
+            url: ajaxurl,
+            data: {
+                action: 'bookly_create_checkout_session',
+                csrf_token: BooklyL10nGlobal.csrf_token,
+                recharge: payment.recharge.id,
+                promo_code: getValidatedPromoCode(),
+                mode: payment.type === 'manual' ? 'payment' : 'setup',
+                consent: payment.type === 'auto' && consent.$input.prop('checked') ? 1 : 0,
+                url: document.URL.split('#')[0],
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.success) {
+                    if (response.url.split('#')[0] === window.location.href.split('#')[0]) {
+                        window.location.href = response.url;
+                        window.location.reload();
+                    } else {
+                        window.location.href = response.url;
+                    }
+                } else {
+                    $modal.booklyModal('hide');
+                    ladda.stop();
+                    booklyAlert({error: [response.data.message]});
+                }
+            }
+        });
+    }
+});

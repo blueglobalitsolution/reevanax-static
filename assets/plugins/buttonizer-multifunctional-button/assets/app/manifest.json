@@ -1,0 +1,16 @@
+{
+  "index.html": {
+    "file": "index.3ebcd41b.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_vendor.ded54a2f.js"
+    ],
+    "css": [
+      "index.aaca6382.css"
+    ]
+  },
+  "_vendor.ded54a2f.js": {
+    "file": "vendor.ded54a2f.js"
+  }
+}

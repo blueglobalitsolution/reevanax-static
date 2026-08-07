@@ -1,0 +1,11 @@
+.monsterinsights-apex-chart[data-v-e98dc1f8] {
+  width: 100%;
+}
+.monsterinsights-apex-chart__empty[data-v-e98dc1f8] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #999797;
+  font-size: 14px;
+}

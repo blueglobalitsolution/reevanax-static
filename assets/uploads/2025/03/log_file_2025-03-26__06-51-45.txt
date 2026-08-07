@@ -1,0 +1,78 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 300
+Files info:
+Site URL = https://reevana.blueglobaltechnology.com
+Data file = /www/wwwroot/Reevana.blueglobaltechnology.com/wp-content/themes/mellis/install-resource/demo-import/demo-content.xml
+Widget file = /www/wwwroot/Reevana.blueglobaltechnology.com/wp-content/themes/mellis/install-resource/demo-import/widgets.wie
+Customizer file = /www/wwwroot/Reevana.blueglobaltechnology.com/wp-content/themes/mellis/install-resource/demo-import/customize.dat
+Redux files:
+not defined!
+
+---ocdi/before_content_import---
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "gallery-04" (Media)
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+service-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Search - Search - Imported to Inactive
+Categories - Categories - Imported to Inactive
+
+Main Sidebar : 
+
+Search - No Title - Widget already exists
+Archives - No Title - Imported
+Categories - Categories - Imported
+Tag Cloud - Tags - Imported
+
+WooCommerce Sidebar : 
+
+Product Search - No Title - Imported
+Filter Products by Price - Price - Imported
+Product Categories - Categories - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

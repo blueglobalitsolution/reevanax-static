@@ -1,0 +1,75 @@
+
+.monsterinsights-report-pie-chart {
+	width: 100%;
+}
+.monsterinsights-report-pie-chart__empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 200px;
+	color: #6b7280;
+	font-size: 14px;
+}
+
+/* Cards layout: donut on the left, breakdown items as cards on the right */
+.monsterinsights-report-pie-chart--cards {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+.monsterinsights-report-pie-chart--cards .monsterinsights-report-pie-chart__donut {
+	flex: 0 0 auto;
+	width: 240px;
+	max-width: 50%;
+}
+.monsterinsights-report-pie-chart__cards {
+	flex: 1;
+	min-width: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.monsterinsights-report-pie-chart__card {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	background: #f4f3f7;
+	border-radius: 8px;
+	padding: 14px 18px;
+}
+.monsterinsights-report-pie-chart__card-dot {
+	flex: 0 0 auto;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+}
+.monsterinsights-report-pie-chart__card-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+.monsterinsights-report-pie-chart__card-label {
+	font-size: 14px;
+	color: #6b7280;
+	line-height: 1.3;
+}
+.monsterinsights-report-pie-chart__card-value {
+	font-size: 15px;
+	font-weight: 700;
+	color: #393f4c;
+	line-height: 1.3;
+}
+@media (max-width: 600px) {
+.monsterinsights-report-pie-chart--cards {
+		flex-direction: column;
+		align-items: stretch;
+}
+.monsterinsights-report-pie-chart--cards .monsterinsights-report-pie-chart__donut {
+		width: 100%;
+		max-width: 100%;
+}
+}

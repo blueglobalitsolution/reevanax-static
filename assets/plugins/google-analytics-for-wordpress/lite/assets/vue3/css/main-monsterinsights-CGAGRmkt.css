@@ -1,0 +1,11 @@
+
+/* The form now lives inside the shared Modal's centered dialog shell, so the
+   card no longer owns full-screen positioning. Override the WordPress-core
+   `.notification-dialog-wrap` overlay rules (position: fixed; inset: 0) that
+   leak in from wp-admin so the dialog sits naturally within the shell. */
+#request-filesystem-credentials-dialog[data-v-9d871ebe] {
+	position: static;
+	inset: auto;
+	display: block;
+	background: none;
+}

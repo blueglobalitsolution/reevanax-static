@@ -1,0 +1,944 @@
+[
+  {
+    "id": "anti-agening-treatment",
+    "name": "Anti-Ageing Treatment",
+    "services": [
+      {
+        "id": "anti-agening-treatment__breast-augmentation",
+        "name": "Breast Augmentation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__breast-lift",
+        "name": "Breast Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__ems-sculpting-for-skin-tighetning",
+        "name": "Ems Sculpting For Skin Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__face-rejuvination",
+        "name": "Face Rejuvenation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__iv-drips-for-skin-brightening-rejuvenation-treatment",
+        "name": "Iv Drips For Skin Brightening Rejuvenation Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__labioplast-for-younger-looking-labia-treatment",
+        "name": "Labiaplasty For Younger Looking Labia Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__laser-skin-tightening-treatment",
+        "name": "Laser Skin Tightening Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__liposuction",
+        "name": "Liposuction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__mnrf-skin",
+        "name": "MNRF Skin",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__o-shot-g-shot-for-enhacing-sexual-pleasure",
+        "name": "O-Shot & G-Shot for Enhancing Sexual Pleasure",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__pico-laser-skin",
+        "name": "Pico Laser Skin",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__skin-tightening",
+        "name": "Skin Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__stretch-mark-removal",
+        "name": "Stretch Mark Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__under-eye-prp",
+        "name": "Under Eye Prp",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__vaginal-rejuvenation",
+        "name": "Vaginal Rejuvenation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__vaginal-tightening-with-advance-technology",
+        "name": "Vaginal Tightening With Advance Technology",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "anti-agening-treatment__wrinkle-and-fine-line-removal",
+        "name": "Wrinkle And Fine Line Removal",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "body-fitness-treatment",
+    "name": "Body & Fitness Treatment",
+    "services": [
+      {
+        "id": "body-fitness-treatment__breast-lift",
+        "name": "Breast Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__breast-reduction",
+        "name": "Breast Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__breast-tightening",
+        "name": "Breast Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__butt-lift",
+        "name": "Butt Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__cool-sculpting",
+        "name": "CoolSculpting",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__cryolipolysis",
+        "name": "Cryolipolysis",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__ems-sculpting",
+        "name": "EMS Sculpting",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__full-body-lsr",
+        "name": "Full Body LSR",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__liposuction",
+        "name": "Liposuction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__skin-tightening",
+        "name": "Skin Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__stretch-mark-removal",
+        "name": "Stretch Mark Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__thigh-tightening",
+        "name": "Thigh Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "body-fitness-treatment__tummy-tuck-surgery",
+        "name": "Tummy Tuck Surgery",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "cosmetic-gynecology-treatment",
+    "name": "Gynec Aesthetics",
+    "services": [
+      {
+        "id": "cosmetic-gynecology-treatment__chronic-vaginal-infection-laser-treatment",
+        "name": "Chronic Vaginal Infection Laser Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__clitoral-hood-plasty",
+        "name": "Clitoral Hood Plasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__hymenoplasty",
+        "name": "Hymenoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__labioplasty",
+        "name": "Labiaplastyy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__laser-vaginoplasty-treatment",
+        "name": "Laser Vaginoplasty Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__o-shot-g-shot-for-enhacing-sexual-pleasure",
+        "name": "O-Shot & G-Shot for Enhancing Sexual Pleasure",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__surgical-vaginoplasty",
+        "name": "Surgical Vaginoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__vaginal-prp-in-surat",
+        "name": "Vaginal Prp In Surat",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__vaginal-rejuvenation-treatment",
+        "name": "Vaginal Rejuvenation Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__vaginal-septum-removal",
+        "name": "Vaginal Septum Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "cosmetic-gynecology-treatment__vaginal-tightening-with-advance-technology",
+        "name": "Vaginal Tightening With Advance Technology",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "face-procedures",
+    "name": "Face Procedures",
+    "services": [
+      {
+        "id": "face-procedures__acne-scar-removal",
+        "name": "Acne Scar Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__anti-aging",
+        "name": "Anti Aging",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__blepharoplasty-eyelid-surgery",
+        "name": "Blepharoplasty Eyelid Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__botox",
+        "name": "Botox",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__bro-lift",
+        "name": "Brow Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__chemical-peel",
+        "name": "Chemical Peel",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__chin-augmentation",
+        "name": "Chin Augmentation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__dermabration-2",
+        "name": "Dermabrasion",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__dermafillers",
+        "name": "Dermafillers",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__dermapen-with-prp-2",
+        "name": "Dermapen With Prp 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__enzyme-facial",
+        "name": "Enzyme Facial",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__even-tone-skin",
+        "name": "Even Tone Skin",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__face-prp-2",
+        "name": "Face Prp 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__face-rejuvination",
+        "name": "Face Rejuvenation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__face-tightening",
+        "name": "Face Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__facial-dimple-creation-2",
+        "name": "Facial Dimple Creation 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__fat-transfer",
+        "name": "Fat Transfer",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__growth-factor-prp-2",
+        "name": "Growth Factor Prp 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__hydrafacial",
+        "name": "Hydrafacial",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__ipl-intense-pulsed-light-therapy",
+        "name": "Ipl Intense Pulsed Light Therapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__iv-therapy-for-skin-brightening",
+        "name": "Iv Therapy For Skin Brightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__korean-facial",
+        "name": "Korean Facial",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__laser-face-lightening-2",
+        "name": "Laser Face Lightening 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__laser-hair-removal-2",
+        "name": "Laser Hair Removal 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__laser-undereye-darkness-treatment-2",
+        "name": "Laser Undereye Darkness Treatment 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__lip-surgery",
+        "name": "Lip Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__liposuction",
+        "name": "Liposuction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__mesotherapy",
+        "name": "Mesotherapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__micro-needling-2",
+        "name": "Micro Needling 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__pico-laser",
+        "name": "Pico Laser",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__rhinoplasty",
+        "name": "Rhinoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__skin-brightening",
+        "name": "Skin Brightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__under-eye-wrinkle-removal-2",
+        "name": "Under Eye Wrinkle Removal 2",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "face-procedures__wrinkles-removal-2",
+        "name": "Wrinkles Removal 2",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "hair-care-procedures",
+    "name": "Hair Care Procedures",
+    "services": [
+      {
+        "id": "hair-care-procedures__growth-factor",
+        "name": "Growth Factor",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__growth-factor-concentration-gfc",
+        "name": "Growth Factor Concentration Gfc",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__hair-detail-examination-under-a-microscope",
+        "name": "Hair Detail Examination Under A Microscope",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__hair-fall",
+        "name": "Hair Fall",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__hair-prp",
+        "name": "Hair Prp",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__hair-transplant",
+        "name": "Hair Transplant",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__laser-light-hair",
+        "name": "Laser Light Hair",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__mesotherapy",
+        "name": "Mesotherapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "hair-care-procedures__omega-light-therapy",
+        "name": "Omega Light Therapy",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "male-asthetic",
+    "name": "Male Aesthetic",
+    "services": [
+      {
+        "id": "male-asthetic__anti-aging-treatment",
+        "name": "Anti Aging Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__circumcision",
+        "name": "Circumcision",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__full-body-lhr",
+        "name": "Full Body Lhr",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__gender-change-surgery",
+        "name": "Gender Change Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__gynecomastia",
+        "name": "Gynecomastia",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__hair-growth",
+        "name": "Hair Growth",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__hair-mesotherapy",
+        "name": "Hair Mesotherapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__hair-prp",
+        "name": "Hair Prp",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__omega-light-therapy",
+        "name": "Omega Light Therapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__painless-body-hair-removal",
+        "name": "Painless Body Hair Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__penil-recreation-in-gender-transfer",
+        "name": "Penile Recreation In Gender Transfer",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__scar-removal",
+        "name": "Scar Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__step-wise-baldness-treatment",
+        "name": "Step Wise Baldness Treatment",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__stretch-marks-removal",
+        "name": "Stretch Marks Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "male-asthetic__tattoo-removal",
+        "name": "Tattoo Removal",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "mommy-makeover",
+    "name": "Mommy Makeover",
+    "services": [
+      {
+        "id": "mommy-makeover__arm-lift",
+        "name": "Arm Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__barbie-labiaplasty",
+        "name": "Barbie Labiaplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__breast-augmentation",
+        "name": "Breast Augmentation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__breast-lift",
+        "name": "Breast Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__breast-reduction",
+        "name": "Breast Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__breast-skin-lifting",
+        "name": "Breast Skin Lifting",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__butt-lift",
+        "name": "Butt Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__clitoral-hood-reduction",
+        "name": "Clitoral Hood Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__even-tone-skin",
+        "name": "Even Tone Skin",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__labiaplasty",
+        "name": "Labiaplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__liposuction",
+        "name": "Liposuction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__love-handle-reduction",
+        "name": "Love Handle Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__skin-tightening",
+        "name": "Skin Tightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__stretch-marks-removal-by-advanced-technique",
+        "name": "Stretch Marks Removal By Advanced Technique",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__thigh-fat-reduction",
+        "name": "Thigh Fat Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__tummy-tuck-surgery",
+        "name": "Tummy Tuck Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__vaginal-prp",
+        "name": "Vaginal PRP",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__vaginal-rejuvenation",
+        "name": "Vaginal Rejuvenation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__vaginal-skin-lightening",
+        "name": "Vaginal Skin Lightening",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "mommy-makeover__vaginal-tightening",
+        "name": "Vaginal Tightening",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "plastic-surgery",
+    "name": "Plastic Surgery",
+    "services": [
+      {
+        "id": "plastic-surgery__abdominoplasty",
+        "name": "Abdominoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__blepharoplasty",
+        "name": "Blepharoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__breast-augmentation",
+        "name": "Breast Augmentation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__breast-implant",
+        "name": "Breast Implant",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__breast-lift",
+        "name": "Breast Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__breast-reduction",
+        "name": "Breast Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__bro-lift",
+        "name": "Brow Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__butt-lift",
+        "name": "Butt Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__chin-augmentation",
+        "name": "Chin Augmentation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__clitoral-hood-reduction",
+        "name": "Clitoral Hood Reduction",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__ear-reposition-surgery",
+        "name": "Ear Reposition Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__ear-repositioning",
+        "name": "Ear Repositioning",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__face-lift",
+        "name": "Face Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__facial-dimple-creation",
+        "name": "Facial Dimple Creation",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__fat-transfer",
+        "name": "Fat Transfer",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__forehead-lift",
+        "name": "Forehead Lift",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__hymenoplasty",
+        "name": "Hymenoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__lip-surgery",
+        "name": "Lip Surgery",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__otoplasty",
+        "name": "Otoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__rhinoplasty",
+        "name": "Rhinoplasty",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__rhytidectomy",
+        "name": "Rhytidectomy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "plastic-surgery__vaginoplasty",
+        "name": "Vaginoplasty",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "scar-tattoo-removal",
+    "name": "Scar / Tattoo Removal",
+    "services": [
+      {
+        "id": "scar-tattoo-removal__acne-scar-removal",
+        "name": "Acne Scar Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__co2-laser",
+        "name": "Co2 Laser",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__co2-pico-laser",
+        "name": "Co2 Pico Laser",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__laser-scar-removal",
+        "name": "Laser Scar Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__mesotherapy",
+        "name": "Mesotherapy",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__prp-scar-removal",
+        "name": "Prp Scar Removal",
+        "durationMin": 15,
+        "price": 0
+      },
+      {
+        "id": "scar-tattoo-removal__tattoo-removal",
+        "name": "Tattoo Removal",
+        "durationMin": 15,
+        "price": 0
+      }
+    ]
+  }
+]

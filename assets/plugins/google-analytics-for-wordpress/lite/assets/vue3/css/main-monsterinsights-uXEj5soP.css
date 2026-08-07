@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* Positioned ancestor for the in-content gates (upsell + addon notice render with
+   teleport-to=false and scope their absolute overlay to this box — the report content
+   area, below the sticky nav — matching the legacy upsell placement). */
+.monsterinsights-report-page[data-v-1b217949] {
+  position: relative;
+}
+.monsterinsights-addon-unavailable-modal[data-v-1b217949] {
+  background: #fff;
+  border-radius: 6px;
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.monsterinsights-addon-unavailable-modal__icon[data-v-1b217949] {
+  margin-bottom: 16px;
+}
+.monsterinsights-addon-unavailable-modal h3[data-v-1b217949] {
+  font-size: 2.25em;
+  font-weight: 600;
+  color: #393f4c;
+  margin: 0 0 14px;
+}
+.monsterinsights-addon-unavailable-modal p[data-v-1b217949] {
+  font-size: 1.35em;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.monsterinsights-addon-unavailable-modal__buttons[data-v-1b217949] {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.monsterinsights-addon-unavailable-modal__buttons .monsterinsights-button-upgrade[data-v-1b217949] {
+  display: inline-block;
+  background: #509fe2;
+  border: 1px solid #2e7fbe;
+  border-width: 1px 1px 2px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.monsterinsights-addon-unavailable-modal__buttons .monsterinsights-button-upgrade[data-v-1b217949]:hover {
+  background: #3a93dd;
+}
+.monsterinsights-addon-unavailable-modal__buttons .monsterinsights-button-dismiss[data-v-1b217949] {
+  display: inline-block;
+  background: #8ea4b4;
+  border: 1px solid #738ea1;
+  border-width: 1px 1px 2px;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.monsterinsights-addon-unavailable-modal__buttons .monsterinsights-button-dismiss[data-v-1b217949]:hover {
+  background: #596771;
+}

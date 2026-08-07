@@ -1,0 +1,13 @@
+# Live SMTP credentials — NEVER commit
+smtp_config.json
+
+# Asset build cache (downloaded optimized assets)
+_tools/.asset_cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# Runtime logs / build artifacts
+_tools/*.log
+_tools/*.out

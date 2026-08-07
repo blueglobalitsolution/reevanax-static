@@ -1,0 +1,25 @@
+
+.monsterinsights-ecommerce-breakdown-selector {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+.monsterinsights-ecommerce-breakdown-selector__label {
+	font-size: 14px;
+	font-weight: 500;
+	color: #333;
+}
+.monsterinsights-ecommerce-breakdown-selector__select {
+	padding: 6px 12px;
+	font-size: 13px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	background: #fff;
+	outline: none;
+	cursor: pointer;
+	min-width: 140px;
+}
+.monsterinsights-ecommerce-breakdown-selector__select:focus {
+	border-color: #509fe2;
+}

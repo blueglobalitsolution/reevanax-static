@@ -1,0 +1,1245 @@
+{
+    "errors":{
+       "fatal": "Oh, non era quello che ci aspettavamo! Qualcosa \u00e8 andato storto.",
+       "custom_javascript":{
+          "title": "Errore javascript personalizzato",
+          "message": "Il tuo javascript personalizzato si \u00e8 verificato un errore. Leggere l'errore seguente:"
+       },
+       "saving":{
+          "title": "Impossibile salvare le impostazioni",
+          "message": "Si \u00e8 verificato un problema durante il salvataggio delle impostazioni:"
+       },
+       "forms":{
+          "only_numbers": "Sono consentiti solo numeri.",
+          "only_numbers_info": "Per questo input, sono consentiti solo numeri positivi."
+       },
+       "permalink":{
+          "title": "Errore Dimalink",
+          "info": "Le richieste di Buttonizer non funzioneranno quando si utilizza permalink semplice. Per utilizzare Buttonizer, utilizzare un permalink personalizzato"
+       }
+    },
+    "templates":{
+       "all_templates_description": "Please note that you can still customize the button to your own wishes after inserting it",
+       "number_of_buttons": "Number of buttons",
+       "select": "Seleziona",
+       "selected": "Selected",
+       "insert": "Insert",
+       "framedesign":{
+          "label": "Framedesign"
+       },
+       "popular_actions":{
+          "label": "Azioni popolari"
+       }
+    },
+    "warnings":{
+       "invalid_email": "Indirizzo email non valido.",
+       "invalid_phone_number": "Numero di telefono non valido. Si prega di utilizzare solo il numero per il tuo numero di telefono. Omettere zeri, parentesi o trattini quando si aggiunge il numero di telefono in formato internazionale.",
+       "only_numbers": "Questo campo consente solo numeri.",
+       "premium_license_free_version":{
+          "title": "Licenza attivata",
+          "information": "Si prega di scaricare e caricare la versione premium trovato nell'e-mail che ti abbiamo inviato per utilizzare tutte le funzioni premium."
+       },
+       "php_version_outdated":{
+          "title": "This PHP version is no longer supported",
+          "information": "Your current PHP version ({{ version }}) is no longer supported by Buttonizer as it will no longer receive security patches. Some features will not work. We recommend upgrading to the latest version."
+       },
+       "unsaved_changes": "Are you sure you want to exit? Your changes have not been saved."
+    },
+    "common":{
+       "button": "Pulsante",
+       "group": "Gruppo",
+       "settings": "Impostazioni",
+       "custom": "Personalizzato",
+       "confirm": "Conferma",
+       "search": "Cerca",
+       "skip": "Salta",
+       "edit": "Modifica",
+       "type": "Tipo",
+       "or": "o",
+       "select": "Seleziona",
+       "learn_more": "Scopri di pi\u00f9",
+       "off": "Off",
+       "disable": "Disabilita",
+       "disabled": "Disabilitato",
+       "save": "Salva",
+       "saving": "Salvataggio",
+       "saving_settings": "Salvataggio delle impostazioni",
+       "save_and_close": "Save and close",
+       "publish": "Pubblica",
+       "published": "Pubblicato",
+       "publishing": "Pubblicazione...",
+       "warning": "Attenzione",
+       "next": "Successivo",
+       "previous": "Precedente",
+       "save_publish": "Salva e pubblica"
+    },
+    "loading":{
+       "loading": "Caricamento...",
+       "settings": "Caricamento impostazioni in corso...",
+       "bar": "Caricamento barra...",
+       "website": "In attesa del tuo sito web...",
+       "website_slow": "Ci vuole pi\u00f9 tempo del solito, sito lento?",
+       "website_skip": "Salta questo passaggio",
+       "initializing": "Inizializzazione in corso...",
+       "resetting": "Sto reimpostando \u2026",
+       "running_migration": "Esecuzione della migrazione in corso in corso...",
+       "finishing": "Finendo\u2026"
+    },
+    "utils":{
+       "add_button": "Aggiungi pulsante",
+       "add_group": "Aggiungi gruppo",
+       "create_group": "Crea nuovo gruppo",
+       "shift_click": "Shift + Click to skip dialog",
+       "new_button": "Nuovo pulsante",
+       "new_group": "Nuovo gruppo",
+       "style": "Stile",
+       "advanced": "Avanzate",
+       "text": "Testo",
+       "base": "Base",
+       "icon": "Icona",
+       "color": "Colore",
+       "image": "Immagine",
+       "image_url": "Image URL",
+       "select_image": "Seleziona immagine",
+       "change_image": "Cambia immagine",
+       "select_file": "Seleziona file",
+       "change_file": "Cambia documento",
+       "remove_image": "Fare clic per rimuovere questa immagine",
+       "first_button": "Primo pulsante",
+       "second_button": "Secondo pulsante",
+       "rename": "Rinomina",
+       "rename_to": "Rinomina in:",
+       "delete": "Elimina",
+       "clear": "Clear",
+       "duplicate": "Duplica",
+       "lowercase_page_rule": "Regola pagina",
+       "lowercase_time_schedule": "orario",
+       "interaction": "Interazione",
+       "background": "Sfondo",
+       "tips_tricks": "Hai bisogno di aiuto? Guida introduttiva, consigli e trucchi",
+       "visit_knowledgebase": "Hai bisogno di aiuto? Visita la nostra guida base!",
+       "search_not_found": "Nessun risultato per:",
+       "icon_selector":{
+          "title": "Selettore icone",
+          "search_icon": "Cerca icona",
+          "loading": "Caricamento icone, si prega di attendere...",
+          "searching_for": "Ricerca di: <bold>{{ keyword }}</bold>, trovati <bold>{{ resultCount }}</bold> risultati.",
+          "found": "Your search found <bold>{{ resultCount }}</bold> results.",
+          "remove_filter": "Rimuovi filtro"
+       },
+       "templates":{
+          "found": "Your search returned <bold>{{ resultCount }}<bold> results."
+       },
+       "crash":{
+          "title": "Buttonizer si \u00e8 schiantato!",
+          "subtitle": "Il nostro team di sviluppo \u00e8 stato informato.",
+          "subtitle2": "Se vuoi aiutarti, dicci cos'\u00e8 successo qui sotto.",
+          "no_super_intro": "We're sorry, Buttonizer has crashed! Would you like to become a SUPER contributor and automatically log errors, including this one?",
+          "no_super_additional_info": "By sharing your crash report with us, you will help us detect exceptions like these so we can resolve them in a future release.",
+          "reload": "Reload"
+       },
+       "knowledge_link": "Hai bisogno di aiuto? Informazioni sull'utilizzo di <bold>{{ setting }}</bold>.",
+       "filter-visibility":{
+          "timeschedule_show_button": "Mostra pulsante in qualsiasi momento",
+          "timeschedule_show_group": "Mostra gruppo in qualsiasi momento",
+          "pagerule_show_button": "Pulsante Mostra in tutte le pagine",
+          "pagerule_show_group": "Mostra gruppo su tutte le pagine"
+       }
+    },
+    "event_tracker":{
+       "title": "Tracciatore di eventi",
+       "window_title": "Tracciatore di eventi"
+    },
+    "modal":{
+       "ok": "OK",
+       "ok_fix": "OK, risolver\u00f2 questo problema",
+       "sure": "Sono sicuro",
+       "lost": "How'd ya get here?",
+       "close": "Chiudi",
+       "cancel": "Annulla",
+       "incorrect": "Immissione errata.",
+       "yes_please": "S\u00ec, grazie",
+       "no_thanks": "No grazie",
+       "dismiss": "Nascondi",
+       "changed_my_mind": "Ho cambiato idea",
+       "save": "Salva",
+       "remove":{
+          "time_schedule":{
+             "window_title": "Rimuovere la pianificazione?",
+             "question": "Sei molto sicuro di voler rimuovere questo orario? I pulsanti che sono ancora associati a questo abaco di tempo diventeranno visibili a meno che non vengano collegati a un altro abaco temporale o non li nascondi.",
+             "no_buttons": "Non ci sono pulsanti collegati a questo programma di tempo. \u00c8 possibile rimuovere questo in modo sicuro.",
+             "num_buttons_multiple": "A questo orario sono associati dei pulsanti <bold>{{ buttonCount }}</bold>!",
+             "num_buttons_single": "C'\u00e8 <bold>1</bold> pulsante allegato a questo orario",
+             "last_warning": "Rimuovere questa pianificazione temporale?"
+          },
+          "button":{
+             "window_title": "Elimina pulsante",
+             "question": "Sei sicuro di voler rimuovere questo pulsante?",
+             "question_remove": "Sei sicuro di voler rimuovere il pulsante chiamato '{{ name }}'?",
+             "cannot_delete_window_title": "Impossibile eliminare il pulsante",
+             "cannot_delete": "Non \u00e8 possibile eliminare questo pulsante perch\u00e9 questo \u00e8 l'unico pulsante rimasto."
+          },
+          "group":{
+             "window_title": "Elimina gruppo",
+             "question": "Sei sicuro di voler rimuovere questo gruppo?",
+             "question_multiple_buttons": "Sei sicuro di voler rimuovere questo gruppo completo? Contiene i pulsanti {{ count }}.",
+             "cannot_delete_window_title": "Impossibile eliminare il gruppo",
+             "cannot_delete": "Non \u00e8 possibile eliminare questo gruppo perch\u00e9 questo \u00e8 l'unico gruppo rimasto."
+          },
+          "page_rule":{
+             "window_title": "Rimuovere la regola di pagina?",
+             "question": "Sei molto sicuro di voler rimuovere questa regola di pagina? I pulsanti ancora associati a questa regola di pagina diventeranno visibili a meno che non vengano associati a un'altra regola di pagina o non li nascondiate.",
+             "no_buttons": "Non ci sono pulsanti associati a questa regola di pagina. \u00c8 possibile rimuovere questo in modo sicuro.",
+             "num_buttons_multiple": "A questa regola di pagina sono associati i pulsanti <bold>{{ buttonCount }}</bold>!",
+             "num_buttons_single": "C'\u00e8 <bold>1</bold> pulsante allegato a questa regola di pagina",
+             "last_warning": "Rimuovere questa regola di pagina?"
+          },
+          "permanent": "Questa azione \u00e8 definitiva e non pu\u00f2 essere annullata."
+       }
+    },
+    "saving":{
+       "saving": "Saving draft...",
+       "failed": "Failed!",
+       "completed": "Saved draft!"
+    },
+    "revert":{
+       "revert_changes": "Annullare le modifiche",
+       "reverting": "Ripristino...",
+       "modal":{
+          "intro": "Sei sicuro di voler annullare le modifiche?",
+          "action": "Le modifiche correnti verranno sovrascritte dai pulsanti e dalle impostazioni pubblicate correnti."
+       },
+       "error":{
+          "title": "Impossibile ripristinare le impostazioni",
+          "message": "Si \u00e8 verificato un problema durante il ripristino delle impostazioni."
+       }
+    },
+    "welcome":{
+       "title": "Grazie per aver usato Buttonizer!",
+       "intro": "Siamo lieti di darvi il benvenuto a <b>Buttonizer 2.0<\/b>!",
+       "super-contributor": "Diventa un collaboratore SUPER inviandoci automaticamente segnalazioni di arresti anomali e log degli errori. In questo modo possiamo bugfix i vostri bug con la velocit\u00e0 della luce. Non preoccuparti, tutti i dati sono anonimizzati.",
+       "learn-more": "Scopri di pi\u00f9",
+       "no-thanks": "No grazie",
+       "yes-please": "Si per favore!",
+       "tour": "We've created a tour for our new Buzzers. Would you like to take the tour?",
+       "already_know": "No grazie, so come funziona",
+       "take_tour": "S\u00ec, grazie",
+       "open_menu": "Apre il men\u00f9",
+       "back_to_overview": "Ritorna al Riepilogo"
+    },
+    "buttonizer_tour":{
+       "title_interface_tour": "Welcome to Buttonizer!",
+       "intro_interface_tour": "We've created a tour for our new Buzzers. Would you like to take the tour? If not, feel free to watch a tour whenever you want. You can find all of our tours in the <bold>settings</bold> of Buttonizer.",
+       "title_new_features_tour": "What's New?",
+       "intro_new_features_tour": "Keep up-to-date with the newest releases, feature updates, and news from Buttonizer by following this short tour. Do not worry if you can not follow it right now! You can find this tour in the <bold>settings</bold> of Buttonizer.",
+       "already_know": "No, thanks",
+       "take_tour": "Let's go",
+       "previous": "Precedente",
+       "next": "Successivo",
+       "done": "Done",
+       "final":{
+          "title": "That was it! ",
+          "intro": "Thank you for taking the tour! If you have any questions, ask them on the <b><a href=\"https:\/\/community.buttonizer.pro\" target=\"_blank\">Buttonizer Community<\/a><\/b> forums. And if you have any feedback regarding the Buttonizer Tour, we'd love to hear it :) Enjoy Buttonizing!"
+       },
+       "interface_tour":{
+          "step_0":{
+             "title": "Gruppo",
+             "intro": "A group can have multiple buttons that work separately from each other. This group contains your first Buttonizer button! Click on \u201cAdd button\u201d to add more buttons to this group."
+          },
+          "step_1":{
+             "title": "Impostazioni",
+             "intro": "Let's go to the settings of the group to view the different configurations."
+          },
+          "step_2":{
+             "title": "Generale",
+             "intro": "The general settings control some basic configuration for your button. You can change the label, position and style of the group here. Make sure the label is short and clear."
+          },
+          "step_3":{
+             "title": "Pulsante",
+             "intro": "Easily customize your button by choosing the color of your button, icon and the color. Make sure the button and text are clearly visible. You can set a different style for the normal and hover state."
+          },
+          "step_4":{
+             "title": "Navigation",
+             "intro": " This button makes navigation between the different buttons easier. You can also go to the group\u2019s settings."
+          },
+          "step_5":{
+             "title": "Pubblica",
+             "intro": "Adjustments are automatically saved in the editor and won\u2019t be shown on the site. Make sure to click <b>\"Publish\"<\/b> to see these changes on your website."
+          },
+          "step_6":{
+             "title": "Menu",
+             "intro": "This menu contains a list of options where you can go to settings, Page Rules and the Buttonizer Community. You can also manage your own account here."
+          },
+          "step_7":{
+             "title": "Impostazioni",
+             "intro": "You can change your settings for Buttonizer, including settings for Google Analytics, icon library, preferences and you can reset Buttonizer."
+          },
+          "step_8":{
+             "title": "More Buttonizer Tours",
+             "intro": "We have more tours in store which are more in-depth and will help you improve your experience with Buttonizer even more. Go to <b><a onClick=\"app.closeButtonizerTour()\">settings<\/a><\/b> to enjoy another tour!"
+          },
+          "step_9":{
+             "title": "Supporto",
+             "intro": "Our support helps you troubleshoot common issues, find solutions, ask questions, and share tips with other Buzzers."
+          }
+       },
+       "create_button_tour":{
+          "step_0":{
+             "title": "Nuovo pulsante",
+             "intro": "If you would like to have a single Floating Action Button that triggers a primary action, then we would advise you to create a single button. "
+          },
+          "step_1":{
+             "title": "Settings for button",
+             "intro": "Let's go to the settings of the button to view the different configurations."
+          },
+          "step_2":{
+             "title": "Generale",
+             "intro": "The general settings control some basic configuration for your button. You can change the action type and the label of the button here."
+          },
+          "step_3":{
+             "title": "Azione pulsante",
+             "intro": "The Button action in the general settings specify where to send your website visitors too once you have added an action to the button."
+          },
+          "step_4":{
+             "title": "Open URL in:",
+             "intro": "This feature provides an easy and simple way to open the linked URL of the button action in the same tab, a new browser window or a new tab."
+          },
+          "step_5":{
+             "title": "Visibilit\u00e0 del dispositivo",
+             "intro": "You can decide if your button should be available on mobile devices and\/ or on computers."
+          },
+          "step_6":{
+             "title": "Testo etichetta",
+             "intro": "You can add and change the text of the label here. Choose a label that is short and clear."
+          },
+          "step_7":{
+             "title": "Style your button",
+             "intro": "If you want to change the colors of your button, then you can go to the tab Style and you will see that the first settings are the color settings for your button."
+          },
+          "step_8":{
+             "title": "Normal vs hover",
+             "intro": "You can set a different button style for the normal and hover state."
+          },
+          "step_9":{
+             "title": "Background color",
+             "intro": "To change the background color of a button, use the color picker. Pick a background color that improves your button's readability and usability."
+          },
+          "step_10":{
+             "title": "Raggio Bordo:",
+             "intro": "You can add rounded corners to a button with the border-radius property. Try to set a single radius to make circular corners."
+          },
+          "step_11":{
+             "title": "Icona",
+             "intro": "Learn how to add a Font Awesome icon to your button."
+          },
+          "step_12":{
+             "title": "Icon vs image",
+             "intro": "Your floating action button can contain an icon that promotes a primary action. You can either select an icon in Buttonizer or import your own image."
+          },
+          "step_13":{
+             "title": "Seleziona icona",
+             "intro": "Pick an icon you would like to see in your button."
+          },
+          "step_14":{
+             "title": "Dimensione icona",
+             "intro": "Change the size of your button icons. Increase or decrease the size of icons relative to that inherited font-size."
+          },
+          "step_15":{
+             "title": "Label visibility",
+             "intro": "You can decide if the label next to the button should be available on mobile devices,  computers or on both."
+          },
+          "step_16":{
+             "title": "Label position",
+             "intro": "With label position you can place the label on either side of the button. You can make use of this feature right away to see which position you prefer."
+          },
+          "step_17":{
+             "title": "Font family",
+             "intro": "Choosing the right font is an important step in making your button usable and accessible. Buttonizer automatically grabs the font family from your website, but you can also use the complete set of properties to choose the right font family. "
+          },
+          "step_18":{
+             "title": "Margin",
+             "intro": "With margin you can create more space around your button. Try it out by using pixels or percentages."
+          },
+          "step_19":{
+             "title": "Padding",
+             "intro": "With padding you can control the space between its content and its border. Try it out by using pixels or percentages."
+          }
+       }
+    },
+    "import_export":{
+       "import":{
+          "title": "Import",
+          "select_please": "Please select a Buttonizer export file.",
+          "select_click": "Click or drop a JSON export file",
+          "into_group":{
+             "button": "Import into this group",
+             "text": "Import buttons or replace this group."
+          },
+          "new_group":{
+             "group": "Import group",
+             "button": "Import button",
+             "text": "Import a new group."
+          },
+          "reupload": "Re-upload file",
+          "drag_drop": "Drop export file here",
+          "warning":{
+             "replace": "You are about to <b>replace<\/b> this group with:",
+             "preview": "What you are about to import:",
+             "invalid": "This file is not a Buttonizer file.",
+             "malformed": "The file you have selected is malformed or the file is not a Buttonizer file.",
+             "no_buttons": "This group does not have any buttons to import."
+          }
+       },
+       "properties": "properties",
+       "export":{
+          "title": "Export",
+          "export_button": "Export button",
+          "export_group": "Export group",
+          "merge": "Merge with group style",
+          "warning":{
+             "preview": "What you are about to export:",
+             "no_buttons": "This group does not have any buttons to export.",
+             "no_data": "This button does not have any data to export."
+          }
+       },
+       "import_export": "Import & Export"
+    },
+    "settings":{
+       "settings": "Impostazioni",
+       "tippy_single_button": "Pulsante Aggiungi per abilitare le impostazioni di gruppo",
+       "more_actions": "More actions",
+       "setting_categories":{
+          "menu_style": "Stile menu",
+          "general": "Generale",
+          "group_style": "Stile gruppo",
+          "group_icon": "Icona Gruppo",
+          "button_style": "Stile del pulsante",
+          "button_icon": "Icona pulsante",
+          "label_style": "Stile etichetta",
+          "background": "Sfondo",
+          "icon_style": "Stile Icona",
+          "image_style": "Stile Immagine",
+          "show_or_hide": "Mostrare o nascondere",
+          "label": "Label"
+       },
+       "name":{
+          "title": "Nome pulsante",
+          "description": "Questo \u00e8 il nome del pulsante."
+       },
+       "background_color":{
+          "title": "Colore pulsante",
+          "description": "Questo \u00e8 il colore del tuo gruppo di pulsanti e anche il colore predefinito per i pulsanti all'interno di questo gruppo."
+       },
+       "color_picker":{
+          "options":{
+             "solid": "Solid Color",
+             "linear": "Linear Gradient",
+             "radial": "Radial Gradient"
+          },
+          "new_swatch_description": "Click to add swatch. Right-click any swatch to remove."
+       },
+       "font_family":{
+          "title": "Font family",
+          "placeholder": "Type a custom font",
+          "add": "Type \",\" to add {{ value }}"
+       },
+       "button_size":{
+          "title": "Button Sizes",
+          "menu_button": "Menu button size",
+          "sub_button": "Sub button size"
+       },
+       "label_inside":{
+          "title": "Place label inside button"
+       },
+       "label_same_width":{
+          "title": "Make all labels have same width"
+       },
+       "label_same_height":{
+          "title": "Set height same as the button's"
+       },
+       "background_image":{
+          "title": "Use background image",
+          "description": "Caricare un'immagine se si desidera che un'immagine sia di sfondo anzich\u00e9 di colore. Proporzioni consigliate: quadrato (1:1)."
+       },
+       "border_radius":{
+          "title": "Raggio Bordo:",
+          "description": "Modificare la rotondit\u00e0 di questo gruppo di pulsanti."
+       },
+       "box_shadow":{
+          "title": "Box shadow",
+          "description": "Change the box shadow of this button."
+       },
+       "margin":{
+          "title": "Margin",
+          "description": "Change the position of the label."
+       },
+       "padding":{
+          "title": "Padding",
+          "description": "Change the background size of the label."
+       },
+       "icon":{
+          "title": "Icona",
+          "select": "Seleziona icona",
+          "description": "Scegliere un'icona dalla libreria di icone."
+       },
+       "icon_color":{
+          "title": "Colore Icona",
+          "description": "Modificare il colore dell'icona di questo pulsante."
+       },
+       "icon_image_border_radius":{
+          "title": "Raggio Bordo:",
+          "description": "Modificare il raggio del bordo dell'immagine."
+       },
+       "icon_image_select":{
+          "title": "Icona",
+          "description": "Choose an image to use as this button or group icon. Recommended aspect ratio: square (1:1)"
+       },
+       "icon_image_size":{
+          "title": "Dimensione immagine",
+          "description": "Modificare le dimensioni dell'immagine."
+       },
+       "icon_or_image":{
+          "title": "Grafica",
+          "label": "Select icon type",
+          "description": "Scegliere se utilizzare un'icona o un'immagine come icona del pulsante."
+       },
+       "icon_size":{
+          "title": "Dimensione icona",
+          "description": "Modificare le dimensioni dell'icona di questo pulsante."
+       },
+       "label":{
+          "title": "Etichetta",
+          "description": "Modificare l'etichetta di questo pulsante.",
+          "placeholder": "Testo etichetta"
+       },
+       "label_color":{
+          "title": "Colore del testo",
+          "description": "Modificare il testo e il colore di sfondo dell'etichetta per questo pulsante o gruppo."
+       },
+       "font_size_border_radius":{
+          "title": "Dimensione del carattere e raggio del bordo",
+          "description": "Modificare la dimensione del carattere e il raggio del bordo dell'etichetta per questo gruppo di pulsanti."
+       },
+       "font_size": "Dimensioni testo",
+       "menu_animation":{
+          "title": "Animazione",
+          "description": "Questo animer\u00e0 questo gruppo di pulsanti per ottenere l'attenzione del visitatore. L'animazione si ripete ogni 10 secondi.",
+          "delay": "Delay",
+          "repeat_count": "Repeat Count",
+          "repeat_helper_text": "Enter '0' for unlimited",
+          "animations":{
+             "none": "Nessuna Animazione",
+             "hello": "Buttonizer Ciao",
+             "bounce": "Bounce",
+             "jelly": "Jelly",
+             "pulse": "Pulse"
+          }
+       },
+       "label_position":{
+          "title": "Posizione",
+          "description": "Label position",
+          "warning": "Make sure to add a label",
+          "directions":{
+             "left": "Left",
+             "auto": "Auto",
+             "right": "Right"
+          }
+       },
+       "menu_position":{
+          "title": "Posizione",
+          "description": "Modificare la posizione di questo gruppo di pulsanti.",
+          "horizontal": "Orizzontale",
+          "vertical": "Verticale",
+          "from": "from",
+          "scaled": "Scaled",
+          "absolute": "Absolute",
+          "directions":{
+             "left": "Left",
+             "right": "Right",
+             "bottom": "Bottom",
+             "top": "Top"
+          }
+       },
+       "menu_style":{
+          "title": "Stile menu",
+          "title_short": "Stile",
+          "description": "Modificare lo stile del menu di questo gruppo di pulsanti.",
+          "warning": "Questa impostazione non viene utilizzata quando si utilizza lo stile di menu {{ name }}...",
+          "styles":{
+             "default": "Predefinito",
+             "faded": "Sbiadito",
+             "cornercircle": "Corner circle",
+             "buildingup": "Build Up",
+             "pop": "Pop",
+             "square": "Quadrato",
+             "rectangle": "Rettangolo",
+             "text": "Text only",
+             "texticon": "Text w\/ icon"
+          }
+       },
+       "menu":{
+          "title": "Menu",
+          "title_settings": "Menu settings",
+          "description": "Turn on or off whether the group has a closable menu button"
+       },
+       "opening_animation":{
+          "title": "Opening animation",
+          "description": "Decide what type of opening animation is used for opening\/closing the menu"
+       },
+       "label_desktop":{
+          "title": "Visibilit\u00e0",
+          "description": "Mostra sempre l'etichetta, mostra l'etichetta al passaggio del mouse o nascondi l'etichetta sui <u>dispositivi desktop.<\/u>"
+       },
+       "label_mobile":{
+          "title": "Visibilit\u00e0",
+          "description": "Mostra o nascondi sempre l'etichetta sui <u>dispositivi mobili.<\/u>"
+       },
+       "label_styles":{
+          "group_default": "Group default",
+          "always": "Mostra sempre etichetta",
+          "hover": "Mostra etichetta al passaggio del mouse",
+          "hide": "Nascondi etichetta"
+       },
+       "show_mobile_desktop":{
+          "title": "Mostra su",
+          "device_visibility": "Visibilit\u00e0 del dispositivo",
+          "description": "Scegliere se si desidera rendere visibile questo gruppo di pulsanti su dispositivi desktop e mobili.",
+          "mobile": "Mobile",
+          "desktop": "Desktop",
+          "toggle_desktop": "Attiva\/disattiva la visualizzazione sul desktop",
+          "toggle_mobile": "Attiva\/disattiva la visualizzazione sui dispositivi mobili"
+       },
+       "start_opened":{
+          "title": "Inizio aperto",
+          "description": "Questo gruppo di pulsanti viene aperto quando questa impostazione \u00e8 abilitata."
+       },
+       "use_main_button_style":{
+          "title": "Usa stile gruppo",
+          "description": "Se abilitato, questo pulsante utilizzer\u00e0 lo stesso stile del gruppo di pulsanti.",
+          "warning": "Disabilitare USE GROUP STYLE per accedere a queste impostazioni"
+       },
+       "close_on_click_outside":{
+          "title": "Close on click outside",
+          "description": "This will close the menu if you click outside Buttonizer."
+       },
+       "close_on_click_inside":{
+          "title": "Close on button click",
+          "description": "This will close the menu if you click on a button inside this group."
+       },
+       "open_on_mouseover":{
+          "title": "Open on hover",
+          "description": "This will open the menu if you hover the group button."
+       },
+       "close_on_mouseout":{
+          "title": "Close on mouse out",
+          "description": "This will close the menu if you hover out the group button."
+       },
+       "custom_id":{
+          "title": "ID Personalizzato",
+          "description": "Aggiunge un attributo HTML 'id' personalizzato al pulsante.",
+          "pro_description": "\u00c8 possibile aggiungere un ID personalizzato a ogni pulsante per lo stile.",
+          "placeholder": "Nome ID"
+       },
+       "custom_class":{
+          "title": "Classe personalizzata",
+          "description": "Aggiunge un attributo HTML 'class' personalizzato al pulsante.",
+          "pro_description": "\u00c8 possibile aggiungere una classe personalizzata a ogni pulsante per lo stile.",
+          "placeholder": "Nome classe",
+          "styling_editor": "Open Custom Styling Editor",
+          "styling_editor_title": "Custom Styling Editor"
+       },
+       "selected_page_rule":{
+          "title": "Regola pagina",
+          "description": "Aggiunge un attributo HTML 'class' personalizzato al pulsante.",
+          "pro_description": "\u00c8 possibile aggiungere una classe personalizzata a ogni pulsante per lo stile.",
+          "manage_page_rules": "Gestire le regole di pagina",
+          "cannot_select": "Non \u00e8 possibile selezionare la stessa regola di pagina del suo gruppo!",
+          "show_on_rule_trigger":{
+             "show": "mostra il pulsante quando la regola viene attivata",
+             "hide": "Nascondi il pulsante quando viene attivata la regola"
+          }
+       },
+       "timeout_scroll":{
+          "timeout":{
+             "title": "Timeout",
+             "trigger_once": "Trigger only once",
+             "milliseconds": "Millisecondi",
+             "info": "Mostra Buttonizer dopo {{ value }} secondi"
+          },
+          "scroll":{
+             "title": "Scorrimento",
+             "from_top": "Dall'alto",
+             "show_after": "Mostra Buttonizer dopo 0 secondi",
+             "visibility": "Hide group as starting visibility",
+             "hide": "Nascondi",
+             "show": "Mostra",
+             "info": "Scorrere <bold>{{ scrollValue }}</bold> dall'inizio della pagina al gruppo <bold>{{ showOrHide }}</bold>"
+          }
+       },
+       "exit_intent":{
+          "title": "Intento di uscita",
+          "enable": "Abilitare l'intento di uscita",
+          "pro_description": "Con questa impostazione, puoi attivare Buttonizer per l'animazione prima che l'ospite esca dal tuo sito web.",
+          "description": "L'intento di uscita pu\u00f2 essere utilizzato per attivare un'animazione intorno a Buttonizer quando un visitatore sta lasciando il tuo sito web.",
+          "info": "Nota: l'intento di <b>uscita non<\/b> si attiva in modalit\u00e0 anteprima, ma solo nel tuo sito web LIVE.",
+          "when_to_trigger": "Quando attivare?",
+          "trigger_window": "Attiva quando si esce dalla finestra del browser",
+          "trigger_inactive": "Innesco in inattivit\u00e0 (2 minuti)",
+          "how_often":{
+             "_title": "Con quale frequenza dovrebbe essere attivato?",
+             "once_page": "Attiva solo una volta per pagina",
+             "once_session": "Attiva solo una volta per sessione",
+             "always": "Innesco ogni volta"
+          },
+          "animation":{
+             "_title": "Animazione intenzionale",
+             "focused": "Concentrato",
+             "open_menu": "Apre il men\u00f9",
+             "jump": "Salta una volta e apri",
+             "jump_single": "Jump once",
+             "flip": "Capovolgere e aprire",
+             "flip_single": "Flip"
+          }
+       },
+       "popups":{
+          "generate": "Generate new popup id",
+          "elementor_guide": "Copy and paste this into your Elementor Popup's <b>\"Open By Selector\"<\/b> option. <br \/>",
+          "popup_maker_guide": "In your <b>Popup Settings<\/b>, add a new <b>\"Click to Open\"<\/b> trigger and copy and paste this code in <b>\"Extra CSS Selectors\"<\/b> <br \/>"
+       },
+       "button_action":{
+          "title": "Azione pulsante",
+          "description": "Scegliere un'azione di clic per questo pulsante.",
+          "select": "Scegli azione pulsante",
+          "search_not_found": "Nessuna azione del pulsante trovata per:",
+          "actions":{
+             "group_popular": "Azioni popolari",
+             "group_chat": "Clicca per chattare",
+             "group_social_media": "Social Media",
+             "group_popup": "Popup",
+             "group_actions": "Azioni",
+             "phone_number":{
+                "name": "Azione di chiamata (numero di telefono)",
+                "invalid": "Numero di telefono non valido",
+                "number": "Numero di telefono"
+             },
+             "mail":{
+                "name": "Azione di posta (indirizzo di posta elettronica)",
+                "invalid": "Indirizzo email non valido."
+             },
+             "page":{
+                "name": "Pagina",
+                "placeholder": "Select a page",
+                "helper": "To visualise what page type you have chosen, the value is displayed as: '[Page type]: [Page name]'."
+             },
+             "back_to_top": "Torna su",
+             "go_to_bottom": "Go to bottom",
+             "go_back_one_page": "Torna indietro di una pagina",
+             "share_page": "Condividi pagina",
+             "sms": "SMS",
+             "viber": "Viber non supporta un link \"chat con numero di telefono\". Quando un utente fa clic su questo pulsante si aprir\u00e0 il loro \"aggiungi contatto\" con il numero inserito.",
+             "messenger_chat":{
+                "description": "Facebook Messenger Chat Widget! First, you'll need to <a href=\"https:\/\/developers.facebook.com\/docs\/messenger-platform\/reference\/messenger-profile-api\/domain-whitelisting#page_settings\" target=\"_blank\">whitelist<\/a> your site on Facebook. Then add your <a href=\"https:\/\/www.facebook.com\/help\/1503421039731588\" target=\"_blank\">Page ID<\/a> into the input above.",
+                "invalid": "ID pagina non valido.",
+                "page_id": "ID pagina Facebook",
+                "language": "Messenger Chat Language"
+             },
+             "whatsapp_chat": "WhatsApp Chat",
+             "poptin": "<b>You need to install Poptin's WordPress plugin.<\/b> <\/br>You can find it <b><a href=\"https:\/\/wordpress.org\/plugins\/poptin\/\" target=\"_blank\">here<\/a>.<\/b> <\/br>Once you've made a Poptin paste the <b><a href=\"https:\/\/help.poptin.com\/article\/show\/72942-how-to-show-a-poptin-when-the-visitor-clicks-on-a-button-link-on-your-site\" target=\"_blank\">direct link<\/a><\/b> into the input above.",
+             "share_page_on": "Condividi su  {{ platform }}",
+             "social_sharing":{
+                "social_sharing": "Condivisione Social",
+                "popular": "Popular Social Sharing",
+                "other": "Other Social Sharing"
+             },
+             "clipboard": "Copia URL negli Appunti",
+             "print_page": "Stampa la pagina",
+             "share_page_via": "Condividi tramite  {{ platform }}",
+             "action_discontinued": "<italic>{{ action }}</italic> has been discontinued and replaced with <a>{{ replacement }}</a>.",
+             "url":{
+                "name": "URL del sito web",
+                "invalid": "Questo URL sembra non essere valido. Il pulsante potrebbe non funzionare come previsto.",
+                "invalid_tip": "Ti manca <b>http:\/\/<\/b> o <b>https:\/\/<\/b>? Forse uno spazio non necessario viene aggiunto da qualche parte.",
+                "insecure": "<b>URL non sicuro:<\/b> Siamo spiacenti di interrompere, ma vi consigliamo di utilizzare HTTPS per i vostri URL. Questo \u00e8 un modo pi\u00f9 sicuro per trasportare i dati."
+             },
+             "javascript":{
+                "name": "Pulsante personalizzato azione / JavaScript",
+                "open_dialog": "Aprire l'editor di codice JavaScript",
+                "warning_modal_title": "Avviso! Prima di continuare...",
+                "warning_intro": "Questa azione del pulsante viene modificato da javascript personalizzato a un'azione diversa. Le modifiche a javascript andranno perse.",
+                "warning_question": "Sei sicuro di volere procedere?"
+             },
+             "whatsapp_info": "Inserisci il tuo numero di telefono senza spazi e simboli. Leggi i consigli di WhatsApps <a href=\"https:\/\/faq.whatsapp.com\/en\/android\/26000030\/\" target=\"_blank\"=\"\">cliccando qui.<\/a>",
+             "twitter_info": "Quando si desidera utilizzare Twitter DM \u00e8 necessario trovare il tuo ID utente Twitter e consentire i messaggi diretti da chiunque. Per trovare l'ID account <a href=\"https:\/\/tweeterid.com\/\" target=\"_blank\"=\"\">clicca qui<\/a>. E per saperne di pi\u00f9 su come consentire i messaggi diretti da chiunque, <a href=\"https:\/\/help.twitter.com\/nl\/using-twitter\/direct-messages#receive\" target=\"_blank\"=\"\">clicca qui<\/a>.",
+             "signal_group_info": "Paste the generated Signal group URL into the field. If you need more information about how to enable group invite links, <a href=\"https:\/\/support.signal.org\/hc\/en-us\/articles\/360051086971-Group-Link-or-QR-code\" target=\"_blank\">click here<\/a>.",
+             "chat":{
+                "sms": "SMS",
+                "messenger_chat": "Facebook Messenger Chat Widget",
+                "messenger_link": "Facebook Messenger Link",
+                "twitter_dm": "Twitter DM",
+                "skype": "Skype",
+                "line": "LINE",
+                "waze": "Waze",
+                "telegram": "Telegram",
+                "viber": "Viber",
+                "signal_group": "Join signal group"
+             },
+             "social_media":{
+                "facebook": "Facebook",
+                "twitter": "Twitter",
+                "instagram": "Instagram",
+                "snapchat": "Snapchat",
+                "linkedin": "LinkedIn",
+                "vk": "VKontakte",
+                "waze": "Waze"
+             }
+          },
+          "placeholders":{
+             "sms": "Testo",
+             "message": "Messaggio",
+             "username": "Username",
+             "mail":{
+                "recipient": "Destinatario",
+                "subject": "Oggetto",
+                "cc": "cc",
+                "bcc": "bcc",
+                "body": "Corpo"
+             }
+          },
+          "open_url":{
+             "title": "Open URL in: "
+          },
+          "rel_attributes":{
+             "title": "Rel attributes",
+             "placeholder": "Set link rel attributes."
+          }
+       },
+       "button_group_window":{
+          "filters": "Filtri",
+          "styling": "Stile",
+          "timeout_scroll": "Timeout e scorrimento"
+       }
+    },
+    "settings_window":{
+       "title": "Impostazioni Buttonizer",
+       "description": "Gestire le impostazioni di Buttonizer",
+       "icon_library":{
+          "title": "Libreria Icone",
+          "description": "Scegli il tuo iconset",
+          "free": "gratuito",
+          "latest": "Ultimi (automatico)",
+          "info": "Se il tema viene caricato automaticamente in una libreria, \u00e8 sufficiente selezionare la libreria di icone corretta.",
+          "select_version":{
+             "title": "Seleziona versione",
+             "info": "Selezionare la versione corretta della libreria per utilizzare le icone in Buttonizer."
+          },
+          "library_license_key":{
+             "info": "\u00c8 stata selezionata una libreria di icone con icone premium. Immettere il codice di licenza della libreria per visualizzarli e utilizzarli.",
+             "how_does_it_work": "Come funziona?",
+             "enter_integrity_code": "Immettere il codice integrity"
+          },
+          "import_library":{
+             "title": "Importa libreria di icone",
+             "info": "Buttonizer deve importare la libreria di icone nel tema? Se il tema importa gi\u00e0 la libreria, \u00e8 possibile disattivarla."
+          }
+       },
+       "google_analytics":{
+          "title": "Google Analytics",
+          "enable": "Abilita Google Analytics",
+          "description": "Misura le tue conversioni",
+          "intro": "Se abilitata, Buttonizer registrer\u00e0 automaticamente i clic sul tuo account Google Analytics. Puoi forzare Buttonizer a non utilizzare Google Analytics disabilitando questa opzione.",
+          "tracking_code_info": "Google Analytics viene rilevato automaticamente se lo hai aggiunto alla tua pagina web. Ma, se non si fa uso di Google Analytics ancora e questa \u00e8 la prima volta, Buttonizer pu\u00f2 aggiungere per voi.",
+          "tracking_code_warning": "Se hai aggiunto Google Analytics alla tua pagina web in precedenza e Buttonizer aggiunge anche lo stesso codice Analytics, sar\u00e0 pasticciare con i dati di analisi!",
+          "input": "UA Code",
+          "link": "Dove posso vedere i miei dati di clic dei miei pulsanti in Google Analytics?"
+       },
+       "other_settings":{
+          "title": "Preferenze",
+          "description": "Gestire le preferenze",
+          "admin_button":{
+             "title": "Mostra barra superiore amministratore",
+             "info": "Nascondi Buttonizer nella barra superiore dell'amministratore disabilitando questa impostazione."
+          },
+          "tooltips":{
+             "title": "Mostra suggerimenti",
+             "info": "Nascondere le descrizioni comandi disabilitando questa impostazione."
+          },
+          "tips":{
+             "title": "Mostra suggerimenti Buttonizer",
+             "info": "Nascondere i suggerimenti di Buttonizer nel dashboard disabilitando questa impostazione"
+          },
+          "subdomain":{
+             "title": "Supporto per sottodomini",
+             "info": "Alcuni siti web WordPress utilizzano sottodomini per scopi di contenuto. Attivare questa impostazione per consentire il caricamento di Buttonizer nei sottodomini. Abilitarlo solo quando ne hai bisogno."
+          },
+          "ajax":{
+             "title": "Utilizzare ajax per caricare i pulsanti",
+             "info": "Questa funzione \u00e8 stata creata per assicurarsi che Buttonizer non rallenti il tuo sito web. Se desideri visualizzare i pulsanti immediatamente senza loadtime, disattiva questa impostazione. L'impect di carico dipender\u00e0 dalla quantit\u00e0 di pulsanti e gruppi attualmente disponibili."
+          },
+          "error_logging":{
+             "title": "Registrazione automatica degli errori e segnalazione degli arresti anomali",
+             "info": "Abilita la registrazione automatica degli errori e la segnalazione degli arresti anomali per aiutarci a risolvere i problemi all'interno di Buttonizer! Tutti i dati vengono resi anonimi automaticamente."
+          },
+          "no_limit":{
+             "title": "Show more than 7 buttons in a group!",
+             "info": "When enabled, it will disable the 7 button limit in Buttonizer. This means that you will be able to add as much buttons you can fit in the screen!"
+          },
+          "reset_opt_in":{
+             "title": "Opt-in to Buttonizer",
+             "info": "Currently you are opted out for sharing your WordPress environment information. When you want to make use of Buttonizer Pro, you need to opt-in. For more information, check out the opt-in page.",
+             "button": "Reset opt-in"
+          },
+          "additional_roles":{
+             "title": "Permissions",
+             "info": "You can grant more roles to access the Buttonizer settings who are not an administrator.",
+             "roles": "Select roles"
+          }
+       },
+       "buttonizer_tour":{
+          "title": "Buttonizer tour",
+          "description": "Helps you with step-by-step tours",
+          "interface":{
+             "title": "Buttonizer interface",
+             "description": "Make a tour through Buttonizer's interface"
+          },
+          "create_button":{
+             "title": "Create a button",
+             "description": "Learn how to make floating action buttons"
+          }
+       },
+       "changelog_dialog":{
+          "title": "What's new?",
+          "all_changelogs": "View all changelogs",
+          "new_features": "New features",
+          "first_feature":{
+             "title": "New styling options!",
+             "info": "We've added much more styling options for the group and the buttons. Now you can truly customize the buttons to your liking."
+          },
+          "second_feature":{
+             "title": "Load in templates",
+             "info": "Instead of creating your own buttons and groups, you can save time by loading ready-made templates. Click \"add button\" or \"create new group\" to see all templates available."
+          },
+          "third_feature":{
+             "title": "Updated menu position for button styles",
+             "info": "We have slightly adjusted the placement of the settings for changing the button position. Don't worry, you can still find the settings under the \"Advanced\" tab."
+          },
+          "fourth_feature":{
+             "title": "\"Shift + click\" to skip a dialog",
+             "info": "You can now press shift + click when adding, deleting and duplicating to skip the confirmation dialog."
+          }
+       },
+       "reset":{
+          "title": "Reimposta buttonizer",
+          "description": "Se hai bisogno di un'installazione pulita",
+          "info": "Si tratta di un modo per ripristinare le impostazioni predefinite di Buttonizer.",
+          "what_will_happen":{
+             "title": "Cosa succede quando faccio clic sul pulsante rosso qui sotto?",
+             "info": "Il plugin otterr\u00e0 un 'reset di fabbrica'. Tutte le impostazioni di Buttonizer verranno eliminate, tornando a quando \u00e8 stato installato e attivato Buttonizer per la prima volta."
+          },
+          "why":{
+             "title": "Perch\u00e9 dovrei farlo?",
+             "info": "Forse hai rovinato i pulsanti, le categorie o le impostazioni e vorresti iniziare da zero. O forse ti senti solo a provare il pulsante di reset..."
+          },
+          "license":{
+             "title": "Ho un numero di licenza, cosa ne dici?",
+             "info": "Nessun problema! Non succeder\u00e0 nulla con la tua licenza! Reimposta solo quanto segue:",
+             "list":{
+                "buttons": "Tuoi pulsanti",
+                "groups": "tuoi gruppi di pulsanti",
+                "time_schedules": "Pianificazioni di tutti i tempi",
+                "page_rules": "Tutte le regole di pagina",
+                "settings": "Tutte le altre impostazioni di Buttonizer",
+                "published": "Tutte le impostazioni pubblicate"
+             }
+          },
+          "default_settings":{
+             "title": "Ok, suona bene. E allora?",
+             "info": "Buttonizer torner\u00e0 alle impostazioni predefinite e si sentir\u00e0 come una nuova installazione. Questo \u00e8 tutto."
+          },
+          "ready":{
+             "title": "Ok, sono pronto!",
+             "info": "Premere il pulsante rosso qui sotto per reimpostare Buttonizer. Non ci saranno pi\u00f9 avvertimenti.",
+             "button": "Reset Buttonizer"
+          }
+       }
+    },
+    "bar":{
+       "previous_session": "Carica le modifiche dalla sessione precedente",
+       "edit_group_settings": "Modificare le impostazioni del gruppo",
+       "preview":{
+          "no_changes": "Probabilmente hai fatto clic su un link, questo ti ha fatto lasciare la finestra di anteprima di Buttonizer. Non \u00e8 possibile visualizzare le modifiche qui.",
+          "return": "Torna all'anteprima",
+          "desktop": "Anteprima desktop",
+          "tablet": "Anteprima Tablet",
+          "mobile": "Anteprima mobile"
+       },
+       "breadcrumb":{
+          "home": "Home",
+          "tippy_home": "Torna alla panoramica",
+          "tippy_group": "Torna al gruppo"
+       },
+       "menu":{
+          "version": "Versione 0.0.0",
+          "knowledgebase":{
+             "title": "Documentazione base",
+             "description": "Scopri tutto quello che c'\u00e8 da sapere su Buttonizer"
+          },
+          "support_group": "Supporto",
+          "support":{
+             "title": "Ho bisogno di supporto",
+             "description": "Supporto diretto con gli sviluppatori Buttonizer"
+          },
+          "community":{
+             "title": "Comunit\u00e0",
+             "description": "Interagire con gli altri utenti di Buttonizer"
+          },
+          "tour":{
+             "title": "Tour Buttonizer (consigliato!)",
+             "description": "Inizia il tour di 2 minuti"
+          },
+          "wp_admin": "Torna alla dashboard di WordPress",
+          "follow": "Seguici per consigli e trucchi utili!",
+          "account_group": "Account Buttonizer",
+          "account":{
+             "title": "Il mio account",
+             "description": "Visualizzare i dettagli della licenza e dell'account"
+          },
+          "upgrade":{
+             "title": "Aggiornamento o prezzi",
+             "description": "Un'immersione profonda in tutte le possibilit\u00e0"
+          },
+          "affiliation":{
+             "title": "Affiliazione",
+             "description": "Guadagna promuovendo Buttonizer"
+          },
+          "options":{
+             "title": "Opzioni"
+          }
+       },
+       "buttons":{
+          "now_editing": "Ora la modifica:",
+          "tippy_new_group": "Questo crea un nuovo gruppo con 2 pulsanti all'interno.",
+          "tippy_single_button": "In questo modo viene creato un nuovo pulsante, all'esterno di altri gruppi.",
+          "tippy_learn_more": "Ulteriori informazioni su gruppi e pulsanti",
+          "tippy_drag_warning": "Non puoi trascinare l'unico pulsante rimasto in un gruppo!",
+          "convert_to_group": "Converti in gruppo"
+       }
+    },
+    "migration_modal":{
+       "title": "Ciao Buttonizer!",
+       "intro": "Sembra che hai installato Buttonizer 2.0 prima. Ma, hai installato di nuovo la versione 1.5 in seguito e aggiornato di nuovo alla 2.0!",
+       "convert": "L'avanzamento della migrazione non \u00e8 stato eseguito come allora. Per convertire i pulsanti, premi il pulsante qui sotto!",
+       "popping_up": "Se questa finestra continua a spuntare, anche quando hai provato a convertire i pulsanti, prova a reimpostare Buttonizer. Vai all'icona 'ingranaggio' ({1}) nella barra in alto, seleziona 'Opzioni {2}' e la scheda 'Ripristina' e segui le istruzioni.",
+       "convert_buttons": "Converti i miei bottoni!"
+    },
+    "premium":{
+       "modal":{
+          "title": "Caratteristica Premium",
+          "describe": "Ciao, questa funzione \u00e8 una caratteristica premium. Descriveremo ci\u00f2 che questa funzione far\u00e0:",
+          "go_pro": "Vai pro",
+          "list":{
+             "button_sizes": "Change the size of the buttons and groups",
+             "time_schedules": "Mostra pulsanti (gruppi) utilizzando le pianificazioni di tempo avanzate",
+             "page_rules": "Mostra pulsante (gruppi) su pagine specifiche utilizzando le regole avanzate della pagina",
+             "button_groups": "Creare pi\u00f9 gruppi di pulsanti",
+             "custom_images": "Sfondo pulsante personalizzato e immagine dell'icona",
+             "exit_intent": "Intento di uscita",
+             "show_on_scroll": "Mostra o nascondi a scorrimento",
+             "show_on_timeout": "Mostra al timeout",
+             "custom_class": "Essere in grado di impostare i nomi delle classi CSS e gli ID dei pulsanti",
+             "javascript": "Esegui javascript sui clic sui pulsanti"
+          }
+       },
+       "time_schedules":{
+          "first_time_schedule": "Il mio primo programma di tempo"
+       },
+       "warning_duplicate": "La duplicazione dei pulsanti \u00e8 disabilitata per la versione gratuita",
+       "page_rules":{
+          "first_page_rule": "La mia regola per la prima pagina"
+       },
+       "menu_styles":{
+          "text": "This menu style will remove the icon and add the label into the button, making it one long button.",
+          "text-icon": "This menu style will add the label into the button with an icon, making it one long button."
+       },
+       "multiple_button_groups": "\u00c8 possibile aggiungere pi\u00f9 gruppi in posizioni diverse",
+       "custom_image": "\u00c8 possibile selezionare le immagini e impostarle come icona o come immagine di sfondo del pulsante.",
+       "show_on_timeout": "Con questa impostazione, \u00e8 possibile visualizzare\/nascondere il pulsante dopo un determinato periodo di tempo.",
+       "show_on_scroll": "With this setting, you can make your button appear\/hide after scrolling for a certain amount.",
+       "add_animation_settings": "With this setting, you can change your animation settings like delay and repeat count.",
+       "font_family": "With this setting, you can change the font family of the label. You choose a font add your custom font.",
+       "margin": "With this setting, you can change the margin of the label. Change the position of the label relative to it's button",
+       "padding": "With this setting, you can change the size of the label."
+    },
+    "page_rules":{
+       "name": "Regole di pagina",
+       "menu_description": "Scegliere la pagina in cui visualizzare un pulsante (gruppo)",
+       "window_title": "Gestione regole pagina",
+       "window_description": "\u00c8 possibile impostare le regole di pagina tramite questa finestra. Quando si aggiungono pagine o definizioni a questa regola di pagina, i pulsanti associati a questa regola di pagina verranno visualizzati o nascosti a seconda delle impostazioni non appena viene attivata.",
+       "pro_description": "\u00c8 possibile impostare regole di pagina che verranno attivate in pagine o ruoli utente specifici. \u00c8 possibile creare regole di pagina illimitate con pi\u00f9 regole da attivare.",
+       "add_page_rule": "Aggiungi regola di pagina",
+       "name_your_page_rule": "Assegna un nome alla regola della pagina:",
+       "single_name": "Regola pagina",
+       "input_any_page": "Mostra il pulsante in qualsiasi pagina",
+       "remove_page_rule": "Rimuovere la regola di pagina",
+       "open_settings": "Aprire le impostazioni di Regole di pagina",
+       "current_page_rule": "Regola pagina corrente",
+       "behaviour": "Comportamento delle condizioni delle regole della pagina",
+       "trigger": "Si attiva quando UNO dei valori selezionati \u00e8 vero (true)",
+       "conditions":{
+          "title": "Condizioni",
+          "show_group_on": "Mostra gruppo quando questa regola di pagina \u00e8 attivata",
+          "hide_group_on": "Nascondi gruppo quando questa regola di pagina \u00e8 attivata",
+          "show_button_on": "mostra pulsante quando questa regola di pagina \u00e8 attivata",
+          "hide_button_on": "nascondi pulsante quando questa regola di pagina \u00e8 attivata",
+          "add": "Aggiungi condizione"
+       },
+       "empty":{
+          "page": "Nessuna regola di pagina",
+          "selected": "Nessuna regola di pagina selezionata",
+          "rules": "Non ci sono regole per questa regola di pagina. Tutti i pulsanti associati a questa regola di pagina saranno visibili. Premere 'Aggiungi condizione' per aggiungerne una!"
+       },
+       "types":{
+          "must_meet": "Tutte le condizioni devono soddisfare (AND)",
+          "one_meets": "Almeno una condizione deve soddisfare (OR)"
+       },
+       "rule_and": "e",
+       "rule_or": "o",
+       "rules":{
+          "page": "Pagina",
+          "page_title": "Il titolo della pagina contiene",
+          "blog": "Blog",
+          "blog_title": "Il titolo del blog contiene",
+          "category": "Categoria",
+          "url_match": "URL match",
+          "url_match_exact": "Exact URL match",
+          "url_contains": "L'URL contiene",
+          "url_starts": "L'URL inizia con",
+          "url_ends": "L'URL termina con",
+          "url_regex": "URL regular expression",
+          "user_roles": "L'utente ha ruolo",
+          "user_logged_in": "L'utente ha eseguito l'accesso",
+          "user_logged_out": "L'utente \u00e8 disconnesso"
+       },
+       "rules_group":{
+          "content_based": "Basato sul contenuto",
+          "url": "Url",
+          "users": "Utenti"
+       },
+       "debug":{
+          "title": "Debug",
+          "test": "Test out this page rule",
+          "invalid": "This URL appears to be invalid. You need to use the whole URL of your page.",
+          "example": "It should look something like {0}",
+          "user_roles": "User role test",
+          "debug_page": "Debug page",
+          "triggered": "This Page Rule is triggered",
+          "not_triggered": "This Page Rule is not triggered",
+          "one_met": "One or more conditions were met",
+          "all_met": "All conditions were met",
+          "one_not_met": "One or more conditions were not met",
+          "all_not_met": "All conditions were not met",
+          "type": "Condition type",
+          "set_value": "Condition value",
+          "got_value": "Received value",
+          "trigger": "Triggered"
+       },
+       "select_items": "Selezionare uno o pi\u00f9 elementi.",
+       "remove_rule": "Sei sicuro di voler rimuovere questa regola?",
+       "remove_rule_aborted": "Interrotta. Ogni regola di pagina deve mantenere almeno una regola.",
+       "warning_changing_rule": "Hai ancora selezionato i valori, sei sicuro di voler rimuovere questo?",
+       "rule_value": "Valore della regola"
+    },
+    "time_schedules":{
+       "name": "Orari",
+       "menu_description": "Ad esempio: Mostra un pulsante Chiamami ora solo negli orari di apertura",
+       "single_name": "Orario",
+       "window_title": "Gestore orari pianificazione",
+       "pro_description": "\u00c8 possibile impostare le pianificazioni dei tempi che verranno attivate in orari specifici di un giorno. \u00c8 anche possibile modificare le azioni di pianificazione per giorni specifici. \u00c8 possibile creare un numero illimitato di pianificazioni.",
+       "open_settings": "Aprire le impostazioni di pianificazione temporale",
+       "current_time_schedule": "Orari correnti:",
+       "empty":{
+          "page": "Non hai orari",
+          "selected": "Nessuna pianificazione temporale selezionata"
+       },
+       "dates": "Date",
+       "add_schedule": "Aggiungere la pianificazione temporale",
+       "add_date": "Aggiungi date",
+       "new_schedule": "Nuova Programmazione",
+       "name_schedule": "Assegnare un nome al nuovo orario:",
+       "rename_schedule": "Rinomina pianificazione in:",
+       "show_any_time": "Mostra il pulsante in qualsiasi momento",
+       "till": "fino a",
+       "conditions":{
+          "show_group_on": "Mostra gruppo quando questa pianificazione temporale \u00e8 attivata",
+          "hide_group_on": "Nascondi gruppo quando viene attivata questa pianificazione temporale",
+          "show_button_on": "mostra pulsante quando questa pianificazione temporale \u00e8 attivata",
+          "hide_button_on": "nascondi pulsante quando questa pianificazione temporale \u00e8 attivata"
+       },
+       "trigger":{
+          "trigger": "Trigger on",
+          "dont_trigger": "Non attivare trigger"
+       },
+       "remove_schedule": "Rimuovi pianificazione",
+       "must_keep_one": "\u00c8 necessario mantenere almeno una pianificazione",
+       "current_timezone": "Fuso orario corrente:",
+       "remove_date":{
+          "title": "Rimuovi data",
+          "message": "Sei sicuro di voler rimuovere questa data?"
+       },
+       "errors":{
+          "time_invalid": "Spiacenti, l'ora '{1}' non \u00e8 valida. Ripristino di '{2}'.",
+          "time_overlap_start": "L'ora di inizio '{1}' \u00e8 in conflitto con l'ora di fine '{2}'. Il tempo \u00e8 stato ripristinato a '{3}'. Assicurati di avere almeno 5 minuti di sovrapposizione.",
+          "time_overlap_end": "L'ora di fine '{1}' \u00e8 in conflitto con l'ora di inizio '{2}'. Il tempo \u00e8 stato ripristinato a '{3}'. Assicurati di avere almeno 5 minuti di sovrapposizione."
+       },
+       "weekdays":{
+          "title": "Giorni lavorativi",
+          "monday": "Luned\u00ec",
+          "tuesday": "Marted\u00ec",
+          "wednesday": "Mercoled\u00ec",
+          "thursday": "Gioved\u00ec",
+          "friday": "Venerd\u00ec",
+          "saturday": "Sabato",
+          "sunday": "Domenica"
+       },
+       "exclude":{
+          "title": "Date escluse",
+          "add": "Aggiungi data esclusa",
+          "info": "Aggiungere date specifiche per mostrare o nascondere i pulsanti associati a questo schema di tempo. Ad esempio: \"Il mio negozio \u00e8 aperto dal 22 gennaio alle 22:00 (10:00) a causa di una serata speciale che organizziamo\". La regola sovrascriver\u00e0 le impostazioni predefinite per quel giorno."
+       },
+       "input_start":{
+          "label": "Iniziare a attivare i pulsanti da",
+          "helper": "Data Inizio",
+          "error": "Avviso! La data di inizio '{0}' ha superato la data di fine di questa pianificazione. Se non si modifica questa data, la pianificazione non funzioner\u00e0."
+       },
+       "input_end":{
+          "label": "Interrompi attivazione dei pulsanti dopo (opzionale)",
+          "helper": "Fare clic per aggiungere la data di fine",
+          "placeholder_empty": "Seleziona una data nel controllo selezione data sottostante",
+          "error": "Avviso! La data di fine '{0}' ha superato la data di inizio di questa pianificazione. Se non si modifica questa data, la pianificazione non funzioner\u00e0."
+       }
+    },
+    "random_tips":{
+       "tip_1": "Sapevi che Buttonizer ha diversi stili di gruppo che puoi usare?",
+       "tip_2": "Fare clic sui pulsanti per gestire le impostazioni",
+       "tip_3": "Assegnare un colore ai pulsanti",
+       "tip_4": "Un pulsante pu\u00f2 avere una sola azione, ma puoi scegliere pi\u00f9 di 25 azioni!",
+       "tip_5": "Disattivare questi suggerimenti nelle impostazioni",
+       "tip_6": "You can show more than 7 buttons by enabling it in Preferences ;)",
+       "tip_7": "Incollare il codice HEX nel selettore colore se si desidera utilizzare un colore specifico",
+       "tip_8": "Giocare in modo intelligente con 'Show on desktop' e 'Show on mobile' ti dar\u00e0 fino a 14 pulsanti per pagina!",
+       "tip_9": "You can use Page Rules to show or hide buttons on certain pages",
+       "tip_10": "Puoi utilizzare l'azione del pulsante Condividi social network per consentire a un visitatore di condividere la tua pagina web",
+       "tip_11": "Hai bisogno di una suggerimento (ttoltip) ? ;)",
+       "tip_12": "\u00c8 possibile applicare uno stile al pulsante grande principale modificando il gruppo",
+       "tip_13": "\u00c8 possibile aggiungere una classe o id HTML-attribute a un gruppo e un pulsante",
+       "tip_14": "Vuoi fare un nuovo pulsante simile? Duplica il tuo bottone!",
+       "tip_15": "Se avete un grande consiglio, fatecelo sapere! Lo aggiungeremo :)",
+       "tip_16": "Pssst, clicca sul nome del gruppo\/pulsante in alto",
+       "tip_17": "Intento di uscita... \u00c8 qui che inizia il divertimento!",
+       "tip_18": "With our brand new color picker you can build a personalized palette, create a color scale and blend colors",
+       "tip_19": "Premium users just need one license key for their production environment and development environment",
+       "tip_20": "Give more roles permission to access Buttonizer's dashboard in Preferences!",
+       "tip_21": "Easily edit a specific button by hovering on them on the preview",
+       "tip_22": "Add a custom text when using Social Sharing actions!",
+       "tip_23": "Buttonizer also supports languages that are written from right-to-left :)"
+    }
+ }

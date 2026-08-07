@@ -1,0 +1,32 @@
+# Normalize line endings for text files (repo stores LF, checkout honors core.autocrlf)
+*.html text eol=lf
+*.htm  text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.xml  text eol=lf
+*.sh   text eol=lf
+*.conf text eol=lf
+.htaccess text eol=lf
+
+# Explicitly mark binary media/fonts/archives so they are never diffed/text-transformed
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.svg  binary
+*.ico  binary
+*.mp4  binary
+*.webm binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
+*.zip  binary
+*.bin  binary
+*.bin.meta binary
+*.mmdb binary

@@ -1,0 +1,600 @@
+.archive_sev {
+  margin-bottom: 110px;
+}
+@media (max-width: 767px) {
+  .archive_sev {
+    margin-bottom: 80px;
+  }
+}
+.archive_sev .archive_sev_content {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+}
+.archive_sev .archive_sev_content.two_column {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+  .archive_sev .archive_sev_content.two_column {
+    grid-template-columns: auto;
+  }
+}
+.archive_sev .archive_sev_content.three_column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 991px) {
+  .archive_sev .archive_sev_content.three_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .archive_sev .archive_sev_content.three_column {
+    grid-template-columns: auto;
+  }
+}
+.archive_sev .archive_sev_content.four_column {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .archive_sev .archive_sev_content.four_column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .archive_sev .archive_sev_content.four_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .archive_sev .archive_sev_content.four_column {
+    grid-template-columns: auto;
+  }
+}
+
+.ova-service-list {
+  width: 100%;
+}
+.ova-service-list.template2 .service-title-list li.item {
+  margin-bottom: 0;
+}
+.ova-service-list.template2 .service-title-list li.item:hover a, .ova-service-list.template2 .service-title-list li.item.active a {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.ova-service-list.template2 .service-title-list li.item:hover a .icon-service, .ova-service-list.template2 .service-title-list li.item.active a .icon-service {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.ova-service-list.template2 .service-title-list li.item:hover a .count, .ova-service-list.template2 .service-title-list li.item.active a .count {
+  transition: all 0.3s ease;
+  opacity: 0;
+  top: 20px;
+}
+.ova-service-list.template2 .service-title-list li.item:hover a .icon-arrow, .ova-service-list.template2 .service-title-list li.item.active a .icon-arrow {
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+.ova-service-list.template2 .service-title-list li.item a {
+  font-weight: 400;
+  color: #fff;
+  padding: 35px 5px;
+  background-color: var(--heading);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ova-service-list.template2 .service-title-list li.item a .info {
+  display: flex;
+  column-gap: 30px;
+}
+@media (max-width: 767px) {
+  .ova-service-list.template2 .service-title-list li.item a .info {
+    column-gap: 20px;
+  }
+}
+.ova-service-list.template2 .service-title-list li.item a .icon_count {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.ova-service-list.template2 .service-title-list li.item a .icon-service {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.ova-service-list.template2 .service-title-list li.item a .icon-service i {
+  font-size: 55px;
+}
+@media (max-width: 1024px) {
+  .ova-service-list.template2 .service-title-list li.item a .icon-service i {
+    font-size: 45px;
+  }
+}
+.ova-service-list.template2 .service-title-list li.item a .count {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+}
+.ova-service-list.template2 .service-title-list li.item a .category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.ova-service-list.template2 .service-title-list li.item a .service-title {
+  font-family: var(--secondary-font);
+  font-size: 36px;
+}
+@media (max-width: 1024px) {
+  .ova-service-list.template2 .service-title-list li.item a .service-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .ova-service-list.template2 .service-title-list li.item a .service-title {
+    font-size: 28px;
+  }
+}
+.ova-service-list.template2 .service-title-list li.item a .icon-arrow {
+  opacity: 0;
+  visibility: hidden;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+}
+@media (max-width: 1024px) {
+  .ova-service-list.template2 .service-title-list li.item a .icon-arrow {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+  }
+}
+.ova-service-list.template2 .service-title-list li.item a .icon-arrow i {
+  transform: rotate(-45deg);
+  font-size: 18px;
+  color: #fff;
+}
+.ova-service-list .service-title-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.ova-service-list .service-title-list li.item {
+  padding: 0;
+  margin-bottom: 8px;
+}
+.ova-service-list .service-title-list li.item a {
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 30px;
+  line-height: 1.2;
+  color: var(--heading);
+  background-color: #f5f5f5;
+}
+.ova-service-list .service-title-list li.item a .service-title {
+  display: block;
+}
+.ova-service-list .service-title-list li.item a .icon-arrow {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.ova-service-list .service-title-list li.item a i {
+  display: inline-flex;
+  font-size: 11px;
+  color: var(--primary);
+}
+.ova-service-list .service-title-list li.item:hover a, .ova-service-list .service-title-list li.item.active a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: var(--heading);
+  color: #fff;
+}
+
+.ova-service-box-elementor {
+  display: grid;
+  grid-gap: 30px;
+}
+.ova-service-box-elementor.two_column {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+  .ova-service-box-elementor.two_column {
+    grid-template-columns: auto;
+  }
+}
+.ova-service-box-elementor.three_column {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 991px) {
+  .ova-service-box-elementor.three_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .ova-service-box-elementor.three_column {
+    grid-template-columns: auto;
+  }
+}
+.ova-service-box-elementor.four_column {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .ova-service-box-elementor.four_column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .ova-service-box-elementor.four_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .ova-service-box-elementor.four_column {
+    grid-template-columns: auto;
+  }
+}
+.ova-service-box-elementor.five_column {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .ova-service-box-elementor.five_column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .ova-service-box-elementor.five_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .ova-service-box-elementor.five_column {
+    grid-template-columns: auto;
+  }
+}
+.ova-service-box-elementor.six_column {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 1200px) {
+  .ova-service-box-elementor.six_column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .ova-service-box-elementor.six_column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .ova-service-box-elementor.six_column {
+    grid-template-columns: auto;
+  }
+}
+
+.ova-service-box-template1 {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+  padding: 60px;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+}
+@media (max-width: 520px) {
+  .ova-service-box-template1 {
+    padding: 40px 30px;
+  }
+}
+.ova-service-box-template1:hover {
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+}
+.ova-service-box-template1:hover .mask {
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.ova-service-box-template1:hover .img-service {
+  transition: all 0.5s ease;
+  transform: translateY(5px);
+}
+.ova-service-box-template1 .mask {
+  transition: all 0.5s ease;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-position: top left;
+  background-size: auto;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+}
+.ova-service-box-template1 .img-service {
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 48px;
+}
+.ova-service-box-template1 .img-service img {
+  transition: all 0.5s ease;
+  width: 198px;
+  height: 198px;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+.ova-service-box-template1 .icon {
+  transition: all 0.5s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+.ova-service-box-template1 .icon i {
+  transition: all 0.3s ease;
+  display: inline-flex;
+  font-size: 52px;
+  color: #fff;
+}
+.ova-service-box-template1 a .title:hover {
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+.ova-service-box-template1 .title {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding-bottom: 25px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.ova-service-box-template1 .description {
+  margin: 0 0 25px 0;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(240, 232, 232);
+}
+.ova-service-box-template1 .book-button {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: var(--heading);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.ova-service-box-template1 .book-button:hover {
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+.ova-service-box-template1 .book-button i {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.ova-service-box-template2 {
+  transition: all 0.3s ease;
+  text-align: left;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 50px;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+@media (max-width: 520px) {
+  .ova-service-box-template2 {
+    padding: 30px;
+  }
+}
+.ova-service-box-template2:hover {
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+}
+.ova-service-box-template2:hover .mask {
+  transition: all 0.5s ease;
+  bottom: 0;
+  opacity: 1;
+}
+.ova-service-box-template2:hover .icon i {
+  transition: all 0.5s ease;
+  transform: translateY(-5px);
+}
+.ova-service-box-template2 .mask {
+  transition: all 0.5s ease;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -30px;
+  opacity: 0;
+  background-position: bottom right;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.ova-service-box-template2 .icon {
+  position: relative;
+  display: inline-flex;
+}
+.ova-service-box-template2 .icon i {
+  transition: all 0.5s ease;
+  transform: translateY(0);
+  display: inline-flex;
+  font-size: 66px;
+  color: var(--primary);
+}
+.ova-service-box-template2 a .title:hover {
+  transition: all 0.3s ease;
+  color: var(--primary);
+}
+.ova-service-box-template2 .title {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  margin: 6px 0 23px 0;
+  font-weight: 400;
+  color: var(--heading);
+}
+.ova-service-box-template2 .description {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+  z-index: 1;
+}
+
+.ova-service-box-template3:hover .description {
+  transition: all 0.3s ease;
+  border-top: 1px solid var(--primary);
+}
+.ova-service-box-template3 .img-service {
+  margin-bottom: 30px;
+}
+.ova-service-box-template3 .img-service img {
+  display: block;
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+}
+.ova-service-box-template3 .info .info-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.ova-service-box-template3 .info .info-heading .icon-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.ova-service-box-template3 .title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+.ova-service-box-template3 .icon {
+  font-size: 45px;
+  color: var(--primary);
+}
+.ova-service-box-template3 .book-button {
+  transform: rotate(-45deg);
+}
+.ova-service-box-template3 .book-button i {
+  font-size: 20px;
+  color: var(--heading);
+  line-height: 1;
+}
+.ova-service-box-template3 .description {
+  transition: all 0.3s ease;
+  margin: 25px 0 0 0;
+  padding: 25px 0 0 0;
+  border-top: 1px solid rgba(39, 37, 42, 0.1);
+}
+
+.ova-service-box-template4 {
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 40px 35px 35px 35px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 10px 60px rgba(222, 150, 141, 0);
+}
+.ova-service-box-template4:hover {
+  transition: all 0.3s ease;
+  background-color: var(--primary);
+  box-shadow: 0px 10px 60px rgba(222, 150, 141, 0.75);
+}
+.ova-service-box-template4:hover .count {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: var(--heading);
+}
+.ova-service-box-template4:hover .icon i {
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.ova-service-box-template4:hover .title, .ova-service-box-template4:hover .description {
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.ova-service-box-template4 .count {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+.ova-service-box-template4 .icon i {
+  transition: all 0.3s ease;
+  font-size: 65px;
+  color: var(--primary);
+}
+.ova-service-box-template4 .title {
+  transition: all 0.3s ease;
+  margin: 18px 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.ova-service-box-template4 .description {
+  transition: all 0.3s ease;
+  margin: 20px 0 0 0;
+}

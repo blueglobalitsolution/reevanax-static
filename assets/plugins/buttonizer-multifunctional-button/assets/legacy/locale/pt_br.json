@@ -1,0 +1,1245 @@
+{
+    "errors":{
+       "fatal":"Poxa, n\u00e3o era isso que est\u00e1vamos esperando! Algo deu errado.",
+       "custom_javascript":{
+          "title":"Erro de javascript personalizado",
+          "message":"Seu c\u00f3digo javascript personalizado encontrou um erro. Leia o erro abaixo:"
+       },
+       "saving":{
+          "title":"N\u00e3o foi poss\u00edvel salvar as configura\u00e7\u00f5es",
+          "message":"Ocorreu um erro ao salvar suas configura\u00e7\u00f5es:"
+       },
+       "forms":{
+          "only_numbers":"Somente n\u00fameros permitidos.",
+          "only_numbers_info":"Para esta entrada, apenas n\u00fameros positivos s\u00e3o permitidos."
+       },
+       "permalink":{
+          "title":"Permalink Erro",
+          "info":"As solicita\u00e7\u00f5es do Buttonizer n\u00e3o funcionar\u00e3o ao usar o link permanente normal. Para usar o Buttonizer, use um link permanente personalizado"
+       }
+    },
+    "templates":{
+       "all_templates_description":"Please note that you can still customize the button to your own wishes after inserting it",
+       "number_of_buttons":"Number of buttons",
+       "select":"Selecione",
+       "selected":"Selected",
+       "insert":"Insert",
+       "framedesign":{
+          "label":"Framedesign"
+       },
+       "popular_actions":{
+          "label":"A\u00e7\u00f5es populares"
+       }
+    },
+    "warnings":{
+       "invalid_email":"Endere\u00e7o de email inv\u00e1lido.",
+       "invalid_phone_number":"N\u00famero de telefone inv\u00e1lido. Por favor, use apenas n\u00fameros para informar o seu n\u00famero de telefone. Evite zeros, colchetes ou h\u00edfens ao adicionar o n\u00famero do telefone no formato internacional.",
+       "only_numbers":"Este campo permite apenas n\u00fameros.",
+       "premium_license_free_version":{
+          "title":"Licen\u00e7a ativada",
+          "information":"Fa\u00e7a o download e fa\u00e7a o upload da vers\u00e3o premium encontrada no email que lhe enviamos para usar todas as fun\u00e7\u00f5es premium."
+       },
+       "php_version_outdated":{
+          "title":"This PHP version is no longer supported",
+          "information":"Your current PHP version ({{ version }}) is no longer supported by Buttonizer as it will no longer receive security patches. Some features will not work. We recommend upgrading to the latest version."
+       },
+       "unsaved_changes":"Voc\u00ea tem certeza que quer sair? Suas altera\u00e7\u00f5es n\u00e3o foram salvas."
+    },
+    "common":{
+       "button":"Bot\u00e3o",
+       "group":"Grupo",
+       "settings":"Configura\u00e7\u00f5es",
+       "custom":"personalizadas",
+       "confirm":"confirme",
+       "search":"Procurar",
+       "skip":"Pular",
+       "edit":"Editar",
+       "type":"Tipo",
+       "or":"ou",
+       "select":"Selecione",
+       "learn_more":"Saber mais",
+       "off":"Off",
+       "disable":"Desativar",
+       "disabled":"Desativado",
+       "save":"Salve \ue051",
+       "saving":"Salvando",
+       "saving_settings":"Salvando configura\u00e7\u00f5es",
+       "save_and_close":"Salvar e fechar",
+       "publish":"Publicar",
+       "published":"Publicados",
+       "publishing":"Publicando ...",
+       "warning":"Aviso",
+       "next":"Pr\u00f3ximo",
+       "previous":"Anterior",
+       "save_publish":"Salvar e publicar"
+    },
+    "loading":{
+       "loading":"Carregando...",
+       "settings":"Carregando configura\u00e7\u00f5es ...",
+       "bar":"Barra de constru\u00e7\u00e3o ...",
+       "website":"Aguardando seu site ...",
+       "website_slow":"Est\u00e1 demorando mais do que o normal, site lento?",
+       "website_skip":"Pular esta etapa",
+       "initializing":"Inicializando ...",
+       "resetting":"A repor ...",
+       "running_migration":"Executando a migra\u00e7\u00e3o ...",
+       "finishing":"Acabamento..."
+    },
+    "utils":{
+       "add_button":"Bot\u00e3o Adicionar",
+       "add_group":"Adicionar grupo",
+       "create_group":"Criar novo grupo",
+       "shift_click":"Shift + Click to skip dialog",
+       "new_button":"Bot\u00e3o novo",
+       "new_group":"Novo grupo",
+       "style":"Estilo",
+       "advanced":"Avan\u00e7ado",
+       "text":"Texto",
+       "base":"Base",
+       "icon":"\u00cdcone",
+       "color":"Cor",
+       "image":"Imagem",
+       "image_url":"Image URL",
+       "select_image":"Selecione a imagem",
+       "change_image":"Alterar imagem",
+       "select_file":"Selecione o arquivo",
+       "change_file":"Alterar arquivo",
+       "remove_image":"Clique para remover esta imagem",
+       "first_button":"Primeiro bot\u00e3o",
+       "second_button":"Segundo bot\u00e3o",
+       "rename":"Renomear",
+       "rename_to":"Renomeie para:",
+       "delete":"Excluir",
+       "clear":"Claro",
+       "duplicate":"Duplicado",
+       "lowercase_page_rule":"regra de p\u00e1gina",
+       "lowercase_time_schedule":"hor\u00e1rio",
+       "interaction":"Intera\u00e7\u00e3o",
+       "background":"fundo",
+       "tips_tricks":"Preciso de ajuda? In\u00edcio r\u00e1pido, dicas e truques",
+       "visit_knowledgebase":"Preciso de ajuda? Visite nossa base de conhecimento!",
+       "search_not_found":"Nada foi encontrado para:",
+       "icon_selector":{
+          "title":"Seletor de \u00edcone",
+          "search_icon":"\u00cdcone de pesquisa",
+          "loading":"Carregando \u00edcones, aguarde ...",
+          "searching_for":"Procurando por: <bold>{{ keyword }}</bold>, foram encontrados <bold>{{ resultCount }}</bold> resultados.",
+          "found": "Your search found <bold>{{ resultCount }}</bold> results.",
+          "remove_filter":"Remover filtro"
+       },
+       "templates":{
+          "found":"Your search returned <bold>{{ resultCount }}<bold> results."
+       },
+       "crash":{
+          "title":"O Buttonizer falhou!",
+          "subtitle":"Nossa equipe de desenvolvimento foi notificada.",
+          "subtitle2":"Se voc\u00ea quiser ajudar, conte-nos o que aconteceu abaixo.",
+          "no_super_intro":"We're sorry, Buttonizer has crashed! Would you like to become a SUPER contributor and automatically log errors, including this one?",
+          "no_super_additional_info":"By sharing your crash report with us, you will help us detect exceptions like these so we can resolve them in a future release.",
+          "reload":"Reload"
+       },
+       "knowledge_link":"Preciso de ajuda? Aprenda a usar <bold>{{ setting }}</bold>.",
+       "filter-visibility":{
+          "timeschedule_show_button":"Mostrar bot\u00e3o o tempo todo",
+          "timeschedule_show_group":"Mostrar grupo o tempo todo",
+          "pagerule_show_button":"Mostrar bot\u00e3o em todas as p\u00e1ginas",
+          "pagerule_show_group":"Mostrar grupo em todas as p\u00e1ginas"
+       }
+    },
+    "event_tracker":{
+       "title":"Rastreador de eventos",
+       "window_title":"Rastreador de eventos"
+    },
+    "modal":{
+       "ok":"Est\u00e1 bem",
+       "ok_fix":"OK, eu vou consertar isso",
+       "sure":"Tenho certeza",
+       "lost":"How'd ya get here?",
+       "close":"Perto",
+       "cancel":"Cancelar",
+       "incorrect":"Entrada incorreta.",
+       "yes_please":"sim por favor",
+       "no_thanks":"N\u00e3o obrigado",
+       "dismiss":"Dispensar",
+       "changed_my_mind":"Eu mudei de ideia",
+       "save":"Salve \ue051",
+       "remove":{
+          "time_schedule":{
+             "window_title":"Remover hor\u00e1rio?",
+             "question":"Tem certeza de que deseja remover este cronograma? Os bot\u00f5es que ainda est\u00e3o anexados a esse cronograma ficam vis\u00edveis, a menos que voc\u00ea os anexe a outro cronograma ou oculte-os.",
+             "no_buttons":"N\u00e3o h\u00e1 bot\u00f5es anexados a este hor\u00e1rio. Voc\u00ea pode remover isso com seguran\u00e7a.",
+             "num_buttons_multiple":"Existem <bold>{{ buttonCount }}</bold> bot\u00f5es anexados a este hor\u00e1rio!",
+             "num_buttons_single":"H\u00e1 um bot\u00e3o <bold>1</bold> anexado a este cronograma",
+             "last_warning":"Deseja remover este cronograma?"
+          },
+          "button":{
+             "window_title":"Bot\u00e3o Excluir",
+             "question":"Tem certeza de que deseja remover este bot\u00e3o?",
+             "question_remove":"Tem certeza de que deseja remover o bot\u00e3o chamado '{{ name }}'?",
+             "cannot_delete_window_title":"N\u00e3o \u00e9 poss\u00edvel excluir o bot\u00e3o",
+             "cannot_delete":"Voc\u00ea n\u00e3o pode excluir este bot\u00e3o porque este \u00e9 o \u00fanico bot\u00e3o restante."
+          },
+          "group":{
+             "window_title":"Excluir grupo",
+             "question":"Tem certeza de que deseja remover este grupo?",
+             "question_multiple_buttons":"Tem certeza de que deseja remover este grupo completo? Ele cont\u00e9m {{ count }} bot\u00f5es.",
+             "cannot_delete_window_title":"N\u00e3o \u00e9 poss\u00edvel excluir o grupo",
+             "cannot_delete":"Voc\u00ea n\u00e3o pode excluir este grupo porque este \u00e9 o \u00fanico grupo restante."
+          },
+          "page_rule":{
+             "window_title":"Remover regra de p\u00e1gina?",
+             "question":"Tem certeza de que deseja remover esta regra de p\u00e1gina? Os bot\u00f5es que ainda est\u00e3o anexados a esta regra de p\u00e1gina ficam vis\u00edveis, a menos que voc\u00ea os anexe a outra regra de p\u00e1gina ou oculte-os.",
+             "no_buttons":"N\u00e3o h\u00e1 bot\u00f5es anexados a esta regra de p\u00e1gina. Voc\u00ea pode remover isso com seguran\u00e7a.",
+             "num_buttons_multiple":"Existem <bold>{{ buttonCount }}</bold> bot\u00f5es anexados a esta regra da p\u00e1gina!",
+             "num_buttons_single":"H\u00e1 um bot\u00e3o <bold>1</bold> anexado a esta regra de p\u00e1gina",
+             "last_warning":"Deseja remover esta regra de p\u00e1gina?"
+          },
+          "permanent":"Esta a\u00e7\u00e3o \u00e9 permanente e n\u00e3o pode ser desfeita."
+       }
+    },
+    "saving":{
+       "saving":"Saving draft...",
+       "failed":"Failed!",
+       "completed":"Saved draft!"
+    },
+    "revert":{
+       "revert_changes":"Reverter altera\u00e7\u00f5es",
+       "reverting":"A reverter ...",
+       "modal":{
+          "intro":"Tem certeza de que deseja reverter suas altera\u00e7\u00f5es?",
+          "action":"As altera\u00e7\u00f5es atuais ser\u00e3o substitu\u00eddas pelos bot\u00f5es e configura\u00e7\u00f5es publicados atualmente."
+       },
+       "error":{
+          "title":"N\u00e3o foi poss\u00edvel reverter as configura\u00e7\u00f5es",
+          "message":"Ocorreu um erro ao reverter suas configura\u00e7\u00f5es."
+       }
+    },
+    "welcome":{
+       "title":"Obrigado por usar o Buttonizer!",
+       "intro":"Temos o prazer de receb\u00ea-lo em <b>Buttonizer 2.0 <\/b>!",
+       "super-contributor":"Torne-se um colaborador SUPER enviando automaticamente relat\u00f3rios de falhas e registros de erros. Dessa forma, podemos corrigir seus erros com a velocidade da luz. N\u00e3o se preocupe, todos os dados s\u00e3o anonimizados.",
+       "learn-more":"Saber mais",
+       "no-thanks":"N\u00e3o, obrigado",
+       "yes-please":"Sim por favor!",
+       "tour":"We've created a tour for our new Buzzers. Would you like to take the tour?",
+       "already_know":"N\u00e3o, obrigado, eu sei como funciona",
+       "take_tour":"sim por favor",
+       "open_menu":"Abrir menu",
+       "back_to_overview":"Voltar ao menu principal"
+    },
+    "buttonizer_tour":{
+       "title_interface_tour":"Welcome to Buttonizer!",
+       "intro_interface_tour": "We've created a tour for our new Buzzers. Would you like to take the tour? If not, feel free to watch a tour whenever you want. You can find all of our tours in the <bold>settings</bold> of Buttonizer.",
+       "title_new_features_tour":"What's New?",
+       "intro_new_features_tour": "Keep up-to-date with the newest releases, feature updates, and news from Buttonizer by following this short tour. Do not worry if you can not follow it right now! You can find this tour in the <bold>settings</bold> of Buttonizer.",
+       "already_know":"No, thanks",
+       "take_tour":"Let's go",
+       "previous":"Anterior",
+       "next":"Pr\u00f3ximo",
+       "done":"Done",
+       "final":{
+          "title":"That was it! ",
+          "intro":"Thank you for taking the tour! If you have any questions, ask them on the <b><a>Buttonizer Community<\/a><\/b> forums. And if you have any feedback regarding the Buttonizer Tour, we'd love to hear it :) Enjoy Buttonizing!"
+       },
+       "interface_tour":{
+          "step_0":{
+             "title":"Grupo",
+             "intro":"A group can have multiple buttons that work separately from each other. This group contains your first Buttonizer button! Click on \u201cAdd button\u201d to add more buttons to this group."
+          },
+          "step_1":{
+             "title":"Configura\u00e7\u00f5es",
+             "intro":"Let's go to the settings of the group to view the different configurations."
+          },
+          "step_2":{
+             "title":"Geral",
+             "intro":"The general settings control some basic configuration for your button. You can change the label, position and style of the group here. Make sure the label is short and clear."
+          },
+          "step_3":{
+             "title":"Bot\u00e3o",
+             "intro":"Easily customize your button by choosing the color of your button, icon and the color. Make sure the button and text are clearly visible. You can set a different style for the normal and hover state."
+          },
+          "step_4":{
+             "title":"Navigation",
+             "intro":" This button makes navigation between the different buttons easier. You can also go to the group\u2019s settings."
+          },
+          "step_5":{
+             "title":"Publicar",
+             "intro":"Adjustments are automatically saved in the editor and won\u2019t be shown on the site. Make sure to click <b>\"Publish\"<\/b> to see these changes on your website."
+          },
+          "step_6":{
+             "title":"Card\u00e1pio",
+             "intro":"This menu contains a list of options where you can go to settings, Page Rules and the Buttonizer Community. You can also manage your own account here."
+          },
+          "step_7":{
+             "title":"Configura\u00e7\u00f5es",
+             "intro":"You can change your settings for Buttonizer, including settings for Google Analytics, icon library, preferences and you can reset Buttonizer."
+          },
+          "step_8":{
+             "title":"More Buttonizer Tours",
+             "intro":"We have more tours in store which are more in-depth and will help you improve your experience with Buttonizer even more. Go to <b><a onClick=\"app.closeButtonizerTour()\">settings<\/a><\/b> to enjoy another tour!"
+          },
+          "step_9":{
+             "title":"Apoio, suporte",
+             "intro":"Our support helps you troubleshoot common issues, find solutions, ask questions, and share tips with other Buzzers."
+          }
+       },
+       "create_button_tour":{
+          "step_0":{
+             "title":"Bot\u00e3o novo",
+             "intro":"If you would like to have a single Floating Action Button that triggers a primary action, then we would advise you to create a single button. "
+          },
+          "step_1":{
+             "title":"Settings for button",
+             "intro":"Let's go to the settings of the button to view the different configurations."
+          },
+          "step_2":{
+             "title":"Geral",
+             "intro":"The general settings control some basic configuration for your button. You can change the action type and the label of the button here."
+          },
+          "step_3":{
+             "title":"A\u00e7\u00e3o do bot\u00e3o",
+             "intro":"The Button action in the general settings specify where to send your website visitors too once you have added an action to the button."
+          },
+          "step_4":{
+             "title":"Open URL in:",
+             "intro":"This feature provides an easy and simple way to open the linked URL of the button action in the same tab, a new browser window or a new tab."
+          },
+          "step_5":{
+             "title":"Visibilidade do dispositivo",
+             "intro":"You can decide if your button should be available on mobile devices and\/ or on computers."
+          },
+          "step_6":{
+             "title":"Texto do marcador",
+             "intro":"You can add and change the text of the label here. Choose a label that is short and clear."
+          },
+          "step_7":{
+             "title":"Style your button",
+             "intro":"If you want to change the colors of your button, then you can go to the tab Style and you will see that the first settings are the color settings for your button."
+          },
+          "step_8":{
+             "title":"Normal vs hover",
+             "intro":"You can set a different button style for the normal and hover state."
+          },
+          "step_9":{
+             "title":"Background color",
+             "intro":"To change the background color of a button, use the color picker. Pick a background color that improves your button's readability and usability."
+          },
+          "step_10":{
+             "title":"Raio da borda",
+             "intro":"You can add rounded corners to a button with the border-radius property. Try to set a single radius to make circular corners."
+          },
+          "step_11":{
+             "title":"\u00cdcone",
+             "intro":"Learn how to add a Font Awesome icon to your button."
+          },
+          "step_12":{
+             "title":"Icon vs image",
+             "intro":"Your floating action button can contain an icon that promotes a primary action. You can either select an icon in Buttonizer or import your own image."
+          },
+          "step_13":{
+             "title":"Selecionar \u00edcone",
+             "intro":"Pick an icon you would like to see in your button."
+          },
+          "step_14":{
+             "title":"Tamanho do \u00edcone",
+             "intro":"Change the size of your button icons. Increase or decrease the size of icons relative to that inherited font-size."
+          },
+          "step_15":{
+             "title":"Label visibility",
+             "intro":"You can decide if the label next to the button should be available on mobile devices,  computers or on both."
+          },
+          "step_16":{
+             "title":"Label position",
+             "intro":"With label position you can place the label on either side of the button. You can make use of this feature right away to see which position you prefer."
+          },
+          "step_17":{
+             "title":"Fam\u00edlia de fontes",
+             "intro":"Choosing the right font is an important step in making your button usable and accessible. Buttonizer automatically grabs the font family from your website, but you can also use the complete set of properties to choose the right font family. "
+          },
+          "step_18":{
+             "title":"Margem",
+             "intro":"With margin you can create more space around your button. Try it out by using pixels or percentages."
+          },
+          "step_19":{
+             "title":"Preenchimento",
+             "intro":"With padding you can control the space between its content and its border. Try it out by using pixels or percentages."
+          }
+       }
+    },
+    "import_export":{
+       "import":{
+          "title":"Import",
+          "select_please":"Please select a Buttonizer export file.",
+          "select_click":"Click or drop a JSON export file",
+          "into_group":{
+             "button":"Import into this group",
+             "text":"Import buttons or replace this group."
+          },
+          "new_group":{
+             "group":"Import group",
+             "button":"Import button",
+             "text":"Import a new group."
+          },
+          "reupload":"Re-upload file",
+          "drag_drop":"Drop export file here",
+          "warning":{
+             "replace":"You are about to <b>replace<\/b> this group with:",
+             "preview":"What you are about to import:",
+             "invalid":"This file is not a Buttonizer file.",
+             "malformed":"The file you have selected is malformed or the file is not a Buttonizer file.",
+             "no_buttons":"This group does not have any buttons to import."
+          }
+       },
+       "properties":"properties",
+       "export":{
+          "title":"Export",
+          "export_button":"Export button",
+          "export_group":"Export group",
+          "merge":"Merge with group style",
+          "warning":{
+             "preview":"What you are about to export:",
+             "no_buttons":"This group does not have any buttons to export.",
+             "no_data":"This button does not have any data to export."
+          }
+       },
+       "import_export":"Import & Export"
+    },
+    "settings":{
+       "settings":"Configura\u00e7\u00f5es",
+       "tippy_single_button":"Bot\u00e3o Adicionar para ativar as configura\u00e7\u00f5es do grupo",
+       "more_actions":"More actions",
+       "setting_categories":{
+          "menu_style":"Estilo do menu",
+          "general":"Geral",
+          "group_style":"Estilo de grupo",
+          "group_icon":"\u00cdcone do grupo",
+          "button_style":"Estilo do bot\u00e3o",
+          "button_icon":"\u00cdcone de bot\u00e3o",
+          "label_style":"Estilo da etiqueta",
+          "background":"fundo",
+          "icon_style":"Estilo do \u00edcone",
+          "image_style":"Estilo da imagem",
+          "show_or_hide":"Mostrar ou ocultar",
+          "label":"Label"
+       },
+       "name":{
+          "title":"Nome do bot\u00e3o",
+          "description":"Este \u00e9 o nome do bot\u00e3o."
+       },
+       "background_color":{
+          "title":"Cor do botao",
+          "description":"Essa \u00e9 a cor do seu grupo de bot\u00f5es e tamb\u00e9m a cor padr\u00e3o para seus bot\u00f5es dentro deste grupo."
+       },
+       "color_picker":{
+          "options":{
+             "solid":"Solid Color",
+             "linear":"Linear Gradient",
+             "radial":"Radial Gradient"
+          },
+          "new_swatch_description":"Click to add swatch. Right-click any swatch to remove."
+       },
+       "font_family":{
+          "title":"Fam\u00edlia de fontes",
+          "placeholder":"Digite uma fonte personalizada",
+          "add":"Digite \\\",\\\" para adicionar {{ value }}"
+       },
+       "button_size":{
+          "title":"Button Sizes",
+          "menu_button":"Menu button size",
+          "sub_button":"Sub button size"
+       },
+       "label_inside":{
+          "title":"Place label inside button"
+       },
+       "label_same_width":{
+          "title":"Make all labels have same width"
+       },
+       "label_same_height":{
+          "title":"Set height same as the button's"
+       },
+       "background_image":{
+          "title":"Use background image",
+          "description":"Carregue uma imagem se desejar uma imagem como plano de fundo em vez de uma cor. Propor\u00e7\u00e3o recomendada: quadrado (1: 1)."
+       },
+       "border_radius":{
+          "title":"Raio da borda",
+          "description":"Altere a redondeza deste grupo de bot\u00f5es."
+       },
+       "box_shadow":{
+          "title":"Box shadow",
+          "description":"Change the box shadow of this button."
+       },
+       "margin":{
+          "title":"Margem",
+          "description":"Mude a posi\u00e7\u00e3o do r\u00f3tulo."
+       },
+       "padding":{
+          "title":"Preenchimento",
+          "description":"Altere o tamanho do plano de fundo do r\u00f3tulo."
+       },
+       "icon":{
+          "title":"\u00cdcone",
+          "select":"Selecionar \u00edcone",
+          "description":"Escolha um \u00edcone na biblioteca de \u00edcones."
+       },
+       "icon_color":{
+          "title":"Cor do \u00edcone",
+          "description":"Mude a cor do \u00edcone deste bot\u00e3o."
+       },
+       "icon_image_border_radius":{
+          "title":"Raio da borda",
+          "description":"Altere o raio da borda da imagem."
+       },
+       "icon_image_select":{
+          "title":"\u00cdcone",
+          "description":"Escolha uma imagem para usar como este bot\u00e3o ou \u00edcone de grupo. Propor\u00e7\u00e3o recomendada: quadrado (1: 1)"
+       },
+       "icon_image_size":{
+          "title":"Tamanho da imagem",
+          "description":"Mude o tamanho da imagem."
+       },
+       "icon_or_image":{
+          "title":"Gr\u00e1fico",
+          "label":"Select icon type",
+          "description":"Escolha se deseja usar um \u00edcone ou imagem como o \u00edcone do bot\u00e3o."
+       },
+       "icon_size":{
+          "title":"Tamanho do \u00edcone",
+          "description":"Mude o tamanho do \u00edcone deste bot\u00e3o."
+       },
+       "label":{
+          "title":"R\u00f3tulo",
+          "description":"Mude o r\u00f3tulo deste bot\u00e3o.",
+          "placeholder":"Texto do marcador"
+       },
+       "label_color":{
+          "title":"Cor do texto",
+          "description":"Altere a cor do texto e do plano de fundo da etiqueta deste bot\u00e3o ou grupo."
+       },
+       "font_size_border_radius":{
+          "title":"Tamanho da fonte e raio da borda",
+          "description":"Altere o tamanho da fonte e o raio da borda do r\u00f3tulo para este grupo de bot\u00f5es."
+       },
+       "font_size":"Tamanho da fonte",
+       "menu_animation":{
+          "title":"Anima\u00e7\u00e3o",
+          "description":"Isso animar\u00e1 esse grupo de bot\u00f5es para chamar a aten\u00e7\u00e3o do visitante. A anima\u00e7\u00e3o se repete a cada 10 segundos.",
+          "delay":"Demora",
+          "repeat_count":"Contagem de Repeti\u00e7\u00f5es",
+          "repeat_helper_text":"Digite '0' para ilimitado",
+          "animations":{
+             "none":"Sem anima\u00e7\u00e3o",
+             "hello":"Buttonizer Hello",
+             "bounce":"Pulo",
+             "jelly":"Gel\u00e9ia",
+             "pulse":"Pulso"
+          }
+       },
+       "label_position":{
+          "title":"Posi\u00e7\u00e3o",
+          "description":"Label position",
+          "warning":"Make sure to add a label",
+          "directions":{
+             "left":"Esquerda",
+             "auto":"Auto",
+             "right":"Certo"
+          }
+       },
+       "menu_position":{
+          "title":"Posi\u00e7\u00e3o",
+          "description":"Mude a posi\u00e7\u00e3o deste grupo de bot\u00f5es.",
+          "horizontal":"Horizontal",
+          "vertical":"Vertical",
+          "from":"de",
+          "scaled":"Dimensionado",
+          "absolute":"Absoluto",
+          "directions":{
+             "left":"Esquerda",
+             "right":"Certo",
+             "bottom":"Inferior",
+             "top":"Topo"
+          }
+       },
+       "menu_style":{
+          "title":"Estilo do menu",
+          "title_short":"Estilo",
+          "description":"Mude o estilo do menu deste grupo de bot\u00f5es.",
+          "warning":"Essa configura\u00e7\u00e3o n\u00e3o \u00e9 usada ao usar o estilo de menu {{ name }}...",
+          "styles":{
+             "default":"Padr\u00e3o",
+             "faded":"Desbotado",
+             "cornercircle":"C\u00edrculo de canto",
+             "buildingup":"Acumular",
+             "pop":"Pop",
+             "square":"Quadrado",
+             "rectangle":"Ret\u00e2ngulo",
+             "text":"Somente texto",
+             "texticon":"Texto com \u00edcone"
+          }
+       },
+       "menu":{
+          "title":"Card\u00e1pio",
+          "title_settings":"Menu settings",
+          "description":"Turn on or off whether the group has a closable menu button"
+       },
+       "opening_animation":{
+          "title":"Opening animation",
+          "description":"Decide what type of opening animation is used for opening\/closing the menu"
+       },
+       "label_desktop":{
+          "title":"Visibilidade",
+          "description":"Sempre mostre o r\u00f3tulo, mostre o r\u00f3tulo ao passar o mouse ou oculte o r\u00f3tulo nos <u> dispositivos de mesa <\/u>."
+       },
+       "label_mobile":{
+          "title":"Visibilidade",
+          "description":"Sempre mostre ou oculte o r\u00f3tulo em <u> dispositivos m\u00f3veis <\/u>."
+       },
+       "label_styles":{
+          "group_default":"Group default",
+          "always":"Sempre mostrar etiqueta",
+          "hover":"Mostrar marcador ao passar o mouse",
+          "hide":"Ocultar marcador"
+       },
+       "show_mobile_desktop":{
+          "title":"Mostrar em",
+          "device_visibility":"Visibilidade do dispositivo",
+          "description":"Escolha se deseja tornar esse grupo de bot\u00f5es vis\u00edvel em computadores e dispositivos m\u00f3veis.",
+          "mobile":"M\u00f3vel",
+          "desktop":"\u00c1rea de Trabalho",
+          "toggle_desktop":"Alternar mostrar na \u00e1rea de trabalho",
+          "toggle_mobile":"Alternar exibi\u00e7\u00e3o no celular"
+       },
+       "start_opened":{
+          "title":"Iniciar aberto",
+          "description":"Este grupo de bot\u00f5es inicia aberto quando esta configura\u00e7\u00e3o est\u00e1 ativada."
+       },
+       "use_main_button_style":{
+          "title":"Usar estilo de grupo",
+          "description":"Quando ativado, este bot\u00e3o usar\u00e1 o mesmo estilo que o grupo de bot\u00f5es.",
+          "warning":"Desative USE GROUP STYLE para acessar essas configura\u00e7\u00f5es"
+       },
+       "close_on_click_outside":{
+          "title":"Close on click outside",
+          "description":"This will close the menu if you click outside Buttonizer."
+       },
+       "close_on_click_inside":{
+          "title":"Close on button click",
+          "description":"This will close the menu if you click on a button inside this group."
+       },
+       "open_on_mouseover":{
+          "title":"Open on hover",
+          "description":"This will open the menu if you hover the group button."
+       },
+       "close_on_mouseout":{
+          "title":"Close on mouse out",
+          "description":"This will close the menu if you hover out the group button."
+       },
+       "custom_id":{
+          "title":"ID personalizado",
+          "description":"Adiciona um atributo HTML 'id' personalizado ao bot\u00e3o.",
+          "pro_description":"Voc\u00ea pode adicionar um ID personalizado a cada bot\u00e3o para fins de estilo.",
+          "placeholder":"Nome do ID"
+       },
+       "custom_class":{
+          "title":"Classe personalizada",
+          "description":"Adiciona um atributo HTML 'classe' personalizado ao bot\u00e3o.",
+          "pro_description":"Voc\u00ea pode adicionar uma classe personalizada a cada bot\u00e3o para fins de estilo.",
+          "placeholder":"Nome da classe",
+          "styling_editor":"Abra o Editor de estilo personalizado",
+          "styling_editor_title":"Editor de estilo personalizado"
+       },
+       "selected_page_rule":{
+          "title":"Regra da p\u00e1gina",
+          "description":"Adiciona um atributo HTML 'classe' personalizado ao bot\u00e3o.",
+          "pro_description":"Voc\u00ea pode adicionar uma classe personalizada a cada bot\u00e3o para fins de estilo.",
+          "manage_page_rules":"Gerenciar regras da p\u00e1gina",
+          "cannot_select":"Voc\u00ea n\u00e3o pode selecionar a mesma regra de p\u00e1gina do grupo!",
+          "show_on_rule_trigger":{
+             "show":"Mostrar bot\u00e3o quando a regra \u00e9 acionada",
+             "hide":"Ocultar bot\u00e3o quando a regra \u00e9 acionada"
+          }
+       },
+       "timeout_scroll":{
+          "timeout":{
+             "title":"Tempo esgotado",
+             "trigger_once":"Trigger only once",
+             "milliseconds":"Milissegundos",
+             "info":"Mostrar Buttonizer ap\u00f3s {{ value }} segundos"
+          },
+          "scroll":{
+             "title":"Rolagem",
+             "from_top":"Do topo",
+             "show_after":"Mostrar Buttonizer ap\u00f3s 0 segundos",
+             "visibility":"Hide group as starting visibility",
+             "hide":"ocultar",
+             "show":"mostrar",
+             "info":"Role <bold>{{ scrollValue }}</bold> do topo da p\u00e1gina para o grupo <bold>{{ showOrHide }}</bold>"
+          }
+       },
+       "exit_intent":{
+          "title":"Inten\u00e7\u00e3o de sa\u00edda",
+          "enable":"Ativar inten\u00e7\u00e3o de sa\u00edda",
+          "pro_description":"Com essa configura\u00e7\u00e3o, voc\u00ea pode acionar o Buttonizer para animar antes que seu convidado saia do site.",
+          "description":"A inten\u00e7\u00e3o de sa\u00edda pode ser usada para acionar uma anima\u00e7\u00e3o em torno do Buttonizer quando um visitante est\u00e1 saindo do seu site.",
+          "info":"Observa\u00e7\u00e3o: a inten\u00e7\u00e3o de sa\u00edda <b> n\u00e3o ser\u00e1 acionada <\/b> no modo de visualiza\u00e7\u00e3o, apenas no seu site LIVE.",
+          "when_to_trigger":"Quando acionar?",
+          "trigger_window":"Disparar ao sair da janela do navegador",
+          "trigger_inactive":"Gatilho por inatividade (2 minutos)",
+          "how_often":{
+             "_title":"Com que frequ\u00eancia deve ser acionado?",
+             "once_page":"Acionar apenas uma vez por p\u00e1gina",
+             "once_session":"Acionar apenas uma vez por sess\u00e3o",
+             "always":"Disparar sempre"
+          },
+          "animation":{
+             "_title":"Anima\u00e7\u00e3o intencional",
+             "focused":"Focado",
+             "open_menu":"Abrir menu",
+             "jump":"Salte uma vez e abra",
+             "jump_single":"Salte uma vez",
+             "flip":"Virar e abrir",
+             "flip_single":"Giro"
+          }
+       },
+       "popups":{
+          "generate":"Generate new popup id",
+          "elementor_guide":"Copy and paste this into your Elementor Popup's <b>\"Open By Selector\"<\/b> option. <br \/>",
+          "popup_maker_guide":"In your <b>Popup Settings<\/b>, add a new <b>\"Click to Open\"<\/b> trigger and copy and paste this code in <b>\"Extra CSS Selectors\"<\/b> <br \/>"
+       },
+       "button_action":{
+          "title":"A\u00e7\u00e3o do bot\u00e3o",
+          "description":"Escolha uma a\u00e7\u00e3o de clique para este bot\u00e3o.",
+          "select":"A\u00e7\u00e3o do bot\u00e3o Selecionar",
+          "search_not_found":"Nenhuma a\u00e7\u00e3o de bot\u00e3o encontrada para:",
+          "actions":{
+             "group_popular":"A\u00e7\u00f5es populares",
+             "group_chat":"Clique para conversar",
+             "group_social_media":"M\u00eddia social",
+             "group_popup":"Aparecer",
+             "group_actions":"A\u00e7\u00f5es",
+             "phone_number":{
+                "name":"A\u00e7\u00e3o de chamada (n\u00famero de telefone)",
+                "invalid":"N\u00famero de telefone inv\u00e1lido",
+                "number":"N\u00famero de telefone"
+             },
+             "mail":{
+                "name":"A\u00e7\u00e3o de email (endere\u00e7o de email)",
+                "invalid":"Endere\u00e7o de email inv\u00e1lido."
+             },
+             "page":{
+                "name":"P\u00e1gina",
+                "placeholder":"Select a page",
+                "helper":"To visualise what page type you have chosen, the value is displayed as: '[Page type]: [Page name]'."
+             },
+             "back_to_top":"De volta ao topo",
+             "go_to_bottom":"V\u00e1 para baixo",
+             "go_back_one_page":"Voltar uma p\u00e1gina",
+             "share_page":"Compartilhar P\u00e1gina",
+             "sms":"SMS",
+             "viber":"O Viber n\u00e3o suporta um link \"conversar com n\u00famero de telefone\". Quando um usu\u00e1rio clica nesse bot\u00e3o, ele abre seu \"adicionar contato\" com o n\u00famero preenchido.",
+             "messenger_chat":{
+                "description":"Facebook Messenger Chat Widget! First, you'll need to <howToLink>whitelist<\/howToLink> your site on Facebook. Then add your <helpLink>Page ID<\/helpLink> into the input above.",
+                "invalid":"ID de p\u00e1gina inv\u00e1lido.",
+                "page_id":"ID da p\u00e1gina do Facebook",
+                "language":"Messenger Chat Language"
+             },
+             "whatsapp_chat":"WhatsApp Chat",
+             "poptin": "<bold>You need to install Poptin's WordPress plugin.</bold><br />You can find it <bold><downloadLink>here</downloadLink>.</bold><br />Once you've made a Poptin paste the <bold><helpLink>direct link</helpLink><\/bold> into the input above.",
+             "share_page_on":"Compartilhe em {{ platform }}",
+             "social_sharing":{
+                "social_sharing":"Compartilhamento social",
+                "popular":"Popular Social Sharing",
+                "other":"Other Social Sharing"
+             },
+             "clipboard":"Copiar URL para a \u00e1rea de transfer\u00eancia",
+             "print_page":"Imprimir p\u00e1gina",
+             "share_page_via":"Compartilhar via {{ platform }}",
+             "action_discontinued": "<italic>{{ action }}</italic> has been discontinued and replaced with <a>{{ replacement }}</a>.",
+             "url":{
+                "name":"URL do site",
+                "invalid":"Este URL parece ser inv\u00e1lido. O bot\u00e3o pode n\u00e3o funcionar conforme o esperado.",
+                "invalid_tip":"Voc\u00ea sente falta de <b> http: \/\/ <\/b> ou <b> https: \/\/ <\/b>? Talvez um espa\u00e7o desnecess\u00e1rio seja adicionado em algum lugar.",
+                "insecure":"<b> URL n\u00e3o seguro: <\/b> Desculpe interromper, mas recomendamos que voc\u00ea use HTTPS para seus URLs. Essa \u00e9 uma maneira mais segura de transportar dados."
+             },
+             "javascript":{
+                "name":"Fun\u00e7\u00e3o Javascript",
+                "open_dialog":"Abra o editor de c\u00f3digo JavaScript",
+                "warning_modal_title":"Aviso! Antes de continuar ...",
+                "warning_intro":"Voc\u00ea est\u00e1 alterando essa a\u00e7\u00e3o do bot\u00e3o de javascript personalizado para uma a\u00e7\u00e3o diferente. Suas altera\u00e7\u00f5es no javascript ser\u00e3o perdidas.",
+                "warning_question":"Tem certeza de que deseja continuar?"
+             },
+             "whatsapp_info":"Preencha seu n\u00famero de telefone sem espa\u00e7os e s\u00edmbolos. Leia as recomenda\u00e7\u00f5es do WhatsApps <a> clicando aqui. <\/a>",
+             "twitter_info":"Quando voc\u00ea quiser usar o Twitter DM, precisar\u00e1 encontrar seu ID de usu\u00e1rio do Twitter e permitir mensagens diretas de qualquer pessoa. Para encontrar o ID da sua conta <findAccountLink>, clique aqui <\/findAccountLink>. E para ler mais sobre como permitir mensagens diretas de qualquer pessoa, <allowDirectMessagesLink> clique aqui <\/allowDirectMessagesLink>.",
+             "signal_group_info": "Paste the generated Signal group URL into the field. If you need more information about how to enable group invite links, <a>click here<\/a>.",
+             "chat":{
+                "sms":"SMS",
+                "messenger_chat":"Facebook Messenger Chat Widget",
+                "messenger_link":"Facebook Messenger Link",
+                "twitter_dm":"Twitter DM",
+                "skype":"Skype",
+                "line":"LINE",
+                "waze":"Waze",
+                "telegram":"Telegram",
+                "viber":"Viber",
+                "signal_group":"Join signal group"
+             },
+             "social_media":{
+                "facebook":"Facebook",
+                "twitter":"Twitter",
+                "instagram":"Instagram",
+                "snapchat":"Snapchat",
+                "linkedin":"LinkedIn",
+                "vk":"VKontakte",
+                "waze":"Waze"
+             }
+          },
+          "placeholders":{
+             "sms":"Texto",
+             "message":"mensagem",
+             "username":"Nome do usu\u00e1rio",
+             "mail":{
+                "recipient":"Destinat\u00e1rio",
+                "subject":"Sujeito",
+                "cc":"cc",
+                "bcc":"bcc",
+                "body":"Corpo"
+             }
+          },
+          "open_url":{
+             "title":"Open URL in: "
+          },
+          "rel_attributes":{
+             "title":"Rel attributes",
+             "placeholder":"Set link rel attributes."
+          }
+       },
+       "button_group_window":{
+          "filters":"Filtros",
+          "styling":"Styling",
+          "timeout_scroll":"Tempo limite e rolagem"
+       }
+    },
+    "settings_window":{
+       "title":"Configura\u00e7\u00f5es do Buttonizer",
+       "description":"Gerenciar as configura\u00e7\u00f5es do Buttonizer",
+       "icon_library":{
+          "title":"Biblioteca de \u00edcones",
+          "description":"Escolha o seu conjunto de \u00edcones",
+          "free":"livre",
+          "latest":"Mais recente (autom\u00e1tico)",
+          "info":"Se o seu tema for carregado automaticamente em uma biblioteca, basta selecionar a biblioteca de \u00edcones correta.",
+          "select_version":{
+             "title":"Selecionar vers\u00e3o",
+             "info":"Selecione a vers\u00e3o correta da biblioteca para usar os \u00edcones no Buttonizer."
+          },
+          "library_license_key":{
+             "info":"Voc\u00ea selecionou uma biblioteca de \u00edcones que possui \u00edcones premium. Digite o c\u00f3digo de licen\u00e7a da biblioteca para visualiz\u00e1-los e us\u00e1-los.",
+             "how_does_it_work":"Como \u00e9 que isso funciona?",
+             "enter_integrity_code":"Digite o c\u00f3digo integrity"
+          },
+          "import_library":{
+             "title":"Biblioteca de \u00edcones de importa\u00e7\u00e3o",
+             "info":"O Buttonizer deve importar a biblioteca de \u00edcones para o seu tema? Se o seu tema j\u00e1 importa a biblioteca, voc\u00ea pode desativ\u00e1-lo."
+          }
+       },
+       "google_analytics":{
+          "title":"Google Analytics",
+          "enable":"Ativar o Google Analytics",
+          "description":"Avalie suas convers\u00f5es",
+          "intro":"Quando ativado, o Buttonizer registra automaticamente os cliques na sua conta do Google Analytics. Voc\u00ea pode for\u00e7ar o Buttonizer a n\u00e3o usar o Google Analytics desativando essa op\u00e7\u00e3o.",
+          "tracking_code_info":"O Google Analytics \u00e9 detectado automaticamente se voc\u00ea o adicionou \u00e0 sua p\u00e1gina da web. Mas, se voc\u00ea ainda n\u00e3o usa o Google Analytics e \u00e9 a primeira vez, o Buttonizer pode adicion\u00e1-lo para voc\u00ea.",
+          "tracking_code_warning":"Se voc\u00ea adicionou o Google Analytics \u00e0 sua p\u00e1gina da Web antes e o Buttonizer tamb\u00e9m adiciona o mesmo c\u00f3digo do Google Analytics, ele mexer\u00e1 com os dados do Google Analytics!",
+          "input":"C\u00f3digo UA",
+          "link":"Onde posso ver meus dados de clique dos meus bot\u00f5es no Google Analytics?"
+       },
+       "other_settings":{
+          "title":"Prefer\u00eancias",
+          "description":"Gerencie suas prefer\u00eancias",
+          "admin_button":{
+             "title":"Mostrar barra superior do administrador",
+             "info":"Oculte o Buttonizer na barra superior do administrador desativando esta configura\u00e7\u00e3o."
+          },
+          "tooltips":{
+             "title":"Mostrar dicas de ferramentas",
+             "info":"Oculte as dicas de ferramentas desativando esta configura\u00e7\u00e3o."
+          },
+          "tips":{
+             "title":"Mostrar dicas do Buttonizer",
+             "info":"Oculte as dicas do Buttonizer no painel desativando essa configura\u00e7\u00e3o"
+          },
+          "subdomain":{
+             "title":"Suporte de subdom\u00ednio",
+             "info":"Alguns sites do WordPress usam subdom\u00ednios para fins de conte\u00fado. Habilite essa configura\u00e7\u00e3o para permitir que o Buttonizer seja carregado nos seus subdom\u00ednios. Habilite isso somente quando necess\u00e1rio."
+          },
+          "ajax":{
+             "title":"Use ajax ativado para carregar os bot\u00f5es",
+             "info":"Esse recurso foi criado para garantir que o Buttonizer n\u00e3o diminua a velocidade do seu site. Se voc\u00ea deseja mostrar os bot\u00f5es imediatamente sem tempo de carregamento, desative essa configura\u00e7\u00e3o. A previs\u00e3o de carga depender\u00e1 da quantidade de bot\u00f5es e grupos que voc\u00ea possui atualmente."
+          },
+          "error_logging":{
+             "title":"Registro autom\u00e1tico de erros e relat\u00f3rio de falhas",
+             "info":"Ative o registro autom\u00e1tico de erros e os relat\u00f3rios de falhas para nos ajudar a resolver problemas no Buttonizer! Todos os dados s\u00e3o anonimizados automaticamente."
+          },
+          "no_limit":{
+             "title":"Show more than 7 buttons in a group!",
+             "info":"When enabled, it will disable the 7 button limit in Buttonizer. This means that you will be able to add as much buttons you can fit in the screen!"
+          },
+          "reset_opt_in":{
+             "title":"Opt-in to Buttonizer",
+             "info":"Currently you are opted out for sharing your WordPress environment information. When you want to make use of Buttonizer Pro, you need to opt-in. For more information, check out the opt-in page.",
+             "button":"Reset opt-in"
+          },
+          "additional_roles":{
+             "title":"Permissions",
+             "info":"You can grant more roles to access the Buttonizer settings who are not an administrator.",
+             "roles":"Select roles"
+          }
+       },
+       "buttonizer_tour":{
+          "title":"Buttonizer tour",
+          "description":"Helps you with step-by-step tours",
+          "interface":{
+             "title":"Buttonizer interface",
+             "description":"Make a tour through Buttonizer's interface"
+          },
+          "create_button":{
+             "title":"Create a button",
+             "description":"Learn how to make floating action buttons"
+          }
+       },
+       "changelog_dialog":{
+          "title":"What's new?",
+          "all_changelogs":"View all changelogs",
+          "new_features":"New features",
+          "first_feature":{
+             "title":"New styling options!",
+             "info":"We've added much more styling options for the group and the buttons. Now you can truly customize the buttons to your liking."
+          },
+          "second_feature":{
+             "title":"Load in templates",
+             "info":"Instead of creating your own buttons and groups, you can save time by loading ready-made templates. Click \"add button\" or \"create new group\" to see all templates available."
+          },
+          "third_feature":{
+             "title":"Updated menu position for button styles",
+             "info":"We have slightly adjusted the placement of the settings for changing the button position. Don't worry, you can still find the settings under the \"Advanced\" tab."
+          },
+          "fourth_feature":{
+             "title":"\"Shift + click\" to skip a dialog",
+             "info":"You can now press shift + click when adding, deleting and duplicating to skip the confirmation dialog."
+          }
+       },
+       "reset":{
+          "title":"Reset Buttonizer",
+          "description":"Se voc\u00ea precisar de uma instala\u00e7\u00e3o limpa",
+          "info":"Esta \u00e9 uma maneira de redefinir o Buttonizer para as configura\u00e7\u00f5es padr\u00e3o.",
+          "what_will_happen":{
+             "title":"O que acontecer\u00e1 quando eu clicar no bot\u00e3o vermelho abaixo?",
+             "info":"O plugin receber\u00e1 uma 'redefini\u00e7\u00e3o de f\u00e1brica'. Todas as configura\u00e7\u00f5es do Buttonizer ser\u00e3o exclu\u00eddas, revertendo para quando voc\u00ea instalou e ativou o Buttonizer."
+          },
+          "why":{
+             "title":"Porque eu faria isso?",
+             "info":"Talvez voc\u00ea tenha arruinado seus bot\u00f5es, categorias ou configura\u00e7\u00f5es e gostaria de come\u00e7ar do zero. Ou talvez voc\u00ea apenas sinta o bot\u00e3o de redefini\u00e7\u00e3o ..."
+          },
+          "license":{
+             "title":"Eu tenho uma licen\u00e7a, e quanto a isso?",
+             "info":"N\u00e3o se preocupe! Nada vai acontecer com a sua licen\u00e7a! Redefine apenas o seguinte:",
+             "list":{
+                "buttons":"Seus bot\u00f5es",
+                "groups":"Seus grupos de bot\u00f5es",
+                "time_schedules":"Todos os hor\u00e1rios",
+                "page_rules":"Todas as regras da p\u00e1gina",
+                "settings":"Todas as outras configura\u00e7\u00f5es do Buttonizer",
+                "published":"Todas as configura\u00e7\u00f5es publicadas"
+             }
+          },
+          "default_settings":{
+             "title":"Ok, parece bom. O que ent\u00e3o?",
+             "info":"O Buttonizer voltar\u00e1 \u00e0s configura\u00e7\u00f5es padr\u00e3o e parecer\u00e1 uma nova instala\u00e7\u00e3o. Isso \u00e9 tudo."
+          },
+          "ready":{
+             "title":"Ok, eu estou pronto!",
+             "info":"Pressione o bot\u00e3o vermelho abaixo para redefinir o Buttonizer. N\u00e3o haver\u00e1 mais avisos.",
+             "button":"Redefinir Buttonizer!"
+          }
+       }
+    },
+    "bar":{
+       "previous_session":"Altera\u00e7\u00f5es carregadas da sess\u00e3o anterior",
+       "edit_group_settings":"Editar configura\u00e7\u00f5es do grupo",
+       "preview":{
+          "no_changes":"Voc\u00ea provavelmente clicou em um link. Isso fez com que voc\u00ea deixasse a janela de visualiza\u00e7\u00e3o do Buttonizer. Voc\u00ea n\u00e3o pode ver suas altera\u00e7\u00f5es aqui.",
+          "return":"Voltar \u00e0 pr\u00e9-visualiza\u00e7\u00e3o",
+          "desktop":"Visualiza\u00e7\u00e3o da \u00e1rea de trabalho",
+          "tablet":"Visualiza\u00e7\u00e3o do tablet",
+          "mobile":"Visualiza\u00e7\u00e3o para celular"
+       },
+       "breadcrumb":{
+          "home":"Casa",
+          "tippy_home":"Voltar ao menu principal",
+          "tippy_group":"Voltar ao grupo"
+       },
+       "menu":{
+          "version":"Vers\u00e3o {{ versionNumber }}",
+          "knowledgebase":{
+             "title":"Base de conhecimento",
+             "description":"Descubra tudo o que voc\u00ea precisa saber sobre o Buttonizer"
+          },
+          "support_group":"Apoio, suporte",
+          "support":{
+             "title":"Eu preciso de suporte",
+             "description":"Suporte direto com os desenvolvedores do Buttonizer"
+          },
+          "community":{
+             "title":"Comunidade",
+             "description":"Interaja com outros Buttonizers"
+          },
+          "tour":{
+             "title":"Passeio pelo Buttonizer (recomendado!)",
+             "description":"Comece o passeio de 2 minutos"
+          },
+          "wp_admin":"Voltar ao painel do WordPress",
+          "follow":"Siga-nos para obter dicas e truques \u00fateis!",
+          "account_group":"Conta Buttonizer",
+          "account":{
+             "title":"Minha conta",
+             "description":"Ver sua licen\u00e7a e detalhes da conta"
+          },
+          "upgrade":{
+             "title":"Upgrade ou pre\u00e7o",
+             "description":"Um mergulho profundo em todas as possibilidades"
+          },
+          "affiliation":{
+             "title":"Afilia\u00e7\u00e3o",
+             "description":"Ganhe $ promovendo o Buttonizer"
+          },
+          "options":{
+             "title":"Op\u00e7\u00f5es"
+          }
+       },
+       "buttons":{
+          "now_editing":"Agora editando:",
+          "tippy_new_group":"Isso cria um novo grupo com 2 bot\u00f5es internos.",
+          "tippy_single_button":"Isso cria um novo bot\u00e3o, fora de outros grupos.",
+          "tippy_learn_more":"Saiba mais sobre grupos e bot\u00f5es",
+          "tippy_drag_warning":"Voc\u00ea n\u00e3o pode arrastar o \u00fanico bot\u00e3o restante de um grupo!",
+          "convert_to_group":"Converter em grupo"
+       }
+    },
+    "migration_modal":{
+       "title":"Oi Buttonizer!",
+       "intro":"Parece que voc\u00ea instalou o Buttonizer 2.0 antes. Por\u00e9m, voc\u00ea instalou a vers\u00e3o 1.5 novamente mais tarde e atualizou novamente para a 2.0!",
+       "convert":"O progresso da migra\u00e7\u00e3o n\u00e3o foi executado como na \u00e9poca. Para converter seus bot\u00f5es, pressione o bot\u00e3o abaixo!",
+       "popping_up": "If this window keeps popping up, even when you've tried to convert the buttons, try to reset Buttonizer. Go to the 'cog' icon (<i class=\"fas fa-cog\"><\/i>) on the top bar, select 'Options <i class=\"fas fa-cogs\"><\/i>' and the tab 'Reset' and follow the instructions.",
+       "convert_buttons":"Converta meus bot\u00f5es!"
+    },
+    "premium":{
+       "modal":{
+          "title":"Recurso Premium",
+          "describe":"Ol\u00e1, esta fun\u00e7\u00e3o \u00e9 um recurso premium. Vamos descrever o que esse recurso far\u00e1:",
+          "go_pro":"Go pro",
+          "list":{
+             "button_sizes":"Change the size of the buttons and groups",
+             "time_schedules":"Mostrar bot\u00e3o (grupos) usando os hor\u00e1rios avan\u00e7ados",
+             "page_rules":"Mostrar bot\u00e3o (grupos) em p\u00e1ginas espec\u00edficas usando regras de p\u00e1gina avan\u00e7adas",
+             "button_groups":"Crie v\u00e1rios grupos de bot\u00f5es",
+             "custom_images":"Fundo bot\u00e3o personalizado & amp; imagem do \u00edcone",
+             "exit_intent":"Inten\u00e7\u00e3o de sa\u00edda",
+             "show_on_scroll":"Mostrar ou ocultar na rolagem",
+             "show_on_timeout":"Mostrar no tempo limite",
+             "custom_class":"Ser capaz de definir nomes de classes CSS e IDs de bot\u00e3o",
+             "javascript":"Executar javascript com cliques no bot\u00e3o"
+          }
+       },
+       "time_schedules":{
+          "first_time_schedule":"Minha primeira vez"
+       },
+       "warning_duplicate":"A duplica\u00e7\u00e3o de bot\u00f5es est\u00e1 desativada para a vers\u00e3o gratuita",
+       "page_rules":{
+          "first_page_rule":"Minha regra de primeira p\u00e1gina"
+       },
+       "menu_styles":{
+          "text":"Esse estilo de menu remover\u00e1 o \u00edcone e adicionar\u00e1 o r\u00f3tulo ao bot\u00e3o, tornando-o um bot\u00e3o longo.",
+          "text-icon":"Esse estilo de menu adicionar\u00e1 o r\u00f3tulo ao bot\u00e3o com um \u00edcone, tornando-o um bot\u00e3o longo."
+       },
+       "multiple_button_groups":"Voc\u00ea pode adicionar v\u00e1rios grupos em diferentes posi\u00e7\u00f5es",
+       "custom_image":"Voc\u00ea pode selecionar imagens e defini-las como \u00edcone ou como imagem de fundo do bot\u00e3o.",
+       "show_on_timeout":"Com essa configura\u00e7\u00e3o, voc\u00ea pode fazer com que seu bot\u00e3o apare\u00e7a \/ oculte ap\u00f3s um certo per\u00edodo de tempo.",
+       "show_on_scroll":"Com essa configura\u00e7\u00e3o, voc\u00ea pode fazer com que seu bot\u00e3o apare\u00e7a \/ oculte ap\u00f3s rolar uma certa quantidade.",
+       "add_animation_settings":"Com essa configura\u00e7\u00e3o, voc\u00ea pode alterar as configura\u00e7\u00f5es de anima\u00e7\u00e3o, como atraso e contagem de repeti\u00e7\u00f5es.",
+       "font_family":"Com essa configura\u00e7\u00e3o, voc\u00ea pode alterar a fam\u00edlia de fontes do r\u00f3tulo. Voc\u00ea escolhe uma fonte e adiciona sua fonte personalizada.",
+       "margin":"Com essa configura\u00e7\u00e3o, voc\u00ea pode alterar a margem do r\u00f3tulo. Alterar a posi\u00e7\u00e3o do r\u00f3tulo em rela\u00e7\u00e3o ao bot\u00e3o",
+       "padding":"Com essa configura\u00e7\u00e3o, voc\u00ea pode alterar o tamanho do r\u00f3tulo."
+    },
+    "page_rules":{
+       "name":"Regras da p\u00e1gina",
+       "menu_description":"Escolha em qual p\u00e1gina voc\u00ea deseja mostrar um bot\u00e3o (grupo)",
+       "window_title":"Page Rule Manager",
+       "window_description":"Voc\u00ea pode configurar as regras da p\u00e1gina atrav\u00e9s desta janela. Quando voc\u00ea adiciona p\u00e1ginas ou defini\u00e7\u00f5es a esta regra de p\u00e1gina, os bot\u00f5es anexados a esta regra de p\u00e1gina ser\u00e3o mostrados ou ocultados dependendo de suas configura\u00e7\u00f5es assim que essa regra for acionada.",
+       "pro_description":"Voc\u00ea pode configurar regras de p\u00e1gina que ser\u00e3o acionadas em p\u00e1ginas ou fun\u00e7\u00f5es de usu\u00e1rio espec\u00edficas. Voc\u00ea pode criar regras de p\u00e1gina ilimitadas com v\u00e1rias regras para acionar.",
+       "add_page_rule":"Adicionar regra de p\u00e1gina",
+       "name_your_page_rule":"Atribua um nome \u00e0 regra da sua p\u00e1gina:",
+       "single_name":"Regra da p\u00e1gina",
+       "input_any_page":"Mostrar o bot\u00e3o em qualquer p\u00e1gina",
+       "remove_page_rule":"Remover regra de p\u00e1gina",
+       "open_settings":"Configura\u00e7\u00f5es de regras de p\u00e1gina aberta",
+       "current_page_rule":"Regra da p\u00e1gina atual",
+       "behaviour":"Comportamento das condi\u00e7\u00f5es da regra da p\u00e1gina",
+       "trigger":"Dispara quando UM dos valores selecionados \u00e9 verdadeiro",
+       "conditions":{
+          "title":"Condi\u00e7\u00f5es",
+          "show_group_on":"Mostrar grupo quando esta regra de p\u00e1gina est\u00e1 ativada",
+          "hide_group_on":"Ocultar grupo quando esta regra de p\u00e1gina estiver ativada",
+          "show_button_on":"Mostrar bot\u00e3o quando esta regra da p\u00e1gina est\u00e1 ativada",
+          "hide_button_on":"Bot\u00e3o Ocultar quando esta regra da p\u00e1gina \u00e9 ativada",
+          "add":"Adicionar condi\u00e7\u00e3o"
+       },
+       "empty":{
+          "page":"Nenhuma regra de p\u00e1gina",
+          "selected":"Nenhuma regra de p\u00e1gina selecionada",
+          "rules":"N\u00e3o h\u00e1 regras para esta regra de p\u00e1gina. Todos os bot\u00f5es anexados a esta regra da p\u00e1gina estar\u00e3o vis\u00edveis. Pressione 'Adicionar condi\u00e7\u00e3o' para adicionar um!"
+       },
+       "types":{
+          "must_meet":"Todas as condi\u00e7\u00f5es devem atender (AND)",
+          "one_meets":"Pelo menos uma condi\u00e7\u00e3o deve atender (OU)"
+       },
+       "rule_and":"e",
+       "rule_or":"ou",
+       "rules":{
+          "page":"P\u00e1gina",
+          "page_title":"O t\u00edtulo da p\u00e1gina cont\u00e9m",
+          "blog":"Blog",
+          "blog_title":"O t\u00edtulo do blog cont\u00e9m",
+          "category":"Categoria",
+          "url_match":"URL match",
+          "url_match_exact":"Exact URL match",
+          "url_contains":"URL cont\u00e9m",
+          "url_starts":"URL come\u00e7a com",
+          "url_ends":"URL termina com",
+          "url_regex":"URL regular expression",
+          "user_roles":"Usu\u00e1rio tem fun\u00e7\u00e3o",
+          "user_logged_in":"Usu\u00e1rio conectado",
+          "user_logged_out":"Usu\u00e1rio desconectado"
+       },
+       "rules_group":{
+          "content_based":"Baseado em conte\u00fado",
+          "url":"URL",
+          "users":"Comercial"
+       },
+       "debug":{
+          "title":"Debug",
+          "test":"Test out this page rule",
+          "invalid":"This URL appears to be invalid. You need to use the whole URL of your page.",
+          "example":"It should look something like {{ url }}",
+          "user_roles":"User role test",
+          "debug_page":"Debug page",
+          "triggered":"This Page Rule is triggered",
+          "not_triggered":"This Page Rule is not triggered",
+          "one_met":"One or more conditions were met",
+          "all_met":"All conditions were met",
+          "one_not_met":"One or more conditions were not met",
+          "all_not_met":"All conditions were not met",
+          "type":"Condition type",
+          "set_value":"Condition value",
+          "got_value":"Received value",
+          "trigger":"Triggered"
+       },
+       "select_items":"Selecione um ou mais itens.",
+       "remove_rule":"Tem certeza de que deseja remover esta regra?",
+       "remove_rule_aborted":"Abortado. Cada regra de p\u00e1gina deve manter pelo menos uma regra.",
+       "warning_changing_rule":"Voc\u00ea ainda selecionou valores. Tem certeza de que deseja remover isso?",
+       "rule_value":"Valor da regra"
+    },
+    "time_schedules":{
+       "name":"Hor\u00e1rios",
+       "menu_description":"Por exemplo: Mostrar um bot\u00e3o me ligue agora apenas nos hor\u00e1rios de funcionamento",
+       "single_name":"Hor\u00e1rio",
+       "window_title":"Gerente de cronograma",
+       "pro_description":"Voc\u00ea pode configurar hor\u00e1rios que ser\u00e3o acionados durante hor\u00e1rios espec\u00edficos do dia. \u00c9 ainda poss\u00edvel alterar as a\u00e7\u00f5es da programa\u00e7\u00e3o para dias espec\u00edficos. Voc\u00ea pode criar uma quantidade ilimitada de agendas.",
+       "open_settings":"Configura\u00e7\u00f5es de programa\u00e7\u00e3o de hor\u00e1rio aberto",
+       "current_time_schedule":"Hor\u00e1rios atuais:",
+       "empty":{
+          "page":"Voc\u00ea n\u00e3o tem hor\u00e1rios",
+          "selected":"Nenhum hor\u00e1rio selecionado"
+       },
+       "dates":"datas",
+       "add_schedule":"Adicionar hor\u00e1rio",
+       "add_date":"Adicionar data",
+       "new_schedule":"Novo cronograma",
+       "name_schedule":"Nomeie o novo cronograma:",
+       "rename_schedule":"Renomeie a programa\u00e7\u00e3o para:",
+       "show_any_time":"Mostrar o bot\u00e3o a qualquer momento",
+       "till":"at\u00e9",
+       "conditions":{
+          "show_group_on":"Mostrar grupo quando este hor\u00e1rio estiver ativado",
+          "hide_group_on":"Ocultar grupo quando esse hor\u00e1rio estiver ativado",
+          "show_button_on":"Mostrar bot\u00e3o quando este hor\u00e1rio estiver ativado",
+          "hide_button_on":"Ocultar bot\u00e3o quando este hor\u00e1rio estiver ativado"
+       },
+       "trigger":{
+          "trigger":"Gatilho ativado",
+          "dont_trigger":"N\u00e3o ative"
+       },
+       "remove_schedule":"Remover agendamento",
+       "must_keep_one":"Voc\u00ea deve manter pelo menos uma programa\u00e7\u00e3o",
+       "current_timezone":"Fuso hor\u00e1rio atual:",
+       "remove_date":{
+          "title":"Remover data",
+          "message":"Tem certeza de que deseja remover esta data?"
+       },
+       "errors":{
+          "time_invalid":"Desculpe, o hor\u00e1rio '{{ value }}' era inv\u00e1lido. Revertendo para '{{ originalValue }}'.",
+          "time_overlap_start":"O hor\u00e1rio de in\u00edcio '{{ startValue }}' entra em conflito com o hor\u00e1rio de t\u00e9rmino '{{ endValue }}'. O tempo foi revertido para '{{ originalValue }}'. Verifique se voc\u00ea tem pelo menos 5 minutos de sobreposi\u00e7\u00e3o.",
+          "time_overlap_end":"O hor\u00e1rio final '{{ endValue }}' entra em conflito com o hor\u00e1rio inicial '{{ startValue }}'. O tempo foi revertido para '{{ originalValue }}'. Verifique se voc\u00ea tem pelo menos 5 minutos de sobreposi\u00e7\u00e3o."
+       },
+       "weekdays":{
+          "title":"Dias da semana",
+          "monday":"Segunda-feira",
+          "tuesday":"ter\u00e7a",
+          "wednesday":"Quarta-feira",
+          "thursday":"Quinta-feira",
+          "friday":"Sexta-feira",
+          "saturday":"s\u00e1bado",
+          "sunday":"domingo"
+       },
+       "exclude":{
+          "title":"Datas exclu\u00eddas",
+          "add":"Adicionar data exclu\u00edda",
+          "info":"Adicione datas espec\u00edficas para mostrar ou ocultar os bot\u00f5es anexados a este esquema de tempo. Por exemplo: \"Minha loja est\u00e1 aberta de 22 de janeiro \u00e0s 22:00 (22:00) por causa de uma noite especial que organizamos\". A regra substituir\u00e1 as configura\u00e7\u00f5es padr\u00e3o desse dia."
+       },
+       "input_start":{
+          "label":"Comece a acionar bot\u00f5es de",
+          "helper":"Data de in\u00edcio",
+          "error":"Aviso! Sua data de in\u00edcio '{{ date }}' ultrapassou a data de t\u00e9rmino desta programa\u00e7\u00e3o. Se voc\u00ea n\u00e3o alterar essa data, a programa\u00e7\u00e3o n\u00e3o funcionar\u00e1."
+       },
+       "input_end":{
+          "label":"Pare de acionar os bot\u00f5es depois (opcional)",
+          "helper":"Clique para adicionar a data final",
+          "placeholder_empty":"Selecione uma data no seletor de datas abaixo",
+          "error":"Aviso! Sua data de t\u00e9rmino '{{ date }}' ultrapassou a data de in\u00edcio desta programa\u00e7\u00e3o. Se voc\u00ea n\u00e3o alterar essa data, a programa\u00e7\u00e3o n\u00e3o funcionar\u00e1."
+       }
+    },
+    "random_tips":{
+       "tip_1":"Voc\u00ea sabia que o Buttonizer tem diferentes estilos de grupo que voc\u00ea pode usar?",
+       "tip_2":"Clique nos bot\u00f5es para gerenciar suas configura\u00e7\u00f5es",
+       "tip_3":"D\u00ea uma cor aos seus bot\u00f5es",
+       "tip_4":"Um bot\u00e3o pode ter apenas uma a\u00e7\u00e3o, mas voc\u00ea pode escolher mais de 25 a\u00e7\u00f5es!",
+       "tip_5":"Desative essas dicas nas configura\u00e7\u00f5es",
+       "tip_6":"You can show more than 7 buttons by enabling it in Preferences ;)",
+       "tip_7":"Cole o c\u00f3digo HEX no colorpicker se desejar usar uma cor espec\u00edfica",
+       "tip_8":"Se jogar de forma inteligente com 'Mostrar no computador' e 'Mostrar no celular', voc\u00ea ter\u00e1 at\u00e9 14 bot\u00f5es por p\u00e1gina!",
+       "tip_9":"You can use Page Rules to show or hide buttons on certain pages",
+       "tip_10":"Voc\u00ea pode usar a a\u00e7\u00e3o do bot\u00e3o de compartilhamento social para permitir que um visitante compartilhe sua p\u00e1gina da web",
+       "tip_11":"Voc\u00ea precisa de uma dica de ferramenta? ;)",
+       "tip_12":"Voc\u00ea pode estilizar o bot\u00e3o grande principal editando o grupo",
+       "tip_13":"Voc\u00ea pode adicionar um atributo HTML de classe ou ID a um grupo e um bot\u00e3o",
+       "tip_14":"Deseja criar um novo bot\u00e3o semelhante? Duplique seu bot\u00e3o!",
+       "tip_15":"Se voc\u00ea tem uma \u00f3tima dica, informe-nos! Vamos adicion\u00e1-lo :)",
+       "tip_16":"Pssst, clique no nome do grupo \/ bot\u00e3o no topo",
+       "tip_17":"Inten\u00e7\u00e3o de sa\u00edda ... \u00c9 aqui que a divers\u00e3o come\u00e7a!",
+       "tip_18":"With our brand new color picker you can build a personalized palette, create a color scale and blend colors",
+       "tip_19":"Premium users just need one license key for their production environment and development environment",
+       "tip_20":"Give more roles permission to access Buttonizer's dashboard in Preferences!",
+       "tip_21":"Easily edit a specific button by hovering on them on the preview",
+       "tip_22":"Add a custom text when using Social Sharing actions!",
+       "tip_23":"Buttonizer also supports languages that are written from right-to-left :)"
+    }
+ }

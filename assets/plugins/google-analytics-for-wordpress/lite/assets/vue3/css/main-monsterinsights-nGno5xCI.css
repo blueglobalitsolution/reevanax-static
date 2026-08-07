@@ -1,0 +1,387 @@
+@charset "UTF-8";
+.vfm--fixed{position:fixed}
+.vfm--absolute{position:absolute}
+.vfm--inset{top:0;right:0;bottom:0;left:0}
+.vfm--overlay{z-index:-1;background-color:#00000080}
+.vfm--prevent-none{pointer-events:none}
+.vfm--prevent-auto{pointer-events:auto}
+.vfm--outline-none:focus{outline:none}
+@keyframes fade-in{0%{opacity:0}to{opacity:1}}
+@keyframes fade-out{0%{opacity:1}to{opacity:0}}
+.vfm-fade-enter-active{animation:fade-in .3s ease}
+.vfm-fade-leave-active{animation:fade-out .3s ease}
+.vfm-bounce-back{transition-property:transform;transition-duration:.3s}
+.vfm-slide-up-enter-active,.vfm-slide-up-leave-active,.vfm-slide-down-enter-active,.vfm-slide-down-leave-active{transition:transform .3s ease}
+.vfm-slide-down-enter-from,.vfm-slide-down-leave-to{transform:translateY(100vh)!important}
+.vfm-slide-up-enter-from,.vfm-slide-up-leave-to{transform:translateY(-100vh)!important}
+.vfm-slide-right-enter-active,.vfm-slide-right-leave-active,.vfm-slide-left-enter-active,.vfm-slide-left-leave-active{transition:transform .3s ease}
+.vfm-slide-right-enter-from,.vfm-slide-right-leave-to{transform:translate(100vw)!important}
+.vfm-slide-left-enter-from,.vfm-slide-left-leave-to{transform:translate(-100vw)!important}
+.vfm-swipe-banner-back,.vfm-swipe-banner-forward{position:fixed;top:0;bottom:0;width:27px;z-index:10}
+.vfm-swipe-banner-back{left:0}
+.vfm-swipe-banner-forward{right:0}
+/* ---- success ---- */
+.monsterinsights-success-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monsterinsights-success-modal {
+  position: relative;
+  width: 500px;
+  max-width: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 50px 40px 40px;
+  text-align: center;
+}
+@media (max-width: 782px) {
+.monsterinsights-success-modal {
+    width: 100%;
+    padding: 40px 20px 30px;
+}
+}
+.monsterinsights-success-modal__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.monsterinsights-success-modal__title {
+  font-size: 22px;
+  line-height: 1.35;
+  color: #6B7280;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.monsterinsights-success-modal__message {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6B7280;
+  margin: 0 0 24px 0;
+}
+.monsterinsights-success-modal__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.monsterinsights-success-modal__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 10px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #509fe2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.monsterinsights-success-modal__button:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* ---- error ---- */
+.monsterinsights-error-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monsterinsights-error-modal {
+  position: relative;
+  width: 500px;
+  max-width: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 50px 40px 40px;
+  text-align: center;
+}
+@media (max-width: 782px) {
+.monsterinsights-error-modal {
+    width: 100%;
+    padding: 40px 20px 30px;
+}
+}
+.monsterinsights-error-modal__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.monsterinsights-error-modal__title {
+  font-size: 22px;
+  line-height: 1.35;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.monsterinsights-error-modal__message {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+}
+.monsterinsights-error-modal__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.monsterinsights-error-modal__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 10px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #f97373;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+.monsterinsights-error-modal__button:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* ---- confirm ---- */
+.monsterinsights-confirm-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monsterinsights-confirm-modal {
+  position: relative;
+  width: 460px;
+  max-width: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 32px 32px 28px;
+  text-align: left;
+}
+@media (max-width: 782px) {
+.monsterinsights-confirm-modal {
+    width: 100%;
+    padding: 28px 20px 20px;
+}
+}
+.monsterinsights-confirm-modal__title {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #111827;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.monsterinsights-confirm-modal__message {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin: 0 0 20px 0;
+}
+.monsterinsights-confirm-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.monsterinsights-confirm-modal__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+.monsterinsights-confirm-modal__button--secondary {
+  background-color: #ffffff;
+  color: #4b5563;
+  border-color: #d1d5db;
+}
+.monsterinsights-confirm-modal__button--primary {
+  background-color: #509fe2;
+  color: #ffffff;
+}
+.monsterinsights-confirm-modal__button:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* ---- loading ---- */
+.monsterinsights-loading-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monsterinsights-loading-modal {
+  position: relative;
+  width: 400px;
+  max-width: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 40px 32px 32px;
+  text-align: center;
+}
+@media (max-width: 782px) {
+.monsterinsights-loading-modal {
+    width: 100%;
+    padding: 32px 20px 24px;
+}
+}
+.monsterinsights-loading-modal__spinner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.monsterinsights-loading-modal__spinner-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #509fe2;
+  animation: monsterinsights-loading-modal-spin 0.9s linear infinite;
+}
+.monsterinsights-loading-modal__title {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #374151;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.monsterinsights-loading-modal__message {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin: 0;
+}
+@keyframes monsterinsights-loading-modal-spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+/* Each app root carries `.monsterinsights-app-surface`; gates teleport here and scope
+   their overlay to this box (right of the WP admin menu). */
+.monsterinsights-app-surface {
+  position: relative;
+}
+/* ---- generic dialog shell (slot-based dialogs) ----
+   For `mode="dialog"` modals that pass their own card markup via the default slot
+   (Error / table / confirm / form / video dialogs). The overlay centers the card;
+   the slotted content keeps its own visuals. `content-class="monsterinsights-dialog-shell"`
+   is a neutral wrapper that intentionally overrides the per-variant content class so the
+   variant card styling is NOT applied. */
+.monsterinsights-dialog-shell-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+@media (max-width: 782px) {
+.monsterinsights-dialog-shell-overlay {
+    align-items: flex-start;
+    padding: 10px;
+}
+}
+/* ---- gate mode: scope the overlay to our app container ----
+   VFM's container is `vfm--fixed` (viewport). In gate mode we teleport the modal
+   into our app box and switch the container to `absolute` so it covers only that
+   box — the WP admin menu sits outside it and can't be covered. The teleport
+   target must be a positioned ancestor (see the app container's `position: relative`). */
+.vfm.monsterinsights-gate {
+  position: absolute;
+}
+/* Gates never dim — the page owns the (scoped) blur. Force the overlay transparent even
+   if VFM still paints its default dark backdrop under `hide-overlay`. */
+.vfm.monsterinsights-gate .vfm__overlay {
+  background: transparent !important;
+}
+/* ---- upsell gate (declarative slot + backdrop="blurred") ----
+   Hosts the legacy upsell card inside the shared overlay engine. The card
+   (`.monsterinsights-upsell-overlay`) keeps its own visuals; here we only drop
+   its absolute positioning so the overlay flexbox places it — leaving the global
+   class untouched for any not-yet-migrated consumers. */
+.monsterinsights-upsell-modal-shell-overlay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 25px 20px;
+  overflow-y: auto;
+}
+/* The Lite / insufficient-tier upsell gate (and the "Report Unavailable" addon
+   gate, which shares this overlay class) must:
+   1. sit BELOW the sticky report nav (z-index 60) so the nav bar and its
+      dropdown menus stay on top when the page is scrolled, and
+   2. be pinned to the viewport (not scoped to the possibly-short blurred report
+      content), so the card is always fully visible and never clipped on short
+      reports (Coupons, Refunds by Geo, Orders by Location, User Journey, …).
+   The gate overlay is click-through (`background="interactive"`), so covering
+   the viewport here does not block the WP admin menu. The top padding clears the
+   WP admin bar + sticky nav so the card opens just beneath the navigation. */
+.vfm.monsterinsights-gate.monsterinsights-upsell-modal-shell-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 55 !important;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: calc(var(--mi-report-gate-top, 0px) + 20px) 20px 20px;
+}
+.monsterinsights-upsell-modal-shell .monsterinsights-upsell-overlay {
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: 0 auto;
+}
+/* Some consumers' `.monsterinsights-upsell-overlay` is itself a full-screen dark backdrop
+   (components/_upsell.scss: position:fixed; background: rgba(0,0,0,.75); padding: 20px) with
+   `.monsterinsights-upsell-modal` as the card inside it. Inside the gate the Modal already owns
+   the (transparent, scoped) overlay, so strip that backdrop styling — but only for overlays that
+   wrap a `-modal` card, so card-style overlays (e.g. Google Ads, which has no inner `-modal`)
+   keep their own background. */
+.monsterinsights-upsell-modal-shell .monsterinsights-upsell-overlay:has(> .monsterinsights-upsell-modal) {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+  z-index: auto;
+  overflow: visible;
+  width: auto;
+  max-width: 100%;
+}
+/* ---- auth / re-auth gate (the "not authenticated" notice) ----
+   The legacy notice is `position: fixed` viewport-centered (it would cover the WP menu);
+   inside the gate shell we drop that and let the centered overlay place it. */
+.monsterinsights-auth-notice-shell-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  position: fixed !important;
+  inset: 0;
+  z-index: 100000 !important;
+}
+.monsterinsights-auth-notice-shell .monsterinsights-not-authenticated-notice {
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: 0 auto;
+}

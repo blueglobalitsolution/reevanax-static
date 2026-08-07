@@ -1,0 +1,20 @@
+/* optimized service media: gif->mp4 */
+img.attachment-large[src$='.mp4'],
+video.attachment-large,
+video.attachment-full,
+video.size-large,
+video.size-full {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+/* Responsive padding for the footer banner ("Ready for your luxurious...") */
+@media (max-width: 1024px) {
+  .elementor-221 .elementor-element.elementor-element-effa159 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}

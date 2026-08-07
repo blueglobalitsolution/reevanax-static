@@ -1,0 +1,1251 @@
+{
+    "errors":{
+       "fatal": "Oh, dat was niet wat ik had verwacht! Er ging iets mis.",
+       "custom_javascript":{
+          "title": "Aangepaste Javascript foutmelding",
+          "message": "Je aangepaste javascript veroorzaakte een foutmelding. Lees de foutmelding hieronder:"
+       },
+       "saving":{
+          "title": "Kon de instellingen niet opslaan",
+          "message": "Er ging iets mis tijdens het opslaan van uw instellingen:"
+       },
+       "forms":{
+          "only_numbers": "Alleen nummers toegestaan.",
+          "only_numbers_info": "Voor deze instelling zijn alleen positieve nummers toegestaan."
+       },
+       "permalink":{
+          "title": "Permalink-fout",
+          "info": "De verzoeken van Buttonizer werken niet wanneer de gewone permalink structuur wordt gebruikt. Gebruik een aangepaste permalink om Buttonizer te gebruiken"
+       }
+    },
+    "templates":{
+       "all_templates_description": "Je kan de knop aanpassen naar je eigen wensen nadat je hem hebt ingevoegd.",
+       "number_of_buttons": "Aantal knoppen",
+       "select": "Selecteer",
+       "selected": "Geselecteerd",
+       "insert": "Invoegen",
+       "framedesign":{
+          "label": "Framedesign"
+       },
+       "popular_actions":{
+          "label": "Populaire acties"
+       }
+    },
+    "warnings":{
+       "invalid_email": "Ongeldig email adres.",
+       "invalid_phone_number": "Ongeldig telefoonnummer. Gebruik alleen de nummernotatie. Laat nullen, haakjes of streepjes weg wanneer je gebruik maakt van het internationale formaat.",
+       "only_numbers": "Dit velt staat alleen nummers toe.",
+       "premium_license_free_version":{
+          "title": "Licentie geactiveerd",
+          "information": "Download en upload de premium-versie in de e-mail die we je hebben gestuurd om gebruik te maken van de premium functionaliteiten."
+       },
+       "php_version_outdated":{
+          "title": "This PHP version is no longer supported",
+          "information": "Your current PHP version ({{ version }}) is no longer supported by Buttonizer as it will no longer receive security patches. Some features will not work. We recommend upgrading to the latest version."
+       },
+       "unsaved_changes": "Are you sure you want to exit? Your changes have not been saved.",
+       "actions":{
+         "test_action_text": "Rechtermuisklik <mouseIcon /> om de knopactie te testen.",
+         "toggle_menu_text": "Rechtermuisklik <mouseIcon /> om het menu te openen/sluiten.",
+         "disabled_in_editor": "<bold>{{ action }}</bold> kan niet worden bekeken in de editormodus."
+       }
+    },
+    "common":{
+       "button": "Knop",
+       "group": "Groep",
+       "settings": "Instellingen",
+       "custom": "Aangepast",
+       "confirm": "Bevestig",
+       "search": "Zoek",
+       "skip": "Overslaan",
+       "edit": "Bewerk",
+       "type": "Type",
+       "or": "of",
+       "select": "Selecteer",
+       "learn_more": "Meer informatie",
+       "off": "Off",
+       "disable": "Deactiveren",
+       "disabled": "Gedeactiveerd",
+       "save": "Opslaan",
+       "saving": "Opslaan",
+       "saving_settings": "Aan het opslaan",
+       "save_and_close": "Save and close",
+       "publish": "Publiceer",
+       "published": "Gepubliceerd",
+       "publishing": "Publiceren...",
+       "warning": "Waarschuwing",
+       "next": "Volgende",
+       "previous": "Vorige",
+       "save_publish": "Opslaan & publiceren",
+       "snooze": "Snoozen"
+    },
+    "loading":{
+       "loading": "Laden...",
+       "settings": "Instellingen laden...",
+       "bar": "Balk laden...",
+       "website": "We wachten op je website...",
+       "website_slow": "Het duurt langer dan gebruikelijk, langzame website?",
+       "website_skip": "Sla deze stap over",
+       "initializing": "Initialiseren...",
+       "resetting": "Resetten...",
+       "running_migration": "Migratie aan het uitvoeren...",
+       "finishing": "Afronden..."
+    },
+    "utils":{
+       "add_button": "Knop toevoegen",
+       "add_group": "Groep toevoegen",
+       "create_group": "Maak nieuwe groep",
+       "shift_click": "Shift + Click to skip dialog",
+       "new_button": "Nieuwe knop",
+       "new_group": "Nieuwe groep",
+       "style": "Stijl",
+       "advanced": "Geavanceerd",
+       "text": "Tekst",
+       "base": "Basis",
+       "icon": "Icoon",
+       "color": "Kleur",
+       "image": "Afbeelding",
+       "image_url": "Image URL",
+       "select_image": "Selecteer afbeelding",
+       "change_image": "Verander afbeelding",
+       "select_file": "Selecteer bestand",
+       "change_file": "Verander bestand",
+       "remove_image": "Klik om de afbeelding te verwijderen",
+       "first_button": "Eerste knop",
+       "second_button": "Tweede knop",
+       "rename": "Hernoem",
+       "rename_to": "Hernoemen naar:",
+       "delete": "Verwijder",
+       "clear": "Clear",
+       "duplicate": "Dupliceer",
+       "lowercase_page_rule": "pagina regel",
+       "lowercase_time_schedule": "tijdschema",
+       "interaction": "Interactie",
+       "background": "Achtergrond",
+       "tips_tricks": "Hulp nodig? Quick-start, tips & tricks",
+       "visit_knowledgebase": "Hulp nodig? Bezoek ons kennis bank!",
+       "search_not_found": "Niks gevonden voor:",
+       "icon_selector":{
+          "title": "Icoon selectie",
+          "search_icon": "Icoon zoeken",
+          "loading": "Iconen worden geladen, even geduld alstublieft...",
+          "searching_for": "Zoeken naar: <bold>{{ keyword }}</bold>, <bold>{{ resultCount }}</bold> resultaten gevonden.",
+          "found": "Your search found <bold>{{ resultCount }}</bold> results.",
+          "remove_filter": "Filter verwijderen"
+       },
+       "templates":{
+          "found": "Your search returned <bold>{{ resultCount }}<bold> results."
+       },
+       "crash":{
+          "title": "Buttonizer is gecrashed!",
+          "subtitle": "Ons development team is op de hoogte gesteld.",
+          "subtitle2": "Als je wilt helpen, vertel ons hieronder wat er is gebeurd.",
+          "no_super_intro": "We're sorry, Buttonizer has crashed! Would you like to become a SUPER contributor and automatically log errors, including this one?",
+          "no_super_additional_info": "By sharing your crash report with us, you will help us detect exceptions like these so we can resolve them in a future release.",
+          "reload": "Reload"
+       },
+       "knowledge_link": "Hulp nodig? Meer informatie over hoe je de knopactie <bold>{{ setting }}</bold> gebruikt.",
+       "filter-visibility":{
+          "timeschedule_show_button": "De knop altijd weergeven",
+          "timeschedule_show_group": "De groep altijd weergeven",
+          "pagerule_show_button": "Laat de knop op elke pagina zien",
+          "pagerule_show_group": "Laat de groep op elke pagina zien"
+       }
+    },
+    "event_tracker":{
+       "title": "Event tracker",
+       "window_title": "Event tracker"
+    },
+    "modal":{
+       "ok": "Okey",
+       "ok_fix": "Okey, ik los dit op",
+       "sure": "Ik weet het zeker",
+       "lost": "How'd ya get here?",
+       "close": "Sluiten",
+       "cancel": "Annuleren",
+       "incorrect": "Onjuiste invoer.",
+       "yes_please": "Ja graag",
+       "no_thanks": "Nee bedankt",
+       "dismiss": "Negeer",
+       "changed_my_mind": "Ik ben van gedachten veranderd",
+       "save": "Opslaan",
+       "remove":{
+          "time_schedule":{
+             "window_title": "Tijdschema verwijderen?",
+             "question": "Weet je zeker dat je dit tijdschema wilt verwijderen? Knoppen die staan gekoppeld aan dit tijdschema zullen zichtbaar worden tenzij je ze koppelt aan een andere tijdschema.",
+             "no_buttons": "Er zijn geen knoppen gekoppeld aan dit tijdschema. Je kan deze veilig verwijderen.",
+             "num_buttons_multiple": "Er zijn <bold>{{ buttonCount }}</bold> knoppen gekoppeld aan dit tijdschema!",
+             "num_buttons_single": "Er is <bold>1</bold> knop gekoppeld aan dit tijdschema",
+             "last_warning": "Weet je zeker dat je deze tijdschema wilt verwijderen?"
+          },
+          "button":{
+             "window_title": "Verwijder knop",
+             "question": "Weet je zeker dat je deze knop wilt verwijderen?",
+             "question_remove": "Weet je zeker dat je de knop '{{ name }}' wilt verwijderen?",
+             "cannot_delete_window_title": "Kan deze knop niet verwijderen",
+             "cannot_delete": "Je kan deze knop niet verwijderen omdat het de enige knop is."
+          },
+          "group":{
+             "window_title": "Verwijder groep",
+             "question": "Weet je zeker dat je deze groep wilt verwijderen?",
+             "question_multiple_buttons": "Weet je heel zeker dat je de gehele groep wilt verwijderen? De groep bevat {{ count }} knoppen.",
+             "cannot_delete_window_title": "Kan deze groep niet verwijderen",
+             "cannot_delete": "Je kan deze groep niet verwijderen omdat het de enige groep is."
+          },
+          "page_rule":{
+             "window_title": "Pagina regel verwijderen?",
+             "question": "Weet je zeker dat je deze pagina regel wilt verwijderen? Knoppen die staan gekoppeld aan deze pagina regel zullen zichtbaar worden tenzij je ze koppelt aan een andere pagina regel.",
+             "no_buttons": "Er zijn geen knoppen gekoppeld aan deze pagina regel. Je kan deze veilig verwijderen.",
+             "num_buttons_multiple": "Er zijn <bold>{{ buttonCount }}</bold> knoppen gekoppeld aan deze pagina regel!",
+             "num_buttons_single": "Er is <bold>1</bold> knop gekoppeld aan deze pagina regel",
+             "last_warning": "Wil je deze paginaregel verwijderen?"
+          },
+          "permanent": "Deze actie is permanent en kan niet ongedaan worden gemaakt."
+       }
+    },
+    "saving":{
+       "saving": "Saving draft...",
+       "failed": "Failed!",
+       "completed": "Saved draft!"
+    },
+    "revert":{
+       "revert_changes": "Wijzigingen ongedaan maken",
+       "reverting": "Ongedaan maken...",
+       "modal":{
+          "intro": "Weet je zeker dat je je wijzigingen ongedaan wilt maken?",
+          "action": "Je wijzigingen zullen worden overschreven door de huidige gepubliceerde knoppen en instellingen."
+       },
+       "error":{
+          "title": "Kon de instellingen niet ongedaan maken",
+          "message": "Er ging iets mis tijdens het ongedaan maken van uw instellingen."
+       }
+    },
+    "welcome":{
+       "title": "Bedankt voor het gebruiken van Buttonizer!",
+       "intro": "We verwelkomen u graag bij <b>Buttonizer 2.0<\/b>!",
+       "super-contributor": "Wordt SUPER-bijdrager door automatisch crashrapporten en error logs naar ons toe te sturen. Op deze manier kunnen we je fouten met lichtsnelheid oplossen! Geen zorgen, alle data is geanonimiseerd.",
+       "learn-more": "Meer informatie",
+       "no-thanks": "Nee bedankt",
+       "yes-please": "Ja graag!",
+       "tour": "We've created a tour for our new Buzzers. Would you like to take the tour?",
+       "already_know": "Nee bedankt, ik weet hoe het werkt",
+       "take_tour": "Ja graag",
+       "open_menu": "Open menu",
+       "back_to_overview": "Terug naar het overzicht"
+    },
+    "buttonizer_tour":{
+       "title_interface_tour": "Welcome to Buttonizer!",
+       "intro_interface_tour": "We've created a tour for our new Buzzers. Would you like to take the tour? If not, feel free to watch a tour whenever you want. You can find all of our tours in the <bold>settings</bold> of Buttonizer.",
+       "title_new_features_tour": "What's New?",
+       "intro_new_features_tour": "Keep up-to-date with the newest releases, feature updates, and news from Buttonizer by following this short tour. Do not worry if you can not follow it right now! You can find this tour in the <bold>settings</bold> of Buttonizer.",
+       "already_know": "No, thanks",
+       "take_tour": "Let's go",
+       "previous": "Vorige",
+       "next": "Volgende",
+       "done": "Done",
+       "final":{
+          "title": "That was it! ",
+          "intro": "Thank you for taking the tour! If you have any questions, ask them on the <b><a>Buttonizer Community<\/a><\/b> forums. And if you have any feedback regarding the Buttonizer Tour, we'd love to hear it :) Enjoy Buttonizing!"
+       },
+       "interface_tour":{
+          "step_0":{
+             "title": "Groep",
+             "intro": "A group can have multiple buttons that work separately from each other. This group contains your first Buttonizer button! Click on \u201cAdd button\u201d to add more buttons to this group."
+          },
+          "step_1":{
+             "title": "Instellingen",
+             "intro": "Let's go to the settings of the group to view the different configurations."
+          },
+          "step_2":{
+             "title": "Algemeen",
+             "intro": "The general settings control some basic configuration for your button. You can change the label, position and style of the group here. Make sure the label is short and clear."
+          },
+          "step_3":{
+             "title": "Knop",
+             "intro": "Easily customize your button by choosing the color of your button, icon and the color. Make sure the button and text are clearly visible. You can set a different style for the normal and hover state."
+          },
+          "step_4":{
+             "title": "Navigation",
+             "intro": " This button makes navigation between the different buttons easier. You can also go to the group\u2019s settings."
+          },
+          "step_5":{
+             "title": "Publiceer",
+             "intro": "Adjustments are automatically saved in the editor and won\u2019t be shown on the site. Make sure to click <b>\"Publish\"<\/b> to see these changes on your website."
+          },
+          "step_6":{
+             "title": "Menu",
+             "intro": "This menu contains a list of options where you can go to settings, Page Rules and the Buttonizer Community. You can also manage your own account here."
+          },
+          "step_7":{
+             "title": "Instellingen",
+             "intro": "You can change your settings for Buttonizer, including settings for Google Analytics, icon library, preferences and you can reset Buttonizer."
+          },
+          "step_8":{
+             "title": "More Buttonizer Tours",
+             "intro": "We have more tours in store which are more in-depth and will help you improve your experience with Buttonizer even more. Go to <b><a onClick=\"app.closeButtonizerTour()\">settings<\/a><\/b> to enjoy another tour!"
+          },
+          "step_9":{
+             "title": "Ondersteuning",
+             "intro": "Our support helps you troubleshoot common issues, find solutions, ask questions, and share tips with other Buzzers."
+          }
+       },
+       "create_button_tour":{
+          "step_0":{
+             "title": "Nieuwe knop",
+             "intro": "If you would like to have a single Floating Action Button that triggers a primary action, then we would advise you to create a single button. "
+          },
+          "step_1":{
+             "title": "Settings for button",
+             "intro": "Let's go to the settings of the button to view the different configurations."
+          },
+          "step_2":{
+             "title": "Algemeen",
+             "intro": "The general settings control some basic configuration for your button. You can change the action type and the label of the button here."
+          },
+          "step_3":{
+             "title": "Knop actie",
+             "intro": "The Button action in the general settings specify where to send your website visitors too once you have added an action to the button."
+          },
+          "step_4":{
+             "title": "Open URL in:",
+             "intro": "This feature provides an easy and simple way to open the linked URL of the button action in the same tab, a new browser window or a new tab."
+          },
+          "step_5":{
+             "title": "Apparaatzichtbaarheid",
+             "intro": "You can decide if your button should be available on mobile devices and\/ or on computers."
+          },
+          "step_6":{
+             "title": "Label tekst",
+             "intro": "You can add and change the text of the label here. Choose a label that is short and clear."
+          },
+          "step_7":{
+             "title": "Style your button",
+             "intro": "If you want to change the colors of your button, then you can go to the tab Style and you will see that the first settings are the color settings for your button."
+          },
+          "step_8":{
+             "title": "Normal vs hover",
+             "intro": "You can set a different button style for the normal and hover state."
+          },
+          "step_9":{
+             "title": "Background color",
+             "intro": "To change the background color of a button, use the color picker. Pick a background color that improves your button's readability and usability."
+          },
+          "step_10":{
+             "title": "Border-radius",
+             "intro": "You can add rounded corners to a button with the border-radius property. Try to set a single radius to make circular corners."
+          },
+          "step_11":{
+             "title": "Icoon",
+             "intro": "Learn how to add a Font Awesome icon to your button."
+          },
+          "step_12":{
+             "title": "Icon vs image",
+             "intro": "Your floating action button can contain an icon that promotes a primary action. You can either select an icon in Buttonizer or import your own image."
+          },
+          "step_13":{
+             "title": "Selecteer icoon",
+             "intro": "Pick an icon you would like to see in your button."
+          },
+          "step_14":{
+             "title": "Icoon grootte",
+             "intro": "Change the size of your button icons. Increase or decrease the size of icons relative to that inherited font-size."
+          },
+          "step_15":{
+             "title": "Label visibility",
+             "intro": "You can decide if the label next to the button should be available on mobile devices,  computers or on both."
+          },
+          "step_16":{
+             "title": "Label position",
+             "intro": "With label position you can place the label on either side of the button. You can make use of this feature right away to see which position you prefer."
+          },
+          "step_17":{
+             "title": "Font family",
+             "intro": "Choosing the right font is an important step in making your button usable and accessible. Buttonizer automatically grabs the font family from your website, but you can also use the complete set of properties to choose the right font family. "
+          },
+          "step_18":{
+             "title": "Margin",
+             "intro": "With margin you can create more space around your button. Try it out by using pixels or percentages."
+          },
+          "step_19":{
+             "title": "Padding",
+             "intro": "With padding you can control the space between its content and its border. Try it out by using pixels or percentages."
+          }
+       }
+    },
+    "import_export":{
+       "import":{
+          "title": "Import",
+          "select_please": "Please select a Buttonizer export file.",
+          "select_click": "Click or drop a JSON export file",
+          "into_group":{
+             "button": "Import into this group",
+             "text": "Import buttons or replace this group."
+          },
+          "new_group":{
+             "group": "Import group",
+             "button": "Import button",
+             "text": "Import a new group."
+          },
+          "reupload": "Re-upload file",
+          "drag_drop": "Drop export file here",
+          "warning":{
+             "replace": "You are about to <b>replace<\/b> this group with:",
+             "preview": "What you are about to import:",
+             "invalid": "This file is not a Buttonizer file.",
+             "malformed": "The file you have selected is malformed or the file is not a Buttonizer file.",
+             "no_buttons": "This group does not have any buttons to import."
+          }
+       },
+       "properties": "properties",
+       "export":{
+          "title": "Export",
+          "export_button": "Export button",
+          "export_group": "Export group",
+          "merge": "Merge with group style",
+          "warning":{
+             "preview": "What you are about to export:",
+             "no_buttons": "This group does not have any buttons to export.",
+             "no_data": "This button does not have any data to export."
+          }
+       },
+       "import_export": "Import & Export"
+    },
+    "settings":{
+       "settings": "Instellingen",
+       "tippy_single_button": "Voeg een knop toe om groep instellingen te activeren",
+       "more_actions": "More actions",
+       "setting_categories":{
+          "menu_style": "Menustijl",
+          "general": "Algemeen",
+          "group_style": "Groep stijl",
+          "group_icon": "Groep icoon",
+          "button_style": "Knop stijl",
+          "button_icon": "Knop icoon",
+          "label_style": "Label stijl",
+          "background": "Achtergrond",
+          "icon_style": "Icoon stijl",
+          "image_style": "Afbeelding stijl",
+          "show_or_hide": "Weergeven of verbergen",
+          "label": "Label"
+       },
+       "name":{
+          "title": "Knopnaam",
+          "description": "Dit is de knopnaam."
+       },
+       "background_color":{
+          "title": "Knop kleur",
+          "description": "Dit is de kleur van de knopgroep en ook gelijk de standaardkleur van de knoppen in de groep."
+       },
+       "color_picker":{
+          "options":{
+             "solid": "Solid Color",
+             "linear": "Linear Gradient",
+             "radial": "Radial Gradient"
+          },
+          "new_swatch_description": "Click to add swatch. Right-click any swatch to remove."
+       },
+       "font_family":{
+          "title": "Font family",
+          "placeholder": "Type a custom font",
+          "add": "Typ \",\" om {{ value }} toe te voegen"
+       },
+       "button_size":{
+          "title": "Button Sizes",
+          "menu_button": "Menu button size",
+          "sub_button": "Sub button size"
+       },
+       "label_inside":{
+          "title": "Place label inside button"
+       },
+       "label_same_width":{
+          "title": "Make all labels have same width"
+       },
+       "label_same_height":{
+          "title": "Set height same as the button's"
+       },
+       "background_image":{
+          "title": "Use background image",
+          "description": "Upload een afbeelding wanneer je een foto als achtergrond wilt in plaats van een kleur. Aanbevolen formaat is: vierkant (1:1)."
+       },
+       "border_radius":{
+          "title": "Border-radius",
+          "description": "Verander de rondte van deze knop."
+       },
+       "box_shadow":{
+          "title": "Box shadow",
+          "description": "Change the box shadow of this button."
+       },
+       "margin":{
+          "title": "Margin",
+          "description": "Change the position of the label."
+       },
+       "padding":{
+          "title": "Padding",
+          "description": "Change the background size of the label."
+       },
+       "icon":{
+          "title": "Icoon",
+          "select": "Selecteer icoon",
+          "description": "Kies een icoon uit de icoon bibliotheek."
+       },
+       "icon_color":{
+          "title": "Icoon kleur",
+          "description": "Verander de icoonkleur van deze knop."
+       },
+       "icon_image_border_radius":{
+          "title": "Border-radius",
+          "description": "Verander de hoek-rondte van de afbeelding."
+       },
+       "icon_image_select":{
+          "title": "Icoon",
+          "description": "Kies een afbeelding om deze te gebruiken als knop of groep icoon. Aanbevolen formaat is: vierkant (1:1)"
+       },
+       "icon_image_size":{
+          "title": "Afbeeldingsgrootte",
+          "description": "Verander de grootte van de afbeelding."
+       },
+       "icon_or_image":{
+          "title": "Grafisch",
+          "label": "Select icon type",
+          "description": "Kies of je gebruik wilt maken van een icoon of een afbeelding als knop-icoon."
+       },
+       "icon_size":{
+          "title": "Icoon grootte",
+          "description": "Verander de icoon grootte van deze knop."
+       },
+       "label":{
+          "title": "Label",
+          "description": "Verander de label van deze knop.",
+          "placeholder": "Label tekst"
+       },
+       "label_color":{
+          "title": "Tekst kleur",
+          "description": "Verander de tekst en achtergrondkleur van de label van deze knop of knopgroep."
+       },
+       "font_size_border_radius":{
+          "title": "Lettertype grootte & border-radius",
+          "description": "Verander de font size en rand-hoek van de label voor deze knop of knopgroep."
+       },
+       "font_size": "Lettertypegrootte",
+       "menu_animation":{
+          "title": "Animatie",
+          "description": "Deze optie zal de knopgroep animeren om de aandacht te trekken van de bezoeker. De animatie wordt om de 10 seconden herhaald.",
+          "delay": "Delay",
+          "repeat_count": "Repeat Count",
+          "repeat_helper_text": "Enter '0' for unlimited",
+          "animations":{
+             "none": "Geen animatie",
+             "hello": "Buttonizer Hallo",
+             "bounce": "Springen",
+             "jelly": "Pudding",
+             "pulse": "Pulse"
+          }
+       },
+       "label_position":{
+          "title": "Positie",
+          "description": "Label position",
+          "warning": "Make sure to add a label",
+          "directions":{
+             "left": "Left",
+             "auto": "Auto",
+             "right": "Right"
+          }
+       },
+       "menu_position":{
+          "title": "Positie",
+          "description": "Verander de positie van de knopgroep.",
+          "horizontal": "Horizontaal",
+          "vertical": "Verticaal",
+          "from": "from",
+          "scaled": "Scaled",
+          "absolute": "Absolute",
+          "directions":{
+             "left": "Left",
+             "right": "Right",
+             "bottom": "Bottom",
+             "top": "Top"
+          }
+       },
+       "menu_style":{
+          "title": "Menustijl",
+          "title_short": "Stijl",
+          "description": "Verander de menustijl van deze knopgroep.",
+          "warning": "Deze instelling wordt niet gebruikt voor de {{ name }} menustijl...",
+          "styles":{
+             "default": "Standaard",
+             "faded": "Faded",
+             "cornercircle": "Hoekcirkel",
+             "buildingup": "Opbouwen",
+             "pop": "Pop",
+             "square": "Vierkant",
+             "rectangle": "Rechthoek",
+             "text": "Text only",
+             "texticon": "Text w\/ icon"
+          }
+       },
+       "menu":{
+          "title": "Menu",
+          "title_settings": "Menu settings",
+          "description": "Turn on or off whether the group has a closable menu button"
+       },
+       "opening_animation":{
+          "title": "Opening animation",
+          "description": "Decide what type of opening animation is used for opening\/closing the menu"
+       },
+       "label_desktop":{
+          "title": "Zichtbaarheid",
+          "description": "Altijd de label weergeven, alleen weergeven wanneer je er met de muis overheen gaat, of verberg de label op <u>desktop<\/u>."
+       },
+       "label_mobile":{
+          "title": "Zichtbaarheid",
+          "description": "Altijd de label weergeven of verberg de label op <u>mobiele apparaten<\/u>."
+       },
+       "label_styles":{
+          "group_default": "Group default",
+          "always": "Label altijd tonen",
+          "hover": "Label alleen tonen bij muis-hover",
+          "hide": "Label verbergen"
+       },
+       "show_mobile_desktop":{
+          "title": "Weergeven op",
+          "device_visibility": "Apparaatzichtbaarheid",
+          "description": "Kies of u deze knopgroep zichtbaar wilt maken op desktops en mobiele apparaten.",
+          "mobile": "Mobiel",
+          "desktop": "Desktop",
+          "toggle_desktop": "Schakel op desktop weergeven in\/uit",
+          "toggle_mobile": "Schakel op mobiel weergeven in\/uit"
+       },
+       "start_opened":{
+          "title": "Start geopend",
+          "description": "De knopgroep start geopend wanneer deze instelling geactiveerd is."
+       },
+       "use_main_button_style":{
+          "title": "Gebruik groep-stijl",
+          "description": "Wanneer deze optie is ingeschakeld zal deze de stijl van de groep gebruiken.",
+          "warning": "Schakel GEBRUIK GROEP-STIJL uit om deze instelling te beheren"
+       },
+       "close_on_click_outside":{
+          "title": "Close on click outside",
+          "description": "This will close the menu if you click outside Buttonizer."
+       },
+       "close_on_click_inside":{
+          "title": "Close on button click",
+          "description": "This will close the menu if you click on a button inside this group."
+       },
+       "open_on_mouseover":{
+          "title": "Open on hover",
+          "description": "This will open the menu if you hover the group button."
+       },
+       "close_on_mouseout":{
+          "title": "Close on mouse out",
+          "description": "This will close the menu if you hover out the group button."
+       },
+       "custom_id":{
+          "title": "Aangepast ID",
+          "description": "Voegt een aangepast 'id' HTML attribuut toe aan de knop.",
+          "pro_description": "Je kan aan elke knop een aangepaste ID toevoegen voor extra styling.",
+          "placeholder": "ID naam"
+       },
+       "custom_class":{
+          "title": "Aangepaste class",
+          "description": "Voegt een aangepast 'class' HTML attribuut toe aan de knop.",
+          "pro_description": "Je kan aan elke knop een aangepaste class toevoegen voor extra styling.",
+          "placeholder": "Class naam",
+          "styling_editor": "Open Custom Styling Editor",
+          "styling_editor_title": "Custom Styling Editor"
+       },
+       "selected_page_rule":{
+          "title": "Pagina regel",
+          "description": "Voegt een aangepast 'class' HTML attribuut toe aan de knop.",
+          "pro_description": "Je kan aan elke knop een aangepaste class toevoegen voor extra styling.",
+          "manage_page_rules": "Beheer pagina regels",
+          "cannot_select": "Je kan niet dezelfde pagina-regel kiezen als de groep!",
+          "show_on_rule_trigger":{
+             "show": "Toon knop wanneer de regel wordt getriggered",
+             "hide": "Verberg knop wanneer de regel wordt getriggered"
+          }
+       },
+       "timeout_scroll":{
+          "timeout":{
+             "title": "Time-out",
+             "trigger_once": "Trigger only once",
+             "milliseconds": "Milliseconden",
+             "info": "Laat Buttonizer zien na {{ value }} seconden"
+          },
+          "scroll":{
+             "title": "Scrollen",
+             "from_top": "Van boven",
+             "show_after": "Laat Buttonizer zien na 0 seconden",
+             "visibility": "Hide group as starting visibility",
+             "hide": "Verberg",
+             "show": "Weergeven",
+             "info": "Scroll <bold>{{ scrollValue }}</bold> vanaf de bovenkant van de pagina om de groep <bold>{{ showOrHide }}</bold>"
+          }
+       },
+       "exit_intent":{
+          "title": "Exit intent",
+          "enable": "Exit intent inschakelen",
+          "pro_description": "Met deze instelling kun je Buttonizer laten animeren wanneer de gast je website wilt verlaten.",
+          "description": "Exit intent kan gebruikt worden om een animatie te activeren rondom Buttonizer voordat bezoekers je website verlaten.",
+          "info": "Let op: Exit intent zal niet worden <b>geactiveerd<\/b> in voorbeeld-modus, alleen op uw LIVE-website zal dit te zien zijn.",
+          "when_to_trigger": "Wanneer activeren?",
+          "trigger_window": "Trigger wanneer de browser wordt verlaten",
+          "trigger_inactive": "Trigger op inactiviteit (2 minuten)",
+          "how_often":{
+             "_title": "Hoe vaak moet het worden geactiveerd?",
+             "once_page": "Eenmalig per pagina",
+             "once_session": "Eenmalig per bezoek-sessie",
+             "always": "Altijd triggeren"
+          },
+          "animation":{
+             "_title": "Animatie bij intentie",
+             "focused": "Gefocust",
+             "open_menu": "Open menu",
+             "jump": "Spring en open",
+             "jump_single": "Jump once",
+             "flip": "Flip en open",
+             "flip_single": "Flip"
+          }
+       },
+       "popups":{
+          "generate": "Generate new popup id",
+          "elementor_guide": "Copy and paste this into your Elementor Popup's <b>\"Open By Selector\"<\/b> option. <br \/>",
+          "popup_maker_guide": "In your <b>Popup Settings<\/b>, add a new <b>\"Click to Open\"<\/b> trigger and copy and paste this code in <b>\"Extra CSS Selectors\"<\/b> <br \/>"
+       },
+       "button_action":{
+          "title": "Knop actie",
+          "description": "Kies een klik-actie voor deze knop.",
+          "select": "Selecteer knop-actie",
+          "search_not_found": "Geen knop-actie gevonden voor:",
+          "actions":{
+             "group_popular": "Populaire acties",
+             "group_chat": "Klik om te chatten",
+             "group_social_media": "Sociale media",
+             "group_popup": "Pop-up",
+             "group_actions": "Acties",
+             "phone_number":{
+                "name": "Bel actie (telefoonnummer)",
+                "invalid": "Telefoonnummer ongeldig",
+                "number": "Telefoonnummer"
+             },
+             "mail":{
+                "name": "E-mail actie (e-mail adres)",
+                "invalid": "Ongeldig email adres."
+             },
+             "page":{
+                "name": "Pagina",
+                "placeholder": "Select a page",
+                "helper": "To visualise what page type you have chosen, the value is displayed as: '[Page type]: [Page name]'."
+             },
+             "back_to_top": "Terug naar boven",
+             "go_to_bottom": "Go to bottom",
+             "go_back_one_page": "Vorige pagina",
+             "share_page": "Deel pagina",
+             "sms": "SMS",
+             "viber": "Viber ondersteunt geen link om te chatten. Wanneer een gebruiker op deze knop drukt zal hun \"contact toevoegen\" worden geopend met dit telefoonnummer vooringesteld.",
+             "messenger_chat":{
+                "description": "Facebook Messenger Chat Widget! First, you'll need to <howToLink>whitelist<\/howToLink> your site on Facebook. Then add your <helpLink>Page ID<\/helpLink> into the input above.",
+                "invalid": "Pagina ID ongeldig.",
+                "page_id": "Facebook pagina ID",
+                "language": "Messenger Chat Language"
+             },
+             "whatsapp_chat": "WhatsApp Chat",
+             "poptin": "<bold>You need to install Poptin's WordPress plugin.</bold><br />You can find it <bold><downloadLink>here</downloadLink>.</bold><br />Once you've made a Poptin paste the <bold><helpLink>direct link</helpLink><\/bold> into the input above.",
+             "share_page_on": "Delen op {{ platform }}",
+             "social_sharing":{
+                "social_sharing": "Delen op sociale netwerken",
+                "popular": "Popular Social Sharing",
+                "other": "Other Social Sharing"
+             },
+             "clipboard": "URL naar klembord kopi\u00ebren",
+             "print_page": "Pagina printen",
+             "share_page_via": "Delen via {{ platform }}",
+             "action_discontinued": "<italic>{{ action }}</italic> has been discontinued and replaced with <a>{{ replacement }}</a>.",
+             "url":{
+                "name": "Website URL",
+                "invalid": "Dit lijkt op een ongeldige link. De knop werkt mogelijk niet zoals verwacht.",
+                "invalid_tip": "Mis je <b>http:\/\/<\/b> of <b>https:\/\/<\/b>? Misschien heb je een onnodige spatie ergens toegevoegd.",
+                "insecure": "<b>Onveilige link:<\/b> Sorry voor het storen, maar we adviseren je om HTTPS te gebruiken voor je links waar mogelijk. Dit is een veiligere manier voor het transporteren van data."
+             },
+             "javascript":{
+                "name": "Aangepaste knopactie / JavaScript",
+                "open_dialog": "Open JavaScript code editor",
+                "warning_modal_title": "Waarschuwing! Voordat je verdergaat...",
+                "warning_intro": "Je veranderd de knopactie van aangepaste javascript naar een andere actie. Je javascript wijzigingen zullen verloren gaan.",
+                "warning_question": "Weet je zeker dat je verder wilt gaan?"
+             },
+             "whatsapp_info": "Vul je telefoonnummer in zonder spaties en symbolen. Lees WhatsApps aanbevelingen door <a>hier te klikken.</a>",
+             "twitter_info": "Om Twitter DM te gebruiken moet je eerst je Twitter User ID vinden en directe berichten van iedereen toestaan. Om je account ID te vinden <findAccountLink>klik je hier<\/findAccountLink>. Om meer informatie te vinden over hoe je directe berichten van iedereen toestaat, <allowDirectMessagesLink>klik hier<\/allowDirectMessagesLink>.",
+             "signal_group_info": "Paste the generated Signal group URL into the field. If you need more information about how to enable group invite links, <a>click here<\/a>.",
+             "chat":{
+                "sms": "SMS",
+                "messenger_chat": "Facebook Messenger Chat Widget",
+                "messenger_link": "Facebook Messenger Link",
+                "twitter_dm": "Twitter DM",
+                "skype": "Skype",
+                "line": "LINE",
+                "waze": "Waze",
+                "telegram": "Telegram",
+                "viber": "Viber",
+                "signal_group": "Join signal group"
+             },
+             "social_media":{
+                "facebook": "Facebook",
+                "twitter": "Twitter",
+                "instagram": "Instagram",
+                "snapchat": "Snapchat",
+                "linkedin": "LinkedIn",
+                "vk": "VKontakte",
+                "waze": "Waze"
+             }
+          },
+          "placeholders":{
+             "sms": "Tekst",
+             "message": "Bericht",
+             "username": "Gebruikersnaam",
+             "mail":{
+                "recipient": "Ontvanger",
+                "subject": "Onderwerp",
+                "cc": "cc",
+                "bcc": "bcc",
+                "body": "Inhoud"
+             }
+          },
+          "open_url":{
+             "title": "Open URL in: "
+          },
+          "rel_attributes":{
+             "title": "Rel attributes",
+             "placeholder": "Set link rel attributes."
+          }
+       },
+       "button_group_window":{
+          "filters": "Filters",
+          "styling": "Stijl",
+          "timeout_scroll": "Time-out & Scrollen"
+       }
+    },
+    "settings_window":{
+       "title": "Buttonizer instellingen",
+       "description": "Beheer de instellingen van Buttonizer",
+       "icon_library":{
+          "title": "Icoon set",
+          "description": "Kies je iconenset",
+          "free": "gratis",
+          "latest": "Laatste (automatisch)",
+          "info": "Wanneer je thema automatisch iconen inlaad moet je de juiste icoon-bibliotheek kiezen.",
+          "select_version":{
+             "title": "Selecteer versie",
+             "info": "Selecteer de juiste versie van de iconen die je gebruikt op je website zodat je deze kunt selecteren in Buttonizer."
+          },
+          "library_license_key":{
+             "info": "Je hebt een icoon bibliotheek gekozen die premium iconen bevat. Vul de icoon-licentie in om deze weer te geven.",
+             "how_does_it_work": "Hoe werkt dit?",
+             "enter_integrity_code": "Vul de integrity code in"
+          },
+          "import_library":{
+             "title": "Iconen inladen",
+             "info": "Moet Buttonizer de iconen importeren in je thema? Wanneer je thema al iconen inlaad kan je deze optie uitschakelen."
+          }
+       },
+       "google_analytics":{
+          "title": "Google Analytics",
+          "enable": "Google Analytics inschakelen",
+          "description": "Meet je conversies",
+          "intro": "Wanneer deze optie is ingeschakeld zal Buttonizer automatisch de knopklikken loggen naar je Google Analytics account. Je kan door de schuif hierboven uit te zetten Buttonizer forceren om geen gebruik te maken van Google Analytics.",
+          "tracking_code_info": "Google Analytics wordt automatisch gedetecteerd als je deze al op je webpagina hebt toegevoegd. Maar, als je nog geen gebruik maakt van Google Analytics en het je eerste keer is, dan kan Buttonizer deze voor je toevoegen.",
+          "tracking_code_warning": "Wanneer je Google Analytics al aan je webpagina hebt toegevoegd en je laat Buttonizer dezelfde Analytics code toevoegen, zal dit knoeien met je analytics gegevens!",
+          "input": "UA Code",
+          "link": "Waar kan ik mijn klik-data vinden van mijn knoppen in Google Analytics?"
+       },
+       "other_settings":{
+          "title": "Voorkeuren",
+          "description": "Beheer je voorkeuren",
+          "admin_button":{
+             "title": "Weergeven in de admin bovenbalk",
+             "info": "Verberg Buttonizer in de admin top balk door deze instelling uit te schakelen."
+          },
+          "tooltips":{
+             "title": "Tooltips weergeven",
+             "info": "Verberg tooltips door deze instelling uit te schakelen."
+          },
+          "tips":{
+             "title": "Geef Buttonizer tips weer",
+             "info": "Verberg de tips bovenin het Buttonizer dashboard door deze instelling uit te schakelen"
+          },
+          "subdomain":{
+             "title": "Subdomein ondersteuning",
+             "info": "Sommige WordPress website gebruiken subdomeinen om content weer te geven. Je kan Buttonizer toestemming geven om ook op deze subdomeinen te laden. Zet deze functie alleen aan als je dit nodig hebt."
+          },
+          "ajax":{
+             "title": "Gebruik ajax om de knoppen te laden",
+             "info": "Deze functie is gemaakt om ervoor te zorgen dat Buttonizer je website niet vertraagt. Als je de knoppen direct zonder laadtijd zichtbaar wilt hebben kun je deze optie uitschakelen. De impact op de laadtijd hangt af van het aantal knoppen en groepen dat je hebt."
+          },
+          "error_logging":{
+             "title": "Automatisch error logs en crash melden",
+             "info": "Schakel automatische foutregistratie en crashrapportage in om ons te helpen met het oplossen van problemen in Buttonizer! Alle gegevens worden automatisch geanonimiseerd."
+          },
+          "no_limit":{
+             "title": "Show more than 7 buttons in a group!",
+             "info": "When enabled, it will disable the 7 button limit in Buttonizer. This means that you will be able to add as much buttons you can fit in the screen!"
+          },
+          "reset_opt_in":{
+             "title": "Opt-in to Buttonizer",
+             "info": "Currently you are opted out for sharing your WordPress environment information. When you want to make use of Buttonizer Pro, you need to opt-in. For more information, check out the opt-in page.",
+             "button": "Reset opt-in"
+          },
+          "additional_roles":{
+             "title": "Permissions",
+             "info": "You can grant more roles to access the Buttonizer settings who are not an administrator.",
+             "roles": "Select roles"
+          }
+       },
+       "buttonizer_tour":{
+          "title": "Buttonizer tour",
+          "description": "Helps you with step-by-step tours",
+          "interface":{
+             "title": "Buttonizer interface",
+             "description": "Make a tour through Buttonizer's interface"
+          },
+          "create_button":{
+             "title": "Create a button",
+             "description": "Learn how to make floating action buttons"
+          }
+       },
+       "changelog_dialog":{
+          "title": "What's new?",
+          "all_changelogs": "View all changelogs",
+          "new_features": "New features",
+          "first_feature":{
+             "title": "New styling options!",
+             "info": "We've added much more styling options for the group and the buttons. Now you can truly customize the buttons to your liking."
+          },
+          "second_feature":{
+             "title": "Load in templates",
+             "info": "Instead of creating your own buttons and groups, you can save time by loading ready-made templates. Click \"add button\" or \"create new group\" to see all templates available."
+          },
+          "third_feature":{
+             "title": "Updated menu position for button styles",
+             "info": "We have slightly adjusted the placement of the settings for changing the button position. Don't worry, you can still find the settings under the \"Advanced\" tab."
+          },
+          "fourth_feature":{
+             "title": "\"Shift + click\" to skip a dialog",
+             "info": "You can now press shift + click when adding, deleting and duplicating to skip the confirmation dialog."
+          }
+       },
+       "reset":{
+          "title": "Reset Buttonizer",
+          "description": "Wanneer je een frisse installatie nodig hebt",
+          "info": "Dit is een manier om Buttonizer terug naar de begin-instellingen te laten gaan.",
+          "what_will_happen":{
+             "title": "Wat gebeurt er als ik op de rode knop hieronder druk?",
+             "info": "De plugin zal teruggaan naar de 'fabrieksinstellingen'. Alle instellingen van Buttonizer zullen worden verwijderd, terug naar het begin toen je net Buttonizer installeerde."
+          },
+          "why":{
+             "title": "Waarom zou ik dat doen?",
+             "info": "Mogelijk heb je je knoppen, categorie\u00ebn of instellingen geru\u00efneerd en ben je toe aan een nieuw begin. Of misschien wil gewoon je de resetknop uitproberen..."
+          },
+          "license":{
+             "title": "Ik heb een licentie, wat gebeurt daarmee?",
+             "info": "Maak je geen zorgen! Er gebeurt niets met je licentie! Het zal alleen de volgende instellingen resetten:",
+             "list":{
+                "buttons": "Jouw knoppen",
+                "groups": "Jouw knop groepen",
+                "time_schedules": "Alle tijdschema's",
+                "page_rules": "Alle pagina regels",
+                "settings": "Alle andere instellingen van Buttonizer",
+                "published": "Alle gepubliceerde instellingen"
+             }
+          },
+          "default_settings":{
+             "title": "Okey, klinkt goed. En dan?",
+             "info": "Buttonizer zal gaan naar de standaard instellingen en zal zich gedragen als een nieuwe installatie. Dat is het enige."
+          },
+          "ready":{
+             "title": "Okey, ik ben er klaar voor!",
+             "info": "Druk op de rode knop hieronder om Buttonizer te resetten. Er zullen geen waarschuwingen meer volgen.",
+             "button": "Reset Buttonizer!"
+          }
+       }
+    },
+    "bar":{
+       "previous_session": "Aanpassingen geladen van de vorige sessie",
+       "edit_group_settings": "Bewerk groepsinstellingen",
+       "preview":{
+          "no_changes": "Mogelijk heb je op een link gekikt. Daardoor verliet je het voorbeeldscherm van Buttonizer. Aanpassingen die je maakt kun je hier niet zien.",
+          "return": "Terugkeren naar voorbeeld",
+          "desktop": "Desktop voorbeeld",
+          "tablet": "Tablet voorbeeld",
+          "mobile": "Mobiel voorbeeld"
+       },
+       "breadcrumb":{
+          "home": "Overzicht",
+          "tippy_home": "Terug naar het overzicht",
+          "tippy_group": "Terug naar de groep"
+       },
+       "menu":{
+          "version": "Versie {{ versionNumber }}",
+          "knowledgebase":{
+             "title": "Kennisbank",
+             "description": "Ontdek alles wat je moet weten over Buttonizer"
+          },
+          "support_group": "Ondersteuning",
+          "support":{
+             "title": "Ik heb hulp nodig",
+             "description": "Directe ondersteuning van de Buttonizer developers"
+          },
+          "community":{
+             "title": "Community",
+             "description": "Communiceer met andere Buttonizers"
+          },
+          "tour":{
+             "title": "Buttonizer tour (aanbevolen!)",
+             "description": "Start de 2 minuten tour"
+          },
+          "wp_admin": "Terug naar de WordPress dashboard",
+          "follow": "Volg ons voor handige tips & tricks!",
+          "account_group": "Buttonizer account",
+          "account":{
+             "title": "Mijn account",
+             "description": "Bekijk je account informatie en licentie"
+          },
+          "upgrade":{
+             "title": "Upgraden en prijzen",
+             "description": "Een diepe duik in alle mogelijkheden"
+          },
+          "affiliation":{
+             "title": "Partner worden",
+             "description": "Verdien $ voor het promoten van Buttonizer"
+          },
+          "options":{
+             "title": "Opties"
+          }
+       },
+       "buttons":{
+          "now_editing": "Nu aan het bewerken:",
+          "tippy_new_group": "Dit maakt een nieuwe groep aan met 2 knoppen.",
+          "tippy_single_button": "Dit maakt een knop aan, buiten  de andere groepen.",
+          "tippy_learn_more": "Lees meer over groepen en knoppen",
+          "tippy_drag_warning": "Je kan deze knop niet slepen aangezien dit de enige knop is die over is!",
+          "convert_to_group": "Converteren naar groep"
+       }
+    },
+    "migration_modal":{
+       "title": "Hoi Buttonizer!",
+       "intro": "Het lijkt er op dat je Buttonizer 2.0 al eens eerder hebt ge\u00efnstalleerd en toen bent teruggegaan naar versie 1.5. Nu ben je ge\u00fcpdatet naar versie 2.0!",
+       "convert": "De automatische migratie is nu niet uitgevoerd omdat dit al eerder is gebeurt. Om je knoppen opnieuw te migreren naar de nieuwste versie druk je op de knop hieronder!",
+       "popping_up": "Wanneer dit scherm blijft opkomen, zelfs wanneer je hebt geprobeerd om de knoppen te migreren, probeer dan Buttonizer te resetten. Ga naar het 'tandwiel' icoon (<i class=\"fas fa-cog\"><\/i>) in de bovenste balk. Ga dan naar 'Opties <i class=\"fas fa-cogs\"><\/i>' en open het tabje 'Reset' en volg de instructies.",
+       "convert_buttons": "Migreer mijn knoppen!"
+    },
+    "premium":{
+       "modal":{
+          "title": "Premium functie",
+          "describe": "Hoi daar, deze functie is voor onze premium gebruikers. We zullen beschrijven wat deze functie zal doen:",
+          "go_pro": "Wordt premium gebruiker",
+          "list":{
+             "button_sizes": "Change the size of the buttons and groups",
+             "time_schedules": "Toon knoppen op basis van geavanceerde tijdschema's",
+             "page_rules": "Toon knoppen op specifieke pagina's met geavanceerde paginaregels",
+             "button_groups": "Mogelijkheid om meer knopgroepen te maken",
+             "custom_images": "Aangepaste knopachtergrond & pictogram afbeelding",
+             "exit_intent": "Exit intent",
+             "show_on_scroll": "Weergeven of verbergen tijdens scrollen",
+             "show_on_timeout": "Weergeven na bepaalde tijd",
+             "custom_class": "Gebruik maken van CSS class namen en ID's",
+             "javascript": "Javascript uitvoeren bij een knop klik"
+          }
+       },
+       "time_schedules":{
+          "first_time_schedule": "Mijn eerste tijdschema"
+       },
+       "warning_duplicate": "Knoppen dupliceren is uitgeschakeld voor de gratis versie",
+       "page_rules":{
+          "first_page_rule": "Mijn eerste pagina regel"
+       },
+       "menu_styles":{
+          "text": "This menu style will remove the icon and add the label into the button, making it one long button.",
+          "text-icon": "This menu style will add the label into the button with an icon, making it one long button."
+       },
+       "multiple_button_groups": "Je hebt de mogelijkheid om meerdere groepen aan te maken op verschillende posities",
+       "custom_image": "Je kan afbeeldingen selecteren om als knop-icoon en knop-achtergrond te gebruiken.",
+       "show_on_timeout": "Met deze instelling kun je Buttonizer weergeven of verbergen na een bepaalde tijd.",
+       "show_on_scroll": "Met deze instelling kun je Buttonizer weergeven of verbergen na een bepaalde hoeveelheid scrollen.",
+       "add_animation_settings": "With this setting, you can change your animation settings like delay and repeat count.",
+       "font_family": "With this setting, you can change the font family of the label. You choose a font add your custom font.",
+       "margin": "With this setting, you can change the margin of the label. Change the position of the label relative to it's button",
+       "padding": "With this setting, you can change the size of the label."
+    },
+    "page_rules":{
+       "name": "Paginaregels",
+       "menu_description": "Kies op welke pagina je een knop(groep) wilt laten zien.",
+       "window_title": "Pagina regel beheer",
+       "window_description": "Je kan pagina regels instellen via dit venster. Wanneer je pagina's of definities toevoegt aan deze pagina regel zullen knoppen die hieraan gekoppeld staan worden weergegeven of verborgen, afhankelijk van je instellingen zodra de regel wordt getriggerd.",
+       "pro_description": "Je kan pagina instellingen instellen die zullen worden getriggerd op specifieke pagina's of gebruikersrollen. Je kan een onbeperkt aantal pagina regels toevoegen met verschillende condities.",
+       "add_page_rule": "Pagina regel toevoegen",
+       "name_your_page_rule": "Geef de pagina regel een naam:",
+       "single_name": "Pagina regel",
+       "input_any_page": "Laat de knop op elke pagina zien",
+       "remove_page_rule": "Pagina regel verwijderen",
+       "open_settings": "Open paginaregel instellingen",
+       "current_page_rule": "Huidige paginaregel",
+       "behaviour": "Pagina regel conditie gedrag",
+       "trigger": "Activeert wanneer \u00c9\u00c9N van de geselecteerde waarden waar is",
+       "conditions":{
+          "title": "Condities",
+          "show_group_on": "Toon groep wanneer de regel wordt geactiveerd",
+          "hide_group_on": "Verberg groep wanneer de regel wordt geactiveerd",
+          "show_button_on": "Toon knop wanneer de regel wordt geactiveerd",
+          "hide_button_on": "Verberg knop wanneer de regel wordt geactiveerd",
+          "add": "Conditie toevoegen"
+       },
+       "empty":{
+          "page": "Geen paginaregels",
+          "selected": "Geen paginaregel geselecteerd",
+          "rules": "Er zijn nog geen regels ingesteld voor deze pagina regel. Alle knoppen gekoppeld aan deze pagina regel zullen zichtbaar zijn. Klik op 'Conditie toevoegen' om er een toe te voegen!"
+       },
+       "types":{
+          "must_meet": "Moet voldoen aan alle condities (EN)",
+          "one_meets": "Moet voldoen aan minimaal 1 conditie (OF)"
+       },
+       "rule_and": "en",
+       "rule_or": "of",
+       "rules":{
+          "page": "Pagina",
+          "page_title": "Pagina titel bevat",
+          "blog": "Blog",
+          "blog_title": "Blog titel bevat",
+          "category": "Categorie",
+          "url_match": "URL match",
+          "url_match_exact": "Exact URL match",
+          "url_contains": "URL bevat",
+          "url_starts": "URL begint met",
+          "url_ends": "URL eindigt met",
+          "url_regex": "URL regular expression",
+          "user_roles": "Gebruiker heeft specifieke rol",
+          "user_logged_in": "Gebruiker is ingelogd",
+          "user_logged_out": "Gebruiker is uitgelogd"
+       },
+       "rules_group":{
+          "content_based": "Content gebaseerd",
+          "url": "URL",
+          "users": "Gebruikers"
+       },
+       "debug":{
+          "title": "Debug",
+          "test": "Test out this page rule",
+          "invalid": "This URL appears to be invalid. You need to use the whole URL of your page.",
+          "example": "It should look something like {{ url }}",
+          "user_roles": "User role test",
+          "debug_page": "Debug page",
+          "triggered": "This Page Rule is triggered",
+          "not_triggered": "This Page Rule is not triggered",
+          "one_met": "One or more conditions were met",
+          "all_met": "All conditions were met",
+          "one_not_met": "One or more conditions were not met",
+          "all_not_met": "All conditions were not met",
+          "type": "Condition type",
+          "set_value": "Condition value",
+          "got_value": "Received value",
+          "trigger": "Triggered"
+       },
+       "select_items": "Selecteer een of meer items.",
+       "remove_rule": "Weet je zeker dat je deze regel wilt verwijderen?",
+       "remove_rule_aborted": "Afgebroken. Elke pagina regel moet in ieder geval \u00e9\u00e9n regel houden.",
+       "warning_changing_rule": "Je hebt nog geselecteerde waarden, weet je zeker dat je deze wilt verwijderen?",
+       "rule_value": "Regel waarde"
+    },
+    "time_schedules":{
+       "name": "Tijdschema's",
+       "menu_description": "Voorbeeld: Toon een bel mij nu-knop alleen op openingstijden",
+       "single_name": "Tijdschema",
+       "window_title": "Tijdschema beheer",
+       "pro_description": "Je kan tijdschema's instellen die zullen worden getriggerd op specifieke tijdstippen van een dag. Het is zelfs mogelijk om de tijdschema's aan te passen voor specifieke dagen. Je kan een onbeperkt aantal tijdschema's aanmaken.",
+       "open_settings": "Open tijdschema instellingen",
+       "current_time_schedule": "Huidige tijdschema's:",
+       "empty":{
+          "page": "Je hebt geen tijdschema's",
+          "selected": "Geen tijdschema geselecteerd"
+       },
+       "dates": "Datums",
+       "add_schedule": "Tijdschema toevoegen",
+       "add_date": "Datum toevoegen",
+       "new_schedule": "Nieuwe tijdschema",
+       "name_schedule": "Geef het nieuwe tijdsschema een naam:",
+       "rename_schedule": "Hernoem tijdschema naar:",
+       "show_any_time": "De knop altijd weergeven",
+       "till": "tot",
+       "conditions":{
+          "show_group_on": "Toon groep wanneer het tijdschema wordt geactiveerd",
+          "hide_group_on": "Verberg groep wanneer het tijdschema wordt geactiveerd",
+          "show_button_on": "Toon knop wanneer het tijdschema wordt geactiveerd",
+          "hide_button_on": "Verberg knop wanneer het tijdschema wordt geactiveerd"
+       },
+       "trigger":{
+          "trigger": "Activeer op",
+          "dont_trigger": "Niet activeren op"
+       },
+       "remove_schedule": "Tijdschema verwijderen",
+       "must_keep_one": "Je moet minimaal \u00e9\u00e9n tijdschema behouden",
+       "current_timezone": "Huidige tijdzone:",
+       "remove_date":{
+          "title": "Datum verwijderen",
+          "message": "Weet je zeker dat je deze datum wilt verwijderen?"
+       },
+       "errors":{
+          "time_invalid": "Sorry, de gekozen tijd '{{ value }}' is niet geldig. De tijd wordt teruggezet naar '{{ originalValue }}'.",
+          "time_overlap_start": "De starttijd '{{ startValue }}' heeft een conflict met de eindtijd '{{ endValue }}. De tijd is teruggezet naar '{{ originalValue }}'. Zorg dat je minimaal 5 minuten speling hebt.",
+          "time_overlap_end": "De eindtijd '{{ endValue }}' heeft een conflict met de starttijd '{{ startValue }}'. De tijd is teruggezet naar '{{ originalValue }}'. Zorg dat je minimaal 5 minuten speling hebt."
+       },
+       "weekdays":{
+          "title": "Weekdagen",
+          "monday": "maandag",
+          "tuesday": "dinsdag",
+          "wednesday": "woensdag",
+          "thursday": "donderdag",
+          "friday": "vrijdag",
+          "saturday": "zaterdag",
+          "sunday": "zondag"
+       },
+       "exclude":{
+          "title": "Uitgezonderde dagen",
+          "add": "Uitgezonderde dag toevoegen",
+          "info": "Je hebt de mogelijkheid om specifieke data te selecteren om knoppen te verbergen of weer te geven die aan dit tijdschema gekoppeld zijn. Je kan dit bijvoorbeeld in de volgende situatie gebruiken: \"Ik ben op 22 januari geopend tot 22:00 vanwege een speciaal evenement dat we organiseren.\". Deze datum zal de normale instellingen van deze dag overschrijven."
+       },
+       "input_start":{
+          "label": "Start triggering knoppen vanaf",
+          "helper": "Startdatum",
+          "error": "Waarschuwing! Je startdatum '{{ date }}' is later dan de einddatum van dit tijdschema. Als je dit niet aanpast zal de tijdschema niet werken."
+       },
+       "input_end":{
+          "label": "Stop triggering knoppen na (optioneel)",
+          "helper": "Klik om een einddatum te selecteren",
+          "placeholder_empty": "Selecteer een datum in de datumkiezen hieronder",
+          "error": "Waarschuwing! Je einddatum '{{ date }}' is voor de startdatum van dit tijdschema. Als je dit niet aanpast zal het tijdschema niet werken."
+       }
+    },
+    "random_tips":{
+       "tip_1": "Wist je dat Buttonizer verschillende groep-stijlen heeft die je kan gebruiken?",
+       "tip_2": "Klik hier om de knopinstellingen te openen",
+       "tip_3": "Geef de knoppen een kleur",
+       "tip_4": "Een knop heeft maar \u00e9\u00e9n actie, maar je kan kiezen uit meer dan 25 acties!",
+       "tip_5": "Je kan deze tips in de instellingen uitzetten",
+       "tip_6": "You can show more than 7 buttons by enabling it in Preferences ;)",
+       "tip_7": "Plak een HEX-code in de kleurkiezer als je een specifieke kleur wilt gebruiken",
+       "tip_8": "Slim omgaan met de 'Weergeven op desktop' en 'Weergeven op mobiel' kan je 14 knoppen per pagina opleveren!",
+       "tip_9": "You can use Page Rules to show or hide buttons on certain pages",
+       "tip_10": "Je kan gebruik maken van de 'Delen op social media' knopactie om bezoekers je webpagina te laten delen",
+       "tip_11": "Heb je een tool-tip nodig? ;)",
+       "tip_12": "Je kan de stijl van de hoofdknop aanpassen door de groep te bewerken",
+       "tip_13": "Je kan een class of id HTML-attribute toevoegen aan een groep of knop",
+       "tip_14": "Wil je een vergelijkbare knop? Dupliceer hem!",
+       "tip_15": "Laat het ons weten als je een goede tip hebt! Dan voegen we 'm toe :)",
+       "tip_16": "Pssst, klik op de groep\/knop naam bovenin",
+       "tip_17": "Exit intent\u2026. Hier begint het pas echt leuk te worden!",
+       "tip_18": "With our brand new color picker you can build a personalized palette, create a color scale and blend colors",
+       "tip_19": "Premium users just need one license key for their production environment and development environment",
+       "tip_20": "Give more roles permission to access Buttonizer's dashboard in Preferences!",
+       "tip_21": "Easily edit a specific button by hovering on them on the preview",
+       "tip_22": "Add a custom text when using Social Sharing actions!",
+       "tip_23": "Buttonizer also supports languages that are written from right-to-left :)"
+    }
+ }

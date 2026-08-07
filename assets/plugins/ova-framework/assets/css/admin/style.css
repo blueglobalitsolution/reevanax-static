@@ -1,0 +1,27 @@
+#gallery-metabox-list li {
+   float: left;
+   width: 50px;
+   text-align: center;
+   margin: 10px 10px 10px 0;
+   cursor: move;
+}
+
+#ova_met_general_setting label{
+	font-weight: bold;
+	min-width: 150px;
+	display: inline-block;
+}
+
+#ova_met_general_setting select{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+}
+
+#ova_met_embed_setting label{
+	margin-bottom: 10px;
+	display: block;
+}
+#ova_met_embed_setting input{
+	border: 1px solid #ccc;
+	padding: 5px 10px;	
+}

@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ovaicon Webfont</title>
+    <link rel="stylesheet" type="text/css" href="ovaicon.css"/>
+    <meta charset="UTF-8">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #5f7d95;
+        }
+
+        a {
+            color: #4AD295;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        [class^="ovaicon-"]:before, [class*=" ovaicon-"]:before, [class^="ovaicon-"]:after, [class*=" ovaicon-"]:after {
+            font-family: Flaticon;
+            font-size: 30px;
+            font-style: normal;
+            margin-left: 20px;
+            color: #333;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: auto;
+            padding: 0 1em;
+        }
+
+        .title {
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 24px;
+        }
+
+        header .logo {
+            width: 210px;
+            height: auto;
+            border: none;
+            display: inline-block;
+        }
+
+        header strong {
+            font-size: 28px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        .demo {
+            margin: 2em auto;
+            line-height: 1.25em;
+        }
+
+        .demo ul li {
+            margin-bottom: 12px;
+        }
+
+        .demo ul li code {
+            background-color: #1D262D;
+            border-radius: 3px;
+            padding: 12px;
+            display: inline-block;
+            color: #fff;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            font-weight: lighter;
+            margin-top: 12px;
+            font-size: 13px;
+            word-break: break-all;
+        }
+
+        .demo ul li code .red {
+            color: #EC3A3B;
+        }
+
+        .demo ul li code .green {
+            color: #4AD295;
+        }
+
+        .demo ul li code .yellow {
+            color: #FFEEB6;
+        }
+
+        .demo ul li code .blue {
+            color: #2C8CF4;
+        }
+
+        .demo ul li code .purple {
+            color: #4949E7;
+        }
+
+        .demo ul li code .dots {
+            margin-top: 0.5em;
+            display: block;
+        }
+
+        #glyphs {
+            border-bottom: 1px solid #E3E9ED;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .glyph {
+            display: inline-block;
+            width: 9em;
+            margin: 1em;
+            text-align: center;
+            vertical-align: top;
+            background: #FFF;
+        }
+
+        .glyph .ovaicon {
+            padding: 10px;
+            display: block;
+            font-family: "Flaticon";
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .glyph .ovaicon:before {
+            font-size: 64px;
+            color: #5f7d95;
+            margin-left: 0;
+        }
+
+        .class-name {
+            font-size: 0.65em;
+            background-color: #E3E9ED;
+            color: #869FB2;
+            border-radius: 4px 4px 0 0;
+            padding: 0.5em;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .author-name {
+            font-size: 0.6em;
+            background-color: #EFF3F6;
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            padding: 0.5em;
+        }
+
+        .author-name a {
+            color: #1D262D;
+        }
+
+        .class-name:last-child {
+            font-size: 10px;
+            color: #888;
+        }
+
+        .class-name:last-child a {
+            font-size: 10px;
+            color: #555;
+        }
+
+        .glyph > input {
+            display: block;
+            width: 100px;
+            margin: 5px auto;
+            text-align: center;
+            font-size: 12px;
+            cursor: text;
+        }
+
+        .glyph > input.icon-input {
+            font-family: "Flaticon";
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .attribution .title {
+            margin-top: 2em;
+        }
+
+        .attribution textarea {
+            background-color: #F8FAFB;
+            color: #1D262D;
+            padding: 1em;
+            border: none;
+            box-shadow: none;
+            border: 1px solid #E3E9ED;
+            border-radius: 4px;
+            resize: none;
+            width: 100%;
+            height: 150px;
+            font-size: 0.8em;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+            -webkit-appearance: none;
+        }
+
+        .attribution textarea:hover {
+            border-color: #CFD9E0;
+        }
+
+        .attribution textarea:focus {
+            border-color: #4AD295;
+        }
+
+        .iconsuse {
+            margin: 2em auto;
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .iconsuse:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .iconsuse .image {
+            float: left;
+            width: 25%;
+            padding: 0 1em;
+        }
+
+        .iconsuse .image p {
+            margin-bottom: 1em;
+        }
+
+        .iconsuse .image span {
+            display: block;
+            font-size: 0.65em;
+            background-color: #222;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.5em;
+            color: #FFFF99;
+            margin-top: 1em;
+            font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .ovaicon:before {
+            color: #5f7d95;
+        }
+
+        #footer {
+            text-align: center;
+            background-color: #1D262D;
+            color: #869FB2;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        #footer a {
+            font-weight: normal;
+        }
+
+        @media (max-width: 960px) {
+            .iconsuse .image {
+                width: 50%;
+            }
+        }
+
+        .preview {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #f5f5f5;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .preview .inner  {
+            line-height: 85px;
+            font-size: 40px;
+            color: #333;
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: 10px;
+            font-family: Monaco, monospace;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #ddd;
+            -webkit-border-radius: 0 0 3px 3px;
+            -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+            color: #666;
+        }
+    </style>
+  <link rel="stylesheet" href="/assets/site-optimized-media.css" />
+</head>
+<body>
+    <header>
+        <a href="https://www.ovaicon.com/" target="_blank" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.3 76.5">
+                <path d="M156.6,69.4H145.3V7.1h11.3Z" style="fill:#0e2a47"/>
+                <path d="M206.2,69.4h-11V64.8a15.4,15.4,0,0,1-12.6,5.7c-11.6,0-20.3-9.5-20.3-22.1s8.8-22.1,20.3-22.1a15.4,15.4,0,0,1,12.6,5.8V27.5h11Zm-32.4-21c0,6.4,4.2,11.6,10.8,11.6s10.8-4.9,10.8-11.6-4.4-11.6-10.8-11.6S173.9,42,173.9,48.4Z"
+                      style="fill:#0e2a47"/>
+                <path d="M262.5,13.7a7.2,7.2,0,0,1-14.4,0,7.2,7.2,0,1,1,14.4,0ZM261,69.4H249.6v-42H261Z"
+                      style="fill:#0e2a47"/>
+                <path id="_Trazado_" data-name="&lt;Trazado&gt;"
+                      d="M139.6,17.8a16.6,16.6,0,0,0-8-1.4c-3.2.4-4.9,2-4.9,5.9v5.1h13V37.5h-13v32H115.4v-32h-7.8v-10h7.8V22.2c0-9.9,5.2-16.3,15-16.3a23.4,23.4,0,0,1,9.3,1.8Z"
+                      style="fill:#0e2a47"/>
+                <path d="M235.1,60c-3.5,0-6.3-1.9-6.3-7.1V37.5H244v-10H228.8V15H217.5V27.5h-5.7v10h5.7V53.7c0,10.9,5.3,16.8,15.7,16.8A22.9,22.9,0,0,0,244,68l-4.3-9.1A12.3,12.3,0,0,1,235.1,60Z"
+                      style="fill:#0e2a47"/>
+                <path d="M348.9,48.4c0,12.6-9.7,22.1-22.7,22.1s-22.7-9.4-22.7-22.1,9.6-22.1,22.7-22.1S348.9,35.8,348.9,48.4Zm-33.9,0c0,6.8,4.8,11.6,11.1,11.6s11.2-4.8,11.2-11.6-4.8-11.6-11.2-11.6S315.1,41.6,315.1,48.4Z"
+                      style="fill:#0e2a47"/>
+                <path d="M394.3,42.7V69.4H382.9V46.3c0-6.1-3-9.4-8.2-9.4s-8.9,3.2-8.9,9.5v23H354.6v-42h11v4.9c3-4.5,7.6-6.1,12.3-6.1C387.5,26.3,394.3,33,394.3,42.7Z"
+                      style="fill:#0e2a47"/>
+                <path d="M298,55.7h0a12.4,12.4,0,0,1-8.2,4.2h-.9l-1.8-.2a10,10,0,0,1-7.4-5.6,13.2,13.2,0,0,1-1.2-5.8,13,13,0,0,1,1.3-5.9,10.1,10.1,0,0,1,7.5-5.5h2.4a11.7,11.7,0,0,1,8.3,4.2l5.5-9.6a19.9,19.9,0,0,0-8.1-4.3,23.4,23.4,0,0,0-6.1-.8,25.2,25.2,0,0,0-7.5,1.1,20.9,20.9,0,0,0-8,4.6,21.9,21.9,0,0,0-6.8,16.4,21.9,21.9,0,0,0,6.7,16.3,20.9,20.9,0,0,0,8,4.6,25.2,25.2,0,0,0,7.7,1.2,23.6,23.6,0,0,0,6.2-.8,20,20,0,0,0,8.1-4.4Z"
+                      style="fill:#0e2a47"/>
+                <path d="M46.3,26.5H26.9L20.8,16H52.4L61.6,0H9.4A9.3,9.3,0,0,0,1.3,4.7a9.3,9.3,0,0,0,0,9.4L34.6,71.8a9.4,9.4,0,0,0,16.2,0l1.1-1.9L36.6,43.3Z"
+                      style="fill:#4ad295"/>
+                <path d="M84.2,4.7A9.3,9.3,0,0,0,76.1,0H73.8l-25,43.3,9.2,16L84.2,14A9.3,9.3,0,0,0,84.2,4.7Z"
+                      style="fill:#4ad295"/>
+            </svg>
+        </a>
+    </header>
+    <section class="demo wrapper">
+
+        <p class="title">Webfont Instructions</p>
+
+        <ul>
+            <li>
+                <span class="num">1. </span>Copy the "Fonts" files and CSS files to your website CSS folder.
+            </li>
+            <li>
+                <span class="num">2. </span>Add the CSS link to your website source code on header.
+                <code class="big">
+                    &lt;<span class="red">head</span>&gt;
+                    <br/><span class="dots">...</span>
+                    <br/>&lt;<span class="red">link</span> <span class="green">rel</span>=<span
+                        class="yellow">"stylesheet"</span> <span class="green">type</span>=<span
+                        class="yellow">"text/css"</span> <span class="green">href</span>=<span class="yellow">"your_website_domain/css_root/ovaicon.css"</span>&gt;
+                    <br/><span class="dots">...</span>
+                    <br/>&lt;/<span class="red">head</span>&gt;
+                </code>
+            </li>
+
+            <li>
+                <p>
+                    <span class="num">3. </span>Use the icon class on <code>"<span class="blue">display</span>:<span
+                        class="purple"> inline</span>"</code> elements:
+                    <br/>
+                    Use example: <code>&lt;<span class="red">i</span> <span class="green">class</span>=<span class="yellow">&quot;ovaicon-airplane49&quot;</span>&gt;&lt;/<span
+                        class="red">i</span>&gt;</code> or <code>&lt;<span class="red">span</span> <span
+                        class="green">class</span>=<span class="yellow">&quot;ovaicon-airplane49&quot;</span>&gt;&lt;/<span
+                        class="red">span</span>&gt;</code>
+            </li>
+        </ul>
+
+    </section>
+    <section id="glyphs">
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back"></i>
+                <div class="class-name">.ovaicon-back</div>
+                <div class="author-name">Author: <a data-file="back" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next"></i>
+                <div class="class-name">.ovaicon-next</div>
+                <div class="author-name">Author: <a data-file="next" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-menu"></i>
+                <div class="class-name">.ovaicon-menu</div>
+                <div class="author-name">Author: <a data-file="menu" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download"></i>
+                <div class="class-name">.ovaicon-download</div>
+                <div class="author-name">Author: <a data-file="download" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-checked"></i>
+                <div class="class-name">.ovaicon-checked</div>
+                <div class="author-name">Author: <a data-file="checked" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-menu-1"></i>
+                <div class="class-name">.ovaicon-menu-1</div>
+                <div class="author-name">Author: <a data-file="menu-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-checked-1"></i>
+                <div class="class-name">.ovaicon-checked-1</div>
+                <div class="author-name">Author: <a data-file="checked-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-cancel"></i>
+                <div class="class-name">.ovaicon-cancel</div>
+                <div class="author-name">Author: <a data-file="cancel" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-1"></i>
+                <div class="class-name">.ovaicon-download-1</div>
+                <div class="author-name">Author: <a data-file="download-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-fast-forward"></i>
+                <div class="class-name">.ovaicon-fast-forward</div>
+                <div class="author-name">Author: <a data-file="fast-forward" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-2"></i>
+                <div class="class-name">.ovaicon-download-2</div>
+                <div class="author-name">Author: <a data-file="download-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload"></i>
+                <div class="class-name">.ovaicon-upload</div>
+                <div class="author-name">Author: <a data-file="upload" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-login"></i>
+                <div class="class-name">.ovaicon-login</div>
+                <div class="author-name">Author: <a data-file="login" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-logout"></i>
+                <div class="class-name">.ovaicon-logout</div>
+                <div class="author-name">Author: <a data-file="logout" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-previous"></i>
+                <div class="class-name">.ovaicon-previous</div>
+                <div class="author-name">Author: <a data-file="previous" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-cancel-1"></i>
+                <div class="class-name">.ovaicon-cancel-1</div>
+                <div class="author-name">Author: <a data-file="cancel-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-fullscreen"></i>
+                <div class="class-name">.ovaicon-fullscreen</div>
+                <div class="author-name">Author: <a data-file="fullscreen" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-1"></i>
+                <div class="class-name">.ovaicon-next-1</div>
+                <div class="author-name">Author: <a data-file="next-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-more"></i>
+                <div class="class-name">.ovaicon-more</div>
+                <div class="author-name">Author: <a data-file="more" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-checked-2"></i>
+                <div class="class-name">.ovaicon-checked-2</div>
+                <div class="author-name">Author: <a data-file="checked-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-cancel-2"></i>
+                <div class="class-name">.ovaicon-cancel-2</div>
+                <div class="author-name">Author: <a data-file="cancel-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-menu-2"></i>
+                <div class="class-name">.ovaicon-menu-2</div>
+                <div class="author-name">Author: <a data-file="menu-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-1"></i>
+                <div class="class-name">.ovaicon-upload-1</div>
+                <div class="author-name">Author: <a data-file="upload-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-list"></i>
+                <div class="class-name">.ovaicon-list</div>
+                <div class="author-name">Author: <a data-file="list" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-2"></i>
+                <div class="class-name">.ovaicon-next-2</div>
+                <div class="author-name">Author: <a data-file="next-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-2"></i>
+                <div class="class-name">.ovaicon-upload-2</div>
+                <div class="author-name">Author: <a data-file="upload-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-1"></i>
+                <div class="class-name">.ovaicon-back-1</div>
+                <div class="author-name">Author: <a data-file="back-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-export"></i>
+                <div class="class-name">.ovaicon-export</div>
+                <div class="author-name">Author: <a data-file="export" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-shuffle"></i>
+                <div class="class-name">.ovaicon-shuffle</div>
+                <div class="author-name">Author: <a data-file="shuffle" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-up-arrow"></i>
+                <div class="class-name">.ovaicon-up-arrow</div>
+                <div class="author-name">Author: <a data-file="up-arrow" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-fullscreen-1"></i>
+                <div class="class-name">.ovaicon-fullscreen-1</div>
+                <div class="author-name">Author: <a data-file="fullscreen-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-2"></i>
+                <div class="class-name">.ovaicon-back-2</div>
+                <div class="author-name">Author: <a data-file="back-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rewind"></i>
+                <div class="class-name">.ovaicon-rewind</div>
+                <div class="author-name">Author: <a data-file="rewind" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-double-chevron"></i>
+                <div class="class-name">.ovaicon-double-chevron</div>
+                <div class="author-name">Author: <a data-file="double-chevron" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-3"></i>
+                <div class="class-name">.ovaicon-next-3</div>
+                <div class="author-name">Author: <a data-file="next-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-4"></i>
+                <div class="class-name">.ovaicon-next-4</div>
+                <div class="author-name">Author: <a data-file="next-4" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-fullscreen-2"></i>
+                <div class="class-name">.ovaicon-fullscreen-2</div>
+                <div class="author-name">Author: <a data-file="fullscreen-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-5"></i>
+                <div class="class-name">.ovaicon-next-5</div>
+                <div class="author-name">Author: <a data-file="next-5" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-3"></i>
+                <div class="class-name">.ovaicon-download-3</div>
+                <div class="author-name">Author: <a data-file="download-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-repeat"></i>
+                <div class="class-name">.ovaicon-repeat</div>
+                <div class="author-name">Author: <a data-file="repeat" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-diagonal-arrow"></i>
+                <div class="class-name">.ovaicon-diagonal-arrow</div>
+                <div class="author-name">Author: <a data-file="diagonal-arrow" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-resize"></i>
+                <div class="class-name">.ovaicon-resize</div>
+                <div class="author-name">Author: <a data-file="resize" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-3"></i>
+                <div class="class-name">.ovaicon-upload-3</div>
+                <div class="author-name">Author: <a data-file="upload-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-4"></i>
+                <div class="class-name">.ovaicon-upload-4</div>
+                <div class="author-name">Author: <a data-file="upload-4" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-menu-3"></i>
+                <div class="class-name">.ovaicon-menu-3</div>
+                <div class="author-name">Author: <a data-file="menu-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-3"></i>
+                <div class="class-name">.ovaicon-back-3</div>
+                <div class="author-name">Author: <a data-file="back-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-4"></i>
+                <div class="class-name">.ovaicon-download-4</div>
+                <div class="author-name">Author: <a data-file="download-4" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-resize-1"></i>
+                <div class="class-name">.ovaicon-resize-1</div>
+                <div class="author-name">Author: <a data-file="resize-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-5"></i>
+                <div class="class-name">.ovaicon-download-5</div>
+                <div class="author-name">Author: <a data-file="download-5" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-6"></i>
+                <div class="class-name">.ovaicon-next-6</div>
+                <div class="author-name">Author: <a data-file="next-6" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-fast-forward-1"></i>
+                <div class="class-name">.ovaicon-fast-forward-1</div>
+                <div class="author-name">Author: <a data-file="fast-forward-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-6"></i>
+                <div class="class-name">.ovaicon-download-6</div>
+                <div class="author-name">Author: <a data-file="download-6" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-4"></i>
+                <div class="class-name">.ovaicon-back-4</div>
+                <div class="author-name">Author: <a data-file="back-4" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-7"></i>
+                <div class="class-name">.ovaicon-download-7</div>
+                <div class="author-name">Author: <a data-file="download-7" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-7"></i>
+                <div class="class-name">.ovaicon-next-7</div>
+                <div class="author-name">Author: <a data-file="next-7" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-5"></i>
+                <div class="class-name">.ovaicon-back-5</div>
+                <div class="author-name">Author: <a data-file="back-5" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-5"></i>
+                <div class="class-name">.ovaicon-upload-5</div>
+                <div class="author-name">Author: <a data-file="upload-5" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-diagonal-arrow-1"></i>
+                <div class="class-name">.ovaicon-diagonal-arrow-1</div>
+                <div class="author-name">Author: <a data-file="diagonal-arrow-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-back-6"></i>
+                <div class="class-name">.ovaicon-back-6</div>
+                <div class="author-name">Author: <a data-file="back-6" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-8"></i>
+                <div class="class-name">.ovaicon-next-8</div>
+                <div class="author-name">Author: <a data-file="next-8" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-diagonal-arrow-2"></i>
+                <div class="class-name">.ovaicon-diagonal-arrow-2</div>
+                <div class="author-name">Author: <a data-file="diagonal-arrow-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rewind-1"></i>
+                <div class="class-name">.ovaicon-rewind-1</div>
+                <div class="author-name">Author: <a data-file="rewind-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-6"></i>
+                <div class="class-name">.ovaicon-upload-6</div>
+                <div class="author-name">Author: <a data-file="upload-6" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-upload-7"></i>
+                <div class="class-name">.ovaicon-upload-7</div>
+                <div class="author-name">Author: <a data-file="upload-7" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-previous-1"></i>
+                <div class="class-name">.ovaicon-previous-1</div>
+                <div class="author-name">Author: <a data-file="previous-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-download-8"></i>
+                <div class="class-name">.ovaicon-download-8</div>
+                <div class="author-name">Author: <a data-file="download-8" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-diagonal-arrow-3"></i>
+                <div class="class-name">.ovaicon-diagonal-arrow-3</div>
+                <div class="author-name">Author: <a data-file="diagonal-arrow-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-next-9"></i>
+                <div class="class-name">.ovaicon-next-9</div>
+                <div class="author-name">Author: <a data-file="next-9" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar"></i>
+                <div class="class-name">.ovaicon-calendar</div>
+                <div class="author-name">Author: <a data-file="calendar" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar-1"></i>
+                <div class="class-name">.ovaicon-calendar-1</div>
+                <div class="author-name">Author: <a data-file="calendar-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-alarm-clock"></i>
+                <div class="class-name">.ovaicon-alarm-clock</div>
+                <div class="author-name">Author: <a data-file="alarm-clock" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-stopwatch"></i>
+                <div class="class-name">.ovaicon-stopwatch</div>
+                <div class="author-name">Author: <a data-file="stopwatch" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar-2"></i>
+                <div class="class-name">.ovaicon-calendar-2</div>
+                <div class="author-name">Author: <a data-file="calendar-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar-3"></i>
+                <div class="class-name">.ovaicon-calendar-3</div>
+                <div class="author-name">Author: <a data-file="calendar-3" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar-4"></i>
+                <div class="class-name">.ovaicon-calendar-4</div>
+                <div class="author-name">Author: <a data-file="calendar-4" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-calendar-5"></i>
+                <div class="class-name">.ovaicon-calendar-5</div>
+                <div class="author-name">Author: <a data-file="calendar-5" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-alarm-clock-1"></i>
+                <div class="class-name">.ovaicon-alarm-clock-1</div>
+                <div class="author-name">Author: <a data-file="alarm-clock-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-wall-clock"></i>
+                <div class="class-name">.ovaicon-wall-clock</div>
+                <div class="author-name">Author: <a data-file="wall-clock" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-loupe"></i>
+                <div class="class-name">.ovaicon-loupe</div>
+                <div class="author-name">Author: <a data-file="loupe" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-search"></i>
+                <div class="class-name">.ovaicon-search</div>
+                <div class="author-name">Author: <a data-file="search" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-speech-bubble"></i>
+                <div class="class-name">.ovaicon-speech-bubble</div>
+                <div class="author-name">Author: <a data-file="speech-bubble" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-comment"></i>
+                <div class="class-name">.ovaicon-comment</div>
+                <div class="author-name">Author: <a data-file="comment" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-comment-1"></i>
+                <div class="class-name">.ovaicon-comment-1</div>
+                <div class="author-name">Author: <a data-file="comment-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-chat-comment-oval-speech-bubble-with-text-lines"></i>
+                <div class="class-name">.ovaicon-chat-comment-oval-speech-bubble-with-text-lines</div>
+                <div class="author-name">Author: <a data-file="chat-comment-oval-speech-bubble-with-text-lines" href="https://www.ovaicon.com/authors/catalin-fertu">Catalin Fertu</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-message"></i>
+                <div class="class-name">.ovaicon-message</div>
+                <div class="author-name">Author: <a data-file="message" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-chat"></i>
+                <div class="class-name">.ovaicon-chat</div>
+                <div class="author-name">Author: <a data-file="chat" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-conversation"></i>
+                <div class="class-name">.ovaicon-conversation</div>
+                <div class="author-name">Author: <a data-file="conversation" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-speech-bubble-1"></i>
+                <div class="class-name">.ovaicon-speech-bubble-1</div>
+                <div class="author-name">Author: <a data-file="speech-bubble-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-chat-1"></i>
+                <div class="class-name">.ovaicon-chat-1</div>
+                <div class="author-name">Author: <a data-file="chat-1" href="https://www.ovaicon.com/authors/smashicons">Smashicons</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-oval-black-speech-bubble"></i>
+                <div class="class-name">.ovaicon-oval-black-speech-bubble</div>
+                <div class="author-name">Author: <a data-file="oval-black-speech-bubble" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-user"></i>
+                <div class="class-name">.ovaicon-user</div>
+                <div class="author-name">Author: <a data-file="user" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-user-1"></i>
+                <div class="class-name">.ovaicon-user-1</div>
+                <div class="author-name">Author: <a data-file="user-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-group"></i>
+                <div class="class-name">.ovaicon-group</div>
+                <div class="author-name">Author: <a data-file="group" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-group-1"></i>
+                <div class="class-name">.ovaicon-group-1</div>
+                <div class="author-name">Author: <a data-file="group-1" href="https://www.ovaicon.com/authors/prosymbols">Prosymbols</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-customer"></i>
+                <div class="class-name">.ovaicon-customer</div>
+                <div class="author-name">Author: <a data-file="customer" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-user-2"></i>
+                <div class="class-name">.ovaicon-user-2</div>
+                <div class="author-name">Author: <a data-file="user-2" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-folder"></i>
+                <div class="class-name">.ovaicon-folder</div>
+                <div class="author-name">Author: <a data-file="folder" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-folder-1"></i>
+                <div class="class-name">.ovaicon-folder-1</div>
+                <div class="author-name">Author: <a data-file="folder-1" href="https://www.ovaicon.com/authors/dmitri13">dmitri13</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-page"></i>
+                <div class="class-name">.ovaicon-page</div>
+                <div class="author-name">Author: <a data-file="page" href="https://www.ovaicon.com/authors/icongeek26">Icongeek26</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-document"></i>
+                <div class="class-name">.ovaicon-document</div>
+                <div class="author-name">Author: <a data-file="document" href="https://www.ovaicon.com/authors/smalllikeart">smalllikeart</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-page-blank"></i>
+                <div class="class-name">.ovaicon-page-blank</div>
+                <div class="author-name">Author: <a data-file="page-blank" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-file"></i>
+                <div class="class-name">.ovaicon-file</div>
+                <div class="author-name">Author: <a data-file="file" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-edit"></i>
+                <div class="class-name">.ovaicon-edit</div>
+                <div class="author-name">Author: <a data-file="edit" href="https://www.ovaicon.com/authors/kiranshastry">Kiranshastry</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-edit-1"></i>
+                <div class="class-name">.ovaicon-edit-1</div>
+                <div class="author-name">Author: <a data-file="edit-1" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-tag"></i>
+                <div class="class-name">.ovaicon-tag</div>
+                <div class="author-name">Author: <a data-file="tag" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-price-tag"></i>
+                <div class="class-name">.ovaicon-price-tag</div>
+                <div class="author-name">Author: <a data-file="price-tag" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-bookmark"></i>
+                <div class="class-name">.ovaicon-bookmark</div>
+                <div class="author-name">Author: <a data-file="bookmark" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-tag-1"></i>
+                <div class="class-name">.ovaicon-tag-1</div>
+                <div class="author-name">Author: <a data-file="tag-1" href="https://www.ovaicon.com/authors/gregor-cresnar">Gregor Cresnar</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-wishlist"></i>
+                <div class="class-name">.ovaicon-wishlist</div>
+                <div class="author-name">Author: <a data-file="wishlist" href="https://www.ovaicon.com/authors/dinosoftlabs">DinosoftLabs</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-shopping-cart"></i>
+                <div class="class-name">.ovaicon-shopping-cart</div>
+                <div class="author-name">Author: <a data-file="shopping-cart" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-shopping-cart-1"></i>
+                <div class="class-name">.ovaicon-shopping-cart-1</div>
+                <div class="author-name">Author: <a data-file="shopping-cart-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-shopping-cart-empty-side-view"></i>
+                <div class="class-name">.ovaicon-shopping-cart-empty-side-view</div>
+                <div class="author-name">Author: <a data-file="shopping-cart-empty-side-view" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-shopping-cart-2"></i>
+                <div class="class-name">.ovaicon-shopping-cart-2</div>
+                <div class="author-name">Author: <a data-file="shopping-cart-2" href="https://www.ovaicon.com/authors/kiranshastry">Kiranshastry</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-facebook-logo"></i>
+                <div class="class-name">.ovaicon-facebook-logo</div>
+                <div class="author-name">Author: <a data-file="facebook-logo" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-facebook-logo-1"></i>
+                <div class="class-name">.ovaicon-facebook-logo-1</div>
+                <div class="author-name">Author: <a data-file="facebook-logo-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-facebook"></i>
+                <div class="class-name">.ovaicon-facebook</div>
+                <div class="author-name">Author: <a data-file="facebook" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-twitter"></i>
+                <div class="class-name">.ovaicon-twitter</div>
+                <div class="author-name">Author: <a data-file="twitter" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-twitter-1"></i>
+                <div class="class-name">.ovaicon-twitter-1</div>
+                <div class="author-name">Author: <a data-file="twitter-1" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-instagram"></i>
+                <div class="class-name">.ovaicon-instagram</div>
+                <div class="author-name">Author: <a data-file="instagram" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-instagram-1"></i>
+                <div class="class-name">.ovaicon-instagram-1</div>
+                <div class="author-name">Author: <a data-file="instagram-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-instagram-2"></i>
+                <div class="class-name">.ovaicon-instagram-2</div>
+                <div class="author-name">Author: <a data-file="instagram-2" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-youtube-logotype"></i>
+                <div class="class-name">.ovaicon-youtube-logotype</div>
+                <div class="author-name">Author: <a data-file="youtube-logotype" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-tiktok"></i>
+                <div class="class-name">.ovaicon-tiktok</div>
+                <div class="author-name">Author: <a data-file="tiktok" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-tik-tok"></i>
+                <div class="class-name">.ovaicon-tik-tok</div>
+                <div class="author-name">Author: <a data-file="tik-tok" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-tik-tok-1"></i>
+                <div class="class-name">.ovaicon-tik-tok-1</div>
+                <div class="author-name">Author: <a data-file="tik-tok-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-quote"></i>
+                <div class="class-name">.ovaicon-quote</div>
+                <div class="author-name">Author: <a data-file="quote" href="https://www.ovaicon.com/authors/those-icons">Those Icons</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-left-quote"></i>
+                <div class="class-name">.ovaicon-left-quote</div>
+                <div class="author-name">Author: <a data-file="left-quote" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-left-quotes-sign"></i>
+                <div class="class-name">.ovaicon-left-quotes-sign</div>
+                <div class="author-name">Author: <a data-file="left-quotes-sign" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-left-quote-1"></i>
+                <div class="class-name">.ovaicon-left-quote-1</div>
+                <div class="author-name">Author: <a data-file="left-quote-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-close"></i>
+                <div class="class-name">.ovaicon-close</div>
+                <div class="author-name">Author: <a data-file="close" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-right-arrow"></i>
+                <div class="class-name">.ovaicon-right-arrow</div>
+                <div class="author-name">Author: <a data-file="right-arrow" href="https://www.ovaicon.com/authors/smashicons">Smashicons</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-pin"></i>
+                <div class="class-name">.ovaicon-pin</div>
+                <div class="author-name">Author: <a data-file="pin" href="https://www.ovaicon.com/authors/vitaly-gorbachev">Vitaly Gorbachev</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-placeholder"></i>
+                <div class="class-name">.ovaicon-placeholder</div>
+                <div class="author-name">Author: <a data-file="placeholder" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-cursor"></i>
+                <div class="class-name">.ovaicon-cursor</div>
+                <div class="author-name">Author: <a data-file="cursor" href="https://www.ovaicon.com/authors/becris">Becris</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-mail"></i>
+                <div class="class-name">.ovaicon-mail</div>
+                <div class="author-name">Author: <a data-file="mail" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-mail-1"></i>
+                <div class="class-name">.ovaicon-mail-1</div>
+                <div class="author-name">Author: <a data-file="mail-1" href="https://www.ovaicon.com/authors/tomas-knop">Tomas Knop</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-email"></i>
+                <div class="class-name">.ovaicon-email</div>
+                <div class="author-name">Author: <a data-file="email" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-letter"></i>
+                <div class="class-name">.ovaicon-letter</div>
+                <div class="author-name">Author: <a data-file="letter" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-telephone"></i>
+                <div class="class-name">.ovaicon-telephone</div>
+                <div class="author-name">Author: <a data-file="telephone" href="https://www.ovaicon.com/authors/gregor-cresnar">Gregor Cresnar</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-phone-call"></i>
+                <div class="class-name">.ovaicon-phone-call</div>
+                <div class="author-name">Author: <a data-file="phone-call" href="https://www.ovaicon.com/authors/gregor-cresnar">Gregor Cresnar</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-telephone-1"></i>
+                <div class="class-name">.ovaicon-telephone-1</div>
+                <div class="author-name">Author: <a data-file="telephone-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-smartphone-call"></i>
+                <div class="class-name">.ovaicon-smartphone-call</div>
+                <div class="author-name">Author: <a data-file="smartphone-call" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-smartphone"></i>
+                <div class="class-name">.ovaicon-smartphone</div>
+                <div class="author-name">Author: <a data-file="smartphone" href="https://www.ovaicon.com/authors/prettycons">prettycons</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-phone-receiver"></i>
+                <div class="class-name">.ovaicon-phone-receiver</div>
+                <div class="author-name">Author: <a data-file="phone-receiver" href="https://www.ovaicon.com/authors/vectors-market">Vectors Market</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-phone"></i>
+                <div class="class-name">.ovaicon-phone</div>
+                <div class="author-name">Author: <a data-file="phone" href="https://www.ovaicon.com/authors/mynamepong">mynamepong</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-right-quote"></i>
+                <div class="class-name">.ovaicon-right-quote</div>
+                <div class="author-name">Author: <a data-file="right-quote" href="https://www.ovaicon.com/authors/elias-bikbulatov">Elias Bikbulatov</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-quotation"></i>
+                <div class="class-name">.ovaicon-quotation</div>
+                <div class="author-name">Author: <a data-file="quotation" href="https://www.ovaicon.com/authors/retinaicons">Retinaicons</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rss-feed-symbol"></i>
+                <div class="class-name">.ovaicon-rss-feed-symbol</div>
+                <div class="author-name">Author: <a data-file="rss-feed-symbol" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rss"></i>
+                <div class="class-name">.ovaicon-rss</div>
+                <div class="author-name">Author: <a data-file="rss" href="https://www.ovaicon.com/authors/laisa-islam-ani">Laisa Islam Ani</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rss-feeds-symbol-in-a-rounded-square"></i>
+                <div class="class-name">.ovaicon-rss-feeds-symbol-in-a-rounded-square</div>
+                <div class="author-name">Author: <a data-file="rss-feeds-symbol-in-a-rounded-square" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-rss-1"></i>
+                <div class="class-name">.ovaicon-rss-1</div>
+                <div class="author-name">Author: <a data-file="rss-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-add"></i>
+                <div class="class-name">.ovaicon-add</div>
+                <div class="author-name">Author: <a data-file="add" href="https://www.ovaicon.com/authors/srip">srip</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-plus"></i>
+                <div class="class-name">.ovaicon-plus</div>
+                <div class="author-name">Author: <a data-file="plus" href="https://www.ovaicon.com/authors/fuzzee">Fuzzee</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-plus-1"></i>
+                <div class="class-name">.ovaicon-plus-1</div>
+                <div class="author-name">Author: <a data-file="plus-1" href="http://www.freepik.com">Freepik</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-minus"></i>
+                <div class="class-name">.ovaicon-minus</div>
+                <div class="author-name">Author: <a data-file="minus" href="https://www.ovaicon.com/authors/handicon">Handicon</a> </div>
+            </div>
+
+            <div class="glyph">
+                <i class="ovaicon ovaicon-minus-1"></i>
+                <div class="class-name">.ovaicon-minus-1</div>
+                <div class="author-name">Author: <a data-file="minus-1" href="https://www.ovaicon.com/authors/bingge-liu">Bingge Liu</a> </div>
+            </div>
+
+    </section>
+
+    <section class="attribution wrapper"   style="text-align:center;">
+
+        <div class="title">License and attribution:</div><div class="attrDiv">Font generated by <a href="https://www.ovaicon.com">ovaicon.com</a>. <div><p>Under <a href="http://creativecommons.org/licenses/by/3.0/">CC</a>: <a data-file="plus-1" href="http://www.freepik.com">Freepik</a>, <a data-file="twitter-1" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a>, <a data-file="chat-comment-oval-speech-bubble-with-text-lines" href="https://www.ovaicon.com/authors/catalin-fertu">Catalin Fertu</a>, <a data-file="right-arrow" href="https://www.ovaicon.com/authors/smashicons">Smashicons</a>, <a data-file="group-1" href="https://www.ovaicon.com/authors/prosymbols">Prosymbols</a>, <a data-file="folder-1" href="https://www.ovaicon.com/authors/dmitri13">dmitri13</a>, <a data-file="page" href="https://www.ovaicon.com/authors/icongeek26">Icongeek26</a>, <a data-file="document" href="https://www.ovaicon.com/authors/smalllikeart">smalllikeart</a>, <a data-file="shopping-cart-2" href="https://www.ovaicon.com/authors/kiranshastry">Kiranshastry</a>, <a data-file="phone-call" href="https://www.ovaicon.com/authors/gregor-cresnar">Gregor Cresnar</a>, <a data-file="wishlist" href="https://www.ovaicon.com/authors/dinosoftlabs">DinosoftLabs</a>, <a data-file="quote" href="https://www.ovaicon.com/authors/those-icons">Those Icons</a>, <a data-file="pin" href="https://www.ovaicon.com/authors/vitaly-gorbachev">Vitaly Gorbachev</a>, <a data-file="cursor" href="https://www.ovaicon.com/authors/becris">Becris</a>, <a data-file="mail-1" href="https://www.ovaicon.com/authors/tomas-knop">Tomas Knop</a>, <a data-file="smartphone" href="https://www.ovaicon.com/authors/prettycons">prettycons</a>, <a data-file="phone-receiver" href="https://www.ovaicon.com/authors/vectors-market">Vectors Market</a>, <a data-file="phone" href="https://www.ovaicon.com/authors/mynamepong">mynamepong</a>, <a data-file="right-quote" href="https://www.ovaicon.com/authors/elias-bikbulatov">Elias Bikbulatov</a>, <a data-file="quotation" href="https://www.ovaicon.com/authors/retinaicons">Retinaicons</a>, <a data-file="rss" href="https://www.ovaicon.com/authors/laisa-islam-ani">Laisa Islam Ani</a>, <a data-file="add" href="https://www.ovaicon.com/authors/srip">srip</a>, <a data-file="plus" href="https://www.ovaicon.com/authors/fuzzee">Fuzzee</a>, <a data-file="minus" href="https://www.ovaicon.com/authors/handicon">Handicon</a>, <a data-file="minus-1" href="https://www.ovaicon.com/authors/bingge-liu">Bingge Liu</a></p>  </div>
+        </div>
+        <div class="title">Copy the Attribution License:</div>
+
+        <textarea onclick="this.focus();this.select();">Font generated by &lt;a href=&quot;https://www.ovaicon.com&quot;&gt;ovaicon.com&lt;/a&gt;. <p>Under <a href="http://creativecommons.org/licenses/by/3.0/">CC</a>: <a data-file="plus-1" href="http://www.freepik.com">Freepik</a>, <a data-file="twitter-1" href="https://www.ovaicon.com/authors/pixel-perfect">Pixel perfect</a>, <a data-file="chat-comment-oval-speech-bubble-with-text-lines" href="https://www.ovaicon.com/authors/catalin-fertu">Catalin Fertu</a>, <a data-file="right-arrow" href="https://www.ovaicon.com/authors/smashicons">Smashicons</a>, <a data-file="group-1" href="https://www.ovaicon.com/authors/prosymbols">Prosymbols</a>, <a data-file="folder-1" href="https://www.ovaicon.com/authors/dmitri13">dmitri13</a>, <a data-file="page" href="https://www.ovaicon.com/authors/icongeek26">Icongeek26</a>, <a data-file="document" href="https://www.ovaicon.com/authors/smalllikeart">smalllikeart</a>, <a data-file="shopping-cart-2" href="https://www.ovaicon.com/authors/kiranshastry">Kiranshastry</a>, <a data-file="phone-call" href="https://www.ovaicon.com/authors/gregor-cresnar">Gregor Cresnar</a>, <a data-file="wishlist" href="https://www.ovaicon.com/authors/dinosoftlabs">DinosoftLabs</a>, <a data-file="quote" href="https://www.ovaicon.com/authors/those-icons">Those Icons</a>, <a data-file="pin" href="https://www.ovaicon.com/authors/vitaly-gorbachev">Vitaly Gorbachev</a>, <a data-file="cursor" href="https://www.ovaicon.com/authors/becris">Becris</a>, <a data-file="mail-1" href="https://www.ovaicon.com/authors/tomas-knop">Tomas Knop</a>, <a data-file="smartphone" href="https://www.ovaicon.com/authors/prettycons">prettycons</a>, <a data-file="phone-receiver" href="https://www.ovaicon.com/authors/vectors-market">Vectors Market</a>, <a data-file="phone" href="https://www.ovaicon.com/authors/mynamepong">mynamepong</a>, <a data-file="right-quote" href="https://www.ovaicon.com/authors/elias-bikbulatov">Elias Bikbulatov</a>, <a data-file="quotation" href="https://www.ovaicon.com/authors/retinaicons">Retinaicons</a>, <a data-file="rss" href="https://www.ovaicon.com/authors/laisa-islam-ani">Laisa Islam Ani</a>, <a data-file="add" href="https://www.ovaicon.com/authors/srip">srip</a>, <a data-file="plus" href="https://www.ovaicon.com/authors/fuzzee">Fuzzee</a>, <a data-file="minus" href="https://www.ovaicon.com/authors/handicon">Handicon</a>, <a data-file="minus-1" href="https://www.ovaicon.com/authors/bingge-liu">Bingge Liu</a></p> 
+        </textarea>
+
+    </section>
+
+    <section class="iconsuse">
+
+        <div class="title">Examples:</div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back"></i>
+                    <span>&lt;i class=&quot;ovaicon-back&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next"></i>
+                    <span>&lt;i class=&quot;ovaicon-next&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-menu"></i>
+                    <span>&lt;i class=&quot;ovaicon-menu&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download"></i>
+                    <span>&lt;i class=&quot;ovaicon-download&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-checked"></i>
+                    <span>&lt;i class=&quot;ovaicon-checked&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-menu-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-menu-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-checked-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-checked-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-cancel"></i>
+                    <span>&lt;i class=&quot;ovaicon-cancel&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-fast-forward"></i>
+                    <span>&lt;i class=&quot;ovaicon-fast-forward&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-login"></i>
+                    <span>&lt;i class=&quot;ovaicon-login&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-logout"></i>
+                    <span>&lt;i class=&quot;ovaicon-logout&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-previous"></i>
+                    <span>&lt;i class=&quot;ovaicon-previous&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-cancel-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-cancel-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-fullscreen"></i>
+                    <span>&lt;i class=&quot;ovaicon-fullscreen&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-more"></i>
+                    <span>&lt;i class=&quot;ovaicon-more&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-checked-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-checked-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-cancel-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-cancel-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-menu-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-menu-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-list"></i>
+                    <span>&lt;i class=&quot;ovaicon-list&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-export"></i>
+                    <span>&lt;i class=&quot;ovaicon-export&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-shuffle"></i>
+                    <span>&lt;i class=&quot;ovaicon-shuffle&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-up-arrow"></i>
+                    <span>&lt;i class=&quot;ovaicon-up-arrow&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-fullscreen-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-fullscreen-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-rewind"></i>
+                    <span>&lt;i class=&quot;ovaicon-rewind&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-double-chevron"></i>
+                    <span>&lt;i class=&quot;ovaicon-double-chevron&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-4"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-4&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-fullscreen-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-fullscreen-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-5"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-5&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-repeat"></i>
+                    <span>&lt;i class=&quot;ovaicon-repeat&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-diagonal-arrow"></i>
+                    <span>&lt;i class=&quot;ovaicon-diagonal-arrow&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-resize"></i>
+                    <span>&lt;i class=&quot;ovaicon-resize&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-4"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-4&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-menu-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-menu-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-4"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-4&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-resize-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-resize-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-5"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-5&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-6"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-6&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-fast-forward-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-fast-forward-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-6"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-6&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-4"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-4&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-7"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-7&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-7"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-7&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-5"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-5&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-5"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-5&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-diagonal-arrow-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-diagonal-arrow-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-back-6"></i>
+                    <span>&lt;i class=&quot;ovaicon-back-6&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-8"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-8&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-diagonal-arrow-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-diagonal-arrow-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-rewind-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-rewind-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-6"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-6&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-upload-7"></i>
+                    <span>&lt;i class=&quot;ovaicon-upload-7&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-previous-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-previous-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-download-8"></i>
+                    <span>&lt;i class=&quot;ovaicon-download-8&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-diagonal-arrow-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-diagonal-arrow-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-next-9"></i>
+                    <span>&lt;i class=&quot;ovaicon-next-9&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-alarm-clock"></i>
+                    <span>&lt;i class=&quot;ovaicon-alarm-clock&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-stopwatch"></i>
+                    <span>&lt;i class=&quot;ovaicon-stopwatch&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar-3"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar-3&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar-4"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar-4&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-calendar-5"></i>
+                    <span>&lt;i class=&quot;ovaicon-calendar-5&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-alarm-clock-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-alarm-clock-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-wall-clock"></i>
+                    <span>&lt;i class=&quot;ovaicon-wall-clock&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-loupe"></i>
+                    <span>&lt;i class=&quot;ovaicon-loupe&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-search"></i>
+                    <span>&lt;i class=&quot;ovaicon-search&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-speech-bubble"></i>
+                    <span>&lt;i class=&quot;ovaicon-speech-bubble&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-comment"></i>
+                    <span>&lt;i class=&quot;ovaicon-comment&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-comment-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-comment-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-chat-comment-oval-speech-bubble-with-text-lines"></i>
+                    <span>&lt;i class=&quot;ovaicon-chat-comment-oval-speech-bubble-with-text-lines&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-message"></i>
+                    <span>&lt;i class=&quot;ovaicon-message&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-chat"></i>
+                    <span>&lt;i class=&quot;ovaicon-chat&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-conversation"></i>
+                    <span>&lt;i class=&quot;ovaicon-conversation&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-speech-bubble-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-speech-bubble-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-chat-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-chat-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-oval-black-speech-bubble"></i>
+                    <span>&lt;i class=&quot;ovaicon-oval-black-speech-bubble&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-user"></i>
+                    <span>&lt;i class=&quot;ovaicon-user&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-user-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-user-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-group"></i>
+                    <span>&lt;i class=&quot;ovaicon-group&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-group-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-group-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-customer"></i>
+                    <span>&lt;i class=&quot;ovaicon-customer&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-user-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-user-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-folder"></i>
+                    <span>&lt;i class=&quot;ovaicon-folder&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-folder-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-folder-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-page"></i>
+                    <span>&lt;i class=&quot;ovaicon-page&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-document"></i>
+                    <span>&lt;i class=&quot;ovaicon-document&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-page-blank"></i>
+                    <span>&lt;i class=&quot;ovaicon-page-blank&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-file"></i>
+                    <span>&lt;i class=&quot;ovaicon-file&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-edit"></i>
+                    <span>&lt;i class=&quot;ovaicon-edit&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-edit-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-edit-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-tag"></i>
+                    <span>&lt;i class=&quot;ovaicon-tag&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-price-tag"></i>
+                    <span>&lt;i class=&quot;ovaicon-price-tag&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-bookmark"></i>
+                    <span>&lt;i class=&quot;ovaicon-bookmark&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-tag-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-tag-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-wishlist"></i>
+                    <span>&lt;i class=&quot;ovaicon-wishlist&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-shopping-cart"></i>
+                    <span>&lt;i class=&quot;ovaicon-shopping-cart&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-shopping-cart-1"></i>
+                    <span>&lt;i class=&quot;ovaicon-shopping-cart-1&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-shopping-cart-empty-side-view"></i>
+                    <span>&lt;i class=&quot;ovaicon-shopping-cart-empty-side-view&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">
+                <p>
+                    <i class="ovaicon ovaicon-shopping-cart-2"></i>
+                    <span>&lt;i class=&quot;ovaicon-shopping-cart-2&quot;&gt;&lt;/i&gt;</span>
+                </p>
+            </div>
+            <div class="image">

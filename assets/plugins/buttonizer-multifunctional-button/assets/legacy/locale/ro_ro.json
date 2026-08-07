@@ -1,0 +1,1245 @@
+{
+    "errors":{
+       "fatal":"Nu asta m\u0103 a\u0219teptam! Ceva n-a mers bine.",
+       "custom_javascript":{
+          "title":"Mesaj de eroare personalizat Javascript",
+          "message":"Javascriptul dvs. personalizat a provocat o eroare. Citi\u021bi mesajul de eroare de mai jos:"
+       },
+       "saving":{
+          "title":"Imposibil de salvat set\u0103rile",
+          "message":"Ceva nu a mers \u00een timp ce salva\u021bi set\u0103rile:"
+       },
+       "forms":{
+          "only_numbers":"Numai numere permise.",
+          "only_numbers_info":"Pentru aceast\u0103 setare sunt permise doar numere pozitive."
+       },
+       "permalink":{
+          "title":"Eroare permanent\u0103",
+          "info":"Cererile de butoniere nu func\u021bioneaz\u0103 atunci c\u00e2nd utiliza\u021bi structura regulat\u0103 de permalink. Utiliza\u021bi un link permanent personalizat pentru a utiliza Buttonizer"
+       }
+    },
+    "templates":{
+       "all_templates_description":"Please note that you can still customize the button to your own wishes after inserting it",
+       "number_of_buttons":"Number of buttons",
+       "select":"Te rog selecteaza",
+       "selected":"Selected",
+       "insert":"Insert",
+       "framedesign":{
+          "label":"Framedesign"
+       },
+       "popular_actions":{
+          "label":"Promo\u021bii populare"
+       }
+    },
+    "warnings":{
+       "invalid_email":"Adresa de email invalida",
+       "invalid_phone_number":"Numar de telefon invalid. Folosi\u021bi numai formatul de num\u0103r. Elimina\u021bi zerouri, paranteze sau liniu\u021be atunci c\u00e2nd utiliza\u021bi formatul interna\u021bional.",
+       "only_numbers":"Acest camp permite doar numere.",
+       "premium_license_free_version":{
+          "title":"Licen\u021ba activat\u0103",
+          "information":"Desc\u0103rca\u021bi \u0219i \u00eenc\u0103rca\u021bi versiunea premium \u00een e-mailul pe care v-am trimis-o pentru a utiliza func\u021biile premium."
+       },
+       "php_version_outdated":{
+          "title":"This PHP version is no longer supported",
+          "information":"Your current PHP version ({{ version }}) is no longer supported by Buttonizer as it will no longer receive security patches. Some features will not work. We recommend upgrading to the latest version."
+       },
+       "unsaved_changes":"Sigur vrei s\u0103 ie\u0219i? Modific\u0103rile dvs. nu au fost salvate."
+    },
+    "common":{
+       "button":"Buton",
+       "group":"Grup",
+       "settings":"Setari",
+       "custom":"Ajustat",
+       "confirm":"Confirma",
+       "search":"Cauta",
+       "skip":"A s\u0103ri",
+       "edit":"Edita\u021bi | \u00d7",
+       "type":"Tip",
+       "or":"sau",
+       "select":"Te rog selecteaza",
+       "learn_more":"Mai multe informatii",
+       "off":"Off",
+       "disable":"Dezactiva\u021bi",
+       "disabled":"dezactivata",
+       "save":"Salveaza",
+       "saving":"Salva\u021bi",
+       "saving_settings":"Economisire",
+       "save_and_close":"Salveaza si inchide",
+       "publish":"Publica",
+       "published":"Publicat",
+       "publishing":"A publica...",
+       "warning":"Avertizare",
+       "next":"Urmatorul",
+       "previous":"Precedentul",
+       "save_publish":"Salveaza & publica"
+    },
+    "loading":{
+       "loading":"Se incarca...",
+       "settings":"Se incarca setarile...",
+       "bar":"Bara de \u00eenc\u0103rcare ...",
+       "website":"Asteptam site-ul tau ...",
+       "website_slow":"Dureaz\u0103 mai mult dec\u00e2t de obicei, site-ul lent?",
+       "website_skip":"Sari peste acest pas",
+       "initializing":"Ini\u021bializeaz\u0103 ...",
+       "resetting":"Reseteaz\u0103 ...",
+       "running_migration":"Efectuarea migra\u021biei ...",
+       "finishing":"Complet..."
+    },
+    "utils":{
+       "add_button":"Adauga buton",
+       "add_group":"Adauga grup",
+       "create_group":"Crea\u021bi un grup nou",
+       "shift_click":"Shift + Click to skip dialog",
+       "new_button":"Buton nou",
+       "new_group":"Grup nou",
+       "style":"Stil",
+       "advanced":"Avansat",
+       "text":"Text",
+       "base":"Baza",
+       "icon":"icoan\u0103",
+       "color":"Culoare",
+       "image":"Imagine",
+       "image_url":"Image URL",
+       "select_image":"Selecteaza imagine",
+       "change_image":"Schimba imagine",
+       "select_file":"Selecta\u021bi fi\u0219ierul",
+       "change_file":"Schimb\u0103 fi\u0219ierul",
+       "remove_image":"Click pentru a elimina aceasta imagine",
+       "first_button":"Primul buton",
+       "second_button":"Al doilea buton",
+       "rename":"Redenumeste",
+       "rename_to":"Redenumi\u021bi la:",
+       "delete":"Sterge",
+       "clear":"clar",
+       "duplicate":"Duplica",
+       "lowercase_page_rule":"linie de pagin\u0103",
+       "lowercase_time_schedule":"orar",
+       "interaction":"Interac\u0163iune",
+       "background":"Fundal",
+       "tips_tricks":"Nevoie de ajutor? Pornire rapid\u0103, sfaturi \u0219i trucuri",
+       "visit_knowledgebase":"Nevoie de ajutor? Accesa\u021bi banca noastr\u0103 de cuno\u0219tin\u021be!",
+       "search_not_found":"Nimic g\u0103sit pentru:",
+       "icon_selector":{
+          "title":"Selectarea pictogramelor",
+          "search_icon":"Pictograma de c\u0103utare",
+          "loading":"Se \u00eencarc\u0103 pictogramele, v\u0103 rug\u0103m s\u0103 a\u0219tepta\u021bi ...",
+          "searching_for":"C\u0103utare: <bold>{{ keyword }}</bold>, <bold>{{ resultCount }}</bold> rezultate g\u0103site.",
+          "found": "Your search found <bold>{{ resultCount }}</bold> results.",
+          "remove_filter":"Scoate\u021bi filtrul"
+       },
+       "templates":{
+          "found":"Your search returned <bold>{{ resultCount }}<bold> results."
+       },
+       "crash":{
+          "title":"Buttonizer s-a pr\u0103bu\u0219it!",
+          "subtitle":"Echipa noastr\u0103 de dezvoltare a fost informat\u0103.",
+          "subtitle2":"Dac\u0103 dori\u021bi s\u0103 v\u0103 ajuta\u021bi, spune\u021bi-ne ce s-a \u00eent\u00e2mplat mai jos.",
+          "no_super_intro":"We're sorry, Buttonizer has crashed! Would you like to become a SUPER contributor and automatically log errors, including this one?",
+          "no_super_additional_info":"By sharing your crash report with us, you will help us detect exceptions like these so we can resolve them in a future release.",
+          "reload":"Reload"
+       },
+       "knowledge_link":"Ai nevoie de ajutor? Afla cum sa folosesti <bold>{{ setting }}</bold>.",
+       "filter-visibility":{
+          "timeschedule_show_button":"Afi\u0219a\u021bi \u00eentotdeauna butonul",
+          "timeschedule_show_group":"Afi\u0219a\u021bi \u00eentotdeauna grupul",
+          "pagerule_show_button":"Afi\u0219a\u021bi butonul de pe fiecare pagin\u0103",
+          "pagerule_show_group":"Afi\u0219a\u021bi grupul pe fiecare pagin\u0103"
+       }
+    },
+    "event_tracker":{
+       "title":"Urm\u0103ritor de evenimente",
+       "window_title":"Urm\u0103ritor de evenimente"
+    },
+    "modal":{
+       "ok":"s-a f\u0103cut",
+       "ok_fix":"Bine, voi rezolva asta",
+       "sure":"sunt sigur",
+       "lost":"How'd ya get here?",
+       "close":"Inchide",
+       "cancel":"Anuleaza",
+       "incorrect":"Intrare incorect\u0103.",
+       "yes_please":"Da, te rog",
+       "no_thanks":"Nu, multumesc",
+       "dismiss":"Ignora",
+       "changed_my_mind":"m-am razgandit",
+       "save":"Salveaza",
+       "remove":{
+          "time_schedule":{
+             "window_title":"\u0218terge\u021bi orarul?",
+             "question":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest orar? Butoanele legate de acest orar vor deveni vizibile dac\u0103 nu le conectezi la un alt orar.",
+             "no_buttons":"Nu exist\u0103 butoane asociate cu acest orar. \u00cel pute\u021bi elimina \u00een siguran\u021b\u0103.",
+             "num_buttons_multiple":"Exist\u0103 butoanele <bold>{{ buttonCount }}</bold> asociate cu acest orar!",
+             "num_buttons_single":"Exist\u0103 butonul <bold>1</bold> asociat cu acest orar",
+             "last_warning":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest orar?"
+          },
+          "button":{
+             "window_title":"Butonul \u0218tergere",
+             "question":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest buton?",
+             "question_remove":"Sigur dori\u021bi s\u0103 elimina\u021bi butonul '{{ name }}'?",
+             "cannot_delete_window_title":"Nu pute\u021bi elimina acest buton",
+             "cannot_delete":"Nu pute\u021bi elimina acest buton, deoarece este singurul buton."
+          },
+          "group":{
+             "window_title":"\u0218terge\u021bi grupul",
+             "question":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest grup?",
+             "question_multiple_buttons":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi \u00eentregul grup? Grupul con\u021bine butoane {{ count }}.",
+             "cannot_delete_window_title":"Nu se poate \u0219terge acest grup",
+             "cannot_delete":"Nu pute\u021bi \u0219terge acest grup, deoarece este singurul grup."
+          },
+          "page_rule":{
+             "window_title":"\u0218terge\u021bi linia de pagin\u0103?",
+             "question":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi aceast\u0103 linie de pagin\u0103? Butoanele legate de aceast\u0103 linie de pagin\u0103 vor deveni vizibile dac\u0103 nu le conectezi la o alt\u0103 linie de pagin\u0103.",
+             "no_buttons":"Nu exist\u0103 butoane asociate cu aceast\u0103 linie de pagin\u0103. \u00cel pute\u021bi elimina \u00een siguran\u021b\u0103.",
+             "num_buttons_multiple":"Exist\u0103 butoane <bold>{{ buttonCount }}</bold> asociate acestei linii de pagini!",
+             "num_buttons_single":"Exist\u0103 butonul <bold>1</bold> asociat cu aceast\u0103 linie de pagin\u0103",
+             "last_warning":"Dori\u021bi s\u0103 \u0219terge\u021bi aceast\u0103 linie de pagin\u0103?"
+          },
+          "permanent":"Aceast\u0103 ac\u021biune este permanent\u0103 \u0219i nu poate fi anulat\u0103."
+       }
+    },
+    "saving":{
+       "saving":"Saving draft...",
+       "failed":"Failed!",
+       "completed":"Saved draft!"
+    },
+    "revert":{
+       "revert_changes":"Renuntati la modificarile efectuate",
+       "reverting":"Anula...",
+       "modal":{
+          "intro":"Sunteti sigur ca doriti sa renuntati la modificari?",
+          "action":"Modific\u0103rile dvs. vor fi suprascrise de butoanele \u0219i set\u0103rile publicate \u00een prezent."
+       },
+       "error":{
+          "title":"Nu s-a putut anula set\u0103rile",
+          "message":"Ceva nu a mers \u00een timp ce le-am anulat set\u0103rile."
+       }
+    },
+    "welcome":{
+       "title":"V\u0103 mul\u021bumim pentru utilizarea Buttonizer!",
+       "intro":"V\u0103 a\u0219tept\u0103m cu ner\u0103bdare s\u0103 <b>Buttonizer 2.0 <\/b>!",
+       "super-contributor":"Deveni\u021bi contribuitor SUPER trimi\u021b\u00e2ndu-ne automat rapoarte de avarie \u0219i jurnalele de erori. \u00cen acest fel v\u0103 putem rezolva erorile cu viteza luminii! F\u0103r\u0103 griji, toate datele sunt f\u0103cute anonime.",
+       "learn-more":"Mai multe informatii",
+       "no-thanks":"nu multumesc",
+       "yes-please":"Da, te rog!",
+       "tour":"We've created a tour for our new Buzzers. Would you like to take the tour?",
+       "already_know":"Nu, mul\u021bumesc, \u0219tiu cum func\u021bioneaz\u0103",
+       "take_tour":"Da, te rog",
+       "open_menu":"Deschide meniu",
+       "back_to_overview":"\u00eenapoi la imagine de ansamblu"
+    },
+    "buttonizer_tour":{
+       "title_interface_tour":"Welcome to Buttonizer!",
+       "intro_interface_tour": "We've created a tour for our new Buzzers. Would you like to take the tour? If not, feel free to watch a tour whenever you want. You can find all of our tours in the <bold>settings</bold> of Buttonizer.",
+       "title_new_features_tour":"What's New?",
+       "intro_new_features_tour": "Keep up-to-date with the newest releases, feature updates, and news from Buttonizer by following this short tour. Do not worry if you can not follow it right now! You can find this tour in the <bold>settings</bold> of Buttonizer.",
+       "already_know":"No, thanks",
+       "take_tour":"Let's go",
+       "previous":"Precedentul",
+       "next":"Urmatorul",
+       "done":"Done",
+       "final":{
+          "title":"That was it! ",
+          "intro":"Thank you for taking the tour! If you have any questions, ask them on the <b><a>Buttonizer Community<\/a><\/b> forums. And if you have any feedback regarding the Buttonizer Tour, we'd love to hear it :) Enjoy Buttonizing!"
+       },
+       "interface_tour":{
+          "step_0":{
+             "title":"Grup",
+             "intro":"A group can have multiple buttons that work separately from each other. This group contains your first Buttonizer button! Click on \u201cAdd button\u201d to add more buttons to this group."
+          },
+          "step_1":{
+             "title":"Setari",
+             "intro":"Let's go to the settings of the group to view the different configurations."
+          },
+          "step_2":{
+             "title":"General",
+             "intro":"The general settings control some basic configuration for your button. You can change the label, position and style of the group here. Make sure the label is short and clear."
+          },
+          "step_3":{
+             "title":"Buton",
+             "intro":"Easily customize your button by choosing the color of your button, icon and the color. Make sure the button and text are clearly visible. You can set a different style for the normal and hover state."
+          },
+          "step_4":{
+             "title":"Navigation",
+             "intro":" This button makes navigation between the different buttons easier. You can also go to the group\u2019s settings."
+          },
+          "step_5":{
+             "title":"Publica",
+             "intro":"Adjustments are automatically saved in the editor and won\u2019t be shown on the site. Make sure to click <b>\"Publish\"<\/b> to see these changes on your website."
+          },
+          "step_6":{
+             "title":"Meniul",
+             "intro":"This menu contains a list of options where you can go to settings, Page Rules and the Buttonizer Community. You can also manage your own account here."
+          },
+          "step_7":{
+             "title":"Setari",
+             "intro":"You can change your settings for Buttonizer, including settings for Google Analytics, icon library, preferences and you can reset Buttonizer."
+          },
+          "step_8":{
+             "title":"More Buttonizer Tours",
+             "intro":"We have more tours in store which are more in-depth and will help you improve your experience with Buttonizer even more. Go to <b><a onClick=\"app.closeButtonizerTour()\">settings<\/a><\/b> to enjoy another tour!"
+          },
+          "step_9":{
+             "title":"A sustine",
+             "intro":"Our support helps you troubleshoot common issues, find solutions, ask questions, and share tips with other Buzzers."
+          }
+       },
+       "create_button_tour":{
+          "step_0":{
+             "title":"Buton nou",
+             "intro":"If you would like to have a single Floating Action Button that triggers a primary action, then we would advise you to create a single button. "
+          },
+          "step_1":{
+             "title":"Settings for button",
+             "intro":"Let's go to the settings of the button to view the different configurations."
+          },
+          "step_2":{
+             "title":"General",
+             "intro":"The general settings control some basic configuration for your button. You can change the action type and the label of the button here."
+          },
+          "step_3":{
+             "title":"Actiunea butonului",
+             "intro":"The Button action in the general settings specify where to send your website visitors too once you have added an action to the button."
+          },
+          "step_4":{
+             "title":"Open URL in:",
+             "intro":"This feature provides an easy and simple way to open the linked URL of the button action in the same tab, a new browser window or a new tab."
+          },
+          "step_5":{
+             "title":"Vizibilitatea dispozitivului",
+             "intro":"You can decide if your button should be available on mobile devices and\/ or on computers."
+          },
+          "step_6":{
+             "title":"Etichet\u0103 text",
+             "intro":"You can add and change the text of the label here. Choose a label that is short and clear."
+          },
+          "step_7":{
+             "title":"Style your button",
+             "intro":"If you want to change the colors of your button, then you can go to the tab Style and you will see that the first settings are the color settings for your button."
+          },
+          "step_8":{
+             "title":"Normal vs hover",
+             "intro":"You can set a different button style for the normal and hover state."
+          },
+          "step_9":{
+             "title":"Background color",
+             "intro":"To change the background color of a button, use the color picker. Pick a background color that improves your button's readability and usability."
+          },
+          "step_10":{
+             "title":"Raza de frontier\u0103",
+             "intro":"You can add rounded corners to a button with the border-radius property. Try to set a single radius to make circular corners."
+          },
+          "step_11":{
+             "title":"icoan\u0103",
+             "intro":"Learn how to add a Font Awesome icon to your button."
+          },
+          "step_12":{
+             "title":"Icon vs image",
+             "intro":"Your floating action button can contain an icon that promotes a primary action. You can either select an icon in Buttonizer or import your own image."
+          },
+          "step_13":{
+             "title":"Selecteaz\u0103 pictograma",
+             "intro":"Pick an icon you would like to see in your button."
+          },
+          "step_14":{
+             "title":"Dimensiunea pictogramei",
+             "intro":"Change the size of your button icons. Increase or decrease the size of icons relative to that inherited font-size."
+          },
+          "step_15":{
+             "title":"Label visibility",
+             "intro":"You can decide if the label next to the button should be available on mobile devices,  computers or on both."
+          },
+          "step_16":{
+             "title":"Label position",
+             "intro":"With label position you can place the label on either side of the button. You can make use of this feature right away to see which position you prefer."
+          },
+          "step_17":{
+             "title":"Familie de fonturi",
+             "intro":"Choosing the right font is an important step in making your button usable and accessible. Buttonizer automatically grabs the font family from your website, but you can also use the complete set of properties to choose the right font family. "
+          },
+          "step_18":{
+             "title":"margine",
+             "intro":"With margin you can create more space around your button. Try it out by using pixels or percentages."
+          },
+          "step_19":{
+             "title":"umplutur\u0103",
+             "intro":"With padding you can control the space between its content and its border. Try it out by using pixels or percentages."
+          }
+       }
+    },
+    "import_export":{
+       "import":{
+          "title":"Import",
+          "select_please":"Please select a Buttonizer export file.",
+          "select_click":"Click or drop a JSON export file",
+          "into_group":{
+             "button":"Import into this group",
+             "text":"Import buttons or replace this group."
+          },
+          "new_group":{
+             "group":"Import group",
+             "button":"Import button",
+             "text":"Import a new group."
+          },
+          "reupload":"Re-upload file",
+          "drag_drop":"Drop export file here",
+          "warning":{
+             "replace":"You are about to <b>replace<\/b> this group with:",
+             "preview":"What you are about to import:",
+             "invalid":"This file is not a Buttonizer file.",
+             "malformed":"The file you have selected is malformed or the file is not a Buttonizer file.",
+             "no_buttons":"This group does not have any buttons to import."
+          }
+       },
+       "properties":"properties",
+       "export":{
+          "title":"Export",
+          "export_button":"Export button",
+          "export_group":"Export group",
+          "merge":"Merge with group style",
+          "warning":{
+             "preview":"What you are about to export:",
+             "no_buttons":"This group does not have any buttons to export.",
+             "no_data":"This button does not have any data to export."
+          }
+       },
+       "import_export":"Import & Export"
+    },
+    "settings":{
+       "settings":"Setari",
+       "tippy_single_button":"Ad\u0103uga\u021bi un buton pentru a activa set\u0103rile grupului",
+       "more_actions":"More actions",
+       "setting_categories":{
+          "menu_style":"Stil de meniu",
+          "general":"General",
+          "group_style":"Stil de grup",
+          "group_icon":"Pictograma grupului",
+          "button_style":"Stil buton",
+          "button_icon":"Pictograma butonului",
+          "label_style":"Stilul etichetei",
+          "background":"Fundal",
+          "icon_style":"Stilul icoanei",
+          "image_style":"Stilul imaginii",
+          "show_or_hide":"Arat\u0103 sau ascunde",
+          "label":"Label"
+       },
+       "name":{
+          "title":"Nume buton",
+          "description":"Acesta este numele butonului"
+       },
+       "background_color":{
+          "title":"Culoare buton",
+          "description":"Aceasta este culoarea grupului de butoane \u0219i, de asemenea, culoarea implicit\u0103 a butoanelor din grup."
+       },
+       "color_picker":{
+          "options":{
+             "solid":"Solid Color",
+             "linear":"Linear Gradient",
+             "radial":"Radial Gradient"
+          },
+          "new_swatch_description":"Click to add swatch. Right-click any swatch to remove."
+       },
+       "font_family":{
+          "title":"Familie de fonturi",
+          "placeholder":"Tasta\u021bi un font personalizat",
+          "add":"Tasta\u021bi \",\" pentru a ad\u0103uga {{ value }}"
+       },
+       "button_size":{
+          "title":"Button Sizes",
+          "menu_button":"Menu button size",
+          "sub_button":"Sub button size"
+       },
+       "label_inside":{
+          "title":"Place label inside button"
+       },
+       "label_same_width":{
+          "title":"Make all labels have same width"
+       },
+       "label_same_height":{
+          "title":"Set height same as the button's"
+       },
+       "background_image":{
+          "title":"Use background image",
+          "description":"\u00cenc\u0103rca\u021bi o imagine dac\u0103 dori\u021bi o fotografie ca fundal \u00een loc de culoare. Formatul recomandat este: p\u0103trat (1: 1)."
+       },
+       "border_radius":{
+          "title":"Raza de frontier\u0103",
+          "description":"Schimba\u021bi runda acestui buton."
+       },
+       "box_shadow":{
+          "title":"Box shadow",
+          "description":"Change the box shadow of this button."
+       },
+       "margin":{
+          "title":"margine",
+          "description":"Schimba\u021bi pozi\u021bia etichetei."
+       },
+       "padding":{
+          "title":"umplutur\u0103",
+          "description":"Modifica\u021bi dimensiunea fundalului etichetei."
+       },
+       "icon":{
+          "title":"icoan\u0103",
+          "select":"Selecteaz\u0103 pictograma",
+          "description":"Alege\u021bi o pictogram\u0103 din biblioteca pictogramelor."
+       },
+       "icon_color":{
+          "title":"Culoarea icoanei",
+          "description":"Schimba\u021bi culoarea pictogramei acestui buton."
+       },
+       "icon_image_border_radius":{
+          "title":"Raza de frontier\u0103",
+          "description":"Schimba\u021bi col\u021bul imaginii."
+       },
+       "icon_image_select":{
+          "title":"icoan\u0103",
+          "description":"Alege\u021bi o imagine pe care s\u0103 o utiliza\u021bi ca buton sau pictogram\u0103 de grup. Formatul recomandat este: p\u0103trat (1: 1)"
+       },
+       "icon_image_size":{
+          "title":"Dimensiune imagine",
+          "description":"Schimba dimensiunea imaginii"
+       },
+       "icon_or_image":{
+          "title":"Grafic",
+          "label":"Select icon type",
+          "description":"Alege\u021bi dac\u0103 dori\u021bi s\u0103 utiliza\u021bi o pictogram\u0103 sau o imagine ca pictogram\u0103 cu buton."
+       },
+       "icon_size":{
+          "title":"Dimensiunea pictogramei",
+          "description":"Modifica\u021bi dimensiunea pictogramei acestui buton."
+       },
+       "label":{
+          "title":"Eticheta",
+          "description":"Schimba\u021bi eticheta acestui buton.",
+          "placeholder":"Etichet\u0103 text"
+       },
+       "label_color":{
+          "title":"Culoarea textului",
+          "description":"Modifica\u021bi textul \u0219i culoarea de fundal a etichetei acestui buton sau grup de butoane."
+       },
+       "font_size_border_radius":{
+          "title":"Dimensiunea fontului \u0219i raza bordurii",
+          "description":"Modifica\u021bi dimensiunea fontului \u0219i unghiul de margine al etichetei pentru acest buton sau grup de butoane."
+       },
+       "font_size":"Marimea fontului",
+       "menu_animation":{
+          "title":"Animatie",
+          "description":"Aceast\u0103 op\u021biune va anima grupul de butoane pentru a atrage aten\u021bia vizitatorului. Anima\u021bia se repet\u0103 la fiecare 10 secunde.",
+          "delay":"\u00cent\u00e2rziere",
+          "repeat_count":"Repeta\u021bi num\u0103rul",
+          "repeat_helper_text":"Introduce\u021bi \u201e0\u201d pentru nelimitat",
+          "animations":{
+             "none":"F\u0103r\u0103 anima\u021bie",
+             "hello":"Buttonizer Bun\u0103 ziua",
+             "bounce":"A sari",
+             "jelly":"Budinc\u0103",
+             "pulse":"Puls"
+          }
+       },
+       "label_position":{
+          "title":"Pozitie",
+          "description":"Label position",
+          "warning":"Make sure to add a label",
+          "directions":{
+             "left":"St\u00e2nga",
+             "auto":"Auto",
+             "right":"Dreapta"
+          }
+       },
+       "menu_position":{
+          "title":"Pozitie",
+          "description":"Schimba\u021bi pozi\u021bia grupului de butoane.",
+          "horizontal":"Orizontal\u0103",
+          "vertical":"Vertical",
+          "from":"din",
+          "scaled":"scalate",
+          "absolute":"Absolut",
+          "directions":{
+             "left":"St\u00e2nga",
+             "right":"Dreapta",
+             "bottom":"Fund",
+             "top":"Top"
+          }
+       },
+       "menu_style":{
+          "title":"Stil de meniu",
+          "title_short":"Stil",
+          "description":"Modifica\u021bi stilul de meniu al acestui grup de butoane.",
+          "warning":"Aceast\u0103 setare nu este folosit\u0103 pentru stilul meniului {{ name }}...",
+          "styles":{
+             "default":"Standard",
+             "faded":"decolorat",
+             "cornercircle":"Cercul de col\u021b",
+             "buildingup":"Construieste",
+             "pop":"Pop",
+             "square":"P\u0103trat",
+             "rectangle":"Dreptunghi",
+             "text":"Doar text",
+             "texticon":"Text w \/ pictogram\u0103"
+          }
+       },
+       "menu":{
+          "title":"Meniul",
+          "title_settings":"Menu settings",
+          "description":"Turn on or off whether the group has a closable menu button"
+       },
+       "opening_animation":{
+          "title":"Opening animation",
+          "description":"Decide what type of opening animation is used for opening\/closing the menu"
+       },
+       "label_desktop":{
+          "title":"Vizibilitate",
+          "description":"Afi\u0219a\u021bi \u00eentotdeauna eticheta, afi\u0219a\u021bi numai atunci c\u00e2nd trece\u021bi peste ea sau ascunde\u021bi eticheta pe <u> desktop <\/u>"
+       },
+       "label_mobile":{
+          "title":"Vizibilitate",
+          "description":"Afi\u0219a\u021bi \u00eentotdeauna eticheta sau ascunde\u021bi eticheta pe <u> dispozitive mobile <\/u>."
+       },
+       "label_styles":{
+          "group_default":"Group default",
+          "always":"Afi\u0219a\u021bi \u00eentotdeauna eticheta",
+          "hover":"Afi\u0219a\u021bi eticheta doar cu mouse-ul",
+          "hide":"Ascunde\u021bi eticheta"
+       },
+       "show_mobile_desktop":{
+          "title":"Vedere",
+          "device_visibility":"Vizibilitatea dispozitivului",
+          "description":"Alege\u021bi dac\u0103 dori\u021bi s\u0103 face\u021bi acest grup de butoane vizibil pe desktopuri \u0219i dispozitive mobile.",
+          "mobile":"Mobil",
+          "desktop":"Desktop",
+          "toggle_desktop":"Activa\u021bi \/ dezactiva\u021bi afi\u0219area pe desktop",
+          "toggle_mobile":"Activa\u021bi \/ dezactiva\u021bi pe ecranul mobil"
+       },
+       "start_opened":{
+          "title":"\u00cencepe\u021bi s\u0103 deschide\u021bi",
+          "description":"Grupul de butoane \u00eencepe s\u0103 fie deschis atunci c\u00e2nd aceast\u0103 setare este activat\u0103."
+       },
+       "use_main_button_style":{
+          "title":"Folosi\u021bi stilul de grup",
+          "description":"C\u00e2nd este activat, acesta va utiliza stilul grupului.",
+          "warning":"Dezactiveaz\u0103 USE GROUP STYLE pentru a gestiona aceast\u0103 setare"
+       },
+       "close_on_click_outside":{
+          "title":"Close on click outside",
+          "description":"This will close the menu if you click outside Buttonizer."
+       },
+       "close_on_click_inside":{
+          "title":"Close on button click",
+          "description":"This will close the menu if you click on a button inside this group."
+       },
+       "open_on_mouseover":{
+          "title":"Open on hover",
+          "description":"This will open the menu if you hover the group button."
+       },
+       "close_on_mouseout":{
+          "title":"Close on mouse out",
+          "description":"This will close the menu if you hover out the group button."
+       },
+       "custom_id":{
+          "title":"ID personalizat",
+          "description":"Adaug\u0103 un atribut HTML \u201eid\u201d personalizat la buton.",
+          "pro_description":"Pute\u021bi ad\u0103uga un ID personalizat fiec\u0103rui buton pentru un stil suplimentar.",
+          "placeholder":"Numele de identificare"
+       },
+       "custom_class":{
+          "title":"Clasa personalizata",
+          "description":"Ad\u0103uga\u021bi un buton HTML personalizat de clas\u0103 la buton.",
+          "pro_description":"Pute\u021bi ad\u0103uga o clas\u0103 personalizat\u0103 la fiecare buton pentru un stil suplimentar.",
+          "placeholder":"Numele clasei",
+          "styling_editor":"Deschide\u021bi editorul personalizat de styling",
+          "styling_editor_title":"Editor personalizat de styling"
+       },
+       "selected_page_rule":{
+          "title":"Regula paginii",
+          "description":"Ad\u0103uga\u021bi un buton HTML personalizat de clas\u0103 la buton.",
+          "pro_description":"Pute\u021bi ad\u0103uga o clas\u0103 personalizat\u0103 la fiecare buton pentru un stil suplimentar.",
+          "manage_page_rules":"Gestiona\u021bi regulile paginii",
+          "cannot_select":"Nu pute\u021bi alege aceea\u0219i linie de pagin\u0103 ca \u0219i grupul!",
+          "show_on_rule_trigger":{
+             "show":"Afi\u0219a\u021bi butonul atunci c\u00e2nd linia este declan\u0219at\u0103",
+             "hide":"Butonul Ascunde c\u00e2nd este declan\u0219at\u0103 regula"
+          }
+       },
+       "timeout_scroll":{
+          "timeout":{
+             "title":"Pauz\u0103",
+             "trigger_once":"Trigger only once",
+             "milliseconds":"milisecunde",
+             "info":"Afi\u0219a\u021bi butonul dup\u0103 {{ value }} secunde"
+          },
+          "scroll":{
+             "title":"defilare",
+             "from_top":"De sus",
+             "show_after":"Afi\u0219a\u021bi Buttonizer dup\u0103 0 secunde",
+             "visibility":"Hide group as starting visibility",
+             "hide":"Ascunde",
+             "show":"Vedere",
+             "info":"Parcurge\u021bi <bold>{{ scrollValue }}</bold> din partea de sus a paginii c\u0103tre grupul <bold>{{ showOrHide }}</bold>"
+          }
+       },
+       "exit_intent":{
+          "title":"Inten\u021bie de ie\u0219ire",
+          "enable":"Activa\u021bi inten\u021bia de ie\u0219ire",
+          "pro_description":"Cu aceast\u0103 setare, pute\u021bi avea Buttonizer animat atunci c\u00e2nd invitatul dore\u0219te s\u0103 p\u0103r\u0103seasc\u0103 site-ul.",
+          "description":"Inten\u021bia de ie\u0219ire poate fi utilizat\u0103 pentru a activa o anima\u021bie \u00een jurul Buttonizer \u00eenainte ca vizitatorii s\u0103 p\u0103r\u0103seasc\u0103 site-ul dvs. web.",
+          "info":"Not\u0103: Inten\u021bia de ie\u0219ire nu va fi <b> activat\u0103 <\/b> \u00een modul de previzualizare, va fi v\u0103zut\u0103 doar pe site-ul dvs. LIVE.",
+          "when_to_trigger":"C\u00e2nd s\u0103 activ\u0103m?",
+          "trigger_window":"Declan\u0219eaz\u0103 la ie\u0219irea browserului",
+          "trigger_inactive":"Declan\u0219ator de inactivitate (2 minute)",
+          "how_often":{
+             "_title":"C\u00e2t de des trebuie activat?",
+             "once_page":"O dat\u0103 pe pagin\u0103",
+             "once_session":"O dat\u0103 pe sesiune de vizit\u0103",
+             "always":"\u00centotdeauna se declan\u0219eaz\u0103"
+          },
+          "animation":{
+             "_title":"Anima\u021bie prin inten\u021bie",
+             "focused":"axat",
+             "open_menu":"Deschide meniu",
+             "jump":"Sari \u0219i deschide",
+             "jump_single":"Sari o dat\u0103",
+             "flip":"Roti\u021bi \u0219i deschide\u021bi",
+             "flip_single":"Flip"
+          }
+       },
+       "popups":{
+          "generate":"Generate new popup id",
+          "elementor_guide":"Copy and paste this into your Elementor Popup's <b>\"Open By Selector\"<\/b> option. <br \/>",
+          "popup_maker_guide":"In your <b>Popup Settings<\/b>, add a new <b>\"Click to Open\"<\/b> trigger and copy and paste this code in <b>\"Extra CSS Selectors\"<\/b> <br \/>"
+       },
+       "button_action":{
+          "title":"Actiunea butonului",
+          "description":"Alege\u021bi o ac\u021biune de clic pentru acest buton.",
+          "select":"Selecteaza actiunea butonului",
+          "search_not_found":"Nu a fost g\u0103sit\u0103 nicio ac\u021biune cu butonul pentru:",
+          "actions":{
+             "group_popular":"Promo\u021bii populare",
+             "group_chat":"Face\u021bi clic pentru a discuta",
+             "group_social_media":"Social Media",
+             "group_popup":"Pop-up",
+             "group_actions":"ac\u0163iuni",
+             "phone_number":{
+                "name":"Ac\u021biune apel (num\u0103r de telefon)",
+                "invalid":"Num\u0103rul de telefon este nevalid",
+                "number":"numar de telefon"
+             },
+             "mail":{
+                "name":"Promovare prin e-mail (adresa de e-mail)",
+                "invalid":"Adresa de email invalida"
+             },
+             "page":{
+                "name":"Pagin\u0103",
+                "placeholder":"Select a page",
+                "helper":"To visualise what page type you have chosen, the value is displayed as: '[Page type]: [Page name]'."
+             },
+             "back_to_top":"\u00cenapoi la etaj",
+             "go_to_bottom":"Merge\u021bi \u00een jos",
+             "go_back_one_page":"Pagina anterioar\u0103",
+             "share_page":"Partaja\u021bi pagina",
+             "sms":"MESAJ TEXT",
+             "viber":"Viber nu accept\u0103 linkul pentru chat. C\u00e2nd un utilizator apas\u0103 acest buton, \u201ead\u0103ugarea contactului\u201d lor va fi deschis\u0103 cu acest num\u0103r de telefon presetat.",
+             "messenger_chat":{
+                "description":"Facebook Messenger Chat Widget! First, you'll need to <howToLink>whitelist<\/a> your site on Facebook. Then add your <helpLink>Page ID<\/helpLink> into the input above.",
+                "invalid":"ID-ul paginii este nevalid.",
+                "page_id":"ID-ul paginii Facebook",
+                "language":"Messenger Chat Language"
+             },
+             "whatsapp_chat":"Chat WhatsApp",
+             "poptin": "<bold>You need to install Poptin's WordPress plugin.</bold><br />You can find it <bold><downloadLink>here</downloadLink>.</bold><br />Once you've made a Poptin paste the <bold><helpLink>direct link</helpLink><\/bold> into the input above.",
+             "share_page_on":"Distribuie pe {{ platform }}",
+             "social_sharing":{
+                "social_sharing":"Distribuie pe re\u021belele de socializare",
+                "popular":"Popular Social Sharing",
+                "other":"Other Social Sharing"
+             },
+             "clipboard":"Copia\u021bi adresa URL \u00een clipboard",
+             "print_page":"Imprima pagina",
+             "share_page_via":"Distribuie prin {{ platform }}",
+             "action_discontinued": "<italic>{{ action }}</italic> has been discontinued and replaced with <a>{{ replacement }}</a>.",
+             "url":{
+                "name":"Website URL",
+                "invalid":"Acesta arat\u0103 ca un link nevalid. Este posibil ca butonul s\u0103 nu func\u021bioneze a\u0219a cum era de a\u0219teptat.",
+                "invalid_tip":"\u00ce\u021bi lipse\u0219te <b> http: \/\/ <\/b> sau <b> https: \/\/ <\/b>? Este posibil s\u0103 fi ad\u0103ugat undeva un spa\u021biu inutil.",
+                "insecure":"<b> Link nesigur: <\/b> Ne pare r\u0103u pentru \u00eentrerupere, dar v\u0103 recomand\u0103m s\u0103 utiliza\u021bi HTTPS pentru linkurile dvs., ori de c\u00e2te ori este posibil. Acesta este un mod mai sigur de transport a datelor."
+             },
+             "javascript":{
+                "name":"Func\u021bia Javascript",
+                "open_dialog":"Deschide\u021bi editorul de cod JavaScript",
+                "warning_modal_title":"Avertizare! \u00cenainte de a continua ...",
+                "warning_intro":"Modifica\u021bi ac\u021biunea butonului de la javascript personalizat la o alt\u0103 ac\u021biune. Modific\u0103rile dvs. javascript vor fi pierdute.",
+                "warning_question":"Esti sigur ca vrei sa continui?"
+             },
+             "whatsapp_info":"Introduce\u021bi num\u0103rul de telefon f\u0103r\u0103 spa\u021bii \u0219i simboluri. Citi\u021bi recomand\u0103rile WhatsApp f\u0103c\u00e2nd clic pe <a>aici.<\/a>",
+             "twitter_info":"Pentru a utiliza Twitter DM trebuie mai \u00eent\u00e2i s\u0103 g\u0103si\u021bi ID-ul dvs. de utilizator Twitter \u0219i s\u0103 permite\u021bi mesaje directe de la oricine. Pentru a g\u0103si codul contului <findAccountLink> face\u021bi clic aici <\/findAccountLink>. Pentru a g\u0103si mai multe informa\u021bii despre cum s\u0103 permite\u021bi mesaje directe de la oricine, <allowDirectMessagesLink> face\u021bi clic aici <\/allowDirectMessagesLink>.",
+             "signal_group_info": "Paste the generated Signal group URL into the field. If you need more information about how to enable group invite links, <a>click here<\/a>.",
+             "chat":{
+                "sms":"SMS",
+                "messenger_chat":"Facebook Messenger Chat Widget",
+                "messenger_link":"Facebook Messenger Link",
+                "twitter_dm":"Twitter DM",
+                "skype":"Skype",
+                "line":"LINE",
+                "waze":"Waze",
+                "telegram":"Telegram",
+                "viber":"Viber",
+                "signal_group":"Join signal group"
+             },
+             "social_media":{
+                "facebook":"Facebook",
+                "twitter":"Twitter",
+                "instagram":"Instagram",
+                "snapchat":"Snapchat",
+                "linkedin":"LinkedIn",
+                "vk":"VKontakte",
+                "waze":"Waze"
+             }
+          },
+          "placeholders":{
+             "sms":"Text",
+             "message":"Mesaj",
+             "username":"Nume de utilizator",
+             "mail":{
+                "recipient":"Receptor",
+                "subject":"Subiect",
+                "cc":"cc",
+                "bcc":"bcc",
+                "body":"Con\u0163inut"
+             }
+          },
+          "open_url":{
+             "title":"Open URL in: "
+          },
+          "rel_attributes":{
+             "title":"Rel attributes",
+             "placeholder":"Set link rel attributes."
+          }
+       },
+       "button_group_window":{
+          "filters":"Filtre",
+          "styling":"Stil",
+          "timeout_scroll":"Timeout & defilare"
+       }
+    },
+    "settings_window":{
+       "title":"Set\u0103ri butoniere",
+       "description":"Gestiona\u021bi set\u0103rile Buttonizer",
+       "icon_library":{
+          "title":"Set de pictograme",
+          "description":"Alege\u021bi setul de pictograme",
+          "free":"liber",
+          "latest":"Ultima (automat\u0103)",
+          "info":"C\u00e2nd tema dvs. \u00eencarc\u0103 automat icoane, trebuie s\u0103 alege\u021bi biblioteca de pictograme potrivit\u0103.",
+          "select_version":{
+             "title":"Selecta\u021bi versiunea",
+             "info":"Selecta\u021bi versiunea corect\u0103 a pictogramelor pe care le utiliza\u021bi pe site-ul dvs. web, astfel \u00eenc\u00e2t s\u0103 le pute\u021bi selecta \u00een Buttonizer."
+          },
+          "library_license_key":{
+             "info":"A\u021bi ales o bibliotec\u0103 cu pictograme care con\u021bine pictograme premium. Introduce\u021bi licen\u021ba pictogram\u0103 pentru a o vizualiza.",
+             "how_does_it_work":"Cum func\u021bioneaz\u0103 asta?",
+             "enter_integrity_code":"Introduce\u021bi codul integrity"
+          },
+          "import_library":{
+             "title":"Icoane de \u00eenc\u0103rcare",
+             "info":"Buttonizer ar trebui s\u0103 importe pictogramele \u00een tema dvs.? Dac\u0103 tema dvs. \u00eencarc\u0103 deja pictograme, pute\u021bi dezactiva aceast\u0103 op\u021biune."
+          }
+       },
+       "google_analytics":{
+          "title":"Google Analytics",
+          "enable":"Activa\u021bi Google Analytics",
+          "description":"M\u0103sura\u021bi-v\u0103 conversiile",
+          "intro":"C\u00e2nd aceast\u0103 op\u021biune este activat\u0103, Buttonizer va \u00eenregistra automat clicurile butonului \u00een contul Google Analytics. Pute\u021bi obliga Buttonizer s\u0103 nu utilizeze Google Analytics oprind glisorul de mai sus.",
+          "tracking_code_info":"Google Analytics este detectat automat dac\u0103 l-ai ad\u0103ugat deja pe pagina ta web. Cu toate acestea, dac\u0103 nu utiliza\u021bi deja Google Analytics \u0219i este prima dat\u0103, Buttonizer \u00eel poate ad\u0103uga pentru dvs.",
+          "tracking_code_warning":"Dac\u0103 a\u021bi ad\u0103ugat deja Google Analytics pe pagina dvs. web \u0219i l\u0103sa\u021bi butonierului s\u0103 adauge acela\u0219i cod Analytics, acest lucru va pune problema cu datele analitice!",
+          "input":"Codul UA",
+          "link":"Unde pot g\u0103si datele mele de clic din butoanele mele din Google Analytics?"
+       },
+       "other_settings":{
+          "title":"Preferin\u021be",
+          "description":"Gestiona\u021bi preferin\u021bele",
+          "admin_button":{
+             "title":"Afi\u0219are \u00een bara de sus a administratorului",
+             "info":"Ascunde\u021bi butonul \u00een bara de sus a administratorului dezactiv\u00e2nd aceast\u0103 setare."
+          },
+          "tooltips":{
+             "title":"Afi\u0219a\u021bi sfaturile instrumentelor",
+             "info":"Ascunde\u021bi sfaturile instrumentelor prin dezactivarea acestei set\u0103ri."
+          },
+          "tips":{
+             "title":"Afi\u0219a\u021bi sfaturile Buttonizer",
+             "info":"Ascunde\u021bi sfaturile din partea de sus a tabloului de bord Buttonizer dezactiv\u00e2nd aceast\u0103 setare"
+          },
+          "subdomain":{
+             "title":"Suport pentru subdomenii",
+             "info":"Unele site-uri WordPress folosesc subdomenii pentru a afi\u0219a con\u021binut. Pute\u021bi acorda permisiunea Buttonizer s\u0103 se \u00eencarce \u0219i pe aceste subdomenii. Activeaz\u0103 aceast\u0103 caracteristic\u0103 numai atunci c\u00e2nd ai nevoie."
+          },
+          "ajax":{
+             "title":"Utiliza\u021bi ajax pentru a \u00eenc\u0103rca butoanele",
+             "info":"Aceast\u0103 caracteristic\u0103 este f\u0103cut\u0103 pentru a v\u0103 asigura c\u0103 Buttonizer nu \u00eencetine\u0219te site-ul. Dac\u0103 dori\u021bi ca butoanele s\u0103 fie vizibile imediat, f\u0103r\u0103 timp de \u00eenc\u0103rcare, pute\u021bi dezactiva aceast\u0103 op\u021biune. Impactul asupra timpului de \u00eenc\u0103rcare depinde de num\u0103rul de butoane \u0219i grupuri pe care le ave\u021bi."
+          },
+          "error_logging":{
+             "title":"Raporteaz\u0103 automat jurnalele de eroare \u0219i se pr\u0103bu\u0219esc",
+             "info":"Activa\u021bi \u00eenregistrarea automat\u0103 a erorilor \u0219i raportarea accidentelor pentru a ne ajuta s\u0103 depan\u0103m Buttonizer! Toate datele sunt anonimizate automat."
+          },
+          "no_limit":{
+             "title":"Show more than 7 buttons in a group!",
+             "info":"When enabled, it will disable the 7 button limit in Buttonizer. This means that you will be able to add as much buttons you can fit in the screen!"
+          },
+          "reset_opt_in":{
+             "title":"Opt-in to Buttonizer",
+             "info":"Currently you are opted out for sharing your WordPress environment information. When you want to make use of Buttonizer Pro, you need to opt-in. For more information, check out the opt-in page.",
+             "button":"Reset opt-in"
+          },
+          "additional_roles":{
+             "title":"Permissions",
+             "info":"You can grant more roles to access the Buttonizer settings who are not an administrator.",
+             "roles":"Select roles"
+          }
+       },
+       "buttonizer_tour":{
+          "title":"Buttonizer tour",
+          "description":"Helps you with step-by-step tours",
+          "interface":{
+             "title":"Buttonizer interface",
+             "description":"Make a tour through Buttonizer's interface"
+          },
+          "create_button":{
+             "title":"Create a button",
+             "description":"Learn how to make floating action buttons"
+          }
+       },
+       "changelog_dialog":{
+          "title":"What's new?",
+          "all_changelogs":"View all changelogs",
+          "new_features":"New features",
+          "first_feature":{
+             "title":"New styling options!",
+             "info":"We've added much more styling options for the group and the buttons. Now you can truly customize the buttons to your liking."
+          },
+          "second_feature":{
+             "title":"Load in templates",
+             "info":"Instead of creating your own buttons and groups, you can save time by loading ready-made templates. Click \"add button\" or \"create new group\" to see all templates available."
+          },
+          "third_feature":{
+             "title":"Updated menu position for button styles",
+             "info":"We have slightly adjusted the placement of the settings for changing the button position. Don't worry, you can still find the settings under the \"Advanced\" tab."
+          },
+          "fourth_feature":{
+             "title":"\"Shift + click\" to skip a dialog",
+             "info":"You can now press shift + click when adding, deleting and duplicating to skip the confirmation dialog."
+          }
+       },
+       "reset":{
+          "title":"Resetare butonier",
+          "description":"C\u00e2nd ave\u021bi nevoie de o instala\u021bie nou\u0103",
+          "info":"Acesta este un mod de a readuce Buttonizer la set\u0103rile ini\u021biale.",
+          "what_will_happen":{
+             "title":"Ce se \u00eent\u00e2mpl\u0103 dac\u0103 ap\u0103s butonul ro\u0219u de mai jos?",
+             "info":"Pluginul va reveni la \u201eset\u0103rile din fabric\u0103\u201d. Toate set\u0103rile Buttonizer vor fi eliminate, la \u00eenceputul c\u00e2nd tocmai a\u021bi instalat Buttonizer."
+          },
+          "why":{
+             "title":"De ce a\u0219 face asta?",
+             "info":"Este posibil s\u0103 v\u0103 distruge\u021bi butoanele, categoriile sau set\u0103rile \u0219i sunte\u021bi gata pentru un nou \u00eenceput. Sau poate dori\u021bi doar s\u0103 \u00eencerca\u021bi butonul de resetare ..."
+          },
+          "license":{
+             "title":"Am o licen\u021b\u0103, ce se \u00eent\u00e2mpl\u0103 cu asta?",
+             "info":"Nu iti face griji! Nu se \u00eent\u00e2mpl\u0103 nimic cu licen\u021ba ta! Va reseta doar urm\u0103toarele set\u0103ri:",
+             "list":{
+                "buttons":"Butoanele tale",
+                "groups":"Butonul dvs. se grupeaz\u0103",
+                "time_schedules":"Toate orarele",
+                "page_rules":"Toate liniile de pagin\u0103",
+                "settings":"Toate celelalte set\u0103ri Buttonizer",
+                "published":"Toate institu\u021biile publicate"
+             }
+          },
+          "default_settings":{
+             "title":"Okey, sun\u0103 bine. \u0218i apoi?",
+             "info":"Buttonizer va merge la set\u0103rile implicite \u0219i se va comporta ca o nou\u0103 instalare. Acesta este singurul lucru."
+          },
+          "ready":{
+             "title":"Okey, sunt gata!",
+             "info":"Ap\u0103sa\u021bi butonul ro\u0219u de mai jos pentru a reseta Buttonizer. Nu vor mai urma avertismente.",
+             "button":"Resetare butonier!"
+          }
+       }
+    },
+    "bar":{
+       "previous_session":"Ajust\u0103ri \u00eenc\u0103rcate din sesiunea precedent\u0103",
+       "edit_group_settings":"Edita\u021bi set\u0103rile grupului",
+       "preview":{
+          "no_changes":"Este posibil s\u0103 fi dat clic pe un link. Acesta a afi\u0219at ecranul de previzualizare al Buttonizer. Nu pute\u021bi vedea nicio modificare pe care o face\u021bi aici.",
+          "return":"Reveni\u021bi la exemplu",
+          "desktop":"Exemplu desktop",
+          "tablet":"Exemplu de tableta",
+          "mobile":"Exemplu mobil"
+       },
+       "breadcrumb":{
+          "home":"Prezentare general\u0103",
+          "tippy_home":"\u00eenapoi la imagine de ansamblu",
+          "tippy_group":"\u00cenapoi la grup"
+       },
+       "menu":{
+          "version":"Versiunea {{ versionNumber }}",
+          "knowledgebase":{
+             "title":"Baz\u0103 de cuno\u0219tin\u021be",
+             "description":"Afl\u0103 tot ce trebuie s\u0103 \u0219tii despre Buttonizer"
+          },
+          "support_group":"A sustine",
+          "support":{
+             "title":"am nevoie de ajutor",
+             "description":"Suport direct din partea dezvoltatorilor Buttonizer"
+          },
+          "community":{
+             "title":"Comunitate",
+             "description":"Comunica\u021bi cu al\u021bi butoni\u0219ti"
+          },
+          "tour":{
+             "title":"Tur de butoniere (recomandat!)",
+             "description":"\u00cencepe\u021bi turul de 2 minute"
+          },
+          "wp_admin":"\u00cenapoi la tabloul de bord WordPress",
+          "follow":"Urma\u021bi-ne pentru sfaturi \u0219i trucuri utile!",
+          "account_group":"Cont Buttonizer",
+          "account":{
+             "title":"Contul meu",
+             "description":"Vizualiza\u021bi informa\u021biile \u0219i licen\u021ba contului"
+          },
+          "upgrade":{
+             "title":"Upgrade \u0219i pre\u021buri",
+             "description":"O scufundare profund\u0103 \u00een toate posibilit\u0103\u021bile"
+          },
+          "affiliation":{
+             "title":"Deveni un partener",
+             "description":"C\u00e2\u0219tig\u0103 $ pentru promovarea Buttonizer"
+          },
+          "options":{
+             "title":"Op\u021biuni"
+          }
+       },
+       "buttons":{
+          "now_editing":"Editeaz\u0103 acum:",
+          "tippy_new_group":"Se creeaz\u0103 un grup nou cu 2 butoane.",
+          "tippy_single_button":"Se creeaz\u0103 un buton, \u00een afara celorlalte grupuri.",
+          "tippy_learn_more":"Citi\u021bi mai multe despre grupuri \u0219i butoane",
+          "tippy_drag_warning":"Nu pute\u021bi trage acest buton, deoarece este singurul buton r\u0103mas!",
+          "convert_to_group":"Converti\u021bi \u00een grup"
+       }
+    },
+    "migration_modal":{
+       "title":"Bun\u0103 Buttonizer!",
+       "intro":"Se pare c\u0103 a\u021bi instalat deja Buttonizer 2.0 \u0219i apoi a\u021bi revenit la versiunea 1.5. Acum v-a\u021bi actualizat la versiunea 2.0!",
+       "convert":"Migrarea automat\u0103 nu a fost efectuat\u0103 acum, deoarece a fost f\u0103cut\u0103 \u00eenainte. Pentru a migra din nou butoanele la cea mai recent\u0103 versiune, ap\u0103sa\u021bi butonul de mai jos!",
+       "popping_up": "If this window keeps popping up, even when you've tried to convert the buttons, try to reset Buttonizer. Go to the 'cog' icon (<i class=\"fas fa-cog\"><\/i>) on the top bar, select 'Options <i class=\"fas fa-cogs\"><\/i>' and the tab 'Reset' and follow the instructions.",
+       "convert_buttons":"Migreaz\u0103-mi butoanele!"
+    },
+    "premium":{
+       "modal":{
+          "title":"Func\u021bie premium",
+          "describe":"Bun\u0103 acolo, aceast\u0103 caracteristic\u0103 este destinat\u0103 utilizatorilor no\u0219tri premium. Vom descrie ce va face aceast\u0103 func\u021bie:",
+          "go_pro":"Deveni\u021bi un utilizator premium",
+          "list":{
+             "button_sizes":"Change the size of the buttons and groups",
+             "time_schedules":"Afi\u0219a\u021bi butoanele bazate pe programe avansate",
+             "page_rules":"Afi\u0219a\u021bi butoanele de pe anumite pagini cu reguli avansate ale paginii",
+             "button_groups":"Posibilitatea de a crea mai multe grupuri de butoane",
+             "custom_images":"Fundal personalizat pentru buton \u0219i imagine pentru pictograme",
+             "exit_intent":"Inten\u021bie de ie\u0219ire",
+             "show_on_scroll":"Afi\u0219a\u021bi sau ascunde\u021bi \u00een timp ce defila\u021bi",
+             "show_on_timeout":"Afi\u0219eaz\u0103 dup\u0103 un anumit timp",
+             "custom_class":"Utilizarea numelor \u0219i ID-urilor clasei CSS",
+             "javascript":"Rula\u021bi JavaScript cu un clic"
+          }
+       },
+       "time_schedules":{
+          "first_time_schedule":"Primul meu orar"
+       },
+       "warning_duplicate":"Butoanele duplicate sunt dezactivate pentru versiunea gratuit\u0103",
+       "page_rules":{
+          "first_page_rule":"Prima mea linie de pagini"
+       },
+       "menu_styles":{
+          "text":"Acest stil de meniu va elimina pictograma \u0219i va ad\u0103uga eticheta \u00een buton, f\u0103c\u00e2nd-o un singur buton lung.",
+          "text-icon":"Acest stil de meniu va ad\u0103uga eticheta \u00een buton cu o pictogram\u0103, ceea ce va face un singur buton lung."
+       },
+       "multiple_button_groups":"Ave\u021bi op\u021biunea de a crea mai multe grupuri \u00een diferite pozi\u021bii",
+       "custom_image":"Pute\u021bi selecta imagini pe care s\u0103 le utiliza\u021bi ca pictogram\u0103 de buton \u0219i fundal de buton.",
+       "show_on_timeout":"Cu aceast\u0103 setare, pute\u021bi afi\u0219a sau ascunde Buttonizer dup\u0103 un anumit timp.",
+       "show_on_scroll":"Aceast\u0103 setare v\u0103 permite s\u0103 afi\u0219a\u021bi sau s\u0103 ascunde\u021bi Buttonizer dup\u0103 o anumit\u0103 cantitate de defilare.",
+       "add_animation_settings":"Cu aceast\u0103 setare, pute\u021bi modifica set\u0103rile de anima\u021bie ca \u00eent\u00e2rziere \u0219i repetare num\u0103r.",
+       "font_family":"Cu aceast\u0103 setare, pute\u021bi modifica familia de fonturi a etichetei. Alege\u021bi un font pentru a ad\u0103uga fontul personalizat.",
+       "margin":"Cu aceast\u0103 setare, pute\u021bi modifica marja etichetei. Modifica\u021bi pozi\u021bia etichetei fa\u021b\u0103 de butonul acesteia",
+       "padding":"Cu aceast\u0103 setare, pute\u021bi modifica dimensiunea etichetei."
+    },
+    "page_rules":{
+       "name":"Regulile paginii",
+       "menu_description":"Alege\u021bi pe ce pagin\u0103 dori\u021bi s\u0103 afi\u0219a\u021bi un buton (grup).",
+       "window_title":"Gestionarea regulilor de pagini",
+       "window_description":"Pute\u021bi seta regulile paginii prin aceast\u0103 fereastr\u0103. C\u00e2nd ad\u0103uga\u021bi pagini sau defini\u021bii la aceast\u0103 linie de pagin\u0103, butoanele asociate acesteia vor fi afi\u0219ate sau ascunse \u00een func\u021bie de set\u0103rile dvs. odat\u0103 ce linia este declan\u0219at\u0103.",
+       "pro_description":"Pute\u021bi seta set\u0103ri de pagin\u0103 care vor fi declan\u0219ate pe anumite pagini sau roluri de utilizator. Pute\u021bi ad\u0103uga un num\u0103r nelimitat de linii de pagin\u0103, cu condi\u021bii diferite.",
+       "add_page_rule":"Adaug\u0103 linie de pagin\u0103",
+       "name_your_page_rule":"Denumi\u021bi linia paginii:",
+       "single_name":"Regula paginii",
+       "input_any_page":"Afi\u0219a\u021bi butonul de pe fiecare pagin\u0103",
+       "remove_page_rule":"\u0218terge\u021bi linia de pagin\u0103",
+       "open_settings":"Deschide\u021bi set\u0103rile pentru linia de pagin\u0103",
+       "current_page_rule":"Linia de pagin\u0103 curent\u0103",
+       "behaviour":"Conducerea regulii paginii",
+       "trigger":"Se activeaz\u0103 c\u00e2nd una dintre valorile selectate este adev\u0103rat\u0103",
+       "conditions":{
+          "title":"Condi\u021bii",
+          "show_group_on":"Afi\u0219a\u021bi grupul atunci c\u00e2nd regula este activat\u0103",
+          "hide_group_on":"Ascunde\u021bi grupul atunci c\u00e2nd regula este activat\u0103",
+          "show_button_on":"Afi\u0219a\u021bi butonul c\u00e2nd regula este activat\u0103",
+          "hide_button_on":"Ascunde butonul atunci c\u00e2nd regula este activat\u0103",
+          "add":"Adaug\u0103 condi\u021bie"
+       },
+       "empty":{
+          "page":"F\u0103r\u0103 reguli de pagin\u0103",
+          "selected":"Nicio linie de pagin\u0103 selectat\u0103",
+          "rules":"Nu au fost stabilite \u00eenc\u0103 reguli pentru aceast\u0103 regul\u0103 a paginii. Toate butoanele legate de aceast\u0103 linie de pagin\u0103 vor fi vizibile. Face\u021bi clic pe \u201eAdaug\u0103 condi\u021bie\u201d pentru a ad\u0103uga una!"
+       },
+       "types":{
+          "must_meet":"Trebuie s\u0103 \u00eendeplineasc\u0103 toate condi\u021biile",
+          "one_meets":"Trebuie s\u0103 \u00eendeplineasc\u0103 cel pu\u021bin 1 condi\u021bie (OF)"
+       },
+       "rule_and":"\u0219i",
+       "rule_or":"sau",
+       "rules":{
+          "page":"Pagin\u0103",
+          "page_title":"Titlul paginii con\u021bine",
+          "blog":"Blog",
+          "blog_title":"Titlul blogului con\u021bine",
+          "category":"Categorie",
+          "url_match":"URL match",
+          "url_match_exact":"Exact URL match",
+          "url_contains":"URL con\u021bine",
+          "url_starts":"URL \u00eencepe cu",
+          "url_ends":"URL se termin\u0103 cu",
+          "url_regex":"URL regular expression",
+          "user_roles":"Utilizatorul are un rol specific",
+          "user_logged_in":"Utilizatorul este conectat",
+          "user_logged_out":"Utilizatorul este deconectat"
+       },
+       "rules_group":{
+          "content_based":"Pe baz\u0103 de con\u021binut",
+          "url":"URL-",
+          "users":"Utilizatori"
+       },
+       "debug":{
+          "title":"Debug",
+          "test":"Test out this page rule",
+          "invalid":"This URL appears to be invalid. You need to use the whole URL of your page.",
+          "example":"It should look something like {{ url }}",
+          "user_roles":"User role test",
+          "debug_page":"Debug page",
+          "triggered":"This Page Rule is triggered",
+          "not_triggered":"This Page Rule is not triggered",
+          "one_met":"One or more conditions were met",
+          "all_met":"All conditions were met",
+          "one_not_met":"One or more conditions were not met",
+          "all_not_met":"All conditions were not met",
+          "type":"Condition type",
+          "set_value":"Condition value",
+          "got_value":"Received value",
+          "trigger":"Triggered"
+       },
+       "select_items":"Selecta\u021bi unul sau mai multe articole.",
+       "remove_rule":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi aceast\u0103 linie?",
+       "remove_rule_aborted":"Daramaturi. Fiecare linie de pagin\u0103 trebuie s\u0103 p\u0103streze cel pu\u021bin o linie.",
+       "warning_changing_rule":"\u00cenc\u0103 ave\u021bi valori selectate, sunte\u021bi sigur c\u0103 dori\u021bi s\u0103 le \u0219terge\u021bi?",
+       "rule_value":"Ajusta\u021bi valoarea"
+    },
+    "time_schedules":{
+       "name":"orare",
+       "menu_description":"Exemplu: Afi\u0219a\u021bi butonul de apelare-mi acum doar \u00een timpul programului de deschidere",
+       "single_name":"orar",
+       "window_title":"Managementul orarului",
+       "pro_description":"Pute\u021bi seta programe care vor fi declan\u0219ate la anumite ore ale zilei. Este chiar posibil s\u0103 ajusta\u021bi programele pentru anumite zile. Pute\u021bi crea un num\u0103r nelimitat de programe de timp.",
+       "open_settings":"Deschide\u021bi set\u0103rile de orar",
+       "current_time_schedule":"Orarele actuale:",
+       "empty":{
+          "page":"Nu ave\u021bi orare",
+          "selected":"Nu a fost selectat orar"
+       },
+       "dates":"Datele",
+       "add_schedule":"Ad\u0103uga\u021bi orar",
+       "add_date":"Ad\u0103uga\u021bi data",
+       "new_schedule":"Orar nou",
+       "name_schedule":"Nume\u0219te programul nou:",
+       "rename_schedule":"Redenumirea orarului \u00een:",
+       "show_any_time":"Afi\u0219a\u021bi \u00eentotdeauna butonul",
+       "till":"pana cand",
+       "conditions":{
+          "show_group_on":"Afi\u0219a\u021bi grupul atunci c\u00e2nd este activat programul",
+          "hide_group_on":"Ascunde\u021bi grupul atunci c\u00e2nd este activat programul",
+          "show_button_on":"Buton Afi\u0219are c\u00e2nd este activat programul",
+          "hide_button_on":"Butonul Ascunde c\u00e2nd este activat programul"
+       },
+       "trigger":{
+          "trigger":"Activa\u021bi pornirea",
+          "dont_trigger":"Nu activa\u021bi pornirea"
+       },
+       "remove_schedule":"\u0218terge\u021bi orarul",
+       "must_keep_one":"Trebuie s\u0103 p\u0103stra\u021bi cel pu\u021bin un orar",
+       "current_timezone":"Fusul orar curent:",
+       "remove_date":{
+          "title":"\u0218terge\u021bi data",
+          "message":"Sigur dori\u021bi s\u0103 \u0219terge\u021bi aceast\u0103 dat\u0103?"
+       },
+       "errors":{
+          "time_invalid":"Ne pare r\u0103u, ora selectat\u0103 \u201e{{ value }}\u201d nu este valid\u0103. Ora este resetat\u0103 la \u201e{{ originalValue }}\u201d.",
+          "time_overlap_start":"Ora de \u00eenceput \u201e{{ startValue }}\u201d intr\u0103 \u00een conflict cu ora final\u0103 '{{ endValue }}. Timpul a fost resetat la \u201e{{ originalValue }}\u201d. Asigura\u021bi-v\u0103 c\u0103 ave\u021bi cel pu\u021bin 5 minute de sl\u0103bire.",
+          "time_overlap_end":"Ora final\u0103 \u201e{{ endValue }}\u201d intr\u0103 \u00een conflict cu ora de \u00eenceput \u201e{{ startValue }}\u201d. Timpul a fost resetat la \u201e{{ originalValue }}\u201d. Asigura\u021bi-v\u0103 c\u0103 ave\u021bi cel pu\u021bin 5 minute de sl\u0103bire."
+       },
+       "weekdays":{
+          "title":"Zilele saptamanii",
+          "monday":"luni",
+          "tuesday":"mar\u0163i",
+          "wednesday":"miercuri",
+          "thursday":"joi",
+          "friday":"vineri",
+          "saturday":"s\u00e2mb\u0103t\u0103",
+          "sunday":"duminic\u0103"
+       },
+       "exclude":{
+          "title":"Zile exceptate",
+          "add":"Ad\u0103uga\u021bi ziua cu excep\u021bia",
+          "info":"Ave\u021bi op\u021biunea de a selecta anumite date pentru a ascunde sau afi\u0219a butoanele asociate cu acest orar. De exemplu, pute\u021bi folosi acest lucru \u00een urm\u0103toarea situa\u021bie: \u201eVoi fi deschis p\u00e2n\u0103 la 22:00 pe 22 ianuarie datorit\u0103 unui eveniment special pe care \u00eel organiz\u0103m\u201d. Aceast\u0103 dat\u0103 va \u00eenlocui set\u0103rile normale pentru aceast\u0103 zi."
+       },
+       "input_start":{
+          "label":"\u00cencepe\u021bi declan\u0219area butoanelor din",
+          "helper":"Data de \u00eenceput",
+          "error":"Avertizare! Data de \u00eenceput \u201e{{ date }}\u201d este mai t\u00e2rziu dec\u00e2t data de \u00eencheiere a acestui calendar. Dac\u0103 nu schimba\u021bi acest lucru, orarul nu va func\u021biona."
+       },
+       "input_end":{
+          "label":"Opri\u021bi butoanele de declan\u0219are dup\u0103 (op\u021bional)",
+          "helper":"Face\u021bi clic pentru a selecta o dat\u0103 de \u00eencheiere",
+          "placeholder_empty":"Selecta\u021bi o dat\u0103 din selec\u021bia datei de mai jos",
+          "error":"Avertizare! Data ta de \u00eencheiere '{{ date }}' este anterioar\u0103 datei de \u00eenceput a acestui program. Dac\u0103 nu schimba\u021bi acest lucru, orarul nu va func\u021biona."
+       }
+    },
+    "random_tips":{
+       "tip_1":"\u0218tia\u021bi c\u0103 Buttonizer are mai multe stiluri de grup pe care le pute\u021bi utiliza?",
+       "tip_2":"Face\u021bi clic aici pentru a accesa set\u0103rile butonului",
+       "tip_3":"Da\u021bi butoanelor o culoare",
+       "tip_4":"Un buton are o singur\u0103 ac\u021biune, dar pute\u021bi alege dintre mai mult de 25 de ac\u021biuni!",
+       "tip_5":"Pute\u021bi dezactiva aceste sfaturi \u00een set\u0103ri",
+       "tip_6":"You can show more than 7 buttons by enabling it in Preferences ;)",
+       "tip_7":"Lipi\u021bi un cod HEX \u00een selectorul de culori dac\u0103 dori\u021bi s\u0103 utiliza\u021bi o culoare specific\u0103",
+       "tip_8":"Folosind \u00een mod inteligent \u201eAfi\u0219aj pe desktop\u201d \u0219i \u201eAfi\u0219are pe mobil\u201d, v\u0103 pute\u021bi oferi 14 butoane pe pagin\u0103!",
+       "tip_9":"You can use Page Rules to show or hide buttons on certain pages",
+       "tip_10":"Pute\u021bi utiliza ac\u021biunea butonului \u201ePartajare pe re\u021belele de socializare\u201d pentru a permite vizitatorilor s\u0103 partajeze pagina dvs. web",
+       "tip_11":"Ave\u021bi nevoie de un sfat pentru instrument? ;)",
+       "tip_12":"Pute\u021bi modifica stilul butonului principal prin editarea grupului",
+       "tip_13":"Pute\u021bi ad\u0103uga un atribut HTML de clas\u0103 sau id la un grup sau buton",
+       "tip_14":"Vrei un buton similar? Duplic\u0103-l!",
+       "tip_15":"Spune-ne dac\u0103 ai un sfat bun! Apoi \u00eel ad\u0103ug\u0103m :)",
+       "tip_16":"Pssst, face\u021bi clic pe numele grupului \/ butonului din partea de sus",
+       "tip_17":"Inten\u021bie de ie\u0219ire ... De aici \u00eencepe s\u0103 se distreze cu adev\u0103rat!",
+       "tip_18":"With our brand new color picker you can build a personalized palette, create a color scale and blend colors",
+       "tip_19":"Premium users just need one license key for their production environment and development environment",
+       "tip_20":"Give more roles permission to access Buttonizer's dashboard in Preferences!",
+       "tip_21":"Easily edit a specific button by hovering on them on the preview",
+       "tip_22":"Add a custom text when using Social Sharing actions!",
+       "tip_23":"Buttonizer also supports languages that are written from right-to-left :)"
+    }
+ }

@@ -1,0 +1,67 @@
+.monsterinsights-save-status[data-v-ef4a5e50] {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  background: #f0f0f1;
+  color: #50575e;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  pointer-events: none;
+}
+.monsterinsights-save-status--saved[data-v-ef4a5e50] {
+  background: #eaf7ee;
+  color: #2b8a3e;
+}
+.monsterinsights-save-status--error[data-v-ef4a5e50] {
+  background: #fdecec;
+  color: #d63638;
+}
+.monsterinsights-save-status__icon[data-v-ef4a5e50] {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+}
+.monsterinsights-save-status__icon svg[data-v-ef4a5e50] {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+.monsterinsights-save-status__spinner[data-v-ef4a5e50] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-top-color: #50575e;
+  border-radius: 50%;
+  animation: monsterinsights-save-status-spin-ef4a5e50 0.7s linear infinite;
+}
+@keyframes monsterinsights-save-status-spin-ef4a5e50 {
+to {
+    transform: rotate(360deg);
+}
+}
+.monsterinsights-save-status-enter-active[data-v-ef4a5e50],
+.monsterinsights-save-status-leave-active[data-v-ef4a5e50] {
+  transition: opacity 0.2s ease;
+}
+.monsterinsights-save-status-enter-from[data-v-ef4a5e50],
+.monsterinsights-save-status-leave-to[data-v-ef4a5e50] {
+  opacity: 0;
+}.monsterinsights-em-nav-inline {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.monsterinsights-em-nav-inline .monsterinsights-navigation-tab-link {
+  white-space: nowrap;
+}

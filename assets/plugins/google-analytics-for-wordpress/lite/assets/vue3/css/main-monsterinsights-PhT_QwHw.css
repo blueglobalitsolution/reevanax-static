@@ -1,0 +1,46 @@
+
+.monsterinsights-report-table-modal__row-icon-img {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	vertical-align: middle;
+}
+
+/* Truncate long text in first column and links */
+.monsterinsights-report-table-modal__table tbody td:first-child span,
+.monsterinsights-report-table-modal__table tbody td .monsterinsights-report-table-modal__cell-with-icon span {
+	display: inline-block;
+	max-width: 30ch;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.monsterinsights-report-table-modal__cell-link {
+	display: inline-block;
+	max-width: 35ch;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+	color: #509fe2;
+	text-decoration: none;
+}
+.monsterinsights-report-table-modal__cell-link:hover {
+	text-decoration: underline;
+}
+.monsterinsights-report-table-modal__th--key-event .monsterinsights-report-table-modal__th-content {
+	justify-content: flex-end;
+	width: 100%;
+}
+.monsterinsights-report-table-modal__td--key-event {
+	text-align: right;
+	vertical-align: middle;
+}
+.monsterinsights-report-table-modal__td--key-event .monsterinsights-report-table-modal__cell-with-icon {
+	justify-content: flex-end;
+	width: 100%;
+}
+.monsterinsights-report-table-modal__td--key-event .monsterinsights-report-table-modal__cell-with-icon span {
+	max-width: none;
+}

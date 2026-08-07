@@ -1,0 +1,12 @@
+{
+  "smtp_host": "smtp-relay.brevo.com",
+  "smtp_port": 587,
+  "smtp_user": "your-brevo-login@smtp-brevo.com",
+  "smtp_password": "your-brevo-smtp-key",
+  "smtp_use_tls": true,
+  "from_email": "your-email@gmail.com",
+  "from_name": "ReevanaX Booking",
+  "to_email": "info.reevanax@gmail.com",
+  "to_name": "ReevanaX",
+  "note": "For Brevo use smtp-relay.brevo.com. For Gmail use smtp.gmail.com + App Password."
+}

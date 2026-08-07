@@ -1,0 +1,837 @@
+@keyframes opaque {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes resizeanim {
+
+  0%,
+  to {
+    opacity: 0
+  }
+}
+
+.mi-apexcharts-scope .apexcharts-canvas {
+  position: relative;
+  direction: ltr !important;
+  user-select: none
+}
+
+.mi-apexcharts-scope .apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px
+}
+
+.mi-apexcharts-scope .apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)
+}
+
+.mi-apexcharts-scope .apexcharts-inner {
+  position: relative
+}
+
+.mi-apexcharts-scope .apexcharts-text tspan {
+  font-family: inherit
+}
+
+.mi-apexcharts-scope rect.legend-mouseover-inactive,
+.mi-apexcharts-scope .legend-mouseover-inactive rect,
+.mi-apexcharts-scope .legend-mouseover-inactive path,
+.mi-apexcharts-scope .legend-mouseover-inactive circle,
+.mi-apexcharts-scope .legend-mouseover-inactive line,
+.mi-apexcharts-scope .legend-mouseover-inactive text.apexcharts-yaxis-title-text,
+.mi-apexcharts-scope .legend-mouseover-inactive text.apexcharts-yaxis-label {
+  transition: .15s ease all;
+  opacity: .2
+}
+
+.mi-apexcharts-scope .apexcharts-legend-text {
+  padding-left: 15px;
+  margin-left: -15px;
+}
+
+.mi-apexcharts-scope .apexcharts-legend-series[role="button"]:focus {
+  outline: 2px solid #008FFB;
+  outline-offset: 2px;
+}
+
+.mi-apexcharts-scope .apexcharts-legend-series[role="button"]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mi-apexcharts-scope .apexcharts-legend-series[role="button"]:focus-visible {
+  outline: 2px solid #008FFB;
+  outline-offset: 2px;
+}
+
+.mi-apexcharts-scope .apexcharts-series-collapsed {
+  opacity: 0
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, .96)
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, .8)
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip * {
+  font-family: inherit
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #eceff1;
+  border-bottom: 1px solid #ddd
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, .7);
+  border-bottom: 1px solid #333
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-value,
+.mi-apexcharts-scope .apexcharts-tooltip-text-y-value,
+.mi-apexcharts-scope .apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 600
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-label:empty,
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-value:empty,
+.mi-apexcharts-scope .apexcharts-tooltip-text-y-label:empty,
+.mi-apexcharts-scope .apexcharts-tooltip-text-y-value:empty,
+.mi-apexcharts-scope .apexcharts-tooltip-text-z-value:empty,
+.mi-apexcharts-scope .apexcharts-tooltip-title:empty {
+  display: none
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-label,
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-value {
+  padding: 6px 0 5px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-goals-group,
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-label,
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-value {
+  display: flex
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-label:not(:empty),
+.mi-apexcharts-scope .apexcharts-tooltip-text-goals-value:not(:empty) {
+  margin-top: -6px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 4px;
+  text-align: center;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: currentcolor;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 14px;
+  font-weight: 900;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="circle"]::before {
+  content: "\25CF";
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="square"]::before,
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="rect"]::before {
+  content: "\25A0";
+  transform: translate(-1px, -2px);
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="line"]::before {
+  content: "\2500";
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="diamond"]::before {
+  content: "\25C6";
+  font-size: 28px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="triangle"]::before {
+  content: "\25B2";
+  font-size: 22px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="cross"]::before {
+  content: "\2715";
+  font-size: 18px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="plus"]::before {
+  content: "\2715";
+  transform: rotate(45deg) translate(-1px, -1px);
+  font-size: 18px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="star"]::before {
+  content: "\2605";
+  font-size: 18px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-marker[shape="sparkle"]::before {
+  content: "\2726";
+  font-size: 20px;
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-series-group.apexcharts-active,
+.mi-apexcharts-scope .apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-y-group {
+  padding: 6px 0 5px
+}
+
+.mi-apexcharts-scope .apexcharts-custom-tooltip,
+.mi-apexcharts-scope .apexcharts-tooltip-box {
+  padding: 4px 8px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-boxPlot {
+  display: flex;
+  flex-direction: column-reverse
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-box>div {
+  margin: 4px 0
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-box span.value {
+  font-weight: 700
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-rangebar {
+  padding: 5px 8px
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-rangebar .series-name {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip,
+.mi-apexcharts-scope .apexcharts-yaxistooltip {
+  opacity: 0;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #eceff1;
+  border: 1px solid #90a4ae
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip {
+  padding: 9px 10px;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, .7);
+  border: 1px solid rgba(0, 0, 0, .5);
+  color: #fff
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip:after,
+.mi-apexcharts-scope .apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip:after {
+  border-color: transparent;
+  border-width: 6px;
+  margin-left: -6px
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip:before {
+  border-color: transparent;
+  border-width: 7px;
+  margin-left: -7px
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom:after,
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top:after,
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top:before {
+  top: 100%
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #eceff1
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90a4ae
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after,
+.mi-apexcharts-scope .apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, .5)
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top:after {
+  border-top-color: #eceff1
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top:before {
+  border-top-color: #90a4ae
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top.apexcharts-theme-dark:after,
+.mi-apexcharts-scope .apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, .5)
+}
+
+.mi-apexcharts-scope .apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip {
+  padding: 4px 10px
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, .7);
+  border: 1px solid rgba(0, 0, 0, .5);
+  color: #fff
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip:after,
+.mi-apexcharts-scope .apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip:after {
+  border-color: transparent;
+  border-width: 6px;
+  margin-top: -6px
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip:before {
+  border-color: transparent;
+  border-width: 7px;
+  margin-top: -7px
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left:after,
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left:before {
+  left: 100%
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right:after,
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right:before {
+  right: 100%
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left:after {
+  border-left-color: #eceff1
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left:before {
+  border-left-color: #90a4ae
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left.apexcharts-theme-dark:after,
+.mi-apexcharts-scope .apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, .5)
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right:after {
+  border-right-color: #eceff1
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right:before {
+  border-right-color: #90a4ae
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right.apexcharts-theme-dark:after,
+.mi-apexcharts-scope .apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, .5)
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1
+}
+
+.mi-apexcharts-scope .apexcharts-yaxistooltip-hidden {
+  display: none
+}
+
+.mi-apexcharts-scope .apexcharts-xcrosshairs,
+.mi-apexcharts-scope .apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-xcrosshairs.apexcharts-active,
+.mi-apexcharts-scope .apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-ycrosshairs-hidden {
+  opacity: 0
+}
+
+.mi-apexcharts-scope .apexcharts-selection-rect {
+  cursor: move
+}
+
+.mi-apexcharts-scope .svg_select_shape {
+  stroke-width: 1;
+  stroke-dasharray: 10 10;
+  stroke: black;
+  stroke-opacity: 0.1;
+  pointer-events: none;
+  fill: none;
+}
+
+.mi-apexcharts-scope .svg_select_handle {
+  stroke-width: 3;
+  stroke: black;
+  fill: none;
+}
+
+.mi-apexcharts-scope .svg_select_handle_r {
+  cursor: e-resize;
+}
+
+.mi-apexcharts-scope .svg_select_handle_l {
+  cursor: w-resize;
+}
+
+.mi-apexcharts-scope .apexcharts-svg.apexcharts-zoomable.hovering-zoom {
+  cursor: crosshair
+}
+
+.mi-apexcharts-scope .apexcharts-svg.apexcharts-zoomable.hovering-pan {
+  cursor: move
+}
+
+.mi-apexcharts-scope .apexcharts-menu-icon,
+.mi-apexcharts-scope .apexcharts-pan-icon,
+.mi-apexcharts-scope .apexcharts-reset-icon,
+.mi-apexcharts-scope .apexcharts-selection-icon,
+.mi-apexcharts-scope .apexcharts-toolbar-custom-icon,
+.mi-apexcharts-scope .apexcharts-zoom-icon,
+.mi-apexcharts-scope .apexcharts-zoomin-icon,
+.mi-apexcharts-scope .apexcharts-zoomout-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6e8192;
+  text-align: center
+}
+
+.mi-apexcharts-scope .apexcharts-menu-icon svg,
+.mi-apexcharts-scope .apexcharts-reset-icon svg,
+.mi-apexcharts-scope .apexcharts-zoom-icon svg,
+.mi-apexcharts-scope .apexcharts-zoomin-icon svg,
+.mi-apexcharts-scope .apexcharts-zoomout-icon svg {
+  fill: #6e8192
+}
+
+.mi-apexcharts-scope .apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(.76)
+}
+
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-menu-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-pan-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-reset-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-selection-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-zoomout-icon svg {
+  fill: #f3f4f5
+}
+
+.mi-apexcharts-scope .apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg,
+.mi-apexcharts-scope .apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.mi-apexcharts-scope .apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg {
+  fill: #008ffb
+}
+
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-menu-icon:hover svg,
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-zoomout-icon:hover svg {
+  fill: #333
+}
+
+.mi-apexcharts-scope .apexcharts-menu-icon,
+.mi-apexcharts-scope .apexcharts-selection-icon {
+  position: relative
+}
+
+.mi-apexcharts-scope .apexcharts-reset-icon {
+  margin-left: 5px
+}
+
+.mi-apexcharts-scope .apexcharts-menu-icon,
+.mi-apexcharts-scope .apexcharts-reset-icon,
+.mi-apexcharts-scope .apexcharts-zoom-icon {
+  transform: scale(.85)
+}
+
+.mi-apexcharts-scope .apexcharts-zoomin-icon,
+.mi-apexcharts-scope .apexcharts-zoomout-icon {
+  transform: scale(.7)
+}
+
+.mi-apexcharts-scope .apexcharts-zoomout-icon {
+  margin-right: 3px
+}
+
+.mi-apexcharts-scope .apexcharts-pan-icon {
+  transform: scale(.62);
+  position: relative;
+  left: 1px;
+  top: 0
+}
+
+.mi-apexcharts-scope .apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6e8192;
+  stroke-width: 2
+}
+
+.mi-apexcharts-scope .apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008ffb
+}
+
+.mi-apexcharts-scope .apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333
+}
+
+.mi-apexcharts-scope .apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0 6px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.mi-apexcharts-scope .apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: .15s ease all;
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer
+}
+
+.mi-apexcharts-scope .apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee
+}
+
+.mi-apexcharts-scope .apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, .7);
+  color: #fff
+}
+
+@media screen and (min-width:768px) {
+  .mi-apexcharts-scope .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1
+  }
+}
+
+.mi-apexcharts-scope .apexcharts-canvas .apexcharts-element-hidden,
+.mi-apexcharts-scope .apexcharts-datalabel.apexcharts-element-hidden,
+.mi-apexcharts-scope .apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.mi-apexcharts-scope .apexcharts-hidden-element-shown {
+  opacity: 1;
+  transition: 0.25s ease all;
+}
+
+.mi-apexcharts-scope .apexcharts-datalabel,
+.mi-apexcharts-scope .apexcharts-datalabel-label,
+.mi-apexcharts-scope .apexcharts-datalabel-value,
+.mi-apexcharts-scope .apexcharts-datalabels,
+.mi-apexcharts-scope .apexcharts-pie-label {
+  cursor: default;
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease
+}
+
+.mi-apexcharts-scope .apexcharts-radialbar-label {
+  cursor: pointer;
+}
+
+.mi-apexcharts-scope .apexcharts-annotation-rect,
+.mi-apexcharts-scope .apexcharts-area-series .apexcharts-area,
+.mi-apexcharts-scope .apexcharts-gridline,
+.mi-apexcharts-scope .apexcharts-line,
+.mi-apexcharts-scope .apexcharts-point-annotation-label,
+.mi-apexcharts-scope .apexcharts-radar-series path:not(.apexcharts-marker),
+.mi-apexcharts-scope .apexcharts-radar-series polygon,
+.mi-apexcharts-scope .apexcharts-toolbar svg,
+.mi-apexcharts-scope .apexcharts-tooltip .apexcharts-marker,
+.mi-apexcharts-scope .apexcharts-xaxis-annotation-label,
+.mi-apexcharts-scope .apexcharts-yaxis-annotation-label,
+.mi-apexcharts-scope .apexcharts-zoom-rect,
+.mi-apexcharts-scope .no-pointer-events {
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-tooltip-active .apexcharts-marker {
+  transition: .15s ease all
+}
+
+.mi-apexcharts-scope .apexcharts-radar-series .apexcharts-yaxis {
+  pointer-events: none;
+}
+
+.mi-apexcharts-scope .resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden
+}
+
+.mi-apexcharts-scope .contract-trigger:before,
+.mi-apexcharts-scope .resize-triggers,
+.mi-apexcharts-scope .resize-triggers>div {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.mi-apexcharts-scope .resize-triggers>div {
+  height: 100%;
+  width: 100%;
+  background: #eee;
+  overflow: auto
+}
+
+.mi-apexcharts-scope .contract-trigger:before {
+  overflow: hidden;
+  width: 200%;
+  height: 200%
+}
+
+.mi-apexcharts-scope .apexcharts-bar-goals-markers {
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-bar-shadows {
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-rangebar-goals-markers {
+  pointer-events: none
+}
+
+.mi-apexcharts-scope .apexcharts-disable-transitions * {
+  transition: none !important;
+}.mi-apexcharts-scope .apexcharts-flip-y {
+  transform: scaleY(-1) translateY(-100%);
+  transform-origin: top;
+  transform-box: fill-box;
+}
+.mi-apexcharts-scope .apexcharts-flip-x {
+  transform: scaleX(-1);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.mi-apexcharts-scope .apexcharts-legend {
+  display: flex;
+  overflow: auto;
+  padding: 0 10px;
+}
+.mi-apexcharts-scope .apexcharts-legend.apexcharts-legend-group-horizontal {
+  flex-direction: column;
+}
+.mi-apexcharts-scope .apexcharts-legend-group {
+  display: flex;
+}
+.mi-apexcharts-scope .apexcharts-legend-group-vertical {
+  flex-direction: column-reverse;
+}
+.mi-apexcharts-scope .apexcharts-legend.apx-legend-position-bottom, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-top {
+  flex-wrap: wrap
+}
+.mi-apexcharts-scope .apexcharts-legend.apx-legend-position-right, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-left {
+  flex-direction: column;
+  bottom: 0;
+}
+.mi-apexcharts-scope .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-top.apexcharts-align-left, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-right, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mi-apexcharts-scope .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+  justify-content: center;
+  align-items: center;
+}
+.mi-apexcharts-scope .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-right, .mi-apexcharts-scope .apexcharts-legend.apx-legend-position-top.apexcharts-align-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.mi-apexcharts-scope .apexcharts-legend-series {
+  cursor: pointer;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+.mi-apexcharts-scope .apexcharts-legend-text {
+  position: relative;
+  font-size: 14px;
+}
+.mi-apexcharts-scope .apexcharts-legend-text *, .mi-apexcharts-scope .apexcharts-legend-marker * {
+  pointer-events: none;
+}
+.mi-apexcharts-scope .apexcharts-legend-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+.mi-apexcharts-scope .apexcharts-legend-series.apexcharts-no-click {
+  cursor: auto;
+}
+.mi-apexcharts-scope .apexcharts-legend .apexcharts-hidden-zero-series, .mi-apexcharts-scope .apexcharts-legend .apexcharts-hidden-null-series {
+  display: none !important;
+}
+.mi-apexcharts-scope .apexcharts-inactive-legend {
+  opacity: 0.45;
+} 

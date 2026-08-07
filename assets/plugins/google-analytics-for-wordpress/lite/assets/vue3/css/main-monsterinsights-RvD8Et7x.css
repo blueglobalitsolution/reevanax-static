@@ -1,0 +1,84 @@
+
+.monsterinsights-universally-promo[data-v-db7e75b2] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+	padding: 10px 12px;
+	/* No own margin — each placement controls spacing via its wrapper class (GH-3374).
+	   A scoped `margin: 0` here would out-specify those external margin-top rules. */
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--color-gray-700, #374151);
+	background-color: var(--color-gray-50, #f9fafb);
+	border: 1px solid var(--color-gray-200, #e5e7eb);
+	border-radius: 6px;
+}
+/* Flush row variant: drop the card chrome (bg/border/radius/margin) and align to
+   the table's cell padding so it reads as the table's last row, not a banner. */
+.monsterinsights-universally-promo--bare[data-v-db7e75b2] {
+	margin: 0;
+	/* Match the table cells' vertical padding (8px) so the strip is the same
+	   height as a data row, not a taller banner. */
+	padding: 8px 20px 8px 32px;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+}
+.monsterinsights-universally-promo__lead[data-v-db7e75b2] {
+	font-weight: 600;
+}
+.monsterinsights-universally-promo__text[data-v-db7e75b2] {
+	display: flex;
+}
+.monsterinsights-universally-promo__link[data-v-db7e75b2] {
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: inherit;
+	font-weight: 600;
+	color: var(--color-primary, #1a73e8);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.monsterinsights-universally-promo__link[data-v-db7e75b2]:disabled {
+	cursor: default;
+	opacity: 0.7;
+}
+.monsterinsights-universally-promo__link[data-v-db7e75b2]:focus-visible {
+	outline: 2px solid var(--color-primary, #1a73e8);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+.monsterinsights-universally-promo__done[data-v-db7e75b2] {
+	font-weight: 600;
+	color: var(--color-success, #1ec185);
+}
+.monsterinsights-universally-promo__info[data-v-db7e75b2] {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 4px;
+	color: var(--color-gray-500, #6b7280);
+	vertical-align: middle;
+}
+.monsterinsights-universally-promo__dismiss[data-v-db7e75b2] {
+	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--color-gray-500, #6b7280);
+	cursor: pointer;
+}
+.monsterinsights-universally-promo__dismiss[data-v-db7e75b2]:hover {
+	color: var(--color-gray-700, #374151);
+}
+.monsterinsights-universally-promo__dismiss[data-v-db7e75b2]:focus-visible {
+	outline: 2px solid var(--color-primary, #1a73e8);
+	outline-offset: 2px;
+	border-radius: 2px;
+}

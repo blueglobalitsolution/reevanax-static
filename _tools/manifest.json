@@ -1,0 +1,21 @@
+{
+  "ok": 214,
+  "failed": [
+    {
+      "path": "/cat_sev/body-massages",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "/cat_sev/spa",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "/cat_sev/treatments",
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "total": 217
+}

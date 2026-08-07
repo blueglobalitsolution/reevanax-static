@@ -1,0 +1,1290 @@
+{
+  "errors": {
+    "fatal": "Oh, that was not what we were expecting! Something went wrong.",
+    "custom_javascript": {
+      "title": "Custom javascript error",
+      "message": "Your custom javascript ran into an error. Read the error below:"
+    },
+    "saving": {
+      "title": "Could not save settings",
+      "message": "Something went wrong while saving your settings:"
+    },
+    "forms": {
+      "only_numbers": "Only numbers allowed.",
+      "only_numbers_info": "For this input, only positive numbers are allowed."
+    },
+    "permalink": {
+      "title": "Permalink Error",
+      "info": "Buttonizer's requests will not work when using plain permalink. To use Buttonizer, use a custom permalink"
+    }
+  },
+  "templates": {
+    "all_templates_description": "Please note that you can still customize the button to your own wishes after inserting it",
+    "number_of_buttons": "Number of buttons",
+    "select": "Select",
+    "selected": "Selected",
+    "insert": "Insert",
+    "start_scratch": "Start from scratch",
+    "first_button": "My first button",
+    "framedesign": {
+      "label": "Framedesign",
+      "social_media": "Social media",
+      "business": "Business",
+      "contact": "Contact",
+      "actions": "Actions",
+      "social_sharing": "Social sharing",
+      "support": "Support"
+    },
+    "popular_actions": {
+      "label": "Popular actions"
+    }
+  },
+  "warnings": {
+    "invalid_email": "Invalid email address.",
+    "invalid_phone_number": "Invalid phone number. Please only use number for your phone number. Omit any zeros, brackets or dashes when adding the phone number in international format.",
+    "only_numbers": "This field only allows numbers.",
+    "premium_license_free_version": {
+      "title": "License activated",
+      "information": "Please download and upload the premium version found in the email we have sent you to use all premium functions."
+    },
+    "php_version_outdated": {
+      "title": "This PHP version is no longer supported",
+      "information": "Your current PHP version ({{ version }}) is no longer supported by Buttonizer as it will no longer receive security patches. Some features will not work. We recommend upgrading to the latest version."
+    },
+    "unsaved_changes": "Are you sure you want to exit? Your changes have not been saved.",
+    "actions": {
+      "test_action_text": "Right-click <mouseIcon /> to test the button action.",
+      "toggle_menu_text": "Right-click <mouseIcon /> to open or close the menu.",
+      "disabled_in_editor": "<bold>{{ action }}</bold> cannot be previewed in editor mode."
+    }
+  },
+  "common": {
+    "button": "Button",
+    "group": "Group",
+    "settings": "Settings",
+    "custom": "Custom",
+    "confirm": "Confirm",
+    "search": "Search",
+    "skip": "Skip",
+    "edit": "Edit",
+    "type": "Type",
+    "or": "or",
+    "select": "Select",
+    "learn_more": "Learn more",
+    "off": "Off",
+    "disable": "Disable",
+    "disabled": "Disabled",
+    "save": "Save",
+    "saving": "Saving",
+    "saving_settings": "Saving settings",
+    "save_and_close": "Save and close",
+    "publish": "Publish",
+    "published": "Published",
+    "publishing": "Publishing...",
+    "warning": "Warning",
+    "next": "Next",
+    "previous": "Previous",
+    "save_publish": "Save & publish",
+    "snooze": "Snooze",
+    "to_dashboard": "Go to dashboard",
+    "finish": "Finish"
+  },
+  "loading": {
+    "loading": "Loading...",
+    "settings": "Loading settings...",
+    "bar": "Building bar...",
+    "website": "Waiting for your website...",
+    "website_slow": "It's taking longer than usual, slow website?",
+    "website_skip": "Skip this step",
+    "initializing": "Initializing...",
+    "resetting": "Resetting...",
+    "running_migration": "Running migration...",
+    "finishing": "Finishing..."
+  },
+  "utils": {
+    "add_button": "Add button",
+    "add_group": "Add group",
+    "create_group": "Create new group",
+    "shift_click": "Shift + Click to skip dialog",
+    "new_button": "New button",
+    "new_group": "New group",
+    "style": "Style",
+    "advanced": "Advanced",
+    "text": "Text",
+    "base": "Base",
+    "icon": "Icon",
+    "color": "Color",
+    "image": "Image",
+    "copy": "Copy",
+    "copy_code": "Copy code",
+    "image_url": "Upload your image",
+    "paste_url": "Paste your URL",
+    "select_image": "Select image",
+    "change_image": "Change image",
+    "select_file": "Select file",
+    "change_file": "Change file",
+    "remove_image": "Click to remove this image",
+    "menu_button": "Menu button",
+    "first_button": "First button",
+    "second_button": "Second button",
+    "rename": "Rename",
+    "rename_to": "Rename to:",
+    "delete": "Delete",
+    "clear": "Clear",
+    "duplicate": "Duplicate",
+    "lowercase_page_rule": "page rule",
+    "lowercase_time_schedule": "time schedule",
+    "interaction": "Interaction",
+    "background": "Background",
+    "tips_tricks": "Need help? Quick-start, tips & tricks",
+    "visit_knowledgebase": "Need help? Visit our knowledge base!",
+    "code_copied": "The code has been copied to your clipboard.",
+    "search_not_found": "Nothing found for:",
+    "icon_selector": {
+      "title": "Icon selector",
+      "search_icon": "Search icon",
+      "loading": "Loading icons, please wait...",
+      "searching_for": "Searching for: <bold>{{ keyword }}</bold>, found <bold>{{ resultCount }}</bold> results.",
+      "found": "Your search found <bold>{{ resultCount }}</bold> results.",
+      "remove_filter": "Remove filter"
+    },
+    "templates": {
+      "found": "Your search returned <bold>{{ resultCount }}<bold> results."
+    },
+    "crash": {
+      "title": "Buttonizer has crashed!",
+      "subtitle": "Our development team has been notified.",
+      "subtitle2": "If you'd like to help, tell us what happened below.",
+      "no_super_intro": "We're sorry, Buttonizer has crashed! Would you like to become a SUPER contributor and automatically log errors, including this one?",
+      "no_super_additional_info": "By sharing your crash report with us, you will help us detect exceptions like these so we can resolve them in a future release.",
+      "reload": "Reload"
+    },
+    "knowledge_link": "Need help? Learn how to use <bold>{{ setting }}</bold>.",
+    "filter-visibility": {
+      "timeschedule_show_button": "Show button at all times",
+      "timeschedule_show_group": "Show group at all times",
+      "pagerule_show_button": "Show button on all pages",
+      "pagerule_show_group": "Show group on all pages"
+    }
+  },
+  "event_tracker": {
+    "title": "Event tracker",
+    "window_title": "Event tracker"
+  },
+  "modal": {
+    "ok": "OK",
+    "ok_fix": "OK, I'll fix this",
+    "sure": "I'm sure",
+    "lost": "How'd ya get here?",
+    "close": "Close",
+    "cancel": "Cancel",
+    "incorrect": "Incorrect entry.",
+    "yes_please": "Yes please",
+    "no_thanks": "No thank you",
+    "dismiss": "Dismiss",
+    "changed_my_mind": "I've changed my mind",
+    "save": "Save",
+    "remove": {
+      "time_schedule": {
+        "window_title": "Remove time schedule?",
+        "question": "Are you very sure you want to remove this time schedule? Buttons that are still attached to this time schedule will become visible unless you attach them to another time schedule or hide them.",
+        "no_buttons": "There are no buttons attached to this time schedule. You can remove this safely.",
+        "num_buttons_multiple": "There are <bold>{{ buttonCount }}</bold> buttons attached to this time schedule!",
+        "num_buttons_single": "There is <bold>1</bold> button attached to this time schedule",
+        "last_warning": "Do you want to remove this time schedule?"
+      },
+      "button": {
+        "window_title": "Delete button",
+        "question": "Are you sure you want to remove this button?",
+        "question_remove": "Are you sure you want to remove the button called '{{ name }}'?",
+        "cannot_delete_window_title": "Cannot delete button",
+        "cannot_delete": "You cannot delete this button because this the only button left."
+      },
+      "group": {
+        "window_title": "Delete group",
+        "question": "Are you sure you want to remove this group?",
+        "question_multiple_buttons": "Are you sure you want to remove this full group? It contains {{ count }} buttons.",
+        "cannot_delete_window_title": "Cannot delete group",
+        "cannot_delete": "You cannot delete this group because this the only group left."
+      },
+      "page_rule": {
+        "window_title": "Remove page rule?",
+        "question": "Are you very sure you want to remove this page rule? Buttons that are still attached to this page rule will become visible unless you attach them to another page rule or hide them.",
+        "no_buttons": "There are no buttons attached to this page rule. You can remove this safely.",
+        "num_buttons_multiple": "There are <bold>{{ buttonCount }}</bold> buttons attached to this page rule!",
+        "num_buttons_single": "There is <bold>1</bold> button attached to this page rule",
+        "last_warning": "Do you want to remove this page rule?"
+      },
+      "permanent": "This action is permanent and cannot be undone."
+    }
+  },
+  "saving": {
+    "saving": "Saving draft...",
+    "failed": "Failed!",
+    "completed": "Saved draft!"
+  },
+  "revert": {
+    "revert_changes": "Revert changes",
+    "reverting": "Reverting...",
+    "modal": {
+      "intro": "Are you sure you want to revert your changes?",
+      "action": "The current changes will be overwritten by the current published buttons and settings."
+    },
+    "error": {
+      "title": "Could not revert settings",
+      "message": "Something went wrong while reverting your settings."
+    }
+  },
+  "welcome": {
+    "title": "Thanks for using Buttonizer!",
+    "intro": "We are pleased to welcome you to <b>Buttonizer 2.0</b>!",
+    "super-contributor": "Become a SUPER contributor by automatically sending us crash reports and error logs. This way we can bugfix your bugs with the speed of light. Don't worry, all data is anonymized.",
+    "learn-more": "Learn more",
+    "no-thanks": "No thanks",
+    "yes-please": "Yes please!",
+    "tour": "We've created a tour for our new Buzzers. Would you like to take the tour?",
+    "already_know": "No thanks, I know how it works",
+    "take_tour": "Yes please",
+    "open_menu": "Open menu",
+    "back_to_overview": "Back to Overview"
+  },
+  "buttonizer_tour": {
+    "tour_disabled": "Pick a button to start the tour",
+    "title_interface_tour": "Welcome to Buttonizer!",
+    "intro_interface_tour": "We've created a tour for our new Buzzers. Would you like to take the tour? If not, feel free to watch a tour whenever you want. You can find all of our tours in the <bold>settings</bold> of Buttonizer.",
+    "title_new_features_tour": "What's New?",
+    "intro_new_features_tour": "Keep up-to-date with the newest releases, feature updates, and news from Buttonizer by following this short tour. Do not worry if you can not follow it right now! You can find this tour in the <bold>settings</bold> of Buttonizer.",
+    "already_know": "No, thanks",
+    "take_tour": "Let's go",
+    "previous": "Previous",
+    "next": "Next",
+    "done": "Done",
+
+    "interface_tour": {
+      "step_0": {
+        "title": "Groups contains buttons",
+        "intro": "A group can have multiple buttons that work separately from each other. Click on \u201cAdd button\u201d to add more buttons to this group."
+      },
+      "step_1": {
+        "title": "Group settings",
+        "intro": "You can change the styling for every buttons in this group. Changing the same setting in the button settings will override the group settings."
+      },
+      "step_2": {
+        "title": "General",
+        "intro": "The general settings control some basic configuration for your button. You can change the label, position and style of the group here. Make sure the label is short and clear."
+      },
+      "step_3": {
+        "title": "Styling",
+        "intro": "Customize your button, icon and label. You can set a different style for the normal and hover state of some settings. Click on the back icon to the right side of the setting to make it go back to the default value."
+      },
+      "step_4": {
+        "title": "Navigation",
+        "intro": " This button makes navigation between the different buttons easier. You can also go to the group\u2019s settings."
+      },
+      "step_5": {
+        "title": "Preferences",
+        "intro": "Click here to open the settings page."
+      },
+      "step_6": {
+        "title": "Publish",
+        "intro": "Adjustments are automatically saved in the editor and will not be shown on the site. Make sure to click <b>\"Publish\"</b> to see these changes on your website."
+      },
+      "step_7": {
+        "title": "More Buttonizer Tours",
+        "intro": "We have more tours in store which are more in-depth and will help you improve your experience with Buttonizer even more. Go to <b><a onClick=\"app.closeButtonizerTour()\">settings</a></b> to enjoy another tour!"
+      },
+      "step_8": {
+        "title": "Support",
+        "intro": "Our support helps you troubleshoot common issues, find solutions, ask questions, and share tips with other Buzzers."
+      }
+    },
+    "create_button_tour": {
+      "step_0": {
+        "title": "New button",
+        "intro": "If you would like to have a single Floating Action Button that triggers a primary action, then we would advise you to create a single button. "
+      },
+      "step_1": {
+        "title": "Settings for button",
+        "intro": "Click here to go to the settings of the button to view the different configurations."
+      },
+      "step_2": {
+        "title": "General",
+        "intro": "The general settings control some basic configuration for your button. You can change the action type and the label of the button here."
+      },
+      "step_3": {
+        "title": "Button action",
+        "intro": "The Button action in the general settings specify where to send your website visitors too once you have added an action to the button."
+      },
+      "step_5": {
+        "title": "Device visibility",
+        "intro": "You can decide if your button should be available on mobile devices and/ or on computers."
+      },
+      "step_6": {
+        "title": "Label text",
+        "intro": "You can add and change the text of the label here. Choose a label that is short and clear."
+      },
+      "step_7": {
+        "title": "Style your button",
+        "intro": "If you want to change the colors of your button, then you can go to the tab Style and you will see that the first settings are the color settings for your button."
+      },
+      "step_8": {
+        "title": "Normal vs hover",
+        "intro": "You can set a different button style for the normal and hover state."
+      },
+      "step_11": {
+        "title": "Icon",
+        "intro": "Learn how to add a Font Awesome icon to your button."
+      },
+      "step_12": {
+        "title": "Icon vs image",
+        "intro": "Your floating action button can contain an icon that promotes a primary action. You can either select an icon in Buttonizer or import your own image."
+      },
+      "step_13": {
+        "title": "Select icon",
+        "intro": "Pick an icon you would like to see in your button."
+      },
+      "step_14": {
+        "title": "Icon size",
+        "intro": "Change the size of your button icons. Increase or decrease the size of icons relative to that inherited font-size."
+      },
+      "step_15": {
+        "title": "Label visibility",
+        "intro": "You can decide if the label next to the button should be available on mobile devices,  computers or on both."
+      },
+      "step_16": {
+        "title": "Label position",
+        "intro": "With label position you can place the label on either side of the button. You can make use of this feature right away to see which position you prefer."
+      },
+      "step_17": {
+        "title": "Font family",
+        "intro": "Choosing the right font is an important step in making your button usable and accessible. Buttonizer automatically grabs the font family from your website, but you can also use the complete set of properties to choose the right font family. "
+      },
+      "step_18": {
+        "title": "Margin",
+        "intro": "With margin you can create more space around your button. Try it out by using pixels or percentages."
+      },
+      "step_19": {
+        "title": "Padding",
+        "intro": "With padding you can control the space between its content and its border. Try it out by using pixels or percentages."
+      }
+    },
+    "hint": {
+      "step_0": "Edit your button",
+      "step_1": "Button styling",
+      "step_2": "Publish changes"
+    }
+  },
+  "import_export": {
+    "import": {
+      "title": "Import",
+      "select_please": "Please select a Buttonizer export file.",
+      "select_click": "Click or drop a JSON export file",
+      "into_group": {
+        "button": "Import into this group",
+        "text": "Import buttons or replace this group."
+      },
+      "new_group": {
+        "group": "Import group",
+        "button": "Import button",
+        "text": "Import a new group."
+      },
+      "reupload": "Re-upload file",
+      "drag_drop": "Drop export file here",
+      "warning": {
+        "replace": "You are about to <b>replace</b> this group with:",
+        "preview": "What you are about to import:",
+        "invalid": "This file is not a Buttonizer file.",
+        "malformed": "The file you have selected is malformed or the file is not a Buttonizer file.",
+        "no_buttons": "This group does not have any buttons to import."
+      }
+    },
+    "properties": "properties",
+    "export": {
+      "title": "Export",
+      "export_button": "Export button",
+      "export_group": "Export group",
+      "merge": "Merge with group style",
+      "warning": {
+        "preview": "What you are about to export:",
+        "no_buttons": "This group does not have any buttons to export.",
+        "no_data": "This button does not have any data to export."
+      }
+    },
+    "import_export": "Import & Export"
+  },
+  "settings": {
+    "settings": "Settings",
+    "tippy_single_button": "Add button to enable group settings",
+    "more_actions": "More actions",
+    "setting_categories": {
+      "menu_style": "Menu style",
+      "general": "General",
+      "group_style": "Group style",
+      "group_icon": "Group icon",
+      "button_style": "Button style",
+      "button_icon": "Button icon",
+      "label_style": "Label style",
+      "background": "Background",
+      "icon_style": "Icon Style",
+      "image_style": "Image style",
+      "show_or_hide": "Show or hide",
+      "label": "Label"
+    },
+    "name": {
+      "title": "Button name",
+      "description": "This is the button name."
+    },
+    "background_color": {
+      "title": "Button color",
+      "description": "This is the color of your button group and also the default color for your buttons within this group."
+    },
+    "color_picker": {
+      "options": {
+        "solid": "Solid Color",
+        "linear": "Linear Gradient",
+        "radial": "Radial Gradient"
+      },
+      "right_click": "Right-click to delete color",
+      "new_swatch_description": "Click to add swatch"
+    },
+    "font_family": {
+      "title": "Font family",
+      "placeholder": "Type a custom font",
+      "add": "Type \",\" to add {{ value }}"
+    },
+    "button_size": {
+      "title": "Button Sizes",
+      "menu_button": "Menu button size",
+      "sub_button": "Sub button size"
+    },
+    "label_inside": {
+      "title": "Place label inside button"
+    },
+    "label_same_width": {
+      "title": "Make all labels have same width"
+    },
+    "label_same_height": {
+      "title": "Set height same as the button's"
+    },
+    "background_image": {
+      "title": "Use background image",
+      "description": "Upload an image if you want an image as a background instead of a color. Recommended aspect ratio: square (1:1)."
+    },
+    "border_radius": {
+      "title": "Border radius",
+      "description": "Change the roundness of this button group."
+    },
+    "box_shadow": {
+      "title": "Box shadow",
+      "description": "Change the box shadow of this button."
+    },
+    "margin": {
+      "title": "Margin",
+      "description": "Change the position of the label."
+    },
+    "padding": {
+      "title": "Padding",
+      "description": "Change the background size of the label."
+    },
+    "icon": {
+      "title": "Icon",
+      "select": "Select icon",
+      "description": "Choose an icon from the icon library."
+    },
+    "icon_color": {
+      "title": "Icon color",
+      "description": "Change the icon color of this button."
+    },
+    "icon_image_border_radius": {
+      "title": "Border radius",
+      "description": "Change the border radius of the image."
+    },
+    "icon_image_select": {
+      "title": "Icon",
+      "description": "You can also use a free image uploader like imgbb.com."
+    },
+    "icon_image_size": {
+      "title": "Image size",
+      "description": "Change the size of the image."
+    },
+    "icon_or_image": {
+      "title": "Graphic",
+      "label": "Select icon type",
+      "description": "Choose whether to use an icon or image as the button icon."
+    },
+    "icon_size": {
+      "title": "Icon size",
+      "description": "Change the icon size of this button."
+    },
+    "label": {
+      "title": "Label",
+      "description": "Change the label of this button.",
+      "placeholder": "Label text"
+    },
+    "label_color": {
+      "title": "Text color",
+      "description": "Change the text and background color of the label for this button or group."
+    },
+    "font_size_border_radius": {
+      "title": "Font size & border radius",
+      "description": "Change the font size and border radius of the label for this button group."
+    },
+    "font_size": "Font size",
+    "menu_animation": {
+      "title": "Animation",
+      "description": "This will animate this button group to get the attention of the visitor. The animation repeats itself every 10 seconds.",
+      "delay": "Delay",
+      "repeat_count": "Repeat Count",
+      "repeat_helper_text": "Enter '0' for unlimited",
+      "animations": {
+        "none": "No animation",
+        "hello": "Buttonizer Hello",
+        "bounce": "Bounce",
+        "jelly": "Jelly",
+        "pulse": "Pulse"
+      }
+    },
+    "label_position": {
+      "title": "Position",
+      "description": "Label position",
+      "warning": "Make sure to add a label",
+      "directions": {
+        "left": "Left",
+        "auto": "Auto",
+        "right": "Right"
+      }
+    },
+    "menu_position": {
+      "title": "Position",
+      "description": "Change the position of this button group.",
+      "horizontal": "Horizontal",
+      "vertical": "Vertical",
+      "from": "from",
+      "scaled": "Scaled",
+      "absolute": "Absolute",
+      "directions": {
+        "left": "Left",
+        "right": "Right",
+        "bottom": "Bottom",
+        "top": "Top"
+      }
+    },
+    "menu_style": {
+      "title": "Menu style",
+      "title_short": "Style",
+      "description": "Change the menu style of this button group.",
+      "warning": "This setting is not used when using the {{ name }} menu style...",
+      "styles": {
+        "default": "Default",
+        "faded": "Faded",
+        "cornercircle": "Corner circle",
+        "buildingup": "Build Up",
+        "pop": "Pop",
+        "square": "Square",
+        "rectangle": "Rectangle",
+        "text": "Text only",
+        "texticon": "Text w/ icon"
+      }
+    },
+    "menu": {
+      "title": "Menu",
+      "title_settings": "Menu settings",
+      "description": "Turn on or off whether the group has a closable menu button"
+    },
+    "opening_animation": {
+      "title": "Opening animation",
+      "description": "Decide what type of opening animation is used for opening/closing the menu"
+    },
+    "label_desktop": {
+      "title": "Visibility",
+      "description": "Always show the label, show the label on hover or hide the label on <u>desktop devices</u>."
+    },
+    "label_mobile": {
+      "title": "Visibility",
+      "description": "Always show or hide the label on <u>mobile devices</u>."
+    },
+    "label_styles": {
+      "group_default": "Group default",
+      "always": "Always show label",
+      "hover": "Show label on hover",
+      "hide": "Hide label"
+    },
+    "show_mobile_desktop": {
+      "title": "Show on",
+      "device_visibility": "Device visibility",
+      "description": "Choose if you want to make this button group visible on desktop and mobile devices.",
+      "mobile": "Mobile",
+      "desktop": "Desktop",
+      "toggle_desktop": "Toggle show on desktop",
+      "toggle_mobile": "Toggle show on mobile"
+    },
+    "start_opened": {
+      "title": "Start opened",
+      "description": "This button group starts opened when this setting is enabled."
+    },
+    "use_main_button_style": {
+      "title": "Use group style",
+      "description": "When enabled, this button will use the same style as the button group.",
+      "warning": "Disable USE GROUP STYLE to access these settings"
+    },
+    "close_on_click_outside": {
+      "title": "Close on click outside",
+      "description": "This will close the menu if you click outside Buttonizer."
+    },
+    "close_on_click_inside": {
+      "title": "Close on button click",
+      "description": "This will close the menu if you click on a button inside this group."
+    },
+    "open_on_mouseover": {
+      "title": "Open on hover",
+      "description": "This will open the menu if you hover the group button."
+    },
+    "close_on_mouseout": {
+      "title": "Close on mouse out",
+      "description": "This will close the menu if you hover out the group button."
+    },
+    "custom_id": {
+      "title": "Custom ID",
+      "description": "Adds a custom 'id' HTML attribute to the button.",
+      "pro_description": "You can add a custom ID to each button for styling purposes.",
+      "placeholder": "ID name"
+    },
+    "custom_class": {
+      "title": "Custom class",
+      "description": "Adds a custom 'class' HTML attribute to the button.",
+      "pro_description": "You can add a custom class to each button for styling purposes.",
+      "placeholder": "Class name",
+      "styling_editor": "Open Custom Styling Editor",
+      "styling_editor_title": "Custom Styling Editor"
+    },
+    "selected_page_rule": {
+      "title": "Page rule",
+      "description": "Adds a custom 'class' HTML attribute to the button.",
+      "pro_description": "You can add a custom class to each button for styling purposes.",
+      "manage_page_rules": "Manage page rules",
+      "cannot_select": "You cannot select the same page rule as it's group!",
+      "show_on_rule_trigger": {
+        "show": "Show button when rule is triggered",
+        "hide": "Hide button when rule is triggered"
+      }
+    },
+    "timeout_scroll": {
+      "timeout": {
+        "title": "Timeout",
+        "trigger_once": "Trigger only once",
+        "milliseconds": "Milliseconds",
+        "info": "Show Buttonizer after {{ value }} seconds"
+      },
+      "scroll": {
+        "title": "Scroll",
+        "from_top": "From top",
+        "show_after": "Show Buttonizer after 0 seconds",
+        "visibility": "Hide group as starting visibility",
+        "hide": "Hide",
+        "show": "Show",
+        "info": "Scroll <bold>{{ scrollValue }}</bold> from top of page to <bold>{{ showOrHide }}</bold> group"
+      }
+    },
+    "exit_intent": {
+      "title": "Exit intent",
+      "enable": "Enable exit intent",
+      "pro_description": "With this setting, you can trigger Buttonizer to animate before your guest exits your website.",
+      "description": "Exit intent can be used to trigger an animation around Buttonizer when a visitor is leaving your website.",
+      "info": "Please note: Exit intent will <b>not trigger</b> in preview mode, only in your LIVE website.",
+      "when_to_trigger": "When to trigger?",
+      "trigger_window": "Trigger when leaving browser window",
+      "trigger_inactive": "Trigger on inactivity (2 minutes)",
+      "how_often": {
+        "_title": "How often should it be triggered?",
+        "once_page": "Only trigger once per page",
+        "once_session": "Only trigger once per session",
+        "always": "Trigger every time"
+      },
+      "animation": {
+        "_title": "Animation on intent",
+        "focused": "Focused",
+        "open_menu": "Open menu",
+        "jump": "Jump once and open",
+        "jump_single": "Jump once",
+        "flip": "Flip and open",
+        "flip_single": "Flip"
+      }
+    },
+    "popups": {
+      "generate": "Generate new popup id",
+      "elementor_guide": "Copy and paste this into your Elementor Popup's <b>\"Open By Selector\"</b> option. <br />",
+      "popup_maker_guide": "In your <b>Popup Settings</b>, add a new <b>\"Click to Open\"</b> trigger and copy and paste this code in <b>\"Extra CSS Selectors\"</b> <br />"
+    },
+    "button_action": {
+      "title": "Button action",
+      "description": "Choose a click action for this button.",
+      "select": "Select button action",
+      "search_not_found": "No button action found for:",
+      "actions": {
+        "add_request": "Can't find a suitable action request?",
+        "group_popular": "Popular actions",
+        "group_chat": "Click to chat",
+        "group_social_media": "Social Media",
+        "group_popup": "Popup",
+        "group_actions": "Actions",
+        "phone_number": {
+          "name": "Call action (phone number)",
+          "invalid": "Check your phone number, it should look like this: +00123456789",
+          "number": "Phone number"
+        },
+        "mail": {
+          "name": "Mail action (email address)",
+          "invalid": "Invalid email address."
+        },
+        "page": {
+          "name": "Page",
+          "placeholder": "Select a page",
+          "helper": "To visualise what page type you have chosen, the value is displayed as: '[Page type]: [Page name]'."
+        },
+        "back_to_top": "Back to top",
+        "go_to_bottom": "Go to bottom",
+        "go_back_one_page": "Go back one page",
+        "share_page": "Share page",
+        "sms": "SMS",
+        "viber": "Viber does not support a \"chat with phone number \" link. When a user clicks on this button it will open their \"add contact\" with the number filled in.",
+        "messenger_chat": {
+          "description": "Facebook Messenger Chat Widget! First, you'll need to <howToLink>whitelist</howToLink> your site on Facebook. Then add your <helpLink>Page ID</helpLink> into the input above.",
+          "invalid": "Invalid Page ID.",
+          "page_id": "Facebook Page ID",
+          "language": "Messenger Chat Language"
+        },
+        "whatsapp_chat": "WhatsApp Chat",
+        "poptin": "<bold>You need to install Poptin's WordPress plugin.</bold><br />You can find it <bold><downloadLink>here</downloadLink>.</bold><br />Once you've made a Poptin paste the <bold><helpLink>direct link</helpLink></bold> into the input above.",
+        "share_page_on": "Share on {{ platform }}",
+        "social_sharing": {
+          "social_sharing": "Social Sharing",
+          "popular": "Popular Social Sharing",
+          "other": "Other Social Sharing"
+        },
+        "clipboard": "Copy URL to clipboard",
+        "print_page": "Print page",
+        "download": {
+          "name": "Download file",
+          "description": "Enter the full URL of the file that should be downloaded by the browser when the button is clicked. The file can be of any file format, but must be publicly accessible."
+        },
+        "share_page_via": "Share via {{ platform }}",
+        "action_discontinued": "<italic>{{ action }}</italic> has been discontinued and replaced with <a>{{ replacement }}</a>.",
+        "url": {
+          "name": "Website URL",
+          "invalid": "This URL appears to be invalid. The button may not work as expected.",
+          "invalid_tip": "Do you miss <b>http://</b> or <b>https://</b>? Perhaps an unnecessary space is added somewhere.",
+          "insecure": "<b>Insecure URL:</b> Sorry to interrupt, but we advice you to use HTTPS for your URLS. This is a safer way to transport data."
+        },
+        "javascript": {
+          "name": "Custom button action / JavaScript",
+          "open_dialog": "Open JavaScript code editor",
+          "editor_deprecated": "The button JavaScript editor has been deprecated in favour of our JavaScript API. Please update your code. <a>Learn more</a>.",
+          "editor_deprecated_action": "Have you moved your JavaScript code? <a>Click here</a> to remove the deprecated code.",
+          "warning_modal_title": "Warning! Before you continue...",
+          "warning_intro": "You are changing this button action from custom javascript to a different action. Your javascript changes will be lost.",
+          "warning_question": "Are you sure you want to proceed?",
+          "intro_text": "With our advanced JavaScript API we have multiple events available which you can use to interact with groups and buttons.",
+          "snippet": "Add the following JavaScript code snippet to your website to use JavaScript with this button:"
+        },
+        "whatsapp_info": "Fill in your phone number without any spaces and symbols. Read WhatsApps recommendations by <a>clicking here.</a>",
+        "twitter_info": "When you want to use Twitter DM you will need to find your Twitter User ID and allow direct messages from anyone. To find your account ID <findAccountLink>click here</findAccountLink>. And to read more about how to allow direct messages from anyone, <allowDirectMessagesLink>click here</allowDirectMessagesLink>.",
+        "signal_group_info": "Paste the generated Signal group URL into the field. If you need more information about how to enable group invite links, <a>click here</a>.",
+        "chat": {
+          "sms": "SMS",
+          "messenger_chat": "Messenger Chat",
+          "messenger_link": "Messenger Link",
+          "twitter_dm": "Twitter DM",
+          "skype": "Skype",
+          "line": "LINE",
+          "waze": "Waze",
+          "telegram": "Telegram",
+          "viber": "Viber",
+          "signal_group": "Join signal group"
+        },
+        "social_media": {
+          "facebook": "Facebook",
+          "twitter": "Twitter",
+          "instagram": "Instagram",
+          "snapchat": "Snapchat",
+          "linkedin": "LinkedIn",
+          "vk": "VKontakte",
+          "waze": "Waze",
+          "tiktok": "TikTok"
+        }
+      },
+      "placeholders": {
+        "sms": "Text",
+        "message": "Message",
+        "username": "Username",
+        "mail": {
+          "recipient": "Recipient",
+          "subject": "Subject",
+          "cc": "cc",
+          "bcc": "bcc",
+          "body": "Body"
+        }
+      },
+      "open_url": {
+        "title": "Open URL in: "
+      },
+      "rel_attributes": {
+        "title": "Rel attributes",
+        "placeholder": "Set link rel attributes."
+      }
+    },
+    "button_group_window": {
+      "filters": "Filters",
+      "styling": "Styling",
+      "timeout_scroll": "Timeout & Scroll"
+    }
+  },
+  "settings_window": {
+    "title": "Buttonizer settings",
+    "description": "Manage the settings of Buttonizer",
+    "icon_library": {
+      "title": "Icon library",
+      "description": "Choose your iconset",
+      "free": "free",
+      "latest": "Latest (automatic)",
+      "info": "If your theme automatically loads in a library, just select the correct icon library instead.",
+      "select_version": {
+        "title": "Select version",
+        "info": "Select the correct version of the library in order to use the icons in Buttonizer."
+      },
+      "library_license_key": {
+        "info": "You have selected an icon library that has premium icons. Enter the library license code to view and use these.",
+        "how_does_it_work": "How does this work?",
+        "enter_integrity_code": "Enter integrity code"
+      },
+      "import_library": {
+        "title": "Import icon library",
+        "info": "Should Buttonizer import the icon library into your theme? If your theme already imports the library you can disable this."
+      }
+    },
+    "google_analytics": {
+      "title": "Google Analytics",
+      "enable": "Enable Google Analytics",
+      "description": "Measure your conversions",
+      "intro": "When enabled, Buttonizer will automatically log clicks to your Google Analytics account. You can force Buttonizer not to use the Google Analytics by disabling this switch.",
+      "tracking_code_info": "Google Analytics is automatically detected if you have added it to your webpage. But, if you don't make use of Google Analytics yet and  this is your first time, Buttonizer can add it for you.",
+      "tracking_code_warning": "If you have added Google Analytics to your webpage before and Buttonizer also adds the same Analytics code, it will mess with your analytics data!",
+      "input": "UA Code",
+      "link": "Where can I see my click data of my buttons in Google Analytics?"
+    },
+    "other_settings": {
+      "title": "Preferences",
+      "description": "Manage your preferences",
+      "admin_button": {
+        "title": "Show admin top bar",
+        "info": "Hide Buttonizer in the admin top bar by disabling this setting."
+      },
+      "tooltips": {
+        "title": "Show tooltips",
+        "info": "Hide the tooltips by disabling this setting."
+      },
+      "tips": {
+        "title": "Show Buttonizer tips",
+        "info": "Hide the Buttonizer tips in the dashboard by disabling this setting"
+      },
+      "subdomain": {
+        "title": "Subdomain support",
+        "info": "Some WordPress websites use subdomains for content purposes. Enable this setting to allow Buttonizer to load on your subdomains. Only enable this when you need it."
+      },
+      "ajax": {
+        "title": "Use ajax on to load the buttons",
+        "info": "This feature has been created to make sure Buttonizer doesn't slow down your website. If you'd like to show the buttons immediately without loadtime, disable this setting. The load impect will depend on the amount of buttons and groups you currently have."
+      },
+      "error_logging": {
+        "title": "Automatic error logging and crash reporting",
+        "info": "Enable automatic error logging and crash reporting in order to help us solve issues within Buttonizer! All data is anonymized automatically."
+      },
+      "no_limit": {
+        "title": "Show more than 7 buttons in a group!",
+        "info": "When enabled, it will disable the 7 button limit in Buttonizer. This means that you will be able to add as much buttons you can fit in the screen!"
+      },
+      "reset_opt_in": {
+        "title": "Opt-in to Buttonizer",
+        "info": "Currently you are opted out for sharing your WordPress environment information. When you want to make use of Buttonizer Pro, you need to opt-in. For more information, check out the opt-in page.",
+        "button": "Reset opt-in"
+      },
+      "additional_roles": {
+        "title": "Permissions",
+        "info": "You can grant more roles to access the Buttonizer settings who are not an administrator.",
+        "roles": "Select roles"
+      }
+    },
+    "buttonizer_tour": {
+      "title": "Buttonizer tour",
+      "description": "Helps you with step-by-step tours",
+      "interface": {
+        "title": "Buttonizer interface",
+        "description": "Make a tour through Buttonizer's interface"
+      },
+      "create_button": {
+        "title": "Create a button",
+        "description": "Learn how to make floating action buttons"
+      }
+    },
+    "changelog_dialog": {
+      "title": "What's new?",
+      "all_changelogs": "View all changelogs",
+      "new_features": "New features",
+      "first_feature": {
+        "title": "New styling options!",
+        "info": "We've added much more styling options for the group and the buttons. Now you can truly customize the buttons to your liking."
+      },
+      "second_feature": {
+        "title": "Load in templates",
+        "info": "Instead of creating your own buttons and groups, you can save time by loading ready-made templates. Click \"add button\" or \"create new group\" to see all templates available."
+      },
+      "third_feature": {
+        "title": "Updated menu position for button styles",
+        "info": "We have slightly adjusted the placement of the settings for changing the button position. Don't worry, you can still find the settings under the \"Advanced\" tab."
+      },
+      "fourth_feature": {
+        "title": "\"Shift + click\" to skip a dialog",
+        "info": "You can now press shift + click when adding, deleting and duplicating to skip the confirmation dialog."
+      }
+    },
+    "reset": {
+      "title": "Reset Buttonizer",
+      "description": "If you need a clean install",
+      "info": "This is a way to reset Buttonizer to the default settings.",
+      "what_will_happen": {
+        "title": "What will happen when I click the red button below?",
+        "info": "The plugin will get a 'factory reset'. All settings of Buttonizer will get deleted, reverting back to when you first installed and activated Buttonizer."
+      },
+      "why": {
+        "title": "Why would I do that?",
+        "info": "Perhaps you ruined your buttons, categories or settings and would like to start from scratch. Or maybe you just feel trying the reset button..."
+      },
+      "license": {
+        "title": "I have a license, what about that?",
+        "info": "No worries! Nothing will happen with your license! It only resets the following:",
+        "list": {
+          "buttons": "Your buttons",
+          "groups": "Your button groups",
+          "time_schedules": "All time schedules",
+          "page_rules": "All page rules",
+          "settings": "All other settings of Buttonizer",
+          "published": "All published settings"
+        }
+      },
+      "default_settings": {
+        "title": "Okay, sounds good. What then?",
+        "info": "Buttonizer will revert back to the default settings and feel like a fresh installation. That's all."
+      },
+      "ready": {
+        "title": "Okay, I'm ready!",
+        "info": "Press the red button below to reset Buttonizer. There will be no more warnings.",
+        "button": "Reset Buttonizer!"
+      }
+    }
+  },
+  "bar": {
+    "menu_button": "The button to open/close the group. Show or hide it on prefered devices.",
+    "previous_session": "Loaded changes from previous session",
+    "edit_group_settings": "Edit group settings",
+    "preview": {
+      "no_changes": "You probably have clicked a link, this made you leave the preview window of Buttonizer. You cannot see your changes here.",
+      "return": "Return to preview",
+      "desktop": "Desktop preview",
+      "tablet": "Tablet preview",
+      "mobile": "Mobile preview"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "tippy_home": "Back to overview",
+      "tippy_group": "Back to group"
+    },
+    "menu": {
+      "version": "Version {{ versionNumber }}",
+      "knowledgebase": {
+        "title": "Knowledge base",
+        "description": "Find out everything you need to know about Buttonizer"
+      },
+      "support_group": "Support",
+      "support": {
+        "title": "I need support",
+        "description": "Direct support with the Buttonizer developers"
+      },
+      "community": {
+        "title": "Community",
+        "description": "Interact with other Buttonizers"
+      },
+      "tour": {
+        "title": "Buttonizer tour (recommended!)",
+        "description": "Start the 2 minute tour"
+      },
+      "wp_admin": "Back to the WordPress dashboard",
+      "back_to_dashboard": "Back to dashboard",
+      "follow": "Follow us for useful tips & tricks!",
+      "account_group": "Buttonizer account",
+      "account": {
+        "title": "My Account",
+        "description": "View your license and account details"
+      },
+      "upgrade": {
+        "title": "Upgrade or pricing",
+        "description": "A deep dive in all the possibilities"
+      },
+      "affiliation": {
+        "title": "Affiliation",
+        "description": "Earn $ by promoting Buttonizer"
+      },
+      "options": {
+        "title": "Options"
+      }
+    },
+    "buttons": {
+      "now_editing": "Now editing:",
+      "tippy_new_group": "This creates a new group with 2 buttons inside.",
+      "tippy_single_button": "This creates a new button, outside other groups.",
+      "tippy_learn_more": "Learn more about groups and buttons",
+      "tippy_drag_warning": "You can't drag the only button left in a group!",
+      "convert_to_group": "Convert to group"
+    }
+  },
+  "migration_modal": {
+    "title": "Hi Buttonizer!",
+    "intro": "It appears you've installed Buttonizer 2.0 before. But, you installed version 1.5 again later on and updated back to 2.0!",
+    "convert": "The migration progress did not run as it did back then. In order to convert your buttons, press the button below!",
+    "popping_up": "If this window keeps popping up, even when you've tried to convert the buttons, try to reset Buttonizer. Go to the 'cog' icon (<i class=\"fas fa-cog\"></i>) on the top bar, select 'Options <i class=\"fas fa-cogs\"></i>' and the tab 'Reset' and follow the instructions.",
+    "convert_buttons": "Convert my buttons!"
+  },
+  "premium": {
+    "modal": {
+      "title": "Premium feature",
+      "describe": "Hi! You’re trying to access a premium feature. To try this and other amazing features, you can upgrade your account.",
+      "credentials": "14-Day Money Back Guarantee For New Purchases​",
+      "go_pro": "Go pro",
+      "list": {
+        "button_sizes": "Change the size of the buttons and groups",
+        "time_schedules": "Show button(groups) using the advanced time schedules",
+        "page_rules": "Show button(groups) on specific pages using advanced page rules",
+        "button_groups": "Create multiple button groups",
+        "custom_images": "Custom button background and icon image",
+        "exit_intent": "Exit intent",
+        "show_on_scroll": "Show or hide on scroll",
+        "show_on_timeout": "Show on timeout",
+        "custom_class": "Be able to set CSS class names and button IDs",
+        "javascript": "Execute javascript on button clicks"
+      }
+    },
+    "time_schedules": {
+      "first_time_schedule": "My first time schedule"
+    },
+    "warning_duplicate": "Duplicating buttons is disabled for free version",
+    "page_rules": {
+      "first_page_rule": "My first page rule"
+    },
+    "menu_styles": {
+      "text": "This menu style will remove the icon and add the label into the button, making it one long button.",
+      "text-icon": "This menu style will add the label into the button with an icon, making it one long button."
+    },
+    "multiple_button_groups": "You are able to add multiple groups on different positions",
+    "custom_image": "You can select images and set them as icon or as button background image.",
+    "show_on_timeout": "With this setting, you can make your button appear/hide after certain amount of time.",
+    "show_on_scroll": "With this setting, you can make your button appear/hide after scrolling for a certain amount.",
+    "add_animation_settings": "With this setting, you can change your animation settings like delay and repeat count.",
+    "font_family": "With this setting, you can change the font family of the label. You choose a font add your custom font.",
+    "margin": "With this setting, you can change the margin of the label. Change the position of the label relative to it's button",
+    "padding": "With this setting, you can change the size of the label."
+  },
+  "page_rules": {
+    "name": "Page rules",
+    "menu_description": "Choose on which page you want to show a button (group)",
+    "window_title": "Page Rule Manager",
+    "window_description": "You can setup page rules via this window. When you add pages or definitions to this page rule, the buttons attached to this page rule will be shown or hidden depending on their settings as soon this rule is triggered.",
+    "pro_description": "You can setup page rules that will get triggered on specific pages or user roles. You can create unlimited page rules with multiple rules to trigger.",
+    "add_page_rule": "Add page rule",
+    "name_your_page_rule": "Name your page rule:",
+    "single_name": "Page rule",
+    "input_any_page": "Show the button on any page",
+    "remove_page_rule": "Remove page rule",
+    "open_settings": "Open Page Rules settings",
+    "current_page_rule": "Current page rule",
+    "behaviour": "All condition groups behaviour",
+    "trigger": "Triggers when ONE of the selected values is true",
+    "delete_group": "Deleting this condition group will delete all of your conditions within this group. Would you like to proceed?",
+    "conditions": {
+      "title": "Conditions",
+      "show_group_on": "Show group when this page rule is activated",
+      "hide_group_on": "Hide group when this page rule is activated",
+      "show_button_on": "Show button when this page rule is activated",
+      "hide_button_on": "Hide button when this page rule is activated",
+      "add": "Add condition",
+      "add_group": "Add condition group"
+    },
+    "empty": {
+      "page": "No page rules",
+      "selected": "No page rule selected",
+      "rules": "There are no rules for this condition group. It will be triggered by default.",
+      "groups": "There are no conditions for this page rule. It will be triggered by default."
+    },
+    "types": {
+      "must_meet": "All conditions must be met (AND)",
+      "one_meets": "One or more conditions must be met (OR)",
+      "must_meet_group": "All condition groups must be met (AND)",
+      "one_meets_group": "One or more condition groups must be met (OR)"
+    },
+    "rule_and": "and",
+    "rule_or": "or",
+    "rules": {
+      "page": "Page",
+      "page_title": "Page title",
+      "blog": "Blog",
+      "blog_title": "Blog title",
+      "category": "Category",
+      "url": "URL",
+      "url_query": "URL + queries",
+      "path": "Path",
+      "path_query": "Path + queries",
+      "user_roles": "User has role",
+      "user_logged_in": "User is signed in",
+      "user_logged_out": "User is signed out"
+    },
+    "operators": {
+      "title": "Operators",
+      "contains": "contains...",
+      "not_contains": "does not contains...",
+      "ends_with": "ends with...",
+      "begins_with": "begins with...",
+      "match": "is",
+      "not_match": "is not...",
+      "is_any": "is any of...",
+      "is_not_any": "is not any of...",
+      "match_regex": "matches regex...",
+      "not_match_regex": "does not matches regex..."
+    },
+    "rules_group": {
+      "content_based": "Content based",
+      "url": "Url",
+      "users": "Users"
+    },
+    "debug": {
+      "title": "Debug",
+      "test": "Test out this page rule",
+      "invalid": "This URL appears to be invalid. You need to use the whole URL of your page.",
+      "example": "It should look something like {{ url }}",
+      "user_roles": "User role test",
+      "debug_page": "Debug page",
+      "triggered": "This Page Rule is triggered",
+      "not_triggered": "This Page Rule is not triggered",
+      "triggered_group": "This group is triggered",
+      "not_triggered_group": "This group is not triggered",
+      "one_met": "One or more conditions were met",
+      "all_met": "All conditions were met",
+      "one_met_group": "One or more condition groups were met",
+      "all_met_group": "All condition groups were met",
+      "one_not_met": "One or more conditions were not met",
+      "all_not_met": "All conditions were not met",
+      "one_not_met_group": "One or more condition groups were not met",
+      "all_not_met_group": "All condition groups were not met",
+      "type": "Condition type",
+      "set_value": "Condition value",
+      "got_value": "Received value",
+      "trigger": "Triggered",
+      "operator": "Condition operator"
+    },
+    "select_items": "Select one or more items.",
+    "remove_rule": "Are you sure you want to remove this rule?",
+    "remove_rule_aborted": "Aborted. Each page rule must keep at least one rule.",
+    "warning_changing_rule": "You still have selected values, are you sure you want to remove this?",
+    "rule_value": "Rule value"
+  },
+  "time_schedules": {
+    "name": "Time schedules",
+    "menu_description": "For example: Show a call me now button only on opening times",
+    "single_name": "Time schedule",
+    "window_title": "Time schedule manager",
+    "pro_description": "You can setup time schedules that will get triggered during specific times of a day. It is even possible to change the schedule actions for specific days. You can create an unlimited amount of schedules.",
+    "open_settings": "Open time schedule settings",
+    "current_time_schedule": "Current time schedules:",
+    "empty": {
+      "page": "You have no time schedules",
+      "selected": "No time schedule selected"
+    },
+    "dates": "Dates",
+    "add_schedule": "Add time schedule",
+    "add_date": "Add date",
+    "new_schedule": "New schedule",
+    "name_schedule": "Name the new time schedule:",
+    "rename_schedule": "Rename schedule to:",
+    "show_any_time": "Show the button at any time",
+    "till": "till",
+    "conditions": {
+      "show_group_on": "Show group when this time schedule is activated",
+      "hide_group_on": "Hide group when this time schedule is activated",
+      "show_button_on": "Show button when this time schedule is activated",
+      "hide_button_on": "Hide button when this time schedule is activated"
+    },
+    "trigger": {
+      "trigger": "Trigger on",
+      "dont_trigger": "Don't trigger on"
+    },
+    "remove_schedule": "Remove schedule",
+    "must_keep_one": "You must keep at least one schedule",
+    "current_timezone": "Current timezone:",
+    "remove_date": {
+      "title": "Remove date",
+      "message": "Are you sure you want to remove this date?"
+    },
+    "errors": {
+      "time_invalid": "Sorry, the time '{{ value }}' was invalid. Reverting back to '{{ originalValue }}'.",
+      "time_overlap_start": "The start time '{{ startValue }}' conflicts with the end time '{{ endValue }}'. Time has been reverted to '{{ originalValue }}'. Make sure you have at least 5 minutes overlap.",
+      "time_overlap_end": "The end time '{{ endValue }}' conflicts with the start time '{{ startValue }}'. Time has been reverted to '{{ originalValue }}'. Make sure you have at least 5 minutes overlap."
+    },
+    "weekdays": {
+      "title": "Weekdays",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "exclude": {
+      "title": "Excluded Dates",
+      "add": "Add Excluded Date",
+      "info": "Add specific dates to show or hide the buttons attached to this time scheme. For example: \"My store is open on January 22th until 22:00 (10 PM) because of some special evening we organize.\" The rule will overwrite the default settings for that day."
+    },
+    "input_start": {
+      "label": "Start triggering buttons from",
+      "helper": "Start Date",
+      "error": "Warning! Your start date '{{ date }}' hast past the end date of this schedule. If you do not change this date the schedule will not work."
+    },
+    "input_end": {
+      "label": "Stop triggering buttons after (optional)",
+      "helper": "Click to add ending date",
+      "placeholder_empty": "Select a date in the datepicker below",
+      "error": "Warning! Your end date '{{ date }}' has past the start date of this schedule. If you do not change this date the schedule will not work."
+    }
+  },
+  "random_tips": {
+    "tip_1": "Did you know that Buttonizer has different group-styles you can use?",
+    "tip_2": "Click on the buttons to manage their settings",
+    "tip_3": "Give your buttons a color",
+    "tip_4": "A button can only have one action, but you can choose out more than 25 actions!",
+    "tip_5": "Turn off these tips in settings",
+    "tip_6": "You can show more than 7 buttons by enabling it in Preferences ;)",
+    "tip_7": "Paste the HEX-code in the colorpicker if you want to use a specific color",
+    "tip_8": "Playing smart with 'Show on desktop' and 'Show on mobile' will give you up to 14 buttons per page!",
+    "tip_9": "You can use Page Rules to show or hide buttons on certain pages",
+    "tip_10": "You can use the social share button action to let a visitor share your webpage",
+    "tip_11": "Do you need a tool-tip? ;)",
+    "tip_12": "You can style the main big button by editting the group",
+    "tip_13": "You can add a class or id HTML-attribute to a group and a button",
+    "tip_14": "Want to make a new similar button? Duplicate your button!",
+    "tip_15": "If you have a great tip, let us know! We'll add it :)",
+    "tip_16": "Pssst, click on the group/button name on top",
+    "tip_17": "Exit Intent... This is where the fun begins!",
+    "tip_18": "With our brand new color picker you can build a personalized palette, create a color scale and blend colors",
+    "tip_19": "Premium users just need one license key for their production environment and development environment",
+    "tip_20": "Give more roles permission to access Buttonizer's dashboard in Preferences!",
+    "tip_21": "Easily edit a specific button by hovering on them on the preview",
+    "tip_22": "Add a custom text when using Social Sharing actions!",
+    "tip_23": "Buttonizer also supports languages that are written from right-to-left :)"
+  }
+}
