@@ -36,17 +36,37 @@ video.size-full {
 }
 
 /* Fix spacing and padding for dashed treatment cards on mobile */
+/* Fix spacing and padding for dashed treatment cards on mobile */
 @media (max-width: 767px) {
-  .treatment-dashed-card {
+  body .treatment-dashed-card {
+    margin-top: 0px !important;
     margin-bottom: 25px !important;
     padding: 20px !important;
+    --margin-top: 0px !important;
     --margin-bottom: 25px !important;
     --padding-top: 20px !important;
     --padding-bottom: 20px !important;
     --padding-left: 20px !important;
     --padding-right: 20px !important;
   }
+
+  /* Reset all container gaps to 0px on mobile to prevent uneven double-spacing */
+  body .elementor-element.e-con:has(.treatment-dashed-card),
+  body .e-con-inner:has(> .treatment-dashed-card) {
+    gap: 0px !important;
+    row-gap: 0px !important;
+    --gap: 0px !important;
+    --row-gap: 0px !important;
+  }
+
+  /* Hide empty placeholder columns that act as horizontal spacers on desktop ONLY inside card sections to prevent huge gaps on mobile */
+  body .e-con-inner:has(> .treatment-dashed-card) > .e-child:not(.treatment-dashed-card) {
+    display: none !important;
+  }
 }
+
+
+
 
 /* Fix for columns where GIFs were converted to MP4 videos, restoring borders and heights */
 .elementor-element-57ce8dc video,
@@ -66,3 +86,26 @@ video.size-full {
   border-width: 1px !important;
   object-fit: cover !important;
 }
+
+/* Ensure videos inside treatment-dashed-card containers match image styling and do not overflow */
+.treatment-dashed-card .elementor-widget-image video {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  border: 1px solid #CEAE80 !important;
+  object-fit: cover !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fix text overlay/overlap issues in treatment-dashed-card containers */
+.treatment-dashed-card .elementor-widget-image {
+  margin-bottom: 15px !important;
+}
+
+.treatment-dashed-card .elementor-widget-heading {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+
