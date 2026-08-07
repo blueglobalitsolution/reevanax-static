@@ -17,6 +17,11 @@ video.size-full {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+  
+  /* Ensure spacing at the bottom of each service card */
+  .make-column-clickable-elementor {
+    padding-bottom: 30px !important;
+  }
 }
 
 /* Fix for columns where GIFs were converted to MP4 videos, restoring borders and heights */
@@ -27,7 +32,9 @@ video.size-full {
 .elementor-element-60ecd0b video,
 .elementor-element-3734206 video,
 .elementor-element-504d701 video,
-.elementor-element-f818e82 video {
+.elementor-element-f818e82 video,
+.elementor-element-216f06a video,
+.elementor-element-c3250af video {
   width: 100% !important;
   height: 300px !important;
   border-style: solid !important;
