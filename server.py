@@ -17,17 +17,17 @@ from __future__ import annotations
 import json
 import mimetypes
 import os
+import re
 import smtplib
 import ssl
+import time
 import traceback
+from collections import defaultdict
 from email.message import EmailMessage
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse
-import re
-import time
-from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = Path(os.environ.get("REVANAX_SMTP_CONFIG", ROOT / "smtp_config.json"))
@@ -42,34 +42,34 @@ RATE_LIMIT_WINDOW = 60
 
 def send_contact_email(contact: dict) -> None:
     cfg = load_smtp_config()
-    
+
     first_name = contact.get("first_name", "").strip()
     last_name = contact.get("last_name", "").strip()
     phone = contact.get("phone", "").strip()
-    
+
     # Input validation / sanitization
     if not first_name or not last_name or not phone:
         raise ValueError("Missing name or phone fields.")
-        
+
     if len(first_name) > 100 or len(last_name) > 100 or len(phone) > 30:
         raise ValueError("Input field length exceeded.")
-        
+
     # Basic regex validation for phone to prevent header injection or spam
     if not re.match(r"^\+?[0-9\s\-()]{5,20}$", phone):
         raise ValueError("Invalid phone format.")
-        
+
     # Phone must contain between 10 and 11 digits
     digits_only = re.sub(r"\D", "", phone)
     if not (10 <= len(digits_only) <= 11):
         raise ValueError("Phone number must be between 10 and 11 digits.")
-        
+
     # Construct email message
     msg = EmailMessage()
     msg["Subject"] = f"New Contact Request from {first_name} {last_name}"
     from_name = cfg.get("from_name") or "ReevanaX Contact Form"
     msg["From"] = f"{from_name} <{cfg['from_email']}>"
     msg["To"] = cfg["to_email"]
-    
+
     lines = [
         "You have received a new contact request from your website.",
         "",
@@ -77,7 +77,7 @@ def send_contact_email(contact: dict) -> None:
         f"Phone: {phone}",
     ]
     msg.set_content("\n".join(lines))
-    
+
     host = cfg["smtp_host"]
     port = int(cfg["smtp_port"])
     user = cfg["smtp_user"]
@@ -98,7 +98,6 @@ def send_contact_email(contact: dict) -> None:
                 smtp.ehlo()
             smtp.login(user, password)
             smtp.send_message(msg)
-
 
 
 def load_smtp_config() -> dict:
@@ -335,6 +334,7 @@ def main():
     httpd = ThreadingHTTPServer((HOST, PORT), RevanaxHandler)
     print(f"Revanax server running at http://127.0.0.1:{PORT}/")
     print(f"Booking API: POST http://127.0.0.1:{PORT}/api/book")
+    print(f"Contact API: POST http://127.0.0.1:{PORT}/api/contact")
     print(f"SMTP config: {CONFIG_PATH}")
     if not CONFIG_PATH.exists():
         print("WARNING: smtp_config.json not found — copy smtp_config.example.json first.")
