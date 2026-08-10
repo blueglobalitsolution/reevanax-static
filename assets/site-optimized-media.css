@@ -63,7 +63,64 @@ video.size-full {
   body .e-con-inner:has(> .treatment-dashed-card) > .e-child:not(.treatment-dashed-card) {
     display: none !important;
   }
+
+  /* Hide the bulky brown contact bar on mobile for a clean, modern look */
+  body .elementor-element-3b33568 {
+    display: none !important;
+  }
+
+  /* Make the header bar compact, sticky, and modern with glassmorphism on mobile */
+  body .elementor-element-cab6064,
+  body .elementor-element-8516289,
+  body .elementor-element-3244f91 {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    min-height: auto !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(134, 77, 38, 0.08) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  /* Shrink the logo on mobile to look sleek and modern */
+  body .elementor-widget-image img[src*="Logo"] {
+    max-height: 36px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Center and modernize the hamburger menu toggle */
+  body .menu-toggle {
+    margin: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border-radius: 50% !important;
+    transition: background 0.3s ease !important;
+  }
+  
+  body .menu-toggle:active {
+    background: rgba(134, 77, 38, 0.05) !important;
+  }
+
+  /* Force hamburger toggle lines to match the brand brown color */
+  body .menu-toggle:before,
+  body .menu-toggle:after,
+  body .menu-toggle span,
+  body .menu-toggle span:before,
+  body .menu-toggle span:after {
+    background-color: #864D26 !important;
+  }
 }
+
+
 
 
 
