@@ -1,14 +1,1814 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReevanaX Content Studio | Decap CMS</title>
-  <link rel="icon" href="/assets/uploads/2025/04/cropped-favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" href="/assets/uploads/2025/04/cropped-favicon-192x192.png" sizes="192x192" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReevanaX Content Studio</title>
+<link rel="icon" href="/assets/uploads/2025/04/cropped-favicon-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   ReevanaX Content Studio — Next-Gen Luxury Dashboard
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg: #0B0D14;
+  --bg-sidebar: #10131E;
+  --bg-card: #161A28;
+  --bg-card-hover: #1C2235;
+  --bg-input: #1F2539;
+  --bg-input-focus: #262D45;
+  --border: #283049;
+  --border-light: rgba(206, 174, 128, 0.25);
+  --gold: #CEAE80;
+  --gold-hover: #DFBF91;
+  --gold-dim: rgba(206, 174, 128, 0.12);
+  --gold-glow: rgba(206, 174, 128, 0.25);
+  --brown: #864D26;
+  --text: #F3F4F6;
+  --text-dim: #9CA3AF;
+  --text-muted: #6B7280;
+  --success: #10B981;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --danger: #EF4444;
+  --danger-hover: #DC2626;
+  --danger-bg: rgba(239, 68, 68, 0.15);
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 4px 20px rgba(206, 174, 128, 0.2);
+  --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--gold); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--gold-hover); }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scaleUp { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: scale(1); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.fade-in { animation: fadeIn 0.3s ease forwards; }
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  border-top-color: currentColor;
+  animation: spin 0.65s linear infinite;
+}
+
+/* ── Login Screen ─────────────────────────────────────────── */
+#login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top center, #1B1824 0%, #0B0D14 70%);
+  padding: 20px;
+}
+.login-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 44px 38px;
+  width: 430px;
+  max-width: 100%;
+  box-shadow: var(--shadow), 0 0 60px rgba(206,174,128,0.06);
+  animation: scaleUp 0.4s ease;
+  position: relative;
+}
+.login-logo {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.login-logo img {
+  height: 48px;
+  width: auto;
+  border-radius: 8px;
+}
+.login-brand {
+  text-align: center;
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.5px;
+}
+.login-subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+}
+
+/* ── App Shell ─────────────────────────────────────────────── */
+#app {
+  display: none;
+  min-height: 100vh;
+}
+#app.active {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+}
+.sidebar-header {
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar-header img {
+  height: 34px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+.nav-item:hover {
+  background: var(--bg-card);
+  color: var(--text);
+}
+.nav-item.active {
+  background: linear-gradient(90deg, var(--gold-dim) 0%, rgba(206,174,128,0.03) 100%);
+  color: var(--gold);
+  border-left: 3px solid var(--gold);
+}
+.nav-item .icon { font-size: 17px; width: 22px; text-align: center; }
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--brown));
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.user-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Main Content Area */
+.main-wrapper {
+  margin-left: 260px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Topbar */
+.topbar {
+  height: 64px;
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.topbar-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-container {
+  padding: 28px;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* ── Forms & Controls ──────────────────────────────────────── */
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 6px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  transition: var(--transition);
+  outline: none;
+}
+.form-input:focus {
+  background: var(--bg-input-focus);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-dim);
+}
+.form-input::placeholder { color: var(--text-muted); }
+.form-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+  text-decoration: none !important;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, #B69248 100%);
+  color: #10131E;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+  color: #10131E;
+}
+.btn-secondary {
+  background: var(--bg-input);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold);
+  color: #FFF;
+}
+.btn-success {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #FFF;
+}
+.btn-success:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(16,185,129,0.3);
+}
+.btn-danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.btn-danger:hover {
+  background: var(--danger);
+  color: #FFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(239,68,68,0.3);
+}
+.btn-sm {
+  padding: 7px 12px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+}
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-icon:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: var(--bg-card-hover);
+}
+.btn-icon-danger:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+/* ── Dashboard Stats ────────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+}
+.stat-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gold-dim);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.stat-value {
+  font-family: 'Sora', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+/* ── Table & List Views ─────────────────────────────────────── */
+.table-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.table-header {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.table-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  width: 280px;
+  max-width: 100%;
+}
+.table-search input {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 13px;
+  padding: 9px 0;
+  outline: none;
+  width: 100%;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.custom-table th {
+  padding: 13px 20px;
+  background: rgba(0,0,0,0.18);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 1px solid var(--border);
+}
+.custom-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: middle;
+}
+.custom-table tr:hover td {
+  background: var(--bg-card-hover);
+}
+.post-title-link {
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: block;
+}
+.post-title-link:hover {
+  color: var(--gold);
+}
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-published {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.badge-published::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+}
+.badge-draft {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.badge-draft::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--warning);
+}
+
+/* ── Post Editor ────────────────────────────────────────────── */
+.editor-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+}
+.editor-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.editor-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Markdown Toolbar */
+.md-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  flex-wrap: wrap;
+}
+.md-toolbar button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.md-toolbar button:hover {
+  background: var(--bg-card-hover);
+  color: var(--gold);
+  border-color: var(--border);
+}
+.md-toolbar .sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+  margin: 0 4px;
+}
+.md-body-area {
+  min-height: 420px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+/* Tags Container */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-height: 42px;
+  align-items: center;
+}
+.tag-pill {
+  background: var(--gold-dim);
+  color: var(--gold-text);
+  border: 1px solid var(--border-light);
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tag-pill .remove {
+  cursor: pointer;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+.tag-pill .remove:hover { color: var(--danger); }
+.tags-input {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Upload Dropzone */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--bg-input);
+  transition: var(--transition);
+}
+.upload-zone:hover, .upload-zone.dragover {
+  border-color: var(--gold);
+  background: var(--bg-card-hover);
+}
+.upload-preview {
+  margin-top: 12px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.upload-preview img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* SEO Preview */
+.seo-preview {
+  background: #0B0E17;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-top: 10px;
+}
+.seo-preview-url { font-size: 11px; color: var(--gold); margin-bottom: 4px; }
+.seo-preview-title { font-size: 14px; font-weight: 600; color: #60A5FA; line-height: 1.3; margin-bottom: 4px; }
+.seo-preview-desc { font-size: 12px; color: var(--text-dim); line-height: 1.4; }
+
+/* ── Media Library Grid ─────────────────────────────────────── */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+}
+.media-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.media-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.media-thumb-wrap {
+  width: 100%;
+  height: 140px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+.media-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 13, 20, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.media-card:hover .media-overlay { opacity: 1; }
+.media-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.media-filename {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.media-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ── Modal Confirmation Dialog ─────────────────────────────── */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop.active {
+  display: flex;
+}
+.modal-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 440px;
+  max-width: 100%;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  animation: scaleUp 0.25s ease;
+  position: relative;
+}
+.modal-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.modal-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+.modal-desc {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.3s ease;
+}
+.toast-success { border-left-color: var(--success); }
+.toast-error { border-left-color: var(--danger); }
+.toast-info { border-left-color: var(--info); }
+
+@media (max-width: 900px) {
+  .sidebar { width: 70px; }
+  .sidebar-header img { height: 24px; }
+  .nav-item span:not(.icon), .user-info { display: none; }
+  .main-wrapper { margin-left: 70px; }
+  .editor-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-  <!-- Official Decap CMS Application -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LOGIN SCREEN
+     ═══════════════════════════════════════════════════════════ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <img src="/assets/uploads/2025/04/cropped-favicon-192x192.png" alt="ReevanaX" onerror="this.src='/assets/uploads/2022/08/ReevanaX-Final-Logo-CDR-1024x253.png'">
+    </div>
+    <h1 class="login-brand">ReevanaX Studio</h1>
+    <p class="login-subtitle">Aesthetic Clinic Content Management System</p>
+
+    <div id="login-error" style="display:none;background:var(--danger-bg);color:var(--danger);border:1px solid rgba(239,68,68,0.3);padding:10px 14px;border-radius:var(--radius);font-size:13px;margin-bottom:16px;"></div>
+
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="login-email" class="form-input" placeholder="admin@reevanax.com" required value="admin@reevanax.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="login-password" class="form-input" placeholder="••••••••" required value="admin123">
+      </div>
+      <button type="submit" id="login-btn" class="btn btn-primary" style="margin-top:8px">Sign In to Studio</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     APP SHELL
+     ═══════════════════════════════════════════════════════════ -->
+<div id="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header" style="justify-content: center; padding: 18px 16px;">
+      <img src="/assets/uploads/2022/08/ReevanaX-Final-Logo-CDR-1024x253.png" alt="ReevanaX" style="height: 34px; max-width: 100%; object-fit: contain; filter: brightness(1.2);">
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item active" data-view="dashboard" onclick="showView('dashboard')">
+        <span class="icon">📊</span>
+        <span>Dashboard</span>
+      </div>
+      <div class="nav-item" data-view="posts" onclick="showView('posts')">
+        <span class="icon">📝</span>
+        <span>All Posts</span>
+      </div>
+      <div class="nav-item" data-view="editor" onclick="newPost()">
+        <span class="icon">✏️</span>
+        <span>New Post</span>
+      </div>
+      <div class="nav-item" data-view="media" onclick="showView('media')">
+        <span class="icon">🖼️</span>
+        <span>Media Library</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="user-avatar" id="user-avatar">A</div>
+        <div>
+          <div class="user-name" id="user-name">Admin</div>
+          <div class="user-role">Administrator</div>
+        </div>
+      </div>
+      <button class="btn-icon btn-icon-danger" onclick="handleLogout()" title="Logout">🚪</button>
+    </div>
+  </aside>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <!-- Topbar -->
+    <header class="topbar">
+      <h2 class="topbar-title" id="topbar-title">Dashboard</h2>
+      <div class="topbar-actions">
+        <a href="/" target="_blank" class="btn btn-secondary btn-sm">🌐 View Website</a>
+        <a href="/blogs/" target="_blank" class="btn btn-secondary btn-sm">📰 View Blog Grid</a>
+      </div>
+    </header>
+
+    <!-- Content Container -->
+    <main class="content-container" id="content-area">
+      <!-- Dynamic Content View Injected Here -->
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MODAL CONFIRMATION DIALOG
+     ═══════════════════════════════════════════════════════════ -->
+<div class="modal-backdrop" id="confirm-modal">
+  <div class="modal-box">
+    <div class="modal-icon">⚠️</div>
+    <h3 class="modal-title" id="modal-title">Confirm Deletion</h3>
+    <p class="modal-desc" id="modal-desc">Are you sure you want to delete this item? This action cannot be undone.</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-danger" id="modal-confirm-btn">🗑️ Delete Forever</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notifications Container -->
+<div id="toast-container"></div>
+
+<script>
+// ── Global State ─────────────────────────────────────────────
+let AUTH_TOKEN = localStorage.getItem('cms_token') || '';
+let CURRENT_USER = null;
+let POSTS = [];
+let MEDIA = [];
+let EDITING_SLUG = null;
+let MODAL_CALLBACK = null;
+
+// ── API Helper ───────────────────────────────────────────────
+async function api(method, path, body = null) {
+  const opts = {
+    method,
+    headers: { 'Content-Type': 'application/json' }
+  };
+  if (AUTH_TOKEN) opts.headers['Authorization'] = `Bearer ${AUTH_TOKEN}`;
+  if (body) opts.body = JSON.stringify(body);
+  
+  try {
+    const res = await fetch(path, opts);
+    if (res.status === 401) {
+      AUTH_TOKEN = '';
+      localStorage.removeItem('cms_token');
+      showLoginScreen();
+      return { ok: false, error: 'Unauthorized' };
+    }
+    return await res.json();
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+}
+
+async function apiUpload(file) {
+  const form = new FormData();
+  form.append('file', file);
+  try {
+    const res = await fetch('/api/cms/upload', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${AUTH_TOKEN}` },
+      body: form
+    });
+    return await res.json();
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+}
+
+// ── Toast System ─────────────────────────────────────────────
+function toast(message, type = 'success') {
+  const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+  const el = document.createElement('div');
+  el.className = `toast toast-${type}`;
+  el.innerHTML = `<span>${icons[type] || ''}</span><span>${message}</span>`;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+// ── Modal Confirmation ───────────────────────────────────────
+function openConfirmModal(title, desc, onConfirm) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-desc').innerHTML = desc;
+  MODAL_CALLBACK = onConfirm;
+  
+  const confirmBtn = document.getElementById('modal-confirm-btn');
+  confirmBtn.onclick = async () => {
+    confirmBtn.disabled = true;
+    confirmBtn.innerHTML = '<span class="spinner"></span> Deleting...';
+    if (MODAL_CALLBACK) await MODAL_CALLBACK();
+    confirmBtn.disabled = false;
+    confirmBtn.innerHTML = '🗑️ Delete Forever';
+    closeModal();
+  };
+  
+  document.getElementById('confirm-modal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('confirm-modal').classList.remove('active');
+  MODAL_CALLBACK = null;
+}
+
+// ── Auth Handling ────────────────────────────────────────────
+async function handleLogin(e) {
+  e.preventDefault();
+  const btn = document.getElementById('login-btn');
+  const errEl = document.getElementById('login-error');
+  errEl.style.display = 'none';
+  btn.innerHTML = '<span class="spinner"></span> Signing in...';
+  btn.disabled = true;
+
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+
+  const data = await api('POST', '/api/cms/login', { email, password });
+  if (data.ok) {
+    AUTH_TOKEN = data.token;
+    CURRENT_USER = data.user;
+    localStorage.setItem('cms_token', AUTH_TOKEN);
+    showApp();
+    toast('Welcome back to ReevanaX Studio!');
+  } else {
+    errEl.textContent = data.error || 'Invalid credentials.';
+    errEl.style.display = 'block';
+  }
+  btn.innerHTML = 'Sign In to Studio';
+  btn.disabled = false;
+}
+
+function handleLogout() {
+  api('POST', '/api/cms/logout');
+  AUTH_TOKEN = '';
+  CURRENT_USER = null;
+  localStorage.removeItem('cms_token');
+  showLoginScreen();
+  toast('Signed out successfully.', 'info');
+}
+
+function showLoginScreen() {
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('app').classList.remove('active');
+}
+
+function showApp() {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').classList.add('active');
+  if (CURRENT_USER) {
+    document.getElementById('user-name').textContent = CURRENT_USER.display_name || CURRENT_USER.email;
+    document.getElementById('user-avatar').textContent = (CURRENT_USER.display_name || CURRENT_USER.email)[0].toUpperCase();
+  }
+  showView('dashboard');
+}
+
+// ── Navigation ───────────────────────────────────────────────
+function showView(view) {
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  const target = document.querySelector(`.nav-item[data-view="${view}"]`);
+  if (target) target.classList.add('active');
+
+  const titles = {
+    dashboard: 'Dashboard',
+    posts: 'All Blog Posts',
+    editor: EDITING_SLUG ? 'Edit Blog Post' : 'Create New Article',
+    media: 'Media Library'
+  };
+  document.getElementById('topbar-title').textContent = titles[view] || '';
+
+  if (view === 'dashboard') renderDashboard();
+  else if (view === 'posts') renderPosts();
+  else if (view === 'editor') renderEditor();
+  else if (view === 'media') renderMedia();
+}
+
+// ── Dashboard View ───────────────────────────────────────────
+async function renderDashboard() {
+  const area = document.getElementById('content-area');
+  area.innerHTML = '<div style="text-align:center;padding:60px"><span class="spinner" style="color:var(--gold);width:28px;height:28px;"></span></div>';
+
+  const [statsData, postsData] = await Promise.all([
+    api('GET', '/api/cms/stats'),
+    api('GET', '/api/cms/posts')
+  ]);
+
+  POSTS = postsData.posts || [];
+  const s = statsData || { total: 0, published: 0, drafts: 0, media: 0 };
+  const recent = POSTS.slice(0, 5);
+
+  area.innerHTML = `
+    <div class="stats-grid fade-in">
+      <div class="stat-card">
+        <div class="stat-icon">📝</div>
+        <div>
+          <div class="stat-value">${s.total || 0}</div>
+          <div class="stat-label">Total Articles</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--success-bg);color:var(--success)">🟢</div>
+        <div>
+          <div class="stat-value">${s.published || 0}</div>
+          <div class="stat-label">Published Live</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(245,158,11,0.15);color:var(--warning)">📋</div>
+        <div>
+          <div class="stat-value">${s.drafts || 0}</div>
+          <div class="stat-label">Drafts</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(96,165,250,0.15);color:var(--info)">🖼️</div>
+        <div>
+          <div class="stat-value">${s.media || 0}</div>
+          <div class="stat-label">Media Files</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card fade-in">
+      <div class="table-header">
+        <h3 style="font-family:'Sora',sans-serif;font-size:16px;color:var(--text)">Recent Articles</h3>
+        <button class="btn btn-primary btn-sm" onclick="newPost()">✏️ Create New Post</button>
+      </div>
+      ${recent.length ? `
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th style="text-align:right">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${recent.map(p => `
+              <tr>
+                <td>
+                  <span class="post-title-link" onclick="editPost('${p.slug}')">${esc(p.title)}</span>
+                </td>
+                <td style="color:var(--text-dim)">${esc(p.category)}</td>
+                <td style="color:var(--text-muted)">${p.date}</td>
+                <td><span class="badge badge-${p.status}">${p.status}</span></td>
+                <td>
+                  <div class="actions-cell" style="justify-content:flex-end">
+                    <button class="btn-icon" onclick="editPost('${p.slug}')" title="Edit Article">✏️</button>
+                    ${p.status === 'published' ? `<a href="/blogs/${p.slug}/" target="_blank" class="btn-icon" title="View Live">👁️</a>` : ''}
+                    <button class="btn-icon btn-icon-danger" onclick="confirmDeletePost('${p.slug}', '${attr(p.title)}')" title="Delete Article">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      ` : '<div style="padding:40px;text-align:center;color:var(--text-muted)">No articles created yet.</div>'}
+    </div>
+  `;
+}
+
+// ── All Posts View ───────────────────────────────────────────
+async function renderPosts() {
+  const area = document.getElementById('content-area');
+  area.innerHTML = '<div style="text-align:center;padding:60px"><span class="spinner" style="color:var(--gold);width:28px;height:28px;"></span></div>';
+
+  const data = await api('GET', '/api/cms/posts');
+  POSTS = data.posts || [];
+
+  area.innerHTML = `
+    <div class="table-card fade-in">
+      <div class="table-header">
+        <div class="table-search">
+          <span>🔍</span>
+          <input type="text" id="post-search-input" placeholder="Search by title, tag, category..." oninput="filterPostsTable()">
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <span style="color:var(--text-muted);font-size:13px" id="posts-count-label">${POSTS.length} Articles</span>
+          <button class="btn btn-primary btn-sm" onclick="newPost()">✏️ New Post</button>
+        </div>
+      </div>
+      <div id="posts-table-container">
+        ${renderPostsTableRows(POSTS)}
+      </div>
+    </div>
+  `;
+}
+
+function renderPostsTableRows(postsList) {
+  if (!postsList.length) {
+    return '<div style="padding:40px;text-align:center;color:var(--text-muted)">No matching articles found.</div>';
+  }
+  return `
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Title & URL</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th style="text-align:right">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${postsList.map(p => `
+          <tr>
+            <td>
+              <span class="post-title-link" onclick="editPost('${p.slug}')">${esc(p.title)}</span>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">/blogs/${p.slug}/</div>
+            </td>
+            <td style="color:var(--text-dim)">${esc(p.category)}</td>
+            <td style="color:var(--text-muted)">${p.date}</td>
+            <td><span class="badge badge-${p.status}">${p.status}</span></td>
+            <td>
+              <div class="actions-cell" style="justify-content:flex-end">
+                <button class="btn-icon" onclick="editPost('${p.slug}')" title="Edit Article">✏️</button>
+                ${p.status === 'draft' ? `<button class="btn-icon" onclick="quickPublish('${p.slug}')" title="Publish" style="color:var(--success)">🚀</button>` : ''}
+                ${p.status === 'published' ? `<a href="/blogs/${p.slug}/" target="_blank" class="btn-icon" title="View Live">👁️</a>` : ''}
+                <button class="btn-icon btn-icon-danger" onclick="confirmDeletePost('${p.slug}', '${attr(p.title)}')" title="Delete Article">🗑️</button>
+              </div>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function filterPostsTable() {
+  const q = document.getElementById('post-search-input').value.toLowerCase().trim();
+  const filtered = POSTS.filter(p => 
+    p.title.toLowerCase().includes(q) || 
+    p.category.toLowerCase().includes(q) || 
+    p.slug.toLowerCase().includes(q)
+  );
+  document.getElementById('posts-table-container').innerHTML = renderPostsTableRows(filtered);
+  document.getElementById('posts-count-label').textContent = `${filtered.length} of ${POSTS.length} Articles`;
+}
+
+// ── Post Editor View ─────────────────────────────────────────
+async function renderEditor(postData = null) {
+  const area = document.getElementById('content-area');
+  const p = postData || {
+    title: '', slug: '', date: new Date().toISOString().slice(0, 10),
+    author: 'Dr. ReevanaX Medical Team', category: 'Skincare Treatment',
+    tags: [], featured_image: '', featured_image_alt: '',
+    excerpt: '', body: '', meta_title: '', meta_description: '',
+    focus_keyword: '', status: 'draft'
+  };
+
+  const categories = [
+    'Skincare Treatment', 'Haircare Treatment', 'Laser Treatments', 
+    'Plastic Surgery', 'Cosmetic Gynecology', 'Anti-Aging', 
+    'Male Aesthetics', 'Pre-Wedding Treatments', 'Dermatology Surat'
+  ];
+  const tagsArray = Array.isArray(p.tags) ? p.tags : [];
+
+  document.getElementById('topbar-title').textContent = EDITING_SLUG ? `Edit: ${p.title}` : 'Create New Article';
+
+  area.innerHTML = `
+    <div class="editor-grid fade-in">
+      <!-- Left Column (Content) -->
+      <div>
+        <!-- Title & Slug Card -->
+        <div class="editor-card">
+          <div class="form-group">
+            <label>Article Title</label>
+            <input type="text" id="ed-title" class="form-input" style="font-size:18px;font-weight:700;padding:13px;" placeholder="e.g. Best Skin Treatment in Surat" value="${attr(p.title)}" oninput="autoSlug()">
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0">
+              <label>URL Slug</label>
+              <input type="text" id="ed-slug" class="form-input" placeholder="auto-generated-slug" value="${attr(p.slug)}" oninput="updateSlugPreview()">
+              <div class="form-hint">URL: /blogs/<strong id="slug-preview" style="color:var(--gold)">${p.slug || '...'}</strong>/</div>
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label>Publish Date</label>
+              <input type="date" id="ed-date" class="form-input" value="${p.date}">
+            </div>
+          </div>
+        </div>
+
+        <!-- Markdown Editor Card -->
+        <div class="editor-card">
+          <h3>✍️ Content Editor</h3>
+          <div class="md-toolbar">
+            <button type="button" onclick="mdInsert('## ','heading')" title="Heading 2">H2</button>
+            <button type="button" onclick="mdInsert('### ','heading')" title="Heading 3">H3</button>
+            <div class="sep"></div>
+            <button type="button" onclick="mdWrap('**')" title="Bold"><b>B</b></button>
+            <button type="button" onclick="mdWrap('*')" title="Italic"><i>I</i></button>
+            <div class="sep"></div>
+            <button type="button" onclick="mdInsert('* ','list')" title="Bullet List">• List</button>
+            <button type="button" onclick="mdInsert('1. ','list')" title="Numbered List">1. List</button>
+            <div class="sep"></div>
+            <button type="button" onclick="mdInsert('[Link Text](/face-procedures/)', 'inline')" title="Internal Link">🔗 Link</button>
+            <button type="button" onclick="mdInsert('![Alt Text](/assets/uploads/2025/12/02Banner-1.jpg)', 'inline')" title="Image">🖼️ Image</button>
+            <button type="button" onclick="mdInsertTable()" title="Insert Table">📊 Table</button>
+          </div>
+          <textarea id="ed-body" class="form-input md-body-area" placeholder="Write rich article content in Markdown...">${esc(p.body)}</textarea>
+        </div>
+
+        <!-- Excerpt Card -->
+        <div class="editor-card">
+          <h3>📋 Summary Excerpt</h3>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Short Description <span class="char-counter" id="excerpt-counter">0/160</span></label>
+            <textarea id="ed-excerpt" class="form-input" rows="3" placeholder="1-2 sentences for search engines, cards, and social share previews..." oninput="updateCounter('ed-excerpt','excerpt-counter',160)">${esc(p.excerpt)}</textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (Sidebar Controls) -->
+      <div>
+        <!-- Publish Action Card -->
+        <div class="editor-card">
+          <h3>🚀 Actions</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;">
+            <button class="btn btn-success" onclick="savePost('published')">🚀 Publish to Live Site</button>
+            <button class="btn btn-secondary" onclick="savePost('draft')">💾 Save as Draft</button>
+            ${EDITING_SLUG ? `<button class="btn btn-danger" onclick="confirmDeletePost('${p.slug}', '${attr(p.title)}')">🗑️ Delete This Article</button>` : ''}
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
+            <span style="font-size:12px;color:var(--text-muted)">Current Status:</span>
+            <span class="badge badge-${p.status}">${p.status}</span>
+          </div>
+        </div>
+
+        <!-- Featured Image Card -->
+        <div class="editor-card">
+          <h3>🖼️ Featured Banner</h3>
+          <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()"
+               ondragover="event.preventDefault();this.classList.add('dragover')"
+               ondragleave="this.classList.remove('dragover')"
+               ondrop="handleDrop(event)">
+            <div style="font-size:24px;margin-bottom:4px;">📸</div>
+            <p style="font-size:13px;font-weight:600">Click or drag banner image</p>
+            <p style="font-size:11px;color:var(--text-muted)">Recommended: 780×520px</p>
+          </div>
+          <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileSelect(this)">
+          
+          <div id="upload-preview" class="upload-preview" style="${p.featured_image ? '' : 'display:none'}">
+            ${p.featured_image ? `<img src="${p.featured_image}" alt="Banner Preview">` : ''}
+          </div>
+          
+          <div class="form-group" style="margin-top:14px;">
+            <label>Image URL Path</label>
+            <input type="text" id="ed-featured-image" class="form-input" placeholder="/assets/uploads/2025/12/01Banner-2.jpg" value="${attr(p.featured_image)}" oninput="updateImagePreview(this.value)">
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Image Alt Text (SEO)</label>
+            <input type="text" id="ed-featured-image-alt" class="form-input" placeholder="Descriptive image alt text..." value="${attr(p.featured_image_alt)}">
+          </div>
+        </div>
+
+        <!-- Meta Information Card -->
+        <div class="editor-card">
+          <h3>📂 Taxonomy & Author</h3>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="ed-category" class="form-input">
+              ${categories.map(c => `<option value="${c}" ${c === p.category ? 'selected' : ''}>${c}</option>`).join('')}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Author</label>
+            <input type="text" id="ed-author" class="form-input" value="${attr(p.author)}">
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Tags</label>
+            <div class="tags-container" id="tags-container" onclick="document.getElementById('tags-input').focus()">
+              ${tagsArray.map(t => `<span class="tag-pill">${esc(t)}<span class="remove" onclick="removeTag(this)">&times;</span></span>`).join('')}
+              <input type="text" id="tags-input" class="tags-input" placeholder="Add tag & press Enter..." onkeydown="handleTagKey(event)">
+            </div>
+          </div>
+        </div>
+
+        <!-- SEO Settings Card -->
+        <div class="editor-card">
+          <h3>🔍 Google SEO</h3>
+          <div class="form-group">
+            <label>Focus Keyword</label>
+            <input type="text" id="ed-focus-keyword" class="form-input" placeholder="e.g. best skincare surat" value="${attr(p.focus_keyword)}">
+          </div>
+          <div class="form-group">
+            <label>Meta Title <span class="char-counter" id="mt-counter">0/60</span></label>
+            <input type="text" id="ed-meta-title" class="form-input" placeholder="SEO Title (50-60 chars)" value="${attr(p.meta_title)}" oninput="updateCounter('ed-meta-title','mt-counter',60);updateSeoPreview()">
+          </div>
+          <div class="form-group">
+            <label>Meta Description <span class="char-counter" id="md-counter">0/155</span></label>
+            <textarea id="ed-meta-description" class="form-input" rows="3" placeholder="SEO Description (120-155 chars)" oninput="updateCounter('ed-meta-description','md-counter',155);updateSeoPreview()">${esc(p.meta_description)}</textarea>
+          </div>
+          <div class="seo-preview">
+            <div class="seo-preview-url">reevanax.com › blogs › <span id="seo-slug">${p.slug || '...'}</span></div>
+            <div class="seo-preview-title" id="seo-title">${esc(p.meta_title || p.title || 'Your Post Title')}</div>
+            <div class="seo-preview-desc" id="seo-desc">${esc(p.meta_description || p.excerpt || 'Meta description snippet...')}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ── Media Library View ───────────────────────────────────────
+async function renderMedia() {
+  const area = document.getElementById('content-area');
+  area.innerHTML = '<div style="text-align:center;padding:60px"><span class="spinner" style="color:var(--gold);width:28px;height:28px;"></span></div>';
+
+  const data = await api('GET', '/api/cms/media');
+  MEDIA = data.media || [];
+
+  area.innerHTML = `
+    <div class="table-card fade-in">
+      <div class="table-header">
+        <div class="table-search">
+          <span>🔍</span>
+          <input type="text" id="media-search-input" placeholder="Search media files..." oninput="filterMediaGrid()">
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('media-file-input').click()">📤 Upload Image</button>
+          <input type="file" id="media-file-input" accept="image/*" style="display:none" onchange="uploadNewMediaFile(this)">
+        </div>
+      </div>
+
+      <div style="padding:22px;">
+        <div class="media-grid" id="media-grid-container">
+          ${renderMediaCards(MEDIA)}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderMediaCards(mediaList) {
+  if (!mediaList.length) {
+    return '<div style="padding:40px;text-align:center;color:var(--text-muted);grid-column:1/-1;">No media uploaded yet. Click Upload Image above to add banners and photos!</div>';
+  }
+  return mediaList.map(m => `
+    <div class="media-card">
+      <div class="media-thumb-wrap">
+        <img src="${m.path}" alt="${esc(m.filename)}" loading="lazy">
+        <div class="media-overlay">
+          <button class="btn btn-secondary btn-sm" onclick="copyMediaPath('${m.path}')" title="Copy URL">📋 Copy</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmDeleteMedia('${m.id}', '${attr(m.filename)}')" title="Delete Image">🗑️</button>
+        </div>
+      </div>
+      <div class="media-info">
+        <div class="media-filename" title="${esc(m.filename)}">${esc(m.filename)}</div>
+        <div class="media-meta">
+          <span>${formatBytes(m.size || 0)}</span>
+          <span style="cursor:pointer;color:var(--gold)" onclick="copyMediaPath('${m.path}')">Copy Link</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterMediaGrid() {
+  const q = document.getElementById('media-search-input').value.toLowerCase().trim();
+  const filtered = MEDIA.filter(m => m.filename.toLowerCase().includes(q) || m.path.toLowerCase().includes(q));
+  document.getElementById('media-grid-container').innerHTML = renderMediaCards(filtered);
+}
+
+async function uploadNewMediaFile(input) {
+  if (!input.files[0]) return;
+  toast('Uploading image...', 'info');
+  const result = await apiUpload(input.files[0]);
+  if (result.ok) {
+    toast(`Uploaded: ${result.filename}`, 'success');
+    renderMedia();
+  } else {
+    toast(result.error || 'Upload failed', 'error');
+  }
+  input.value = '';
+}
+
+function copyMediaPath(path) {
+  navigator.clipboard.writeText(path).then(() => toast('Image path copied to clipboard!')).catch(() => {});
+}
+
+// ── Delete Handlers with Confirmation Modals ────────────────
+function confirmDeletePost(slug, title) {
+  openConfirmModal(
+    'Delete Blog Article',
+    `Are you sure you want to permanently delete <strong>"${title || slug}"</strong>?<br><br>This will remove the article, delete static HTML files, and rebuild the live blog pages.`,
+    async () => {
+      const res = await api('DELETE', `/api/cms/posts/${slug}`);
+      if (res.ok) {
+        toast('Blog post deleted successfully!');
+        if (EDITING_SLUG === slug) EDITING_SLUG = null;
+        showView('posts');
+      } else {
+        toast(res.error || 'Delete failed', 'error');
+      }
+    }
+  );
+}
+
+function confirmDeleteMedia(mediaId, filename) {
+  openConfirmModal(
+    'Delete Media Image',
+    `Are you sure you want to permanently delete <strong>"${filename}"</strong> from the media library?`,
+    async () => {
+      const res = await api('DELETE', `/api/cms/media/${mediaId}`);
+      if (res.ok) {
+        toast('Media file deleted!');
+        renderMedia();
+      } else {
+        toast(res.error || 'Delete failed', 'error');
+      }
+    }
+  );
+}
+
+// ── Editor Helper Functions ──────────────────────────────────
+function autoSlug() {
+  const title = document.getElementById('ed-title').value;
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  document.getElementById('ed-slug').value = slug;
+  updateSlugPreview();
+}
+
+function updateSlugPreview() {
+  const slug = document.getElementById('ed-slug').value || '...';
+  document.getElementById('slug-preview').textContent = slug;
+  document.getElementById('seo-slug').textContent = slug;
+  updateSeoPreview();
+}
+
+function updateImagePreview(url) {
+  const preview = document.getElementById('upload-preview');
+  if (url) {
+    preview.innerHTML = `<img src="${url}" alt="Preview">`;
+    preview.style.display = 'block';
+  } else {
+    preview.style.display = 'none';
+  }
+}
+
+function mdInsert(prefix, type) {
+  const ta = document.getElementById('ed-body');
+  const start = ta.selectionStart;
+  const end = ta.selectionEnd;
+  const val = ta.value;
+  if (type === 'heading' || type === 'list') {
+    const lineStart = val.lastIndexOf('\n', start - 1) + 1;
+    ta.value = val.slice(0, lineStart) + prefix + val.slice(lineStart);
+    ta.selectionStart = ta.selectionEnd = lineStart + prefix.length;
+  } else {
+    ta.value = val.slice(0, start) + prefix + val.slice(end);
+    ta.selectionStart = ta.selectionEnd = start + prefix.length;
+  }
+  ta.focus();
+}
+
+function mdWrap(marker) {
+  const ta = document.getElementById('ed-body');
+  const start = ta.selectionStart;
+  const end = ta.selectionEnd;
+  const selected = ta.value.slice(start, end) || 'text';
+  ta.value = ta.value.slice(0, start) + marker + selected + marker + ta.value.slice(end);
+  ta.selectionStart = start + marker.length;
+  ta.selectionEnd = start + marker.length + selected.length;
+  ta.focus();
+}
+
+function mdInsertTable() {
+  const table = '\n| Service | Sessions | Result |\n| :--- | :--- | :--- |\n| Laser Facial | 3-4 | Instant Radiance |\n| Hair PRP | 4-6 | Thicker Density |\n\n';
+  const ta = document.getElementById('ed-body');
+  const end = ta.selectionEnd;
+  ta.value = ta.value.slice(0, end) + table + ta.value.slice(end);
+  ta.focus();
+}
+
+function updateCounter(inputId, counterId, max) {
+  const len = document.getElementById(inputId).value.length;
+  document.getElementById(counterId).textContent = `${len}/${max}`;
+}
+
+function updateSeoPreview() {
+  const title = document.getElementById('ed-meta-title')?.value || document.getElementById('ed-title')?.value || 'Your Post Title';
+  const desc = document.getElementById('ed-meta-description')?.value || document.getElementById('ed-excerpt')?.value || 'Meta description snippet...';
+  const slug = document.getElementById('ed-slug')?.value || '...';
+  if (document.getElementById('seo-title')) document.getElementById('seo-title').textContent = title;
+  if (document.getElementById('seo-desc')) document.getElementById('seo-desc').textContent = desc;
+  if (document.getElementById('seo-slug')) document.getElementById('seo-slug').textContent = slug;
+}
+
+// ── Tags Management ──────────────────────────────────────────
+function handleTagKey(e) {
+  if (e.key === 'Enter' || e.key === ',') {
+    e.preventDefault();
+    const input = e.target;
+    const tag = input.value.trim().replace(/,/g, '');
+    if (!tag) return;
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill';
+    pill.innerHTML = `${esc(tag)}<span class="remove" onclick="removeTag(this)">&times;</span>`;
+    input.parentElement.insertBefore(pill, input);
+    input.value = '';
+  }
+}
+
+function removeTag(el) {
+  el.parentElement.remove();
+}
+
+function getTags() {
+  const pills = document.querySelectorAll('#tags-container .tag-pill');
+  return Array.from(pills).map(p => p.childNodes[0].textContent.trim());
+}
+
+// ── File Drop & Upload in Editor ─────────────────────────────
+async function handleFileSelect(input) {
+  if (!input.files[0]) return;
+  await uploadBannerFile(input.files[0]);
+  input.value = '';
+}
+
+async function handleDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('dragover');
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) {
+    await uploadBannerFile(file);
+  }
+}
+
+async function uploadBannerFile(file) {
+  const zone = document.getElementById('upload-zone');
+  zone.innerHTML = '<span class="spinner" style="color:var(--gold)"></span> Uploading...';
+  const result = await apiUpload(file);
+  if (result.ok) {
+    document.getElementById('ed-featured-image').value = result.path;
+    updateImagePreview(result.path);
+    toast(`Banner uploaded: ${result.filename}`);
+  } else {
+    toast(result.error || 'Upload failed', 'error');
+  }
+  zone.innerHTML = '<div style="font-size:24px;margin-bottom:4px;">📸</div><p style="font-size:13px;font-weight:600">Click or drag banner image</p><p style="font-size:11px;color:var(--text-muted)">Recommended: 780×520px</p>';
+}
+
+// ── Save / Quick Publish / Edit Post ─────────────────────────
+async function savePost(status) {
+  const postData = {
+    title: document.getElementById('ed-title').value.trim(),
+    slug: document.getElementById('ed-slug').value.trim(),
+    date: document.getElementById('ed-date').value,
+    author: document.getElementById('ed-author').value.trim(),
+    category: document.getElementById('ed-category').value,
+    tags: getTags(),
+    featured_image: document.getElementById('ed-featured-image').value.trim(),
+    featured_image_alt: document.getElementById('ed-featured-image-alt').value.trim(),
+    excerpt: document.getElementById('ed-excerpt').value.trim(),
+    body: document.getElementById('ed-body').value,
+    meta_title: document.getElementById('ed-meta-title').value.trim(),
+    meta_description: document.getElementById('ed-meta-description').value.trim(),
+    focus_keyword: document.getElementById('ed-focus-keyword').value.trim(),
+    status: status
+  };
+
+  if (!postData.title) {
+    toast('Article title is required', 'error');
+    return;
+  }
+
+  let result;
+  if (EDITING_SLUG) {
+    result = await api('PUT', `/api/cms/posts/${EDITING_SLUG}`, postData);
+  } else {
+    result = await api('POST', '/api/cms/posts', postData);
+  }
+
+  if (result.ok) {
+    const newSlug = result.slug || postData.slug;
+    if (status === 'published') {
+      const pubResult = await api('POST', `/api/cms/posts/${newSlug}/publish`);
+      if (pubResult.ok) {
+        toast(`Article Published Live! /blogs/${newSlug}/`, 'success');
+      } else {
+        toast(pubResult.error || 'Publish failed', 'error');
+      }
+    } else {
+      toast('Draft saved successfully!', 'success');
+    }
+    EDITING_SLUG = null;
+    showView('posts');
+  } else {
+    toast(result.error || 'Save failed', 'error');
+  }
+}
+
+async function quickPublish(slug) {
+  const result = await api('POST', `/api/cms/posts/${slug}/publish`);
+  if (result.ok) {
+    toast(`Published: /blogs/${slug}/`, 'success');
+    showView('posts');
+  } else {
+    toast(result.error || 'Publish failed', 'error');
+  }
+}
+
+function newPost() {
+  EDITING_SLUG = null;
+  showView('editor');
+}
+
+async function editPost(slug) {
+  EDITING_SLUG = slug;
+  const data = await api('GET', `/api/cms/posts/${slug}`);
+  if (data.ok) {
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    document.querySelector('.nav-item[data-view="editor"]').classList.add('active');
+    renderEditor(data.post);
+  } else {
+    toast('Post not found', 'error');
+  }
+}
+
+// ── Utility Helpers ──────────────────────────────────────────
+function esc(s) {
+  if (!s) return '';
+  const d = document.createElement('div');
+  d.textContent = String(s);
+  return d.innerHTML;
+}
+
+function attr(s) {
+  return esc(s).replace(/"/g, '&quot;');
+}
+
+function formatBytes(bytes) {
+  if (!bytes) return '0 B';
+  const k = 1024;
+  const sizes = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+}
+
+// ── App Init ─────────────────────────────────────────────────
+(async function init() {
+  if (AUTH_TOKEN) {
+    const data = await api('GET', '/api/cms/me');
+    if (data.ok) {
+      CURRENT_USER = data.user;
+      showApp();
+    } else {
+      showLoginScreen();
+    }
+  } else {
+    showLoginScreen();
+  }
+})();
+</script>
 </body>
 </html>

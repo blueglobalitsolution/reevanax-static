@@ -4,7 +4,7 @@ ReevanaX Blog Static Site Generator & SEO Publisher.
 
 Reads Markdown files from `content/blogs/*.md`, parses YAML frontmatter,
 and compiles:
-  1. Single static post pages at `blogs/<slug>/index.html` (with full SEO, Schema.org JSON-LD, OpenGraph).
+  1. Single static post pages at `blogs/<slug>/index.html` (with full authentic Elementor Layout matching Screenshot 1).
   2. Blog overview grid at `blogs/index.html`.
   3. XML Sitemap at `sitemap.xml`.
 """
@@ -27,6 +27,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content" / "blogs"
 BLOGS_DIR = ROOT / "blogs"
+DATA_DIR = ROOT / "_data"
 SITE_URL = "https://reevanax.com"
 
 
@@ -49,7 +50,7 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
         except Exception:
             pass
 
-    # Fallback simple parser if yaml fails
+    # Fallback simple parser
     data = {}
     for line in raw_yaml.splitlines():
         line = line.strip()
@@ -63,160 +64,110 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
     return data, body
 
 
-def markdown_to_html(md: str) -> str:
-    """Fast, clean Markdown to semantic HTML converter."""
+def markdown_to_elementor_widgets(md: str) -> str:
+    """Convert Markdown content into clean, semantic Elementor widgets."""
     lines = md.splitlines()
-    html_out = []
+    widgets = []
+    
+    current_text_lines = []
     in_list = False
     list_type = "ul"
-    in_table = False
-    table_rows = []
-    in_code = False
-    code_block = []
-
-    def close_list():
-        nonlocal in_list, list_type
+    
+    def flush_text_widget():
+        nonlocal current_text_lines, in_list
         if in_list:
-            html_out.append(f"</{list_type}>")
+            current_text_lines.append(f"</{list_type}>")
             in_list = False
-
-    def close_table():
-        nonlocal in_table, table_rows
-        if in_table:
-            if table_rows:
-                html_out.append('<div class="table-responsive"><table class="blog-table">')
-                for idx, row in enumerate(table_rows):
-                    if idx == 0:
-                        html_out.append("<thead><tr>" + "".join(f"<th>{c}</th>" for c in row) + "</tr></thead><tbody>")
-                    else:
-                        html_out.append("<tr>" + "".join(f"<td>{c}</td>" for c in row) + "</tr>")
-                html_out.append("</tbody></table></div>")
-            table_rows = []
-            in_table = False
+        if current_text_lines:
+            html_chunk = "\n".join(current_text_lines).strip()
+            if html_chunk:
+                widgets.append(f"""<div class="elementor-element elementor-widget elementor-widget-text-editor">
+    <div class="elementor-widget-container">
+        {html_chunk}
+    </div>
+</div>""")
+            current_text_lines = []
 
     def format_inline(text: str) -> str:
-        # Images: ![alt](url)
-        text = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1" class="blog-inline-img" loading="lazy" />', text)
         # Links: [text](url)
-        text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" class="blog-link">\1</a>', text)
-        # Bold: **text** or __text__
-        text = re.sub(r'(\*\*|__)(.*?)\1', r'<strong>\2</strong>', text)
-        # Italic: *text* or _text_
+        text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', text)
+        # Bold: **text**
+        text = re.sub(r'(\*\*|__)(.*?)\1', r'<b>\2</b>', text)
+        # Italic: *text*
         text = re.sub(r'(\*|_)(.*?)\1', r'<em>\2</em>', text)
-        # Code: `code`
-        text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
         return text
 
-    i = 0
-    while i < len(lines):
-        line = lines[i]
+    for line in lines:
         trimmed = line.strip()
-
-        # Code block toggle
-        if trimmed.startswith("```"):
-            close_list()
-            close_table()
-            if in_code:
-                code_content = html.escape("\n".join(code_block))
-                html_out.append(f'<pre class="blog-code-block"><code>{code_content}</code></pre>')
-                code_block = []
-                in_code = False
-            else:
-                in_code = True
-            i += 1
-            continue
-
-        if in_code:
-            code_block.append(line)
-            i += 1
-            continue
-
+        
         if not trimmed:
-            close_list()
-            close_table()
-            i += 1
+            continue
+
+        # In-content Image: ![alt](url)
+        img_match = re.match(r'^!\[([^\]]*)\]\(([^)]+)\)$', trimmed)
+        if img_match:
+            flush_text_widget()
+            alt_text = html.escape(img_match.group(1))
+            img_src = img_match.group(2)
+            widgets.append(f"""<div class="elementor-element elementor-widget elementor-widget-image">
+    <div class="elementor-widget-container">
+        <img decoding="async" width="780" height="520" src="{img_src}" class="attachment-large size-large" alt="{alt_text}" loading="lazy" style="border-radius:10px; width:100%; height:auto;" />
+    </div>
+</div>""")
+            continue
+
+        # Headings: #, ##, ###, ####
+        if trimmed.startswith("#"):
+            flush_text_widget()
+            level = len(trimmed) - len(trimmed.lstrip("#"))
+            level = min(max(level, 2), 4) # clamp to h2, h3, h4
+            h_text = format_inline(trimmed.lstrip("#").strip())
+            widgets.append(f"""<div class="elementor-element elementor-widget elementor-widget-heading">
+    <div class="elementor-widget-container">
+        <h{level} class="elementor-heading-title elementor-size-default">{h_text}</h{level}>
+    </div>
+</div>""")
             continue
 
         # Horizontal rule
         if trimmed in ("---", "***", "___"):
-            close_list()
-            close_table()
-            html_out.append('<hr class="blog-divider" />')
-            i += 1
+            flush_text_widget()
             continue
 
-        # Headings
-        if trimmed.startswith("#"):
-            close_list()
-            close_table()
-            level = len(trimmed) - len(trimmed.lstrip("#"))
-            level = min(level, 6)
-            title_text = format_inline(trimmed[level:].strip())
-            html_out.append(f'<h{level} class="blog-h{level}">{title_text}</h{level}>')
-            i += 1
-            continue
-
-        # Blockquote
-        if trimmed.startswith(">"):
-            close_list()
-            close_table()
-            quote_text = format_inline(trimmed.lstrip(">").strip())
-            html_out.append(f'<blockquote class="blog-blockquote"><p>{quote_text}</p></blockquote>')
-            i += 1
-            continue
-
-        # Unordered list item
+        # Unordered list
         if trimmed.startswith(("* ", "- ", "+ ")):
-            close_table()
             if not in_list or list_type != "ul":
-                close_list()
-                html_out.append('<ul class="blog-list">')
+                if in_list:
+                    current_text_lines.append(f"</{list_type}>")
+                current_text_lines.append("<ul>")
                 in_list = True
                 list_type = "ul"
             item_text = format_inline(trimmed[2:].strip())
-            html_out.append(f'<li>{item_text}</li>')
-            i += 1
+            current_text_lines.append(f"<li>{item_text}</li>")
             continue
 
-        # Ordered list item
+        # Ordered list
         m_ol = re.match(r'^\d+\.\s+(.*)$', trimmed)
         if m_ol:
-            close_table()
             if not in_list or list_type != "ol":
-                close_list()
-                html_out.append('<ol class="blog-list">')
+                if in_list:
+                    current_text_lines.append(f"</{list_type}>")
+                current_text_lines.append("<ol>")
                 in_list = True
                 list_type = "ol"
             item_text = format_inline(m_ol.group(1).strip())
-            html_out.append(f'<li>{item_text}</li>')
-            i += 1
+            current_text_lines.append(f"<li>{item_text}</li>")
             continue
 
-        # Table row
-        if trimmed.startswith("|") and trimmed.endswith("|"):
-            close_list()
-            cells = [format_inline(c.strip()) for c in trimmed[1:-1].split("|")]
-            # Check if separator row (e.g. |---|---|)
-            if all(set(c.replace(":", "").replace("-", "")) == set() for c in cells if c):
-                i += 1
-                continue
-            if not in_table:
-                in_table = True
-                table_rows = []
-            table_rows.append(cells)
-            i += 1
-            continue
-
-        # Normal Paragraph
-        close_list()
-        close_table()
+        # Paragraph
+        if in_list:
+            current_text_lines.append(f"</{list_type}>")
+            in_list = False
         p_text = format_inline(trimmed)
-        html_out.append(f'<p class="blog-p">{p_text}</p>')
-        i += 1
+        current_text_lines.append(f'<p><span style="font-weight: 400;">{p_text}</span></p>')
 
-    close_list()
-    close_table()
-    return "\n".join(html_out)
+    flush_text_widget()
+    return "\n".join(widgets)
 
 
 def get_all_posts() -> list[dict]:
@@ -241,7 +192,7 @@ def get_all_posts() -> list[dict]:
                 "featured_image_alt": meta.get("featured_image_alt", meta.get("title", "")),
                 "excerpt": meta.get("excerpt", ""),
                 "seo": meta.get("seo") or {},
-                "body_html": markdown_to_html(body),
+                "body_raw": body,
                 "filepath": md_file
             })
         except Exception as e:
@@ -251,25 +202,22 @@ def get_all_posts() -> list[dict]:
     return posts
 
 
-def render_single_post(post: dict) -> str:
-    """Render a standalone, high-SEO static HTML page for a single blog post."""
+def render_single_post(post: dict, all_posts: list[dict]) -> str:
+    """Render authentic Elementor single blog post matching Screenshot 1."""
     title = html.escape(post["title"])
     slug = post["slug"]
     canonical_url = post["seo"].get("canonical_url") or f"{SITE_URL}/blogs/{slug}/"
-    meta_title = html.escape(post["seo"].get("meta_title") or f"{post['title']} – ReevanaX Surat")
+    meta_title = html.escape(post["seo"].get("meta_title") or f"{post['title']} | ReevanaX")
     meta_desc = html.escape(post["seo"].get("meta_description") or post["excerpt"] or post["title"])
     image_url = urljoin(SITE_URL, post["featured_image"])
     author = html.escape(post["author"])
     category = html.escape(post["category"])
     date_str = str(post["date"])
     
-    # Format readable date
     try:
         dt = datetime.strptime(date_str, "%Y-%m-%d")
-        readable_date = dt.strftime("%B %d, %Y")
         iso_date = dt.isoformat()
     except Exception:
-        readable_date = date_str
         iso_date = date_str
 
     # JSON-LD Schema.org
@@ -300,328 +248,254 @@ def render_single_post(post: dict) -> str:
         }
     }, indent=2)
 
-    # Tags HTML
-    tags_html = "".join(f'<span class="blog-tag-pill">{html.escape(t)}</span>' for t in post.get("tags", []))
+    # Convert body into Elementor widgets
+    body_widgets = markdown_to_elementor_widgets(post["body_raw"])
+
+    # Recent Posts Sidebar items
+    recent_items = []
+    for other in all_posts[:5]:
+        other_slug = other["slug"]
+        other_title = html.escape(other["title"])
+        is_current = ' aria-current="page"' if other_slug == slug else ""
+        recent_items.append(f'<li><a href="/blogs/{other_slug}/"{is_current}>{other_title}</a></li>')
+    recent_posts_html = "\n".join(recent_items)
+
+    # Load authentic head, header, footer templates
+    head_template = (DATA_DIR / "post_template_head.html").read_text(encoding="utf-8")
+    header_template = (DATA_DIR / "post_template_header.html").read_text(encoding="utf-8")
+    footer_template = (DATA_DIR / "post_template_footer.html").read_text(encoding="utf-8")
+
+    # Replace SEO and metadata in head
+    head_html = re.sub(r'<title>.*?</title>', lambda m: f'<title>{meta_title}</title>', head_template, flags=re.DOTALL)
+    head_html = re.sub(r'<meta name="description" content=".*?" />', lambda m: f'<meta name="description" content="{meta_desc}" />', head_html)
+    head_html = re.sub(r'<link rel="canonical" href=".*?" />', lambda m: f'<link rel="canonical" href="{canonical_url}" />', head_html)
+    head_html = re.sub(r'<meta property="og:title" content=".*?" />', lambda m: f'<meta property="og:title" content="{meta_title}" />', head_html)
+    head_html = re.sub(r'<meta property="og:description" content=".*?" />', lambda m: f'<meta property="og:description" content="{meta_desc}" />', head_html)
+    head_html = re.sub(r'<meta property="og:url" content=".*?" />', lambda m: f'<meta property="og:url" content="{canonical_url}" />', head_html)
+    head_html = re.sub(r'<meta property="og:image" content=".*?" />', lambda m: f'<meta property="og:image" content="{image_url}" />', head_html)
+    head_html = re.sub(r'<meta name="twitter:title" content=".*?" />', lambda m: f'<meta name="twitter:title" content="{meta_title}" />', head_html)
+    head_html = re.sub(r'<meta name="twitter:description" content=".*?" />', lambda m: f'<meta name="twitter:description" content="{meta_desc}" />', head_html)
+    head_html = re.sub(r'<meta name="twitter:image" content=".*?" />', lambda m: f'<meta name="twitter:image" content="{image_url}" />', head_html)
+    head_html = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: f'<script type="application/ld+json">\n{schema_json}\n</script>', head_html, flags=re.DOTALL)
+
+    # Construct the Elementor middle post container matching Screenshot 2
+    post_container = f"""
+<style id="reevanax-single-post-layout">
+/* ReevanaX Single Post 2-Column Responsive Layout */
+.elementor-single-post-wrapper {{
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 40px 0 60px 0;
+}}
+.elementor-single-post-wrapper .elementor-element-bed2013 {{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}}
+.elementor-single-post-wrapper .elementor-element-bed2013 > .e-con-inner {{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}}
+.elementor-single-post-wrapper .elementor-element-ff49071 {{
+    flex: 1 1 67%;
+    width: 67%;
+    max-width: 67%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}}
+.elementor-single-post-wrapper .elementor-element-7402674 img,
+.elementor-single-post-wrapper .elementor-widget-image img {{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px auto;
+}}
+.elementor-single-post-wrapper .elementor-heading-title {{
+    color: #874D27;
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}}
+.elementor-single-post-wrapper h2.elementor-heading-title {{
+    font-size: 28px;
+}}
+.elementor-single-post-wrapper h3.elementor-heading-title {{
+    font-size: 22px;
+}}
+.elementor-single-post-wrapper h4.elementor-heading-title {{
+    font-size: 18px;
+}}
+.elementor-single-post-wrapper .elementor-widget-text-editor {{
+    font-family: "DM Sans", "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #383731;
+}}
+.elementor-single-post-wrapper .elementor-widget-text-editor p {{
+    margin-bottom: 18px;
+}}
+.elementor-single-post-wrapper .elementor-widget-text-editor a {{
+    color: #874D27;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}}
+.elementor-single-post-wrapper .elementor-widget-text-editor a:hover {{
+    color: #CBAE7D;
+}}
+.elementor-single-post-wrapper .elementor-element-cf08c52 {{
+    flex: 0 0 30%;
+    width: 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: sticky;
+    top: 100px;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df {{
+    background-color: #FBFBF2;
+    border: 1px solid #CBAE7D;
+    border-radius: 10px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+}}
+.elementor-single-post-wrapper .elementor-widget-wp-widget-recent-posts > .elementor-widget-container,
+.elementor-single-post-wrapper .elementor-widget-wp-widget-categories > .elementor-widget-container {{
+    background-color: #FFFFFF;
+    padding: 18px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(135, 77, 39, 0.08);
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df h5 {{
+    color: #874D27;
+    font-family: "Sora", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    border-bottom: 2px solid #CBAE7D;
+    padding-bottom: 6px;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df ul {{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df ul li {{
+    padding: 10px 0;
+    border-bottom: 1px solid #F2EEE5;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df ul li:last-child {{
+    border-bottom: none;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df ul li a {{
+    color: #27252A;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}}
+.elementor-single-post-wrapper .elementor-element-f7509df ul li a:hover {{
+    color: #874D27;
+    padding-left: 4px;
+}}
+
+@media (max-width: 991px) {{
+    .elementor-single-post-wrapper .elementor-element-bed2013,
+    .elementor-single-post-wrapper .elementor-element-bed2013 > .e-con-inner {{
+        flex-direction: column !important;
+        gap: 30px;
+    }}
+    .elementor-single-post-wrapper .elementor-element-ff49071,
+    .elementor-single-post-wrapper .elementor-element-cf08c52 {{
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        position: static;
+    }}
+}}
+</style>
+
+<div class="elementor-single-post-wrapper">
+    <div data-elementor-type="wp-post" class="elementor elementor-28843">
+        <div class="elementor-element elementor-element-bed2013 e-flex e-con-boxed e-con e-parent" data-id="bed2013" data-element_type="container">
+            <div class="e-con-inner">
+                <!-- Main Content Column (Left ~67%) -->
+                <div class="elementor-element elementor-element-ff49071 e-con-full e-flex e-con e-child" data-id="ff49071" data-element_type="container">
+                    <!-- Featured Banner Image -->
+                    <div class="elementor-element elementor-element-7402674 elementor-widget elementor-widget-image" data-id="7402674" data-element_type="widget" data-widget_type="image.default">
+                        <div class="elementor-widget-container">
+                            <img decoding="async" width="780" height="520" src="{post['featured_image']}" class="attachment-large size-large" alt="{html.escape(post['featured_image_alt'])}" loading="lazy" style="border-radius:10px; width:100%; height:auto;" />
+                        </div>
+                    </div>
+
+                    <!-- Post Body Content -->
+                    {body_widgets}
+                </div>
+
+                <!-- Sidebar Column (Right ~33%) -->
+                <div class="elementor-element elementor-element-cf08c52 e-con-full e-flex e-con e-child" data-id="cf08c52" data-element_type="container">
+                    <div class="elementor-element elementor-element-f7509df e-con-full e-flex e-con e-child" data-id="f7509df" data-element_type="container" data-settings='{{"background_background":"classic"}}'>
+                        <!-- Recent Posts Widget -->
+                        <div class="elementor-element elementor-element-96251af blog elementor-widget elementor-widget-wp-widget-recent-posts" data-id="96251af" data-element_type="widget" data-widget_type="wp-widget-recent-posts.default">
+                            <div class="elementor-widget-container">
+                                <h5>Recent Posts</h5>
+                                <ul>
+                                    {recent_posts_html}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="elementor-element elementor-element-484705e blog elementor-widget elementor-widget-wp-widget-categories" data-id="484705e" data-element_type="widget" data-widget_type="wp-widget-categories.default">
+                            <div class="elementor-widget-container">
+                                <h5>Categories</h5>
+                                <ul>
+                                    <li class="cat-item cat-item-140"><a href="/category/haircare-treatment/">Haircare Treatment</a></li>
+                                    <li class="cat-item cat-item-139"><a href="/category/skincare-treatment/">Skincare Treatment</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+"""
 
     return f"""<!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>{meta_title}</title>
-    <meta name="description" content="{meta_desc}" />
-    <link rel="canonical" href="{canonical_url}" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{meta_title}" />
-    <meta property="og:description" content="{meta_desc}" />
-    <meta property="og:url" content="{canonical_url}" />
-    <meta property="og:site_name" content="ReevanaX" />
-    <meta property="og:image" content="{image_url}" />
-    <meta property="article:published_time" content="{iso_date}" />
-    <meta property="article:section" content="{category}" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{meta_title}" />
-    <meta name="twitter:description" content="{meta_desc}" />
-    <meta name="twitter:image" content="{image_url}" />
-
-    <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
-{schema_json}
-    </script>
-
-    <!-- Core Stylesheets & Icons -->
-    <link rel="icon" href="/assets/uploads/2025/04/cropped-favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="/assets/uploads/2025/04/cropped-favicon-192x192.png" sizes="192x192" />
-    <link rel='stylesheet' href='/assets/plugins/elementor/assets/css/frontend.min.css' media='all' />
-    <link rel='stylesheet' href='/assets/themes/mellis/style.css' media='all' />
-    <link rel='stylesheet' href='/assets/site-optimized-media.css' media='all' />
-    
-    <style>
-        /* Single Post ReevanaX Luxury Layout Styling */
-        .blog-article-wrapper {{
-            background: #FDFBF2;
-            color: #27252A;
-            font-family: "Poppins", sans-serif;
-            padding-bottom: 60px;
-        }}
-        .blog-hero {{
-            background: #864D26;
-            color: #FFFFFF;
-            padding: 60px 20px 80px 20px;
-            text-align: center;
-            position: relative;
-        }}
-        .blog-breadcrumb {{
-            font-size: 14px;
-            color: #CEAE80;
-            margin-bottom: 20px;
-        }}
-        .blog-breadcrumb a {{
-            color: #CEAE80;
-            text-decoration: none;
-        }}
-        .blog-breadcrumb a:hover {{
-            text-decoration: underline;
-        }}
-        .blog-category-badge {{
-            display: inline-block;
-            background: #CEAE80;
-            color: #864D26;
-            font-weight: 700;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 6px 16px;
-            border-radius: 50px;
-            margin-bottom: 20px;
-        }}
-        .blog-main-title {{
-            font-family: "Marcellus", serif;
-            font-size: 40px;
-            line-height: 1.3em;
-            color: #FFFFFF;
-            max-width: 900px;
-            margin: 0 auto 20px auto;
-        }}
-        .blog-meta-info {{
-            font-size: 14px;
-            color: #E2E1DA;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }}
-        .blog-content-container {{
-            max-width: 880px;
-            margin: -40px auto 0 auto;
-            background: #FFFFFF;
-            border-radius: 15px;
-            padding: 40px 45px;
-            box-shadow: 0 10px 40px rgba(134, 77, 38, 0.08);
-            border: 1px solid rgba(206, 174, 128, 0.3);
-            position: relative;
-            z-index: 10;
-        }}
-        .blog-featured-banner {{
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 35px;
-            object-fit: cover;
-            max-height: 480px;
-            border: 1px solid #CEAE80;
-        }}
-        .blog-body-text {{
-            font-size: 17px;
-            line-height: 1.85em;
-            color: #383731;
-        }}
-        .blog-body-text .blog-h2 {{
-            font-family: "Sora", sans-serif;
-            font-size: 28px;
-            color: #864D26;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #CEAE80;
-            padding-bottom: 8px;
-        }}
-        .blog-body-text .blog-h3 {{
-            font-family: "Sora", sans-serif;
-            font-size: 22px;
-            color: #864D26;
-            margin-top: 30px;
-            margin-bottom: 12px;
-        }}
-        .blog-body-text .blog-p {{
-            margin-bottom: 20px;
-        }}
-        .blog-body-text .blog-list {{
-            margin-bottom: 25px;
-            padding-left: 25px;
-        }}
-        .blog-body-text .blog-list li {{
-            margin-bottom: 10px;
-            line-height: 1.7em;
-        }}
-        .blog-body-text .blog-blockquote {{
-            border-left: 4px solid #CEAE80;
-            background: #FBFBF2;
-            padding: 18px 24px;
-            margin: 30px 0;
-            font-style: italic;
-            border-radius: 0 8px 8px 0;
-            color: #864D26;
-        }}
-        .blog-body-text .blog-divider {{
-            border: 0;
-            height: 1px;
-            background: #E2E1DA;
-            margin: 40px 0;
-        }}
-        .blog-table {{
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: #FDFBF2;
-            border-radius: 8px;
-            overflow: hidden;
-        }}
-        .blog-table th, .blog-table td {{
-            padding: 12px 16px;
-            border: 1px solid #CEAE80;
-            text-align: left;
-        }}
-        .blog-table th {{
-            background: #864D26;
-            color: #FFFFFF;
-        }}
-        .blog-tags-section {{
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid #E2E1DA;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }}
-        .blog-tag-pill {{
-            background: #F0E8E8;
-            color: #864D26;
-            font-size: 13px;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-weight: 500;
-        }}
-        .blog-cta-banner {{
-            margin-top: 50px;
-            background: #864D26;
-            color: #FFFFFF;
-            border-radius: 12px;
-            padding: 35px;
-            text-align: center;
-        }}
-        .blog-cta-banner h3 {{
-            font-family: "Marcellus", serif;
-            font-size: 28px;
-            color: #CEAE80;
-            margin: 0 0 10px 0;
-        }}
-        .blog-cta-banner p {{
-            font-size: 16px;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-        }}
-        .blog-cta-btn {{
-            display: inline-block;
-            background: #CEAE80;
-            color: #864D26;
-            font-weight: 700;
-            font-size: 16px;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }}
-        .blog-cta-btn:hover {{
-            background: #FFFFFF;
-            color: #864D26;
-            transform: translateY(-2px);
-        }}
-        @media (max-width: 767px) {{
-            .blog-main-title {{
-                font-size: 26px;
-            }}
-            .blog-content-container {{
-                margin: -20px 15px 0 15px;
-                padding: 25px 20px;
-            }}
-            .blog-body-text {{
-                font-size: 15px;
-            }}
-        }}
-    </style>
+{head_html}
 </head>
-<body class="blog-single-page">
-
-    <!-- Top Header -->
-    <header class="site-header">
-        <div class="elementor-element elementor-element-cab6064" style="display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background:#FFFFFF; border-bottom:1px solid rgba(134, 77, 38, 0.1);">
-            <div class="site-logo">
-                <a href="/"><img src="/assets/uploads/2025/04/cropped-favicon-192x192.png" alt="ReevanaX" style="height:40px; width:auto;" /></a>
-            </div>
-            <nav style="display:flex; gap:25px; align-items:center;">
-                <a href="/" style="color:#864D26; font-weight:600; text-decoration:none;">Home</a>
-                <a href="/about-us/" style="color:#864D26; font-weight:600; text-decoration:none;">About</a>
-                <a href="/face-procedures/" style="color:#864D26; font-weight:600; text-decoration:none;">Face</a>
-                <a href="/plastic-surgery/" style="color:#864D26; font-weight:600; text-decoration:none;">Surgery</a>
-                <a href="/blogs/" style="color:#864D26; font-weight:700; text-decoration:none; border-bottom:2px solid #864D26;">Blogs</a>
-                <a href="/book-an-appointment/" style="background:#864D26; color:#FFFFFF; padding:8px 20px; border-radius:50px; text-decoration:none; font-weight:600;">Book Now</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Article Content Wrapper -->
-    <div class="blog-article-wrapper">
-        <!-- Hero Header -->
-        <div class="blog-hero">
-            <div class="blog-breadcrumb">
-                <a href="/">Home</a> &nbsp;/&nbsp; <a href="/blogs/">Blogs</a> &nbsp;/&nbsp; <span>{title}</span>
-            </div>
-            <span class="blog-category-badge">{category}</span>
-            <h1 class="blog-main-title">{title}</h1>
-            <div class="blog-meta-info">
-                <span>By <strong>{author}</strong></span>
-                <span>•</span>
-                <span>{readable_date}</span>
-                <span>•</span>
-                <span>ReevanaX Surat</span>
-            </div>
-        </div>
-
-        <!-- Article Body Card -->
-        <article class="blog-content-container">
-            <img src="{post['featured_image']}" alt="{html.escape(post['featured_image_alt'])}" class="blog-featured-banner" />
-            
-            <div class="blog-body-text">
-                {post['body_html']}
-            </div>
-
-            <!-- Tags Section -->
-            <div class="blog-tags-section">
-                <strong>Tags:</strong>
-                {tags_html}
-            </div>
-
-            <!-- Consultation Call to Action -->
-            <div class="blog-cta-banner">
-                <h3>Transform Your Look with ReevanaX</h3>
-                <p>Schedule a personal consultation with our aesthetic and dermatology specialists in Surat.</p>
-                <a href="/book-an-appointment/" class="blog-cta-btn">Book An Appointment Today</a>
-            </div>
-        </article>
-    </div>
-
-    <!-- Footer -->
-    <footer style="background:#864D26; color:#FFFFFF; padding:40px 20px; text-align:center; font-family:'Poppins', sans-serif;">
-        <p style="margin:0 0 10px 0; color:#CEAE80; font-size:18px; font-weight:600;">ReevanaX – Your Health. Your Beauty. Our Priority.</p>
-        <p style="margin:0 0 15px 0; font-size:14px; color:#E2E1DA;">Advanced Dermatology, Hair Care, Plastic Surgery & Aesthetic Clinic in Surat, Gujarat.</p>
-        <p style="margin:0; font-size:13px; color:#CEAE80;">&copy; {datetime.now().year} ReevanaX. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+{header_template}
+{post_container}
+{footer_template}
 """
 
 
 def render_blog_grid(posts: list[dict]) -> str:
-    """Generate the blog articles grid HTML to update blogs/index.html."""
+    """Generate the blog articles grid HTML matching native Elementor EAEL design from Screenshot 1."""
     cards_html = []
     for p in posts:
         slug = p["slug"]
@@ -629,39 +503,19 @@ def render_blog_grid(posts: list[dict]) -> str:
         title = html.escape(p["title"])
         excerpt = html.escape(p["excerpt"])
         img = p["featured_image"]
-        alt = html.escape(p["featured_image_alt"])
-        category = html.escape(p["category"])
-        date_str = p["date"]
+        alt = html.escape(p.get("featured_image_alt") or p["title"])
         
-        cards_html.append(f"""
-        <article class="eael-grid-post eael-post-grid-column" style="margin-bottom:30px;">
-            <div class="eael-grid-post-holder" style="background:#FFFFFF; border-radius:12px; overflow:hidden; border:1px solid #CEAE80; box-shadow:0 4px 20px rgba(134,77,38,0.06);">
-                <div class="eael-grid-post-holder-inner">
-                    <div class="eael-entry-media" style="position:relative; overflow:hidden;">
-                        <a href="{link}">
-                            <img src="{img}" alt="{alt}" style="width:100%; height:240px; object-fit:cover; display:block;" loading="lazy" />
-                        </a>
-                    </div>
-                    <div class="eael-entry-wrapper" style="padding:25px 20px;">
-                        <span style="display:inline-block; background:#CEAE80; color:#864D26; font-size:11px; font-weight:700; text-transform:uppercase; padding:4px 10px; border-radius:4px; margin-bottom:10px;">{category}</span>
-                        <header class="eael-entry-header" style="margin-bottom:12px;">
-                            <h2 class="eael-entry-title" style="font-size:20px; line-height:1.4em; font-family:'Sora', sans-serif; margin:0;">
-                                <a class="eael-grid-post-link" href="{link}" style="color:#864D26; text-decoration:none;">{title}</a>
-                            </h2>
-                        </header>
-                        <div class="eael-entry-content" style="color:#666; font-size:14px; line-height:1.6em; margin-bottom:15px;">
-                            <p style="margin:0;">{excerpt}</p>
-                        </div>
-                        <div class="eael-entry-footer" style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #F0E8E8; padding-top:12px; font-size:12px; color:#999;">
-                            <span>{date_str}</span>
-                            <a href="{link}" style="color:#864D26; font-weight:700; text-decoration:none;">Read More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
+        cards_html.append(f"""<article class="eael-grid-post eael-post-grid-column">
+        <div class="eael-grid-post-holder">
+            <div class="eael-grid-post-holder-inner"><div class="eael-entry-media"><div class="eael-entry-overlay slide-up"><i class="fas fa-link" aria-hidden="true"></i><a href="{link}"></a></div><div class="eael-entry-thumbnail ">
+                <img decoding="async" width="780" height="520" src="{img}" class="attachment-full size-full" alt="{alt}" loading="lazy" />
             </div>
-        </article>
-        """)
-    return "\n".join(cards_html)
+        </div><div class="eael-entry-wrapper"><header class="eael-entry-header"><h2 class="eael-entry-title"><a class="eael-grid-post-link" href="{link}" title="{title}">{title}</a></h2></header><div class="eael-entry-content">
+                        <div class="eael-grid-post-excerpt"><p>{excerpt}</p></div>
+                    </div><div class="eael-entry-footer"><div class="eael-entry-meta"></div></div></div></div>
+        </div>
+    </article>""")
+    return "".join(cards_html)
 
 
 def build_sitemap(posts: list[dict]) -> None:
@@ -669,7 +523,6 @@ def build_sitemap(posts: list[dict]) -> None:
     sitemap_file = ROOT / "sitemap.xml"
     urls = []
     
-    # 1. Add all static HTML pages
     for hf in ROOT.rglob("index.html"):
         rel = hf.relative_to(ROOT)
         if "admin" in rel.parts or "video_carousel" in rel.parts:
@@ -680,7 +533,6 @@ def build_sitemap(posts: list[dict]) -> None:
             loc = SITE_URL + "/" + "/".join(rel.parts[:-1]) + "/"
         urls.append(loc)
 
-    # Deduplicate and sort
     urls = sorted(list(set(urls)))
     
     xml_lines = [
@@ -729,10 +581,10 @@ def build_all() -> None:
         slug = p["slug"]
         post_dir = BLOGS_DIR / slug
         post_dir.mkdir(parents=True, exist_ok=True)
-        html_content = render_single_post(p)
+        html_content = render_single_post(p, posts)
         (post_dir / "index.html").write_text(html_content, encoding="utf-8")
         
-        # Also maintain root level post folder for backward compatibility if it exists
+        # Also maintain root level post folder for backward compatibility
         root_post_dir = ROOT / slug
         if root_post_dir.exists():
             (root_post_dir / "index.html").write_text(html_content, encoding="utf-8")

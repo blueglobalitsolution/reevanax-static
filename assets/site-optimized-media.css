@@ -36,7 +36,6 @@ video.size-full {
 }
 
 /* Fix spacing and padding for dashed treatment cards on mobile */
-/* Fix spacing and padding for dashed treatment cards on mobile */
 @media (max-width: 767px) {
   body .treatment-dashed-card {
     margin-top: 0px !important;
@@ -164,5 +163,81 @@ video.size-full {
   margin-top: 0px !important;
   padding-top: 0px !important;
 }
+
+/* ─── Universal Subpage Hero Banner (Clean Solid Brand Brown #864D26) ─────────────────── */
+.elementor-element-8e58397,
+.elementor-element-aeda35d,
+.elementor-element-452da04,
+.elementor-element-f1340e2,
+.elementor-element-60e6ca8,
+.elementor-element-4b952ac,
+.elementor-element-a390517,
+.elementor[data-elementor-type="wp-page"] > .elementor-element.e-parent:first-of-type:has(.elementor-button),
+.elementor[data-elementor-type="wp-page"] > .e-con.e-parent:first-of-type:has(.elementor-widget-button) {
+  background: #864D26 !important;
+  background-color: #864D26 !important;
+  background-image: none !important;
+  min-height: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding: 40px 8% !important;
+  box-sizing: border-box !important;
+}
+
+/* White Hero Pill / Button */
+.elementor-element-8e58397 .elementor-button,
+.elementor-element-aeda35d .elementor-button,
+.elementor-element-452da04 .elementor-button,
+.elementor-element-f1340e2 .elementor-button,
+.elementor-element-60e6ca8 .elementor-button,
+.elementor-element-4b952ac .elementor-button,
+.elementor-element-a390517 .elementor-button,
+.elementor[data-elementor-type="wp-page"] > .e-parent:first-of-type .elementor-button,
+.elementor-element-dbc7710 .elementor-button {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  color: #111111 !important;
+  fill: #111111 !important;
+  font-family: "Poppins", "Outfit", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12) !important;
+  display: inline-block !important;
+  border: none !important;
+  pointer-events: auto !important;
+  cursor: default !important;
+}
+
+.elementor-element-8e58397 .elementor-button .elementor-button-text,
+.elementor-element-aeda35d .elementor-button .elementor-button-text,
+.elementor-element-452da04 .elementor-button .elementor-button-text,
+.elementor-element-f1340e2 .elementor-button .elementor-button-text,
+.elementor-element-60e6ca8 .elementor-button .elementor-button-text,
+.elementor-element-4b952ac .elementor-button .elementor-button-text,
+.elementor-element-a390517 .elementor-button .elementor-button-text,
+.elementor[data-elementor-type="wp-page"] > .e-parent:first-of-type .elementor-button .elementor-button-text {
+  color: #111111 !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 767px) {
+  .elementor-element-8e58397,
+  .elementor-element-aeda35d,
+  .elementor-element-452da04,
+  .elementor-element-f1340e2,
+  .elementor-element-60e6ca8,
+  .elementor-element-4b952ac,
+  .elementor-element-a390517,
+  .elementor[data-elementor-type="wp-page"] > .elementor-element.e-parent:first-of-type:has(.elementor-button) {
+    min-height: 140px !important;
+    padding: 25px 20px !important;
+  }
+}
+
+
 
 
