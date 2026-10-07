@@ -113,25 +113,33 @@ async def static_file_handler(request: Request, call_next):
     if path.startswith("/api/") or path.startswith("/wp-json/") or path.startswith("/docs") or path.startswith("/redoc") or path == "/openapi.json":
         return await call_next(request)
 
+    # Security: Explicitly block sensitive system/internal files and directories
+    lower_path = path.lower()
+    blocked_prefixes = ("/.", "/_data", "/backend", "/tools", "/tests", "/node_modules", "/venv", "/.venv", "/__pycache__")
+    blocked_suffixes = (".env", ".db", ".sqlite", ".py", ".sh", ".key", ".pem", ".log", ".bak", ".orig", ".cfg", ".ini", "smtp_config.json")
+    if any(lower_path.startswith(p) or f"/{p.lstrip('/')}" in lower_path for p in blocked_prefixes) or any(lower_path.endswith(s) for s in blocked_suffixes) or ".." in path:
+        return Response(content="403 Forbidden", status_code=403, media_type="text/plain")
+
     # Normalize clean path
     clean_path = path.lstrip("/")
     
-    # Try locating the requested static file in frontend or root directory
+    # Restrict static file resolution strictly to STATIC_ROOT (frontend)
     possible_paths = []
     if clean_path:
         possible_paths.extend([
             STATIC_ROOT / clean_path,
-            STATIC_ROOT / clean_path / "index.html",
-            ROOT_DIR / clean_path,
-            ROOT_DIR / clean_path / "index.html"
+            STATIC_ROOT / clean_path / "index.html"
         ])
     else:
-        possible_paths.extend([
-            STATIC_ROOT / "index.html",
-            ROOT_DIR / "index.html"
-        ])
+        possible_paths.append(STATIC_ROOT / "index.html")
 
     for p in possible_paths:
+        # Guarantee path stays within STATIC_ROOT
+        try:
+            p.resolve().relative_to(STATIC_ROOT.resolve())
+        except ValueError:
+            return Response(content="403 Forbidden", status_code=403, media_type="text/plain")
+
         if p.is_file():
             if p.suffix.lower() in MEDIA_EXTS or "range" in request.headers:
                 return send_media_range_response(request, p)
