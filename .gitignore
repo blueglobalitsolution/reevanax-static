@@ -1,13 +1,34 @@
-# Live SMTP credentials — NEVER commit
+# ── Credentials & Secrets ──
 smtp_config.json
+*.env
+.env.*
+*.pem
+*.key
 
-# Asset build cache (downloaded optimized assets)
-_tools/.asset_cache/
-
-# Python
+# ── Python & Virtual Environments ──
+venv/
+.venv/
+env/
+ENV/
 __pycache__/
-*.pyc
-
-# Runtime logs / build artifacts
+*.py[cod]
+*$py.class
+*.pytest_cache/
+# ── Asset Build Cache & Logs ──
+tools/.asset_cache/
+_tools/.asset_cache/
+tools/*.log
+tools/archive/*.log
 _tools/*.log
-_tools/*.out
+*.log
+*.out
+
+# ── Analysis & Tool Outputs ──
+graphify-out/
+
+# ── Operating System & Editor Metadata ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

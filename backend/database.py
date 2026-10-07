@@ -16,7 +16,8 @@ DB_DIR = ROOT_DIR / "_data"
 DB_PATH = DB_DIR / "cms.db"
 CONFIG_PATH = DB_DIR / "smtp_config.json"
 CONTENT_DIR = ROOT_DIR / "content" / "blogs"
-UPLOADS_DIR = ROOT_DIR / "assets" / "uploads" / "blogs"
+FRONTEND_DIR = ROOT_DIR / "frontend"
+UPLOADS_DIR = (FRONTEND_DIR / "assets" / "uploads" / "blogs") if FRONTEND_DIR.exists() else (ROOT_DIR / "assets" / "uploads" / "blogs")
 
 # Ensure directories exist
 DB_DIR.mkdir(parents=True, exist_ok=True)

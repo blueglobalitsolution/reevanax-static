@@ -2,10 +2,12 @@ import sys
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-TOOLS_DIR = ROOT_DIR / "_tools"
+TOOLS_DIR = ROOT_DIR / "tools"
+LEGACY_TOOLS_DIR = ROOT_DIR / "_tools"
 
-if str(TOOLS_DIR) not in sys.path:
-    sys.path.insert(0, str(TOOLS_DIR))
+for t_dir in (TOOLS_DIR, LEGACY_TOOLS_DIR):
+    if t_dir.exists() and str(t_dir) not in sys.path:
+        sys.path.insert(0, str(t_dir))
 
 try:
     import build_blogs

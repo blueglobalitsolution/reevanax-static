@@ -2,7 +2,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 
 from backend.routers.auth import router as auth_router
 from backend.routers.posts import router as posts_router
@@ -37,13 +37,28 @@ app.include_router(media_router)
 app.include_router(forms_router)
 
 
+# ── WordPress & RevSlider REST API Mock Handlers ──
+@app.get("/wp-json/sliderrevolution/sliders/{slider_id}")
+async def get_revslider_slide(slider_id: str, request: Request):
+    return JSONResponse({
+        "success": True,
+        "slider_id": slider_id,
+        "slides": {}
+    })
+
+
+@app.get("/wp-json/{full_path:path}")
+async def get_wp_json_fallback(full_path: str):
+    return JSONResponse({"success": True, "data": []})
+
+
 # ── Custom Static Handler to Guarantee 100% Page & Asset Resolution ──
 @app.middleware("http")
 async def static_file_handler(request: Request, call_next):
     path = request.url.path
 
     # If it's an API route or Swagger docs, pass directly to FastAPI router
-    if path.startswith("/api/") or path.startswith("/docs") or path.startswith("/redoc") or path == "/openapi.json":
+    if path.startswith("/api/") or path.startswith("/wp-json/") or path.startswith("/docs") or path.startswith("/redoc") or path == "/openapi.json":
         return await call_next(request)
 
     # Normalize clean path
@@ -68,6 +83,16 @@ async def static_file_handler(request: Request, call_next):
         if p.is_file():
             # Determine content type if needed or let FileResponse handle it
             return FileResponse(p)
+
+    # Fallback for dynamic plugin stylesheets that might not be on disk (e.g., RevSlider lazy packs)
+    if clean_path.startswith("assets/plugins/revslider/") and clean_path.endswith(".css"):
+        return Response(content="/* revslider fallback */", media_type="text/css")
+
+    # Fallback for missing RevSlider video-media/thumbnail images
+    if "revslider" in clean_path and any(clean_path.endswith(ext) for ext in [".jpg", ".jpeg", ".png", ".webp"]):
+        fallback_img = STATIC_ROOT / "assets" / "uploads" / "2025" / "08" / "ezgif-frame-001.jpg"
+        if fallback_img.is_file():
+            return FileResponse(fallback_img)
 
     return await call_next(request)
 
