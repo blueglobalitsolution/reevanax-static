@@ -1,13 +1,65 @@
+import os
+import mimetypes
 from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
 
 from backend.routers.auth import router as auth_router
 from backend.routers.posts import router as posts_router
 from backend.routers.media import router as media_router
 from backend.routers.forms import router as forms_router
+
+MEDIA_EXTS = {".mp4", ".webm", ".ogg", ".mp3", ".wav", ".m4v", ".mov"}
+
+
+def send_media_range_response(request: Request, file_path: Path) -> Response:
+    file_size = file_path.stat().st_size
+    content_type, _ = mimetypes.guess_type(str(file_path))
+    content_type = content_type or "application/octet-stream"
+
+    range_header = request.headers.get("range")
+    if not range_header:
+        headers = {
+            "Accept-Ranges": "bytes",
+            "Content-Length": str(file_size),
+            "Content-Type": content_type,
+        }
+        return FileResponse(file_path, headers=headers)
+
+    try:
+        range_val = range_header.replace("bytes=", "").strip()
+        parts = range_val.split("-")
+        start = int(parts[0]) if parts[0] else 0
+        end = int(parts[1]) if len(parts) > 1 and parts[1] else file_size - 1
+    except ValueError:
+        return Response(status_code=416, headers={"Content-Range": f"bytes */{file_size}"})
+
+    start = max(0, start)
+    end = min(file_size - 1, end)
+    content_length = end - start + 1
+
+    def iterfile():
+        with open(file_path, "rb") as f:
+            f.seek(start)
+            bytes_left = content_length
+            while bytes_left > 0:
+                chunk_to_read = min(128 * 1024, bytes_left)
+                chunk = f.read(chunk_to_read)
+                if not chunk:
+                    break
+                bytes_left -= len(chunk)
+                yield chunk
+
+    headers = {
+        "Content-Range": f"bytes {start}-{end}/{file_size}",
+        "Accept-Ranges": "bytes",
+        "Content-Length": str(content_length),
+        "Content-Type": content_type,
+    }
+    return StreamingResponse(iterfile(), status_code=206, headers=headers)
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = ROOT_DIR / "frontend"
@@ -81,7 +133,8 @@ async def static_file_handler(request: Request, call_next):
 
     for p in possible_paths:
         if p.is_file():
-            # Determine content type if needed or let FileResponse handle it
+            if p.suffix.lower() in MEDIA_EXTS or "range" in request.headers:
+                return send_media_range_response(request, p)
             return FileResponse(p)
 
     # Fallback for dynamic plugin stylesheets that might not be on disk (e.g., RevSlider lazy packs)
