@@ -85,6 +85,19 @@ video.size-full {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
   }
 
+  /* Make header container flex space-between so logo is on left and menu button is on right corner */
+  body .elementor-element-8516289 .e-con-inner,
+  body .elementor-element-cab6064 .e-con-inner,
+  body .elementor-element-3244f91 .e-con-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
   /* Shrink the logo on mobile to look sleek and modern */
   body .elementor-widget-image img[src*="Logo"] {
     max-height: 36px !important;
@@ -92,11 +105,25 @@ video.size-full {
     object-fit: contain !important;
   }
 
-  /* Center and modernize the hamburger menu toggle */
+  /* Menu widget container positioned to far right */
+  body .elementor-element-017d00c {
+    margin-left: auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  body .menu-canvas {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* Position and style the hamburger menu toggle on right corner */
   body .menu-toggle {
-    margin: 0 !important;
-    width: 40px !important;
-    height: 40px !important;
+    margin: 0 0 0 auto !important;
+    width: 42px !important;
+    height: 42px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -106,7 +133,7 @@ video.size-full {
   }
   
   body .menu-toggle:active {
-    background: rgba(134, 77, 38, 0.05) !important;
+    background: rgba(134, 77, 38, 0.08) !important;
   }
 
   /* Force hamburger toggle lines to match the brand brown color */
@@ -116,6 +143,220 @@ video.size-full {
   body .menu-toggle span:before,
   body .menu-toggle span:after {
     background-color: #864D26 !important;
+  }
+
+  /* --- CRITICAL FIX: Mobile Sidebar Navigation Accessible Drawer --- */
+  /* Prevent parent Elementor headers from clipping fixed drawer */
+  body .elementor-element-8516289,
+  body .elementor-element-cab6064,
+  body .elementor-element-3244f91,
+  body .elementor-element-017d00c,
+  body .menu-canvas {
+    overflow: visible !important;
+  }
+
+  /* Mobile Drawer Container */
+  .menu-canvas .container-menu {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 320px !important;
+    max-width: 85vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: #1e1916 !important; /* Premium dark brand aesthetic */
+    color: #f7ede2 !important;
+    padding: 24px 20px 40px !important;
+    z-index: 9999999 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.45) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    -webkit-transform: translate3d(-100%, 0, 0) !important;
+    transform: translate3d(-100%, 0, 0) !important;
+    visibility: hidden;
+  }
+
+  /* Slide in when menu-canvas is toggled */
+  .menu-canvas.toggled .container-menu {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+  }
+
+  /* Close (X) button inside the drawer header */
+  .menu-canvas .container-menu .close-menu {
+    align-self: flex-end !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    margin: 0 0 20px auto !important;
+    cursor: pointer !important;
+    color: #ceae80 !important;
+    font-size: 20px !important;
+    background: rgba(206, 174, 128, 0.12) !important;
+    border-radius: 50% !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
+    touch-action: manipulation;
+    box-sizing: border-box !important;
+  }
+
+  .menu-canvas .container-menu .close-menu i,
+  .menu-canvas .container-menu .close-menu .ovaicon-cancel {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+
+  .menu-canvas .container-menu .close-menu i:before,
+  .menu-canvas .container-menu .close-menu .ovaicon-cancel:before {
+    display: block !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .menu-canvas .container-menu .close-menu:hover,
+  .menu-canvas .container-menu .close-menu:active {
+    background: rgba(206, 174, 128, 0.25) !important;
+    transform: scale(1.05);
+  }
+
+  /* Menu Links list */
+  .menu-canvas .primary-navigation {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+  }
+
+  .menu-canvas ul.menu {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .menu-canvas ul.menu > li {
+    position: relative !important;
+    display: block !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin: 0 !important;
+  }
+
+  .menu-canvas ul.menu > li > a {
+    color: #f7ede2 !important;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    padding: 14px 44px 14px 6px !important;
+    display: block !important;
+    text-decoration: none !important;
+    letter-spacing: 0.3px !important;
+    transition: color 0.2s ease !important;
+  }
+
+  .menu-canvas ul.menu > li.current-menu-item > a,
+  .menu-canvas ul.menu > li > a:hover {
+    color: #ceae80 !important;
+  }
+
+  /* Submenu Dropdown Accordion */
+  .menu-canvas .dropdown-toggle {
+    position: absolute !important;
+    top: 6px !important;
+    right: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #ceae80 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: transform 0.3s ease !important;
+    touch-action: manipulation;
+  }
+
+  .menu-canvas .dropdown-toggle.toggled-on {
+    transform: rotate(180deg) !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu {
+    display: none;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 4px 0 10px 14px !important;
+    background: rgba(0, 0, 0, 0.25) !important;
+    border-radius: 6px !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu.show {
+    display: block !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu li {
+    position: relative !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu li:last-child {
+    border-bottom: none !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu li a {
+    color: #d1c7bd !important;
+    font-size: 14px !important;
+    padding: 10px 36px 10px 4px !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+  }
+
+  .menu-canvas ul.menu ul.sub-menu li a:hover,
+  .menu-canvas ul.menu ul.sub-menu li.current-menu-item > a {
+    color: #ceae80 !important;
+  }
+
+  /* Dimmed Fullscreen Backdrop Overlay */
+  .menu-canvas .site-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: rgba(10, 8, 7, 0.7) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 9999990 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s !important;
+  }
+
+  .menu-canvas.toggled .site-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 

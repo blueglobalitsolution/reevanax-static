@@ -1,0 +1,92 @@
+[
+  {
+    "id": "29",
+    "title": "Hair Care Treatment",
+    "subtitle": "Transform Your Hair,<br>Transform Your Confidence!",
+    "button": "Read More",
+    "href": "/hair-care-procedures/",
+    "video": "/assets/uploads/slider-videos/hair-treatment.mp4",
+    "poster": "/assets/uploads/revslider/video-media/hair-treatment-2_21.jpeg"
+  },
+  {
+    "id": "35",
+    "title": "Carbon Laser Facial",
+    "subtitle": "Reveal Clear, Glowing<br>& Radiant Skin!",
+    "button": "Read More",
+    "href": "/face-procedures/",
+    "video": "/assets/uploads/slider-videos/carbon-facia.mp4",
+    "poster": "/assets/uploads/revslider/video-media/carbon-facia_25.jpeg"
+  },
+  {
+    "id": "34",
+    "title": "Skin Care Procedures",
+    "subtitle": "Customized Dermatology<br>& Skin Rejuvenation",
+    "button": "Read More",
+    "href": "/face-procedures/",
+    "video": "/assets/uploads/slider-videos/skin-care.mp4",
+    "poster": "/assets/uploads/revslider/video-media/skin-care_24.jpeg"
+  },
+  {
+    "id": "36",
+    "title": "Cosmetic Gynecology",
+    "subtitle": "Empowering Intimate Wellness<br>& Confidence",
+    "button": "Read More",
+    "href": "/cosmetic-gynecology-treatment/",
+    "video": "/assets/uploads/slider-videos/Gynec-Aesthetics.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Gynec-Aesthetics-2_26.jpeg"
+  },
+  {
+    "id": "37",
+    "title": "Mommy Makeover",
+    "subtitle": "Restore Your Pre-Pregnancy<br>Body & Elegance",
+    "button": "Read More",
+    "href": "/mommy-makeover/",
+    "video": "/assets/uploads/slider-videos/Mommy-Makeover.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Mommy-Makeover-1_27.jpeg"
+  },
+  {
+    "id": "38",
+    "title": "Advanced Face Procedures",
+    "subtitle": "Natural Facial Harmony<br>& Youthful Contours",
+    "button": "Read More",
+    "href": "/face-procedures/",
+    "video": "/assets/uploads/slider-videos/FACE-PROCEDURES.mp4",
+    "poster": "/assets/uploads/revslider/video-media/FACE-PROCEDURES-2_28.jpeg"
+  },
+  {
+    "id": "39",
+    "title": "Scar & Tattoo Removal",
+    "subtitle": "Advanced Pico & CO2<br>Laser Technology",
+    "button": "Read More",
+    "href": "/scar-tattoo-removal/",
+    "video": "/assets/uploads/slider-videos/Tattoo-Removal.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Tattoo-Removal-1_29.jpeg"
+  },
+  {
+    "id": "40",
+    "title": "Anti-Aging Treatments",
+    "subtitle": "Turn Back Time With<br>Advanced Age-Defying Care",
+    "button": "Read More",
+    "href": "/anti-agening-treatment/",
+    "video": "/assets/uploads/slider-videos/Anti-Aging.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Anti-Aging-1_30.jpeg"
+  },
+  {
+    "id": "41",
+    "title": "Body Fitness Treatment",
+    "subtitle": "Sculpt, Tone & Redefine<br>Your Ideal Physique",
+    "button": "Read More",
+    "href": "/body-fitness-treatment/",
+    "video": "/assets/uploads/slider-videos/Body-FItness-Treatment.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Body-FItness-Treatment-1_31.jpeg"
+  },
+  {
+    "id": "42",
+    "title": "Plastic & Cosmetic Surgery",
+    "subtitle": "Board-Certified Precision<br>& Aesthetic Excellence",
+    "button": "Read More",
+    "href": "/plastic-surgery/",
+    "video": "/assets/uploads/slider-videos/Plastic-Surgery.mp4",
+    "poster": "/assets/uploads/revslider/video-media/Plastic-Surgery-1_32.jpeg"
+  }
+]
