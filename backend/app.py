@@ -4,7 +4,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
+from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse, RedirectResponse
 
 from backend.routers.auth import router as auth_router
 from backend.routers.posts import router as posts_router
@@ -119,6 +119,15 @@ async def static_file_handler(request: Request, call_next):
     blocked_suffixes = (".env", ".db", ".sqlite", ".py", ".sh", ".key", ".pem", ".log", ".bak", ".orig", ".cfg", ".ini", "smtp_config.json")
     if any(lower_path.startswith(p) or f"/{p.lstrip('/')}" in lower_path for p in blocked_prefixes) or any(lower_path.endswith(s) for s in blocked_suffixes) or ".." in path:
         return Response(content="403 Forbidden", status_code=403, media_type="text/plain")
+
+    # Canonical Clean URL: Redirect any explicit /index.html to clean URL (e.g. /index.html -> /, /about/index.html -> /about/)
+    if lower_path == "/index.html":
+        query = f"?{request.url.query}" if request.url.query else ""
+        return RedirectResponse(url=f"/{query}", status_code=301)
+    elif lower_path.endswith("/index.html"):
+        clean_redirect = path[:-len("index.html")]
+        query = f"?{request.url.query}" if request.url.query else ""
+        return RedirectResponse(url=f"{clean_redirect}{query}", status_code=301)
 
     # Normalize clean path
     clean_path = path.lstrip("/")
